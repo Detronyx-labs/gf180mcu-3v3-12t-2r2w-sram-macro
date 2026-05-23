@@ -1,0 +1,36 @@
+* GF180MCU 3.3V-oriented 12T 2R2W SRAM bitcell candidate.
+*
+* Pin contract:
+*   vdd vss
+*   wwl0 wbl0 wbr0
+*   wwl1 wbl1 wbr1
+*   rwl0 rbl0
+*   rwl1 rbl1
+*
+* Read bitlines discharge when internal storage node q is high.
+
+.subckt gf180mcu_3v3_12t_2r2w_bitcell vdd vss wwl0 wbl0 wbr0 wwl1 wbl1 wbr1 rwl0 rbl0 rwl1 rbl1
+
+* Device sizing is derived from Timothy Edwards' GF180MCU 3.3V SRAM extraction.
+XP_Q   q  qb vdd vdd pfet_03v3 w=0.28u l=0.28u
+XN_Q   q  qb vss vss nfet_03v3 w=0.45u l=0.28u
+XP_QB qb  q  vdd vdd pfet_03v3 w=0.28u l=0.28u
+XN_QB qb  q  vss vss nfet_03v3 w=0.45u l=0.28u
+
+* Write port 0.
+XW0_Q  q  wwl0 wbl0 vss nfet_03v3 w=0.28u l=0.36u
+XW0_QB qb wwl0 wbr0 vss nfet_03v3 w=0.28u l=0.36u
+
+* Write port 1.
+XW1_Q  q  wwl1 wbl1 vss nfet_03v3 w=0.28u l=0.36u
+XW1_QB qb wwl1 wbr1 vss nfet_03v3 w=0.28u l=0.36u
+
+* Independent read port 0: rbl0 discharges when q=1 and rwl0=1.
+XR0_SEL rbl0 rwl0 r0_mid vss nfet_03v3 w=0.53u l=0.28u
+XR0_Q   r0_mid q    vss    vss nfet_03v3 w=0.53u l=0.28u
+
+* Independent read port 1: rbl1 discharges when q=1 and rwl1=1.
+XR1_SEL rbl1 rwl1 r1_mid vss nfet_03v3 w=0.53u l=0.28u
+XR1_Q   r1_mid q    vss    vss nfet_03v3 w=0.53u l=0.28u
+
+.ends gf180mcu_3v3_12t_2r2w_bitcell

@@ -15,6 +15,7 @@ This package contains the current Detronyx custom SRAM review collateral for a G
 
 | Area | Status | Notes |
 | --- | --- | --- |
+| 12T leaf storage checks | `PASS` locally | See `verification/README.md` and `verification/results/README.md`. |
 | Final pin-LVS / R-aware PEX | `{'OPEN': 17, 'PASS': 12, 'WARN': 4}` | See `reports/pin_lvs_pex_signoff/README.md`. |
 | C-aware timing proxy | `WARN` | Source: `openrcx_geometry_fallback`. See `reports/cap_pex_timing/README.md`. |
 | Native Magic C extraction | `OPEN` | Local GF180MCU Magic techfile emits R/devices but no capacitance coefficients; OpenRCX fallback is used for C timing proxy. |
