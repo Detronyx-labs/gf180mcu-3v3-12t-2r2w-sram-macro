@@ -1,0 +1,53 @@
+# GF180MCU 3.3V 12T 2R2W SRAM Macro
+
+This package contains the current Detronyx custom SRAM review collateral for a GF180MCU 3.3V-oriented 12T two-read/two-write hard macro. It is prepared for external engineering review, not presented as foundry tapeout signoff.
+
+## Macro Variants
+
+| Macro | Rows | Data width | Bits | Size um | Area mm2 | Area per bit um2 | Pins |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
+| `gf180mcu_3v3_12t_2r2w_sram_1024x32` | 1024 | 32 | 32768 | 1003.960 x 1172.280 | 1.176922 | 35.917 | 175 |
+| `gf180mcu_3v3_12t_2r2w_sram_1024x8` | 1024 | 8 | 8192 | 585.560 x 618.040 | 0.361900 | 44.177 | 79 |
+| `gf180mcu_3v3_12t_2r2w_sram_512x32` | 512 | 32 | 16384 | 1003.960 x 618.040 | 0.620487 | 37.872 | 171 |
+| `gf180mcu_3v3_12t_2r2w_sram_512x8` | 512 | 8 | 4096 | 585.560 x 340.920 | 0.199629 | 48.738 | 75 |
+
+## Verification Snapshot
+
+| Area | Status | Notes |
+| --- | --- | --- |
+| Final pin-LVS / R-aware PEX | `{'OPEN': 17, 'PASS': 12, 'WARN': 4}` | See `reports/pin_lvs_pex_signoff/README.md`. |
+| C-aware timing proxy | `WARN` | Source: `openrcx_geometry_fallback`. See `reports/cap_pex_timing/README.md`. |
+| Native Magic C extraction | `OPEN` | Local GF180MCU Magic techfile emits R/devices but no capacitance coefficients; OpenRCX fallback is used for C timing proxy. |
+| Density/fill | `OPEN` | Dummy/fill is not finalized in this package. |
+| Foundry signoff | `OPEN` | Needs independent PDK/foundry-grade LVS/PEX/DRC/EM/IR review. |
+
+## Contents
+
+- `macros/`: GDS, LEF, SPICE blackbox, SystemVerilog blackbox/behavioral/decode contracts, pin JSON, and per-macro summaries.
+- `reports/`: generated physical, signoff, C/OpenRCX timing, and staged open-source evidence.
+- `MANIFEST.json`: package file inventory, public macro aliases, and GDS top-cell rewrite status.
+
+## Implementation Basis
+
+- Timothy Edwards / Open Circuit Design GF180MCU 3.3V SRAM macros: https://github.com/RTimothyEdwards/gf180mcu_ocd_ip_sram
+- Timothy Edwards 512x8 3.3V SRAM macro used as the main GF180 transistor/layout reference: https://github.com/RTimothyEdwards/gf180mcu_ocd_ip_sram/tree/main/cells/gf180mcu_ocd_ip_sram__sram512x8m8wm1
+- Original Google/GF open GF180MCU SRAM macro repository: https://github.com/google/globalfoundries-pdk-ip-gf180mcu_fd_ip_sram
+
+## Regeneration Notes
+
+This publication bundle is generated from the Detronyx GF180 SRAM experiment workspace. The public package intentionally uses neutral macro aliases and omits local generator scripts that contain internal build-stage paths. For local regeneration, use the matching Detronyx workspace flow that produced `reports/final_physical`, `reports/pin_lvs_pex_signoff`, and `reports/cap_pex_timing`. Use the KLayout Python package when regenerating the bundle if GDS top-cell names must be rewritten to the public aliases.
+
+## Review Questions
+
+- Are the 12T 2W2R bitcell and shared M4/M5 escape assumptions physically defensible for GF180MCU?
+- Is the current footprint strategy acceptable before investing in full custom periphery expansion?
+- What minimum extra characterization is required before this can become tapeout-intent memory collateral?
+- Should the next step be full OpenRCX/DEF-based extraction, foundry-rule PEX, or transistor-level sense/write periphery closure?
+
+## Known Open Items
+
+- Full device-expanded macro LVS for the final abutted row-edge/control matrix.
+- Final extracted-RC SPICE characterization with real decoder, write driver, precharge, and sense amplifier devices.
+- SNM/read-disturb/half-select/dual-write sweeps on final extracted parasitics.
+- Liberty characterization: setup/hold, clk-to-q, pin caps, power, and invalid arcs.
+- Density/fill, antenna after final fill, EM/IR with real current profiles, and latch-up/package review.
