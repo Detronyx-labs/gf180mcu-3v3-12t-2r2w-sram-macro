@@ -9,6 +9,9 @@ storage checks used before macro-level LVS/PEX work.
 - `gf180mcu_3v3_12t_2r2w_sram_periphery_lvs.py` gates the packaged
   transistor-level row decode/WL-driver, write-driver, precharge/sense, and
   write-conflict leaf reports.
+- `gf180mcu_3v3_12t_2r2w_sram_gds_leaf_containment.py` checks whether the
+  standalone periphery leaf GDS files and the published macro GDS files contain
+  the expected leaf cell names.
 - `gf180mcu_3v3_12t_2r2w_sram_tile_lvs.py` checks the extracted 4x4 tile subcircuit against an
   independently generated 12T MOS reference.
 - `gf180mcu_3v3_12t_2r2w_sram_macro_lvs.py` checks the macro-top tile instance connectivity
@@ -24,12 +27,12 @@ density, antenna, or foundry signoff.
 ## Release LVS
 
 To check the published extracted SPICE, run the scripts with no positional
-argument. They use `reports/pin_lvs_pex_signoff` when the package has unpacked
-reports, or `reports.zip` in the repository publication layout.
+argument. They use the unpacked reports under `reports/`.
 
 ```bash
 python3 verification/gf180mcu_3v3_12t_2r2w_sram_lvs_gate.py
 python3 verification/gf180mcu_3v3_12t_2r2w_sram_periphery_lvs.py
+python3 verification/gf180mcu_3v3_12t_2r2w_sram_gds_leaf_containment.py
 python3 verification/gf180mcu_3v3_12t_2r2w_sram_tile_lvs.py
 python3 verification/gf180mcu_3v3_12t_2r2w_sram_macro_lvs.py
 python3 verification/gf180mcu_3v3_12t_2r2w_sram_connectivity_check.py
@@ -51,6 +54,11 @@ write row decode/WL driver, read row decode/WL driver, write driver,
 precharge/sense, and write-conflict control. Each leaf must have Magic DRC
 `0`, Netgen LVS `match`/`match_unique`, zero disconnected pins, and the expected
 pin contract, including `dout` as the SAOUT-equivalent read output.
+
+The GDS containment audit currently reports the five periphery leaf GDS files
+as present and self-contained, and the four macro GDS files as
+standalone leaf-level closure only. Use
+`--require-macro-containment` once full macro periphery integration is expected.
 
 ## Leaf Storage
 

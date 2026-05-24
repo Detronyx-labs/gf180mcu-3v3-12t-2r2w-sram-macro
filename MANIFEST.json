@@ -1,7 +1,7 @@
 {
   "cap_source": "openrcx_geometry_fallback",
   "cap_timing_status": "WARN",
-  "created_utc": "2026-05-24T22:05:50.214043+00:00",
+  "created_utc": "2026-05-25T00:06:23.256981+00:00",
   "files": [
     {
       "bytes": 136,
@@ -12,11 +12,11 @@
       "path": "LICENSE"
     },
     {
-      "bytes": 52491,
+      "bytes": 52791,
       "path": "MANIFEST.json"
     },
     {
-      "bytes": 5084,
+      "bytes": 5455,
       "path": "README.md"
     },
     {
@@ -150,10 +150,6 @@
     {
       "bytes": 855,
       "path": "macros/gf180mcu_3v3_12t_2r2w_sram_512x8/summary.md"
-    },
-    {
-      "bytes": 3260159,
-      "path": "reports.zip"
     },
     {
       "bytes": 37374,
@@ -1084,7 +1080,7 @@
       "path": "reports/periphery_block_leaves/summary.csv"
     },
     {
-      "bytes": 2118,
+      "bytes": 2436,
       "path": "reports/periphery_block_leaves/summary.md"
     },
     {
@@ -1220,7 +1216,7 @@
       "path": "scripts/run_gf180mcu_3v3_12t_2r2w_sram_local_signoff.py"
     },
     {
-      "bytes": 3173,
+      "bytes": 3609,
       "path": "verification/README.md"
     },
     {
@@ -1228,15 +1224,19 @@
       "path": "verification/bitcell/gf180mcu_3v3_12t_2r2w_bitcell.spice"
     },
     {
-      "bytes": 6931,
+      "bytes": 6831,
       "path": "verification/gf180mcu_3v3_12t_2r2w_sram_connectivity_check.py"
+    },
+    {
+      "bytes": 3270,
+      "path": "verification/gf180mcu_3v3_12t_2r2w_sram_gds_leaf_containment.py"
     },
     {
       "bytes": 6879,
       "path": "verification/gf180mcu_3v3_12t_2r2w_sram_lvs_common.py"
     },
     {
-      "bytes": 20954,
+      "bytes": 20869,
       "path": "verification/gf180mcu_3v3_12t_2r2w_sram_lvs_gate.py"
     },
     {
@@ -1244,11 +1244,11 @@
       "path": "verification/gf180mcu_3v3_12t_2r2w_sram_macro_lvs.py"
     },
     {
-      "bytes": 4677,
+      "bytes": 4035,
       "path": "verification/gf180mcu_3v3_12t_2r2w_sram_periphery_lvs.py"
     },
     {
-      "bytes": 8557,
+      "bytes": 8472,
       "path": "verification/gf180mcu_3v3_12t_2r2w_sram_tile_lvs.py"
     },
     {
@@ -1323,6 +1323,12 @@
     }
   ],
   "package": "gf180mcu-3v3-12t-2r2w-sram-macro",
+  "periphery_gds_containment": {
+    "audit": "verification/gf180mcu_3v3_12t_2r2w_sram_gds_leaf_containment.py",
+    "leaf_gds_status": "PASS",
+    "macro_gds_contains_periphery_leaves": false,
+    "macro_gds_status": "OPEN_STANDALONE_LEAF_ONLY"
+  },
   "periphery_lvs_counts": {
     "FAIL": 0,
     "PASS": 20

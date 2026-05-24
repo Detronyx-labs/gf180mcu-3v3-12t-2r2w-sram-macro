@@ -6,7 +6,6 @@ from __future__ import annotations
 import argparse
 import json
 import sys
-import zipfile
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Any
@@ -24,16 +23,11 @@ EXPECTED_BLOCKS: dict[str, set[str]] = {
 @dataclass(frozen=True)
 class PackageReader:
     root: Path
-    archive: zipfile.ZipFile | None = None
 
     def read_text(self, rel_path: str) -> str:
-        if self.archive is not None:
-            return self.archive.read(rel_path).decode()
         return (self.root / rel_path).read_text()
 
     def exists(self, rel_path: str) -> bool:
-        if self.archive is not None:
-            return rel_path in self.archive.namelist()
         return (self.root / rel_path).exists()
 
 
@@ -41,13 +35,7 @@ def open_package(root: Path) -> PackageReader:
     report_dir = root / "reports" / "periphery_block_leaves"
     if report_dir.exists():
         return PackageReader(root=root)
-    archive_path = root / "reports.zip"
-    if archive_path.exists():
-        archive = zipfile.ZipFile(archive_path)
-        if "reports/periphery_block_leaves/MANIFEST.json" in archive.namelist():
-            return PackageReader(root=root, archive=archive)
-        archive.close()
-    raise FileNotFoundError("missing reports/periphery_block_leaves or reports.zip periphery report")
+    raise FileNotFoundError("missing reports/periphery_block_leaves periphery report")
 
 
 def load_json(reader: PackageReader, rel_path: str) -> Any:
@@ -97,11 +85,7 @@ def parse_args() -> argparse.Namespace:
 def main() -> int:
     args = parse_args()
     reader = open_package(args.package_root)
-    try:
-        checks = check_manifest(reader)
-    finally:
-        if reader.archive is not None:
-            reader.archive.close()
+    checks = check_manifest(reader)
 
     failed = [check for check in checks if check["status"] != "PASS"]
     for check in checks:

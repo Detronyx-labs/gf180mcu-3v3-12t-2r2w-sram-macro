@@ -24,10 +24,7 @@ PUBLIC_TILE_CELL = "gf180mcu_3v3_12t_2r2w_sram_4x4_tile"
 
 
 def default_reports_path() -> Path:
-    unpacked = Path("reports/pin_lvs_pex_signoff")
-    if unpacked.exists():
-        return unpacked
-    return Path("reports.zip")
+    return Path("reports/pin_lvs_pex_signoff")
 
 
 @dataclass(frozen=True)

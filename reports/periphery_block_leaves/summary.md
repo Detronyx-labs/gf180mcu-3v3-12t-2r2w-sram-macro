@@ -26,6 +26,11 @@ and taps before full macro DRC/LVS.
 
 ## Status
 
-This closes the block-leaf physical split.  Full macro signoff remains open
-until these leaves are tiled, routed to the 12T array, extracted, and checked
-with full macro LVS/PEX/antenna/EMIR.
+This closes the block-leaf physical split: each generated periphery leaf has
+standalone GDS/LEF/Magic/reference-CDL/extracted-SPICE collateral with Magic
+DRC `0`, Netgen LVS `match_unique`, and zero disconnected pins.
+
+The published macro GDS files do not instantiate these leaf cells yet. They are
+still array/control-shell GDS with row-edge/control corridors. Full macro
+signoff remains open until these leaves are tiled, routed to the 12T array,
+extracted, and checked with full macro LVS/PEX/antenna/EMIR.

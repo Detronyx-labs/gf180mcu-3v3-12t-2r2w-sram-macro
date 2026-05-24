@@ -20,10 +20,11 @@ This package contains the current Detronyx custom SRAM review collateral for a G
 | Area | Status | Notes |
 | --- | --- | --- |
 | 12T leaf storage checks | `PASS` locally | See `verification/README.md` and `verification/results/README.md`. |
-| Final pin-LVS / R-aware PEX | `{'OPEN': 5, 'PASS': 24, 'WARN': 4}` | See `reports.zip` path `reports/pin_lvs_pex_signoff/README.md`. |
-| Release Netgen LVS gate | `PASS` | Tile device LVS plus macro-top tile blackbox LVS. Counts: `{'PASS': 8}`. The prior VSS PDN column / `c3_r1_rbl` short is fixed and covered as a regression target. See `reports.zip` path `reports/lvs_gate/README.md` and `verification/`. |
-| Periphery leaf DRC/LVS gate | `PASS` | Tim-derived row decode/WL-driver, write-driver, precharge/sense, and write-conflict leaves are Magic DRC clean and Netgen LVS `match_unique`; periphery gate counts: `{'PASS': 20, 'FAIL': 0}`. See `reports.zip` path `reports/periphery_block_leaves/summary.md` and `verification/gf180mcu_3v3_12t_2r2w_sram_periphery_lvs.py`. |
-| C-aware timing proxy | `WARN` | Source: `openrcx_geometry_fallback`. See `reports.zip` path `reports/cap_pex_timing/README.md`. |
+| Final pin-LVS / R-aware PEX | `{'OPEN': 5, 'PASS': 24, 'WARN': 4}` | See `reports/pin_lvs_pex_signoff/README.md`. |
+| Release Netgen LVS gate | `PASS` | Tile device LVS plus macro-top tile blackbox LVS. Counts: `{'PASS': 8}`. The prior VSS PDN column / `c3_r1_rbl` short is fixed and covered as a regression target. See `reports/lvs_gate/README.md` and `verification/`. |
+| Periphery leaf DRC/LVS gate | `PASS` | Tim-derived row decode/WL-driver, write-driver, precharge/sense, and write-conflict leaves are Magic DRC clean and Netgen LVS `match_unique`; periphery gate counts: `{'PASS': 20, 'FAIL': 0}`. See `reports/periphery_block_leaves/summary.md` and `verification/gf180mcu_3v3_12t_2r2w_sram_periphery_lvs.py`. |
+| Periphery GDS containment | `LEAF PASS / MACRO OPEN` | Standalone periphery leaf GDS files contain their top cells. The four published macro GDS files do not instantiate these leaves yet; they remain array/control-shell GDS. See `verification/gf180mcu_3v3_12t_2r2w_sram_gds_leaf_containment.py`. |
+| C-aware timing proxy | `WARN` | Source: `openrcx_geometry_fallback`. See `reports/cap_pex_timing/README.md`. |
 | Native Magic C extraction | `OPEN` | Local GF180MCU Magic techfile emits R/devices but no capacitance coefficients; OpenRCX fallback is used for C timing proxy. |
 | Local density/fill and antenna | `PASS` | KLayout GF180 density and antenna decks pass on all four published GDS variants. |
 | Foundry signoff | `OPEN` | Needs independent PDK/foundry-grade LVS/PEX/DRC/EM/IR review. |
@@ -31,7 +32,7 @@ This package contains the current Detronyx custom SRAM review collateral for a G
 ## Contents
 
 - `macros/`: GDS, LEF, SPICE blackbox, SystemVerilog blackbox/behavioral/decode contracts, pin JSON, and per-macro summaries.
-- `reports.zip`: generated physical, signoff, C/OpenRCX timing, and staged open-source evidence.
+- `reports/`: generated physical, signoff, C/OpenRCX timing, and staged open-source evidence.
 - `verification/`: release-facing LVS and connectivity scripts for the packaged extracted reports.
 - `scripts/`: release-facing generator entrypoints and helper modules used to build the array and final physical macro collateral.
 - `MANIFEST.json`: package file inventory, public macro aliases, and GDS top-cell rewrite status.
@@ -56,6 +57,7 @@ This publication bundle is generated from the Detronyx GF180 SRAM experiment wor
 ## Known Open Items
 
 - Full device-expanded macro LVS for the final abutted row-edge/control matrix.
+- Full macro GDS integration of the LVS-clean periphery leaves. Current macro GDS files do not contain the `detronyx_12t_*_rc1` periphery leaf cells.
 - Final extracted-RC SPICE characterization after the LVS-clean row decode, write-driver, precharge/sense, and conflict leaves are tiled into the full macro.
 - SNM/read-disturb/half-select/dual-write sweeps on final extracted parasitics.
 - Liberty characterization: setup/hold, clk-to-q, pin caps, power, and invalid arcs.
