@@ -1,0 +1,2054 @@
+[
+  {
+    "direction": "INPUT",
+    "layer": "Metal4",
+    "name": "clk",
+    "rect_um": [
+      0.32,
+      47.06,
+      0.96,
+      47.7
+    ],
+    "use": "SIGNAL"
+  },
+  {
+    "direction": "INPUT",
+    "layer": "Metal4",
+    "name": "w0_en",
+    "rect_um": [
+      0.32,
+      60.545,
+      0.96,
+      61.185
+    ],
+    "use": "SIGNAL"
+  },
+  {
+    "direction": "INPUT",
+    "layer": "Metal4",
+    "name": "w1_en",
+    "rect_um": [
+      0.32,
+      74.025,
+      0.96,
+      74.665
+    ],
+    "use": "SIGNAL"
+  },
+  {
+    "direction": "INPUT",
+    "layer": "Metal4",
+    "name": "r0_en",
+    "rect_um": [
+      0.32,
+      87.505,
+      0.96,
+      88.145
+    ],
+    "use": "SIGNAL"
+  },
+  {
+    "direction": "INPUT",
+    "layer": "Metal4",
+    "name": "r1_en",
+    "rect_um": [
+      0.32,
+      100.99,
+      0.96,
+      101.63
+    ],
+    "use": "SIGNAL"
+  },
+  {
+    "direction": "INPUT",
+    "layer": "Metal4",
+    "name": "w0_addr[0]",
+    "rect_um": [
+      0.32,
+      114.47,
+      0.96,
+      115.11
+    ],
+    "use": "SIGNAL"
+  },
+  {
+    "direction": "INPUT",
+    "layer": "Metal4",
+    "name": "w0_addr[1]",
+    "rect_um": [
+      0.32,
+      127.955,
+      0.96,
+      128.595
+    ],
+    "use": "SIGNAL"
+  },
+  {
+    "direction": "INPUT",
+    "layer": "Metal4",
+    "name": "w0_addr[2]",
+    "rect_um": [
+      0.32,
+      141.435,
+      0.96,
+      142.075
+    ],
+    "use": "SIGNAL"
+  },
+  {
+    "direction": "INPUT",
+    "layer": "Metal4",
+    "name": "w0_addr[3]",
+    "rect_um": [
+      0.32,
+      154.915,
+      0.96,
+      155.555
+    ],
+    "use": "SIGNAL"
+  },
+  {
+    "direction": "INPUT",
+    "layer": "Metal4",
+    "name": "w0_addr[4]",
+    "rect_um": [
+      0.32,
+      168.4,
+      0.96,
+      169.04
+    ],
+    "use": "SIGNAL"
+  },
+  {
+    "direction": "INPUT",
+    "layer": "Metal4",
+    "name": "w0_addr[5]",
+    "rect_um": [
+      0.32,
+      181.88,
+      0.96,
+      182.52
+    ],
+    "use": "SIGNAL"
+  },
+  {
+    "direction": "INPUT",
+    "layer": "Metal4",
+    "name": "w0_addr[6]",
+    "rect_um": [
+      0.32,
+      195.36,
+      0.96,
+      196.0
+    ],
+    "use": "SIGNAL"
+  },
+  {
+    "direction": "INPUT",
+    "layer": "Metal4",
+    "name": "w0_addr[7]",
+    "rect_um": [
+      0.32,
+      208.845,
+      0.96,
+      209.485
+    ],
+    "use": "SIGNAL"
+  },
+  {
+    "direction": "INPUT",
+    "layer": "Metal4",
+    "name": "w0_addr[8]",
+    "rect_um": [
+      0.32,
+      222.325,
+      0.96,
+      222.965
+    ],
+    "use": "SIGNAL"
+  },
+  {
+    "direction": "INPUT",
+    "layer": "Metal4",
+    "name": "w1_addr[0]",
+    "rect_um": [
+      0.32,
+      235.81,
+      0.96,
+      236.45
+    ],
+    "use": "SIGNAL"
+  },
+  {
+    "direction": "INPUT",
+    "layer": "Metal4",
+    "name": "w1_addr[1]",
+    "rect_um": [
+      0.32,
+      249.29,
+      0.96,
+      249.93
+    ],
+    "use": "SIGNAL"
+  },
+  {
+    "direction": "INPUT",
+    "layer": "Metal4",
+    "name": "w1_addr[2]",
+    "rect_um": [
+      0.32,
+      262.77,
+      0.96,
+      263.41
+    ],
+    "use": "SIGNAL"
+  },
+  {
+    "direction": "INPUT",
+    "layer": "Metal4",
+    "name": "w1_addr[3]",
+    "rect_um": [
+      0.32,
+      276.255,
+      0.96,
+      276.895
+    ],
+    "use": "SIGNAL"
+  },
+  {
+    "direction": "INPUT",
+    "layer": "Metal4",
+    "name": "w1_addr[4]",
+    "rect_um": [
+      0.32,
+      289.735,
+      0.96,
+      290.375
+    ],
+    "use": "SIGNAL"
+  },
+  {
+    "direction": "INPUT",
+    "layer": "Metal4",
+    "name": "w1_addr[5]",
+    "rect_um": [
+      0.32,
+      303.22,
+      0.96,
+      303.86
+    ],
+    "use": "SIGNAL"
+  },
+  {
+    "direction": "INPUT",
+    "layer": "Metal4",
+    "name": "w1_addr[6]",
+    "rect_um": [
+      0.32,
+      316.7,
+      0.96,
+      317.34
+    ],
+    "use": "SIGNAL"
+  },
+  {
+    "direction": "INPUT",
+    "layer": "Metal4",
+    "name": "w1_addr[7]",
+    "rect_um": [
+      0.32,
+      330.18,
+      0.96,
+      330.82
+    ],
+    "use": "SIGNAL"
+  },
+  {
+    "direction": "INPUT",
+    "layer": "Metal4",
+    "name": "w1_addr[8]",
+    "rect_um": [
+      0.32,
+      343.665,
+      0.96,
+      344.305
+    ],
+    "use": "SIGNAL"
+  },
+  {
+    "direction": "INPUT",
+    "layer": "Metal4",
+    "name": "r0_addr[0]",
+    "rect_um": [
+      0.32,
+      357.145,
+      0.96,
+      357.785
+    ],
+    "use": "SIGNAL"
+  },
+  {
+    "direction": "INPUT",
+    "layer": "Metal4",
+    "name": "r0_addr[1]",
+    "rect_um": [
+      0.32,
+      370.63,
+      0.96,
+      371.27
+    ],
+    "use": "SIGNAL"
+  },
+  {
+    "direction": "INPUT",
+    "layer": "Metal4",
+    "name": "r0_addr[2]",
+    "rect_um": [
+      0.32,
+      384.11,
+      0.96,
+      384.75
+    ],
+    "use": "SIGNAL"
+  },
+  {
+    "direction": "INPUT",
+    "layer": "Metal4",
+    "name": "r0_addr[3]",
+    "rect_um": [
+      0.32,
+      397.59,
+      0.96,
+      398.23
+    ],
+    "use": "SIGNAL"
+  },
+  {
+    "direction": "INPUT",
+    "layer": "Metal4",
+    "name": "r0_addr[4]",
+    "rect_um": [
+      0.32,
+      411.075,
+      0.96,
+      411.715
+    ],
+    "use": "SIGNAL"
+  },
+  {
+    "direction": "INPUT",
+    "layer": "Metal4",
+    "name": "r0_addr[5]",
+    "rect_um": [
+      0.32,
+      424.555,
+      0.96,
+      425.195
+    ],
+    "use": "SIGNAL"
+  },
+  {
+    "direction": "INPUT",
+    "layer": "Metal4",
+    "name": "r0_addr[6]",
+    "rect_um": [
+      0.32,
+      438.04,
+      0.96,
+      438.68
+    ],
+    "use": "SIGNAL"
+  },
+  {
+    "direction": "INPUT",
+    "layer": "Metal4",
+    "name": "r0_addr[7]",
+    "rect_um": [
+      0.32,
+      451.52,
+      0.96,
+      452.16
+    ],
+    "use": "SIGNAL"
+  },
+  {
+    "direction": "INPUT",
+    "layer": "Metal4",
+    "name": "r0_addr[8]",
+    "rect_um": [
+      0.32,
+      465.0,
+      0.96,
+      465.64
+    ],
+    "use": "SIGNAL"
+  },
+  {
+    "direction": "INPUT",
+    "layer": "Metal4",
+    "name": "r1_addr[0]",
+    "rect_um": [
+      0.32,
+      478.485,
+      0.96,
+      479.125
+    ],
+    "use": "SIGNAL"
+  },
+  {
+    "direction": "INPUT",
+    "layer": "Metal4",
+    "name": "r1_addr[1]",
+    "rect_um": [
+      0.32,
+      491.965,
+      0.96,
+      492.605
+    ],
+    "use": "SIGNAL"
+  },
+  {
+    "direction": "INPUT",
+    "layer": "Metal4",
+    "name": "r1_addr[2]",
+    "rect_um": [
+      0.32,
+      505.445,
+      0.96,
+      506.085
+    ],
+    "use": "SIGNAL"
+  },
+  {
+    "direction": "INPUT",
+    "layer": "Metal4",
+    "name": "r1_addr[3]",
+    "rect_um": [
+      0.32,
+      518.93,
+      0.96,
+      519.57
+    ],
+    "use": "SIGNAL"
+  },
+  {
+    "direction": "INPUT",
+    "layer": "Metal4",
+    "name": "r1_addr[4]",
+    "rect_um": [
+      0.32,
+      532.41,
+      0.96,
+      533.05
+    ],
+    "use": "SIGNAL"
+  },
+  {
+    "direction": "INPUT",
+    "layer": "Metal4",
+    "name": "r1_addr[5]",
+    "rect_um": [
+      0.32,
+      545.895,
+      0.96,
+      546.535
+    ],
+    "use": "SIGNAL"
+  },
+  {
+    "direction": "INPUT",
+    "layer": "Metal4",
+    "name": "r1_addr[6]",
+    "rect_um": [
+      0.32,
+      559.375,
+      0.96,
+      560.015
+    ],
+    "use": "SIGNAL"
+  },
+  {
+    "direction": "INPUT",
+    "layer": "Metal4",
+    "name": "r1_addr[7]",
+    "rect_um": [
+      0.32,
+      572.855,
+      0.96,
+      573.495
+    ],
+    "use": "SIGNAL"
+  },
+  {
+    "direction": "INPUT",
+    "layer": "Metal4",
+    "name": "r1_addr[8]",
+    "rect_um": [
+      0.32,
+      586.34,
+      0.96,
+      586.98
+    ],
+    "use": "SIGNAL"
+  },
+  {
+    "direction": "INPUT",
+    "layer": "Metal5",
+    "name": "w0_data[0]",
+    "rect_um": [
+      174.205,
+      605.72,
+      174.845,
+      606.36
+    ],
+    "use": "SIGNAL"
+  },
+  {
+    "direction": "INPUT",
+    "layer": "Metal5",
+    "name": "w0_data[1]",
+    "rect_um": [
+      187.26,
+      605.72,
+      187.9,
+      606.36
+    ],
+    "use": "SIGNAL"
+  },
+  {
+    "direction": "INPUT",
+    "layer": "Metal5",
+    "name": "w0_data[2]",
+    "rect_um": [
+      200.31,
+      605.72,
+      200.95,
+      606.36
+    ],
+    "use": "SIGNAL"
+  },
+  {
+    "direction": "INPUT",
+    "layer": "Metal5",
+    "name": "w0_data[3]",
+    "rect_um": [
+      213.36,
+      605.72,
+      214.0,
+      606.36
+    ],
+    "use": "SIGNAL"
+  },
+  {
+    "direction": "INPUT",
+    "layer": "Metal5",
+    "name": "w0_data[4]",
+    "rect_um": [
+      226.415,
+      605.72,
+      227.055,
+      606.36
+    ],
+    "use": "SIGNAL"
+  },
+  {
+    "direction": "INPUT",
+    "layer": "Metal5",
+    "name": "w0_data[5]",
+    "rect_um": [
+      239.465,
+      605.72,
+      240.105,
+      606.36
+    ],
+    "use": "SIGNAL"
+  },
+  {
+    "direction": "INPUT",
+    "layer": "Metal5",
+    "name": "w0_data[6]",
+    "rect_um": [
+      252.515,
+      605.72,
+      253.155,
+      606.36
+    ],
+    "use": "SIGNAL"
+  },
+  {
+    "direction": "INPUT",
+    "layer": "Metal5",
+    "name": "w0_data[7]",
+    "rect_um": [
+      265.57,
+      605.72,
+      266.21,
+      606.36
+    ],
+    "use": "SIGNAL"
+  },
+  {
+    "direction": "INPUT",
+    "layer": "Metal5",
+    "name": "w0_data[8]",
+    "rect_um": [
+      278.62,
+      605.72,
+      279.26,
+      606.36
+    ],
+    "use": "SIGNAL"
+  },
+  {
+    "direction": "INPUT",
+    "layer": "Metal5",
+    "name": "w0_data[9]",
+    "rect_um": [
+      291.675,
+      605.72,
+      292.315,
+      606.36
+    ],
+    "use": "SIGNAL"
+  },
+  {
+    "direction": "INPUT",
+    "layer": "Metal5",
+    "name": "w0_data[10]",
+    "rect_um": [
+      304.725,
+      605.72,
+      305.365,
+      606.36
+    ],
+    "use": "SIGNAL"
+  },
+  {
+    "direction": "INPUT",
+    "layer": "Metal5",
+    "name": "w0_data[11]",
+    "rect_um": [
+      317.775,
+      605.72,
+      318.415,
+      606.36
+    ],
+    "use": "SIGNAL"
+  },
+  {
+    "direction": "INPUT",
+    "layer": "Metal5",
+    "name": "w0_data[12]",
+    "rect_um": [
+      330.83,
+      605.72,
+      331.47,
+      606.36
+    ],
+    "use": "SIGNAL"
+  },
+  {
+    "direction": "INPUT",
+    "layer": "Metal5",
+    "name": "w0_data[13]",
+    "rect_um": [
+      343.88,
+      605.72,
+      344.52,
+      606.36
+    ],
+    "use": "SIGNAL"
+  },
+  {
+    "direction": "INPUT",
+    "layer": "Metal5",
+    "name": "w0_data[14]",
+    "rect_um": [
+      356.93,
+      605.72,
+      357.57,
+      606.36
+    ],
+    "use": "SIGNAL"
+  },
+  {
+    "direction": "INPUT",
+    "layer": "Metal5",
+    "name": "w0_data[15]",
+    "rect_um": [
+      369.985,
+      605.72,
+      370.625,
+      606.36
+    ],
+    "use": "SIGNAL"
+  },
+  {
+    "direction": "INPUT",
+    "layer": "Metal5",
+    "name": "w0_data[16]",
+    "rect_um": [
+      383.035,
+      605.72,
+      383.675,
+      606.36
+    ],
+    "use": "SIGNAL"
+  },
+  {
+    "direction": "INPUT",
+    "layer": "Metal5",
+    "name": "w0_data[17]",
+    "rect_um": [
+      396.09,
+      605.72,
+      396.73,
+      606.36
+    ],
+    "use": "SIGNAL"
+  },
+  {
+    "direction": "INPUT",
+    "layer": "Metal5",
+    "name": "w0_data[18]",
+    "rect_um": [
+      409.14,
+      605.72,
+      409.78,
+      606.36
+    ],
+    "use": "SIGNAL"
+  },
+  {
+    "direction": "INPUT",
+    "layer": "Metal5",
+    "name": "w0_data[19]",
+    "rect_um": [
+      422.19,
+      605.72,
+      422.83,
+      606.36
+    ],
+    "use": "SIGNAL"
+  },
+  {
+    "direction": "INPUT",
+    "layer": "Metal5",
+    "name": "w0_data[20]",
+    "rect_um": [
+      435.245,
+      605.72,
+      435.885,
+      606.36
+    ],
+    "use": "SIGNAL"
+  },
+  {
+    "direction": "INPUT",
+    "layer": "Metal5",
+    "name": "w0_data[21]",
+    "rect_um": [
+      448.295,
+      605.72,
+      448.935,
+      606.36
+    ],
+    "use": "SIGNAL"
+  },
+  {
+    "direction": "INPUT",
+    "layer": "Metal5",
+    "name": "w0_data[22]",
+    "rect_um": [
+      461.345,
+      605.72,
+      461.985,
+      606.36
+    ],
+    "use": "SIGNAL"
+  },
+  {
+    "direction": "INPUT",
+    "layer": "Metal5",
+    "name": "w0_data[23]",
+    "rect_um": [
+      474.4,
+      605.72,
+      475.04,
+      606.36
+    ],
+    "use": "SIGNAL"
+  },
+  {
+    "direction": "INPUT",
+    "layer": "Metal5",
+    "name": "w0_data[24]",
+    "rect_um": [
+      487.45,
+      605.72,
+      488.09,
+      606.36
+    ],
+    "use": "SIGNAL"
+  },
+  {
+    "direction": "INPUT",
+    "layer": "Metal5",
+    "name": "w0_data[25]",
+    "rect_um": [
+      500.505,
+      605.72,
+      501.145,
+      606.36
+    ],
+    "use": "SIGNAL"
+  },
+  {
+    "direction": "INPUT",
+    "layer": "Metal5",
+    "name": "w0_data[26]",
+    "rect_um": [
+      513.555,
+      605.72,
+      514.195,
+      606.36
+    ],
+    "use": "SIGNAL"
+  },
+  {
+    "direction": "INPUT",
+    "layer": "Metal5",
+    "name": "w0_data[27]",
+    "rect_um": [
+      526.605,
+      605.72,
+      527.245,
+      606.36
+    ],
+    "use": "SIGNAL"
+  },
+  {
+    "direction": "INPUT",
+    "layer": "Metal5",
+    "name": "w0_data[28]",
+    "rect_um": [
+      539.66,
+      605.72,
+      540.3,
+      606.36
+    ],
+    "use": "SIGNAL"
+  },
+  {
+    "direction": "INPUT",
+    "layer": "Metal5",
+    "name": "w0_data[29]",
+    "rect_um": [
+      552.71,
+      605.72,
+      553.35,
+      606.36
+    ],
+    "use": "SIGNAL"
+  },
+  {
+    "direction": "INPUT",
+    "layer": "Metal5",
+    "name": "w0_data[30]",
+    "rect_um": [
+      565.76,
+      605.72,
+      566.4,
+      606.36
+    ],
+    "use": "SIGNAL"
+  },
+  {
+    "direction": "INPUT",
+    "layer": "Metal5",
+    "name": "w0_data[31]",
+    "rect_um": [
+      578.815,
+      605.72,
+      579.455,
+      606.36
+    ],
+    "use": "SIGNAL"
+  },
+  {
+    "direction": "INPUT",
+    "layer": "Metal5",
+    "name": "w1_data[0]",
+    "rect_um": [
+      591.865,
+      605.72,
+      592.505,
+      606.36
+    ],
+    "use": "SIGNAL"
+  },
+  {
+    "direction": "INPUT",
+    "layer": "Metal5",
+    "name": "w1_data[1]",
+    "rect_um": [
+      604.92,
+      605.72,
+      605.56,
+      606.36
+    ],
+    "use": "SIGNAL"
+  },
+  {
+    "direction": "INPUT",
+    "layer": "Metal5",
+    "name": "w1_data[2]",
+    "rect_um": [
+      617.97,
+      605.72,
+      618.61,
+      606.36
+    ],
+    "use": "SIGNAL"
+  },
+  {
+    "direction": "INPUT",
+    "layer": "Metal5",
+    "name": "w1_data[3]",
+    "rect_um": [
+      631.02,
+      605.72,
+      631.66,
+      606.36
+    ],
+    "use": "SIGNAL"
+  },
+  {
+    "direction": "INPUT",
+    "layer": "Metal5",
+    "name": "w1_data[4]",
+    "rect_um": [
+      644.075,
+      605.72,
+      644.715,
+      606.36
+    ],
+    "use": "SIGNAL"
+  },
+  {
+    "direction": "INPUT",
+    "layer": "Metal5",
+    "name": "w1_data[5]",
+    "rect_um": [
+      657.125,
+      605.72,
+      657.765,
+      606.36
+    ],
+    "use": "SIGNAL"
+  },
+  {
+    "direction": "INPUT",
+    "layer": "Metal5",
+    "name": "w1_data[6]",
+    "rect_um": [
+      670.175,
+      605.72,
+      670.815,
+      606.36
+    ],
+    "use": "SIGNAL"
+  },
+  {
+    "direction": "INPUT",
+    "layer": "Metal5",
+    "name": "w1_data[7]",
+    "rect_um": [
+      683.23,
+      605.72,
+      683.87,
+      606.36
+    ],
+    "use": "SIGNAL"
+  },
+  {
+    "direction": "INPUT",
+    "layer": "Metal5",
+    "name": "w1_data[8]",
+    "rect_um": [
+      696.28,
+      605.72,
+      696.92,
+      606.36
+    ],
+    "use": "SIGNAL"
+  },
+  {
+    "direction": "INPUT",
+    "layer": "Metal5",
+    "name": "w1_data[9]",
+    "rect_um": [
+      709.335,
+      605.72,
+      709.975,
+      606.36
+    ],
+    "use": "SIGNAL"
+  },
+  {
+    "direction": "INPUT",
+    "layer": "Metal5",
+    "name": "w1_data[10]",
+    "rect_um": [
+      722.385,
+      605.72,
+      723.025,
+      606.36
+    ],
+    "use": "SIGNAL"
+  },
+  {
+    "direction": "INPUT",
+    "layer": "Metal5",
+    "name": "w1_data[11]",
+    "rect_um": [
+      735.435,
+      605.72,
+      736.075,
+      606.36
+    ],
+    "use": "SIGNAL"
+  },
+  {
+    "direction": "INPUT",
+    "layer": "Metal5",
+    "name": "w1_data[12]",
+    "rect_um": [
+      748.49,
+      605.72,
+      749.13,
+      606.36
+    ],
+    "use": "SIGNAL"
+  },
+  {
+    "direction": "INPUT",
+    "layer": "Metal5",
+    "name": "w1_data[13]",
+    "rect_um": [
+      761.54,
+      605.72,
+      762.18,
+      606.36
+    ],
+    "use": "SIGNAL"
+  },
+  {
+    "direction": "INPUT",
+    "layer": "Metal5",
+    "name": "w1_data[14]",
+    "rect_um": [
+      774.59,
+      605.72,
+      775.23,
+      606.36
+    ],
+    "use": "SIGNAL"
+  },
+  {
+    "direction": "INPUT",
+    "layer": "Metal5",
+    "name": "w1_data[15]",
+    "rect_um": [
+      787.645,
+      605.72,
+      788.285,
+      606.36
+    ],
+    "use": "SIGNAL"
+  },
+  {
+    "direction": "INPUT",
+    "layer": "Metal5",
+    "name": "w1_data[16]",
+    "rect_um": [
+      800.695,
+      605.72,
+      801.335,
+      606.36
+    ],
+    "use": "SIGNAL"
+  },
+  {
+    "direction": "INPUT",
+    "layer": "Metal5",
+    "name": "w1_data[17]",
+    "rect_um": [
+      813.75,
+      605.72,
+      814.39,
+      606.36
+    ],
+    "use": "SIGNAL"
+  },
+  {
+    "direction": "INPUT",
+    "layer": "Metal5",
+    "name": "w1_data[18]",
+    "rect_um": [
+      826.8,
+      605.72,
+      827.44,
+      606.36
+    ],
+    "use": "SIGNAL"
+  },
+  {
+    "direction": "INPUT",
+    "layer": "Metal5",
+    "name": "w1_data[19]",
+    "rect_um": [
+      839.85,
+      605.72,
+      840.49,
+      606.36
+    ],
+    "use": "SIGNAL"
+  },
+  {
+    "direction": "INPUT",
+    "layer": "Metal5",
+    "name": "w1_data[20]",
+    "rect_um": [
+      852.905,
+      605.72,
+      853.545,
+      606.36
+    ],
+    "use": "SIGNAL"
+  },
+  {
+    "direction": "INPUT",
+    "layer": "Metal5",
+    "name": "w1_data[21]",
+    "rect_um": [
+      865.955,
+      605.72,
+      866.595,
+      606.36
+    ],
+    "use": "SIGNAL"
+  },
+  {
+    "direction": "INPUT",
+    "layer": "Metal5",
+    "name": "w1_data[22]",
+    "rect_um": [
+      879.005,
+      605.72,
+      879.645,
+      606.36
+    ],
+    "use": "SIGNAL"
+  },
+  {
+    "direction": "INPUT",
+    "layer": "Metal5",
+    "name": "w1_data[23]",
+    "rect_um": [
+      892.06,
+      605.72,
+      892.7,
+      606.36
+    ],
+    "use": "SIGNAL"
+  },
+  {
+    "direction": "INPUT",
+    "layer": "Metal5",
+    "name": "w1_data[24]",
+    "rect_um": [
+      905.11,
+      605.72,
+      905.75,
+      606.36
+    ],
+    "use": "SIGNAL"
+  },
+  {
+    "direction": "INPUT",
+    "layer": "Metal5",
+    "name": "w1_data[25]",
+    "rect_um": [
+      918.165,
+      605.72,
+      918.805,
+      606.36
+    ],
+    "use": "SIGNAL"
+  },
+  {
+    "direction": "INPUT",
+    "layer": "Metal5",
+    "name": "w1_data[26]",
+    "rect_um": [
+      931.215,
+      605.72,
+      931.855,
+      606.36
+    ],
+    "use": "SIGNAL"
+  },
+  {
+    "direction": "INPUT",
+    "layer": "Metal5",
+    "name": "w1_data[27]",
+    "rect_um": [
+      944.265,
+      605.72,
+      944.905,
+      606.36
+    ],
+    "use": "SIGNAL"
+  },
+  {
+    "direction": "INPUT",
+    "layer": "Metal5",
+    "name": "w1_data[28]",
+    "rect_um": [
+      957.32,
+      605.72,
+      957.96,
+      606.36
+    ],
+    "use": "SIGNAL"
+  },
+  {
+    "direction": "INPUT",
+    "layer": "Metal5",
+    "name": "w1_data[29]",
+    "rect_um": [
+      970.37,
+      605.72,
+      971.01,
+      606.36
+    ],
+    "use": "SIGNAL"
+  },
+  {
+    "direction": "INPUT",
+    "layer": "Metal5",
+    "name": "w1_data[30]",
+    "rect_um": [
+      983.42,
+      605.72,
+      984.06,
+      606.36
+    ],
+    "use": "SIGNAL"
+  },
+  {
+    "direction": "INPUT",
+    "layer": "Metal5",
+    "name": "w1_data[31]",
+    "rect_um": [
+      996.475,
+      605.72,
+      997.115,
+      606.36
+    ],
+    "use": "SIGNAL"
+  },
+  {
+    "direction": "OUTPUT",
+    "layer": "Metal5",
+    "name": "r0_data[0]",
+    "rect_um": [
+      174.205,
+      19.68,
+      174.845,
+      20.32
+    ],
+    "use": "SIGNAL"
+  },
+  {
+    "direction": "OUTPUT",
+    "layer": "Metal5",
+    "name": "r0_data[1]",
+    "rect_um": [
+      187.26,
+      19.68,
+      187.9,
+      20.32
+    ],
+    "use": "SIGNAL"
+  },
+  {
+    "direction": "OUTPUT",
+    "layer": "Metal5",
+    "name": "r0_data[2]",
+    "rect_um": [
+      200.31,
+      19.68,
+      200.95,
+      20.32
+    ],
+    "use": "SIGNAL"
+  },
+  {
+    "direction": "OUTPUT",
+    "layer": "Metal5",
+    "name": "r0_data[3]",
+    "rect_um": [
+      213.36,
+      19.68,
+      214.0,
+      20.32
+    ],
+    "use": "SIGNAL"
+  },
+  {
+    "direction": "OUTPUT",
+    "layer": "Metal5",
+    "name": "r0_data[4]",
+    "rect_um": [
+      226.415,
+      19.68,
+      227.055,
+      20.32
+    ],
+    "use": "SIGNAL"
+  },
+  {
+    "direction": "OUTPUT",
+    "layer": "Metal5",
+    "name": "r0_data[5]",
+    "rect_um": [
+      239.465,
+      19.68,
+      240.105,
+      20.32
+    ],
+    "use": "SIGNAL"
+  },
+  {
+    "direction": "OUTPUT",
+    "layer": "Metal5",
+    "name": "r0_data[6]",
+    "rect_um": [
+      252.515,
+      19.68,
+      253.155,
+      20.32
+    ],
+    "use": "SIGNAL"
+  },
+  {
+    "direction": "OUTPUT",
+    "layer": "Metal5",
+    "name": "r0_data[7]",
+    "rect_um": [
+      265.57,
+      19.68,
+      266.21,
+      20.32
+    ],
+    "use": "SIGNAL"
+  },
+  {
+    "direction": "OUTPUT",
+    "layer": "Metal5",
+    "name": "r0_data[8]",
+    "rect_um": [
+      278.62,
+      19.68,
+      279.26,
+      20.32
+    ],
+    "use": "SIGNAL"
+  },
+  {
+    "direction": "OUTPUT",
+    "layer": "Metal5",
+    "name": "r0_data[9]",
+    "rect_um": [
+      291.675,
+      19.68,
+      292.315,
+      20.32
+    ],
+    "use": "SIGNAL"
+  },
+  {
+    "direction": "OUTPUT",
+    "layer": "Metal5",
+    "name": "r0_data[10]",
+    "rect_um": [
+      304.725,
+      19.68,
+      305.365,
+      20.32
+    ],
+    "use": "SIGNAL"
+  },
+  {
+    "direction": "OUTPUT",
+    "layer": "Metal5",
+    "name": "r0_data[11]",
+    "rect_um": [
+      317.775,
+      19.68,
+      318.415,
+      20.32
+    ],
+    "use": "SIGNAL"
+  },
+  {
+    "direction": "OUTPUT",
+    "layer": "Metal5",
+    "name": "r0_data[12]",
+    "rect_um": [
+      330.83,
+      19.68,
+      331.47,
+      20.32
+    ],
+    "use": "SIGNAL"
+  },
+  {
+    "direction": "OUTPUT",
+    "layer": "Metal5",
+    "name": "r0_data[13]",
+    "rect_um": [
+      343.88,
+      19.68,
+      344.52,
+      20.32
+    ],
+    "use": "SIGNAL"
+  },
+  {
+    "direction": "OUTPUT",
+    "layer": "Metal5",
+    "name": "r0_data[14]",
+    "rect_um": [
+      356.93,
+      19.68,
+      357.57,
+      20.32
+    ],
+    "use": "SIGNAL"
+  },
+  {
+    "direction": "OUTPUT",
+    "layer": "Metal5",
+    "name": "r0_data[15]",
+    "rect_um": [
+      369.985,
+      19.68,
+      370.625,
+      20.32
+    ],
+    "use": "SIGNAL"
+  },
+  {
+    "direction": "OUTPUT",
+    "layer": "Metal5",
+    "name": "r0_data[16]",
+    "rect_um": [
+      383.035,
+      19.68,
+      383.675,
+      20.32
+    ],
+    "use": "SIGNAL"
+  },
+  {
+    "direction": "OUTPUT",
+    "layer": "Metal5",
+    "name": "r0_data[17]",
+    "rect_um": [
+      396.09,
+      19.68,
+      396.73,
+      20.32
+    ],
+    "use": "SIGNAL"
+  },
+  {
+    "direction": "OUTPUT",
+    "layer": "Metal5",
+    "name": "r0_data[18]",
+    "rect_um": [
+      409.14,
+      19.68,
+      409.78,
+      20.32
+    ],
+    "use": "SIGNAL"
+  },
+  {
+    "direction": "OUTPUT",
+    "layer": "Metal5",
+    "name": "r0_data[19]",
+    "rect_um": [
+      422.19,
+      19.68,
+      422.83,
+      20.32
+    ],
+    "use": "SIGNAL"
+  },
+  {
+    "direction": "OUTPUT",
+    "layer": "Metal5",
+    "name": "r0_data[20]",
+    "rect_um": [
+      435.245,
+      19.68,
+      435.885,
+      20.32
+    ],
+    "use": "SIGNAL"
+  },
+  {
+    "direction": "OUTPUT",
+    "layer": "Metal5",
+    "name": "r0_data[21]",
+    "rect_um": [
+      448.295,
+      19.68,
+      448.935,
+      20.32
+    ],
+    "use": "SIGNAL"
+  },
+  {
+    "direction": "OUTPUT",
+    "layer": "Metal5",
+    "name": "r0_data[22]",
+    "rect_um": [
+      461.345,
+      19.68,
+      461.985,
+      20.32
+    ],
+    "use": "SIGNAL"
+  },
+  {
+    "direction": "OUTPUT",
+    "layer": "Metal5",
+    "name": "r0_data[23]",
+    "rect_um": [
+      474.4,
+      19.68,
+      475.04,
+      20.32
+    ],
+    "use": "SIGNAL"
+  },
+  {
+    "direction": "OUTPUT",
+    "layer": "Metal5",
+    "name": "r0_data[24]",
+    "rect_um": [
+      487.45,
+      19.68,
+      488.09,
+      20.32
+    ],
+    "use": "SIGNAL"
+  },
+  {
+    "direction": "OUTPUT",
+    "layer": "Metal5",
+    "name": "r0_data[25]",
+    "rect_um": [
+      500.505,
+      19.68,
+      501.145,
+      20.32
+    ],
+    "use": "SIGNAL"
+  },
+  {
+    "direction": "OUTPUT",
+    "layer": "Metal5",
+    "name": "r0_data[26]",
+    "rect_um": [
+      513.555,
+      19.68,
+      514.195,
+      20.32
+    ],
+    "use": "SIGNAL"
+  },
+  {
+    "direction": "OUTPUT",
+    "layer": "Metal5",
+    "name": "r0_data[27]",
+    "rect_um": [
+      526.605,
+      19.68,
+      527.245,
+      20.32
+    ],
+    "use": "SIGNAL"
+  },
+  {
+    "direction": "OUTPUT",
+    "layer": "Metal5",
+    "name": "r0_data[28]",
+    "rect_um": [
+      539.66,
+      19.68,
+      540.3,
+      20.32
+    ],
+    "use": "SIGNAL"
+  },
+  {
+    "direction": "OUTPUT",
+    "layer": "Metal5",
+    "name": "r0_data[29]",
+    "rect_um": [
+      552.71,
+      19.68,
+      553.35,
+      20.32
+    ],
+    "use": "SIGNAL"
+  },
+  {
+    "direction": "OUTPUT",
+    "layer": "Metal5",
+    "name": "r0_data[30]",
+    "rect_um": [
+      565.76,
+      19.68,
+      566.4,
+      20.32
+    ],
+    "use": "SIGNAL"
+  },
+  {
+    "direction": "OUTPUT",
+    "layer": "Metal5",
+    "name": "r0_data[31]",
+    "rect_um": [
+      578.815,
+      19.68,
+      579.455,
+      20.32
+    ],
+    "use": "SIGNAL"
+  },
+  {
+    "direction": "OUTPUT",
+    "layer": "Metal5",
+    "name": "r1_data[0]",
+    "rect_um": [
+      591.865,
+      19.68,
+      592.505,
+      20.32
+    ],
+    "use": "SIGNAL"
+  },
+  {
+    "direction": "OUTPUT",
+    "layer": "Metal5",
+    "name": "r1_data[1]",
+    "rect_um": [
+      604.92,
+      19.68,
+      605.56,
+      20.32
+    ],
+    "use": "SIGNAL"
+  },
+  {
+    "direction": "OUTPUT",
+    "layer": "Metal5",
+    "name": "r1_data[2]",
+    "rect_um": [
+      617.97,
+      19.68,
+      618.61,
+      20.32
+    ],
+    "use": "SIGNAL"
+  },
+  {
+    "direction": "OUTPUT",
+    "layer": "Metal5",
+    "name": "r1_data[3]",
+    "rect_um": [
+      631.02,
+      19.68,
+      631.66,
+      20.32
+    ],
+    "use": "SIGNAL"
+  },
+  {
+    "direction": "OUTPUT",
+    "layer": "Metal5",
+    "name": "r1_data[4]",
+    "rect_um": [
+      644.075,
+      19.68,
+      644.715,
+      20.32
+    ],
+    "use": "SIGNAL"
+  },
+  {
+    "direction": "OUTPUT",
+    "layer": "Metal5",
+    "name": "r1_data[5]",
+    "rect_um": [
+      657.125,
+      19.68,
+      657.765,
+      20.32
+    ],
+    "use": "SIGNAL"
+  },
+  {
+    "direction": "OUTPUT",
+    "layer": "Metal5",
+    "name": "r1_data[6]",
+    "rect_um": [
+      670.175,
+      19.68,
+      670.815,
+      20.32
+    ],
+    "use": "SIGNAL"
+  },
+  {
+    "direction": "OUTPUT",
+    "layer": "Metal5",
+    "name": "r1_data[7]",
+    "rect_um": [
+      683.23,
+      19.68,
+      683.87,
+      20.32
+    ],
+    "use": "SIGNAL"
+  },
+  {
+    "direction": "OUTPUT",
+    "layer": "Metal5",
+    "name": "r1_data[8]",
+    "rect_um": [
+      696.28,
+      19.68,
+      696.92,
+      20.32
+    ],
+    "use": "SIGNAL"
+  },
+  {
+    "direction": "OUTPUT",
+    "layer": "Metal5",
+    "name": "r1_data[9]",
+    "rect_um": [
+      709.335,
+      19.68,
+      709.975,
+      20.32
+    ],
+    "use": "SIGNAL"
+  },
+  {
+    "direction": "OUTPUT",
+    "layer": "Metal5",
+    "name": "r1_data[10]",
+    "rect_um": [
+      722.385,
+      19.68,
+      723.025,
+      20.32
+    ],
+    "use": "SIGNAL"
+  },
+  {
+    "direction": "OUTPUT",
+    "layer": "Metal5",
+    "name": "r1_data[11]",
+    "rect_um": [
+      735.435,
+      19.68,
+      736.075,
+      20.32
+    ],
+    "use": "SIGNAL"
+  },
+  {
+    "direction": "OUTPUT",
+    "layer": "Metal5",
+    "name": "r1_data[12]",
+    "rect_um": [
+      748.49,
+      19.68,
+      749.13,
+      20.32
+    ],
+    "use": "SIGNAL"
+  },
+  {
+    "direction": "OUTPUT",
+    "layer": "Metal5",
+    "name": "r1_data[13]",
+    "rect_um": [
+      761.54,
+      19.68,
+      762.18,
+      20.32
+    ],
+    "use": "SIGNAL"
+  },
+  {
+    "direction": "OUTPUT",
+    "layer": "Metal5",
+    "name": "r1_data[14]",
+    "rect_um": [
+      774.59,
+      19.68,
+      775.23,
+      20.32
+    ],
+    "use": "SIGNAL"
+  },
+  {
+    "direction": "OUTPUT",
+    "layer": "Metal5",
+    "name": "r1_data[15]",
+    "rect_um": [
+      787.645,
+      19.68,
+      788.285,
+      20.32
+    ],
+    "use": "SIGNAL"
+  },
+  {
+    "direction": "OUTPUT",
+    "layer": "Metal5",
+    "name": "r1_data[16]",
+    "rect_um": [
+      800.695,
+      19.68,
+      801.335,
+      20.32
+    ],
+    "use": "SIGNAL"
+  },
+  {
+    "direction": "OUTPUT",
+    "layer": "Metal5",
+    "name": "r1_data[17]",
+    "rect_um": [
+      813.75,
+      19.68,
+      814.39,
+      20.32
+    ],
+    "use": "SIGNAL"
+  },
+  {
+    "direction": "OUTPUT",
+    "layer": "Metal5",
+    "name": "r1_data[18]",
+    "rect_um": [
+      826.8,
+      19.68,
+      827.44,
+      20.32
+    ],
+    "use": "SIGNAL"
+  },
+  {
+    "direction": "OUTPUT",
+    "layer": "Metal5",
+    "name": "r1_data[19]",
+    "rect_um": [
+      839.85,
+      19.68,
+      840.49,
+      20.32
+    ],
+    "use": "SIGNAL"
+  },
+  {
+    "direction": "OUTPUT",
+    "layer": "Metal5",
+    "name": "r1_data[20]",
+    "rect_um": [
+      852.905,
+      19.68,
+      853.545,
+      20.32
+    ],
+    "use": "SIGNAL"
+  },
+  {
+    "direction": "OUTPUT",
+    "layer": "Metal5",
+    "name": "r1_data[21]",
+    "rect_um": [
+      865.955,
+      19.68,
+      866.595,
+      20.32
+    ],
+    "use": "SIGNAL"
+  },
+  {
+    "direction": "OUTPUT",
+    "layer": "Metal5",
+    "name": "r1_data[22]",
+    "rect_um": [
+      879.005,
+      19.68,
+      879.645,
+      20.32
+    ],
+    "use": "SIGNAL"
+  },
+  {
+    "direction": "OUTPUT",
+    "layer": "Metal5",
+    "name": "r1_data[23]",
+    "rect_um": [
+      892.06,
+      19.68,
+      892.7,
+      20.32
+    ],
+    "use": "SIGNAL"
+  },
+  {
+    "direction": "OUTPUT",
+    "layer": "Metal5",
+    "name": "r1_data[24]",
+    "rect_um": [
+      905.11,
+      19.68,
+      905.75,
+      20.32
+    ],
+    "use": "SIGNAL"
+  },
+  {
+    "direction": "OUTPUT",
+    "layer": "Metal5",
+    "name": "r1_data[25]",
+    "rect_um": [
+      918.165,
+      19.68,
+      918.805,
+      20.32
+    ],
+    "use": "SIGNAL"
+  },
+  {
+    "direction": "OUTPUT",
+    "layer": "Metal5",
+    "name": "r1_data[26]",
+    "rect_um": [
+      931.215,
+      19.68,
+      931.855,
+      20.32
+    ],
+    "use": "SIGNAL"
+  },
+  {
+    "direction": "OUTPUT",
+    "layer": "Metal5",
+    "name": "r1_data[27]",
+    "rect_um": [
+      944.265,
+      19.68,
+      944.905,
+      20.32
+    ],
+    "use": "SIGNAL"
+  },
+  {
+    "direction": "OUTPUT",
+    "layer": "Metal5",
+    "name": "r1_data[28]",
+    "rect_um": [
+      957.32,
+      19.68,
+      957.96,
+      20.32
+    ],
+    "use": "SIGNAL"
+  },
+  {
+    "direction": "OUTPUT",
+    "layer": "Metal5",
+    "name": "r1_data[29]",
+    "rect_um": [
+      970.37,
+      19.68,
+      971.01,
+      20.32
+    ],
+    "use": "SIGNAL"
+  },
+  {
+    "direction": "OUTPUT",
+    "layer": "Metal5",
+    "name": "r1_data[30]",
+    "rect_um": [
+      983.42,
+      19.68,
+      984.06,
+      20.32
+    ],
+    "use": "SIGNAL"
+  },
+  {
+    "direction": "OUTPUT",
+    "layer": "Metal5",
+    "name": "r1_data[31]",
+    "rect_um": [
+      996.475,
+      19.68,
+      997.115,
+      20.32
+    ],
+    "use": "SIGNAL"
+  },
+  {
+    "direction": "INOUT",
+    "layer": "Metal5",
+    "name": "VDD",
+    "rect_um": [
+      0.0,
+      616.84,
+      1003.96,
+      618.04
+    ],
+    "use": "POWER"
+  },
+  {
+    "direction": "INOUT",
+    "layer": "Metal5",
+    "name": "VSS",
+    "rect_um": [
+      0.0,
+      0.0,
+      1003.96,
+      1.2
+    ],
+    "use": "GROUND"
+  }
+]

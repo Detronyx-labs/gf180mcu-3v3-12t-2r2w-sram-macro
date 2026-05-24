@@ -1,0 +1,2 @@
+.subckt gf180mcu_3v3_12t_sram_ctrl_row_select3_wlbuf VDD VSS P0 P1 P2 WL
+.ends gf180mcu_3v3_12t_sram_ctrl_row_select3_wlbuf

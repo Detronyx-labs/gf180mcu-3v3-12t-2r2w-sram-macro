@@ -1,0 +1,7 @@
+index,block,mos,role,x_units,y_units,x_um,y_um
+1,nand3,nmos,nand_n0,600,3880,3.0,19.4
+2,nand3,nmos,nand_n1,1032,3880,5.16,19.4
+3,nand3,nmos,nand_n2,1464,3880,7.32,19.4
+4,nand3,pmos,nand_p0,600,4819,3.0,24.095
+5,nand3,pmos,nand_p1,1204,4819,6.02,24.095
+6,nand3,pmos,nand_p2,1808,4819,9.04,24.095

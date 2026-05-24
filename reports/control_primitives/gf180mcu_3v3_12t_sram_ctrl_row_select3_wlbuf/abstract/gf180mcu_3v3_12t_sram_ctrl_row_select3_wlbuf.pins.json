@@ -1,0 +1,464 @@
+{
+  "cell": "gf180mcu_3v3_12t_sram_ctrl_row_select3_wlbuf",
+  "pins": [
+    {
+      "direction": "INOUT",
+      "layer": "metal3",
+      "name": "VDD",
+      "use": "POWER",
+      "xhi": 5520,
+      "xlo": 5448,
+      "yhi": 16587,
+      "ylo": 16347
+    },
+    {
+      "direction": "INOUT",
+      "layer": "metal3",
+      "name": "VSS",
+      "use": "GROUND",
+      "xhi": 5380,
+      "xlo": 5308,
+      "yhi": 280,
+      "ylo": 40
+    },
+    {
+      "direction": "INPUT",
+      "layer": "metal3",
+      "name": "P0",
+      "use": "SIGNAL",
+      "xhi": 5660,
+      "xlo": 5588,
+      "yhi": 240,
+      "ylo": 80
+    },
+    {
+      "direction": "INPUT",
+      "layer": "metal3",
+      "name": "P1",
+      "use": "SIGNAL",
+      "xhi": 5800,
+      "xlo": 5728,
+      "yhi": 16727,
+      "ylo": 16567
+    },
+    {
+      "direction": "INPUT",
+      "layer": "metal3",
+      "name": "P2",
+      "use": "SIGNAL",
+      "xhi": 5940,
+      "xlo": 5868,
+      "yhi": 240,
+      "ylo": 80
+    },
+    {
+      "direction": "OUTPUT",
+      "layer": "metal3",
+      "name": "WL",
+      "use": "SIGNAL",
+      "xhi": 6080,
+      "xlo": 6008,
+      "yhi": 16727,
+      "ylo": 16567
+    }
+  ],
+  "primitive": "row_select3_wlbuf",
+  "route_terms": [
+    {
+      "block": "row_select3_wlbuf",
+      "kind": "diff",
+      "net": "row_n",
+      "role": "row_nand3_n0",
+      "terminal": "drain",
+      "x": 636,
+      "y": 5709
+    },
+    {
+      "block": "row_select3_wlbuf",
+      "kind": "gate",
+      "net": "P0",
+      "role": "row_nand3_n0",
+      "terminal": "gate",
+      "x": 716,
+      "y": 5840
+    },
+    {
+      "block": "row_select3_wlbuf",
+      "kind": "diff",
+      "net": "row_nand3_mid0",
+      "role": "row_nand3_n0",
+      "terminal": "source",
+      "x": 796,
+      "y": 5709
+    },
+    {
+      "block": "row_select3_wlbuf",
+      "kind": "diff",
+      "net": "row_nand3_mid0",
+      "role": "row_nand3_n1",
+      "terminal": "drain",
+      "x": 1068,
+      "y": 5709
+    },
+    {
+      "block": "row_select3_wlbuf",
+      "kind": "gate",
+      "net": "P1",
+      "role": "row_nand3_n1",
+      "terminal": "gate",
+      "x": 1148,
+      "y": 5840
+    },
+    {
+      "block": "row_select3_wlbuf",
+      "kind": "diff",
+      "net": "row_nand3_mid1",
+      "role": "row_nand3_n1",
+      "terminal": "source",
+      "x": 1228,
+      "y": 5709
+    },
+    {
+      "block": "row_select3_wlbuf",
+      "kind": "diff",
+      "net": "row_nand3_mid1",
+      "role": "row_nand3_n2",
+      "terminal": "drain",
+      "x": 1500,
+      "y": 5709
+    },
+    {
+      "block": "row_select3_wlbuf",
+      "kind": "gate",
+      "net": "P2",
+      "role": "row_nand3_n2",
+      "terminal": "gate",
+      "x": 1580,
+      "y": 5840
+    },
+    {
+      "block": "row_select3_wlbuf",
+      "kind": "diff",
+      "net": "VSS",
+      "role": "row_nand3_n2",
+      "terminal": "source",
+      "x": 1660,
+      "y": 5709
+    },
+    {
+      "block": "row_select3_wlbuf",
+      "kind": "diff",
+      "net": "buf0",
+      "role": "buf0_n",
+      "terminal": "drain",
+      "x": 1932,
+      "y": 5709
+    },
+    {
+      "block": "row_select3_wlbuf",
+      "kind": "gate",
+      "net": "row_n",
+      "role": "buf0_n",
+      "terminal": "gate",
+      "x": 2012,
+      "y": 5840
+    },
+    {
+      "block": "row_select3_wlbuf",
+      "kind": "diff",
+      "net": "VSS",
+      "role": "buf0_n",
+      "terminal": "source",
+      "x": 2092,
+      "y": 5709
+    },
+    {
+      "block": "row_select3_wlbuf",
+      "kind": "diff",
+      "net": "buf1",
+      "role": "buf1_n",
+      "terminal": "drain",
+      "x": 2364,
+      "y": 5709
+    },
+    {
+      "block": "row_select3_wlbuf",
+      "kind": "gate",
+      "net": "buf0",
+      "role": "buf1_n",
+      "terminal": "gate",
+      "x": 2444,
+      "y": 5840
+    },
+    {
+      "block": "row_select3_wlbuf",
+      "kind": "diff",
+      "net": "VSS",
+      "role": "buf1_n",
+      "terminal": "source",
+      "x": 2524,
+      "y": 5709
+    },
+    {
+      "block": "row_select3_wlbuf",
+      "kind": "diff",
+      "net": "WL",
+      "role": "buf2_n",
+      "terminal": "drain",
+      "x": 2796,
+      "y": 5709
+    },
+    {
+      "block": "row_select3_wlbuf",
+      "kind": "gate",
+      "net": "buf1",
+      "role": "buf2_n",
+      "terminal": "gate",
+      "x": 2876,
+      "y": 5840
+    },
+    {
+      "block": "row_select3_wlbuf",
+      "kind": "diff",
+      "net": "VSS",
+      "role": "buf2_n",
+      "terminal": "source",
+      "x": 2956,
+      "y": 5709
+    },
+    {
+      "block": "row_select3_wlbuf",
+      "kind": "diff",
+      "net": "row_n",
+      "role": "row_nand3_p0",
+      "terminal": "drain",
+      "x": 722,
+      "y": 6641
+    },
+    {
+      "block": "row_select3_wlbuf",
+      "kind": "gate",
+      "net": "P0",
+      "role": "row_nand3_p0",
+      "terminal": "gate",
+      "x": 802,
+      "y": 6719
+    },
+    {
+      "block": "row_select3_wlbuf",
+      "kind": "diff",
+      "net": "VDD",
+      "role": "row_nand3_p0",
+      "terminal": "source",
+      "x": 882,
+      "y": 6641
+    },
+    {
+      "block": "row_select3_wlbuf",
+      "kind": "diff",
+      "net": "row_n",
+      "role": "row_nand3_p1",
+      "terminal": "drain",
+      "x": 1326,
+      "y": 6641
+    },
+    {
+      "block": "row_select3_wlbuf",
+      "kind": "gate",
+      "net": "P1",
+      "role": "row_nand3_p1",
+      "terminal": "gate",
+      "x": 1406,
+      "y": 6719
+    },
+    {
+      "block": "row_select3_wlbuf",
+      "kind": "diff",
+      "net": "VDD",
+      "role": "row_nand3_p1",
+      "terminal": "source",
+      "x": 1486,
+      "y": 6641
+    },
+    {
+      "block": "row_select3_wlbuf",
+      "kind": "diff",
+      "net": "row_n",
+      "role": "row_nand3_p2",
+      "terminal": "drain",
+      "x": 1930,
+      "y": 6641
+    },
+    {
+      "block": "row_select3_wlbuf",
+      "kind": "gate",
+      "net": "P2",
+      "role": "row_nand3_p2",
+      "terminal": "gate",
+      "x": 2010,
+      "y": 6719
+    },
+    {
+      "block": "row_select3_wlbuf",
+      "kind": "diff",
+      "net": "VDD",
+      "role": "row_nand3_p2",
+      "terminal": "source",
+      "x": 2090,
+      "y": 6641
+    },
+    {
+      "block": "row_select3_wlbuf",
+      "kind": "diff",
+      "net": "buf0",
+      "role": "buf0_p",
+      "terminal": "drain",
+      "x": 2534,
+      "y": 6641
+    },
+    {
+      "block": "row_select3_wlbuf",
+      "kind": "gate",
+      "net": "row_n",
+      "role": "buf0_p",
+      "terminal": "gate",
+      "x": 2614,
+      "y": 6719
+    },
+    {
+      "block": "row_select3_wlbuf",
+      "kind": "diff",
+      "net": "VDD",
+      "role": "buf0_p",
+      "terminal": "source",
+      "x": 2694,
+      "y": 6641
+    },
+    {
+      "block": "row_select3_wlbuf",
+      "kind": "diff",
+      "net": "buf1",
+      "role": "buf1_p",
+      "terminal": "drain",
+      "x": 3138,
+      "y": 6641
+    },
+    {
+      "block": "row_select3_wlbuf",
+      "kind": "gate",
+      "net": "buf0",
+      "role": "buf1_p",
+      "terminal": "gate",
+      "x": 3218,
+      "y": 6719
+    },
+    {
+      "block": "row_select3_wlbuf",
+      "kind": "diff",
+      "net": "VDD",
+      "role": "buf1_p",
+      "terminal": "source",
+      "x": 3298,
+      "y": 6641
+    },
+    {
+      "block": "row_select3_wlbuf",
+      "kind": "diff",
+      "net": "WL",
+      "role": "buf2_p",
+      "terminal": "drain",
+      "x": 3742,
+      "y": 6641
+    },
+    {
+      "block": "row_select3_wlbuf",
+      "kind": "gate",
+      "net": "buf1",
+      "role": "buf2_p",
+      "terminal": "gate",
+      "x": 3822,
+      "y": 6719
+    },
+    {
+      "block": "row_select3_wlbuf",
+      "kind": "diff",
+      "net": "VDD",
+      "role": "buf2_p",
+      "terminal": "source",
+      "x": 3902,
+      "y": 6641
+    },
+    {
+      "block": "row_select3_wlbuf",
+      "kind": "diff",
+      "net": "VSS",
+      "role": "psub_tap",
+      "terminal": "tap",
+      "x": 4224,
+      "y": 5840
+    },
+    {
+      "block": "row_select3_wlbuf",
+      "kind": "diff",
+      "net": "VDD",
+      "role": "nsub_tap",
+      "terminal": "tap",
+      "x": 4224,
+      "y": 6503
+    },
+    {
+      "block": "row_select3_wlbuf",
+      "kind": "pin",
+      "net": "VDD",
+      "role": "VDD",
+      "terminal": "pin",
+      "x": 5484,
+      "y": 16467
+    },
+    {
+      "block": "row_select3_wlbuf",
+      "kind": "pin",
+      "net": "VSS",
+      "role": "VSS",
+      "terminal": "pin",
+      "x": 5344,
+      "y": 160
+    },
+    {
+      "block": "row_select3_wlbuf",
+      "kind": "pin",
+      "net": "P0",
+      "role": "P0",
+      "terminal": "pin",
+      "x": 5624,
+      "y": 160
+    },
+    {
+      "block": "row_select3_wlbuf",
+      "kind": "pin",
+      "net": "P1",
+      "role": "P1",
+      "terminal": "pin",
+      "x": 5764,
+      "y": 16647
+    },
+    {
+      "block": "row_select3_wlbuf",
+      "kind": "pin",
+      "net": "P2",
+      "role": "P2",
+      "terminal": "pin",
+      "x": 5904,
+      "y": 160
+    },
+    {
+      "block": "row_select3_wlbuf",
+      "kind": "pin",
+      "net": "WL",
+      "role": "WL",
+      "terminal": "pin",
+      "x": 6044,
+      "y": 16647
+    }
+  ]
+}

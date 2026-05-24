@@ -1,0 +1,375 @@
+{
+  "cell": "gf180mcu_3v3_12t_sram_ctrl_nand4",
+  "pins": [
+    {
+      "direction": "INOUT",
+      "layer": "metal3",
+      "name": "VDD",
+      "use": "POWER",
+      "xhi": 4312,
+      "xlo": 4240,
+      "yhi": 13783,
+      "ylo": 13543
+    },
+    {
+      "direction": "INOUT",
+      "layer": "metal3",
+      "name": "VSS",
+      "use": "GROUND",
+      "xhi": 4172,
+      "xlo": 4100,
+      "yhi": 280,
+      "ylo": 40
+    },
+    {
+      "direction": "INPUT",
+      "layer": "metal3",
+      "name": "A",
+      "use": "SIGNAL",
+      "xhi": 4452,
+      "xlo": 4380,
+      "yhi": 240,
+      "ylo": 80
+    },
+    {
+      "direction": "INPUT",
+      "layer": "metal3",
+      "name": "B",
+      "use": "SIGNAL",
+      "xhi": 4592,
+      "xlo": 4520,
+      "yhi": 13923,
+      "ylo": 13763
+    },
+    {
+      "direction": "INPUT",
+      "layer": "metal3",
+      "name": "C",
+      "use": "SIGNAL",
+      "xhi": 4732,
+      "xlo": 4660,
+      "yhi": 240,
+      "ylo": 80
+    },
+    {
+      "direction": "INPUT",
+      "layer": "metal3",
+      "name": "D",
+      "use": "SIGNAL",
+      "xhi": 4872,
+      "xlo": 4800,
+      "yhi": 13923,
+      "ylo": 13763
+    },
+    {
+      "direction": "OUTPUT",
+      "layer": "metal3",
+      "name": "Y",
+      "use": "SIGNAL",
+      "xhi": 5012,
+      "xlo": 4940,
+      "yhi": 240,
+      "ylo": 80
+    }
+  ],
+  "primitive": "nand4",
+  "route_terms": [
+    {
+      "block": "nand4",
+      "kind": "diff",
+      "net": "Y",
+      "role": "nand_n0",
+      "terminal": "drain",
+      "x": 636,
+      "y": 4589
+    },
+    {
+      "block": "nand4",
+      "kind": "gate",
+      "net": "A",
+      "role": "nand_n0",
+      "terminal": "gate",
+      "x": 716,
+      "y": 4720
+    },
+    {
+      "block": "nand4",
+      "kind": "diff",
+      "net": "nand_mid0",
+      "role": "nand_n0",
+      "terminal": "source",
+      "x": 796,
+      "y": 4589
+    },
+    {
+      "block": "nand4",
+      "kind": "diff",
+      "net": "nand_mid0",
+      "role": "nand_n1",
+      "terminal": "drain",
+      "x": 1068,
+      "y": 4589
+    },
+    {
+      "block": "nand4",
+      "kind": "gate",
+      "net": "B",
+      "role": "nand_n1",
+      "terminal": "gate",
+      "x": 1148,
+      "y": 4720
+    },
+    {
+      "block": "nand4",
+      "kind": "diff",
+      "net": "nand_mid1",
+      "role": "nand_n1",
+      "terminal": "source",
+      "x": 1228,
+      "y": 4589
+    },
+    {
+      "block": "nand4",
+      "kind": "diff",
+      "net": "nand_mid1",
+      "role": "nand_n2",
+      "terminal": "drain",
+      "x": 1500,
+      "y": 4589
+    },
+    {
+      "block": "nand4",
+      "kind": "gate",
+      "net": "C",
+      "role": "nand_n2",
+      "terminal": "gate",
+      "x": 1580,
+      "y": 4720
+    },
+    {
+      "block": "nand4",
+      "kind": "diff",
+      "net": "nand_mid2",
+      "role": "nand_n2",
+      "terminal": "source",
+      "x": 1660,
+      "y": 4589
+    },
+    {
+      "block": "nand4",
+      "kind": "diff",
+      "net": "nand_mid2",
+      "role": "nand_n3",
+      "terminal": "drain",
+      "x": 1932,
+      "y": 4589
+    },
+    {
+      "block": "nand4",
+      "kind": "gate",
+      "net": "D",
+      "role": "nand_n3",
+      "terminal": "gate",
+      "x": 2012,
+      "y": 4720
+    },
+    {
+      "block": "nand4",
+      "kind": "diff",
+      "net": "VSS",
+      "role": "nand_n3",
+      "terminal": "source",
+      "x": 2092,
+      "y": 4589
+    },
+    {
+      "block": "nand4",
+      "kind": "diff",
+      "net": "Y",
+      "role": "nand_p0",
+      "terminal": "drain",
+      "x": 722,
+      "y": 5521
+    },
+    {
+      "block": "nand4",
+      "kind": "gate",
+      "net": "A",
+      "role": "nand_p0",
+      "terminal": "gate",
+      "x": 802,
+      "y": 5599
+    },
+    {
+      "block": "nand4",
+      "kind": "diff",
+      "net": "VDD",
+      "role": "nand_p0",
+      "terminal": "source",
+      "x": 882,
+      "y": 5521
+    },
+    {
+      "block": "nand4",
+      "kind": "diff",
+      "net": "Y",
+      "role": "nand_p1",
+      "terminal": "drain",
+      "x": 1326,
+      "y": 5521
+    },
+    {
+      "block": "nand4",
+      "kind": "gate",
+      "net": "B",
+      "role": "nand_p1",
+      "terminal": "gate",
+      "x": 1406,
+      "y": 5599
+    },
+    {
+      "block": "nand4",
+      "kind": "diff",
+      "net": "VDD",
+      "role": "nand_p1",
+      "terminal": "source",
+      "x": 1486,
+      "y": 5521
+    },
+    {
+      "block": "nand4",
+      "kind": "diff",
+      "net": "Y",
+      "role": "nand_p2",
+      "terminal": "drain",
+      "x": 1930,
+      "y": 5521
+    },
+    {
+      "block": "nand4",
+      "kind": "gate",
+      "net": "C",
+      "role": "nand_p2",
+      "terminal": "gate",
+      "x": 2010,
+      "y": 5599
+    },
+    {
+      "block": "nand4",
+      "kind": "diff",
+      "net": "VDD",
+      "role": "nand_p2",
+      "terminal": "source",
+      "x": 2090,
+      "y": 5521
+    },
+    {
+      "block": "nand4",
+      "kind": "diff",
+      "net": "Y",
+      "role": "nand_p3",
+      "terminal": "drain",
+      "x": 2534,
+      "y": 5521
+    },
+    {
+      "block": "nand4",
+      "kind": "gate",
+      "net": "D",
+      "role": "nand_p3",
+      "terminal": "gate",
+      "x": 2614,
+      "y": 5599
+    },
+    {
+      "block": "nand4",
+      "kind": "diff",
+      "net": "VDD",
+      "role": "nand_p3",
+      "terminal": "source",
+      "x": 2694,
+      "y": 5521
+    },
+    {
+      "block": "nand4",
+      "kind": "diff",
+      "net": "VSS",
+      "role": "psub_tap",
+      "terminal": "tap",
+      "x": 3016,
+      "y": 4720
+    },
+    {
+      "block": "nand4",
+      "kind": "diff",
+      "net": "VDD",
+      "role": "nsub_tap",
+      "terminal": "tap",
+      "x": 3016,
+      "y": 5383
+    },
+    {
+      "block": "nand4",
+      "kind": "pin",
+      "net": "VDD",
+      "role": "VDD",
+      "terminal": "pin",
+      "x": 4276,
+      "y": 13663
+    },
+    {
+      "block": "nand4",
+      "kind": "pin",
+      "net": "VSS",
+      "role": "VSS",
+      "terminal": "pin",
+      "x": 4136,
+      "y": 160
+    },
+    {
+      "block": "nand4",
+      "kind": "pin",
+      "net": "A",
+      "role": "A",
+      "terminal": "pin",
+      "x": 4416,
+      "y": 160
+    },
+    {
+      "block": "nand4",
+      "kind": "pin",
+      "net": "B",
+      "role": "B",
+      "terminal": "pin",
+      "x": 4556,
+      "y": 13843
+    },
+    {
+      "block": "nand4",
+      "kind": "pin",
+      "net": "C",
+      "role": "C",
+      "terminal": "pin",
+      "x": 4696,
+      "y": 160
+    },
+    {
+      "block": "nand4",
+      "kind": "pin",
+      "net": "D",
+      "role": "D",
+      "terminal": "pin",
+      "x": 4836,
+      "y": 13843
+    },
+    {
+      "block": "nand4",
+      "kind": "pin",
+      "net": "Y",
+      "role": "Y",
+      "terminal": "pin",
+      "x": 4976,
+      "y": 160
+    }
+  ]
+}

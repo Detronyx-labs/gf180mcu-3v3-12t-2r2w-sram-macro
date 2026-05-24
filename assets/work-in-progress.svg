@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="220" viewBox="0 0 1400 220" role="img" aria-label="WORK IN PROGRESS - NOT TAPEOUT SIGNOFF">
+  <rect width="1400" height="220" fill="#b00020"/>
+  <rect x="18" y="18" width="1364" height="184" fill="none" stroke="#ffffff" stroke-width="8"/>
+  <text x="700" y="102" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="70" font-weight="900" fill="#ffffff">WORK IN PROGRESS</text>
+  <text x="700" y="158" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="700" fill="#ffffff">NOT TAPEOUT SIGNOFF COLLATERAL</text>
+</svg>

@@ -1,0 +1,2 @@
+.subckt gf180mcu_3v3_12t_sram_ctrl_nand2 VDD VSS A B Y
+.ends gf180mcu_3v3_12t_sram_ctrl_nand2

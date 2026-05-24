@@ -1,0 +1,27 @@
+* Generated current 12T 2W2R SRAM critical-path RC timing proxy.
+* This intentionally uses extracted/scaled wire C and idealized drivers/current.
+.param VDD=3.3
+.param IREAD=10u
+
+VWL_DRV wl_drv 0 PULSE(0 {VDD} 0.2n 50p 50p 10n 20n)
+RWL wl_drv wl_far 80.3168
+CWL wl_far 0 197.858f
+
+.ic v(bl_far)=3.3 v(wbl_far)=3.3
+RBL bl_near bl_far 49.4432
+CBL bl_far 0 316.988f
+IREAD bl_far 0 PULSE(0 {IREAD} 1n 50p 50p 10n 20n)
+
+VWRITE_DRV wdrv 0 PULSE(3.3 0 1n 50p 50p 10n 20n)
+RWBL wdrv wbl_far 49.4432
+CWBL wbl_far 0 316.988f
+
+.tran 2p 20n uic
+.meas tran wl50_ns WHEN v(wl_far)='VDD/2' RISE=1
+.meas tran bl_150mv_ns WHEN v(bl_far)='3.15' FALL=1
+.meas tran write_10pct_ns WHEN v(wbl_far)='0.1*VDD' FALL=1
+.control
+run
+quit
+.endc
+.end

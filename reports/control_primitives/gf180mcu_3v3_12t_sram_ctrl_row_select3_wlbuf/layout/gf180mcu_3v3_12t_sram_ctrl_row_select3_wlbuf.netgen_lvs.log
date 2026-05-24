@@ -1,0 +1,25 @@
+
+Subcircuit summary:
+Circuit 1: detronyx_12t_ctrl_row_select3_w |Circuit 2: detronyx_12t_ctrl_row_select3_w 
+-------------------------------------------|-------------------------------------------
+nfet_03v3 (6)                              |nfet_03v3 (6)                              
+pfet_03v3 (6)                              |pfet_03v3 (6)                              
+Number of devices: 12                      |Number of devices: 12                      
+Number of nets: 11                         |Number of nets: 11                         
+---------------------------------------------------------------------------------------
+Circuits match uniquely.
+Netlists match uniquely.
+
+Subcircuit pins:
+Circuit 1: detronyx_12t_ctrl_row_select3_w |Circuit 2: detronyx_12t_ctrl_row_select3_w 
+-------------------------------------------|-------------------------------------------
+VDD                                        |VDD                                        
+VSS                                        |VSS                                        
+P0                                         |P0                                         
+P1                                         |P1                                         
+P2                                         |P2                                         
+WL                                         |WL                                         
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes gf180mcu_3v3_12t_sram_ctrl_row_select3_wlbuf and gf180mcu_3v3_12t_sram_ctrl_row_select3_wlbuf are equivalent.
+Circuits match uniquely.
