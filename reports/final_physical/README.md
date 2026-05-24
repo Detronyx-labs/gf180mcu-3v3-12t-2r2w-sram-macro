@@ -1,0 +1,20 @@
+# current Final Physical Macro Package
+
+| Macro | Shape | Size | Area | Max | DRC | Pins | Status |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: | --- |
+| `gf180mcu_3v3_12t_2r2w_sram_1024x32` | `1024x32` | `1003.960um x 1172.280um` | `1.176922mm^2` | `1.200000mm^2` | `0` | `175` | `pass_max` |
+| `gf180mcu_3v3_12t_2r2w_sram_1024x8` | `1024x8` | `585.560um x 618.040um` | `0.361900mm^2` | `0.350000mm^2` | `0` | `79` | `warn_within_5pct` |
+| `gf180mcu_3v3_12t_2r2w_sram_512x32` | `512x32` | `1003.960um x 618.040um` | `0.620487mm^2` | `0.600000mm^2` | `0` | `171` | `warn_within_5pct` |
+| `gf180mcu_3v3_12t_2r2w_sram_512x8` | `512x8` | `585.560um x 340.920um` | `0.199629mm^2` | `0.200000mm^2` | `0` | `75` | `pass_max` |
+
+Generated artifacts per macro:
+
+- Magic top layout with repeated verified 4x4 tile array;
+- final row-edge/control corridor geometry;
+- physical boundary pins for control/address/data plus VDD/VSS;
+- M4/M5 top-level power straps;
+- GDS, LEF, blackbox SPICE, blackbox SV, behavioral SV, decode contract.
+
+Remaining non-abstract physical closure: replace the row-edge corridor
+with the dense transistor-level row-select/predecode matrix and run full
+device LVS/PEX on that expanded top.

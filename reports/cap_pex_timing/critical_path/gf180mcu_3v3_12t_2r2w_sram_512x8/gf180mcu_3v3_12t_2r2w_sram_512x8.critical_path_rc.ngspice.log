@@ -1,0 +1,34 @@
+Error: PDK: no such variable.
+Error: PDK: no such variable.
+Error: PDK: no such variable.
+Error opening osdi lib "<local-home>/IHP-Open-PDK//libs.tech/ngspice/osdi/psp103.osdi": No such file or directory!
+Error: Library <local-home>/IHP-Open-PDK//libs.tech/ngspice/osdi/psp103.osdi couldn't be loaded!
+Error: PDK: no such variable.
+Error opening osdi lib "<local-home>/IHP-Open-PDK//libs.tech/ngspice/osdi/psp103_nqs.osdi": No such file or directory!
+Error: Library <local-home>/IHP-Open-PDK//libs.tech/ngspice/osdi/psp103_nqs.osdi couldn't be loaded!
+Error: PDK: no such variable.
+Error opening osdi lib "<local-home>/IHP-Open-PDK//libs.tech/ngspice/osdi/r3_cmc.osdi": No such file or directory!
+Error: Library <local-home>/IHP-Open-PDK//libs.tech/ngspice/osdi/r3_cmc.osdi couldn't be loaded!
+Error: PDK: no such variable.
+Error opening osdi lib "<local-home>/IHP-Open-PDK//libs.tech/ngspice/osdi/mosvar.osdi": No such file or directory!
+Error: Library <local-home>/IHP-Open-PDK//libs.tech/ngspice/osdi/mosvar.osdi couldn't be loaded!
+Using SPARSE 1.3 as Direct Linear Solver
+
+Note: No compatibility mode selected!
+
+
+Circuit: * generated 12t 2r2w sram critical-path rc timing proxy.
+
+Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
+
+Using transient initial conditions
+
+No. of Data Rows : 10035
+
+  Measurements for Transient Analysis
+
+wl50_ns             =   2.27317e-10
+bl_150mv_ns         =   3.40241e-09
+write_10pct_ns      =   1.04932e-09
+
+ngspice-42 done

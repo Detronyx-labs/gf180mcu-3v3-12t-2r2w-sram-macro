@@ -1,1 +1,5 @@
 verification/results/spice/
+verification/results/*_lvs/
+verification/results/*_lvs_gate/
+verification/__pycache__/
+scripts/__pycache__/
