@@ -21,7 +21,7 @@ This package contains the current Detronyx custom SRAM review collateral for a G
 | --- | --- | --- |
 | 12T leaf storage checks | `PASS` locally | See `verification/README.md` and `verification/results/README.md`. |
 | Final pin-LVS / R-aware PEX | `{'OPEN': 5, 'PASS': 24, 'WARN': 4}` | See `reports.zip` path `reports/pin_lvs_pex_signoff/README.md`. |
-| Release Netgen LVS gate | `PASS` | Tile device LVS plus macro-top tile blackbox LVS. Counts: `{'PASS': 8}`. See `reports.zip` path `reports/lvs_gate/README.md` and `verification/`. |
+| Release Netgen LVS gate | `PASS` | Tile device LVS plus macro-top tile blackbox LVS. Counts: `{'PASS': 8}`. The prior VSS PDN column / `c3_r1_rbl` short is fixed and covered as a regression target. See `reports.zip` path `reports/lvs_gate/README.md` and `verification/`. |
 | C-aware timing proxy | `WARN` | Source: `openrcx_geometry_fallback`. See `reports.zip` path `reports/cap_pex_timing/README.md`. |
 | Native Magic C extraction | `OPEN` | Local GF180MCU Magic techfile emits R/devices but no capacitance coefficients; OpenRCX fallback is used for C timing proxy. |
 | Local density/fill and antenna | `PASS` | KLayout GF180 density and antenna decks pass on all four published GDS variants. |
