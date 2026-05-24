@@ -1,0 +1,25 @@
+
+Subcircuit summary:
+Circuit 1: detronyx_12t_write_conflict_rc1 |Circuit 2: detronyx_12t_write_conflict_rc1 
+-------------------------------------------|-------------------------------------------
+nfet_03v3 (6)                              |nfet_03v3 (6)                              
+pfet_03v3 (6)                              |pfet_03v3 (6)                              
+Number of devices: 12                      |Number of devices: 12                      
+Number of nets: 11                         |Number of nets: 11                         
+---------------------------------------------------------------------------------------
+Circuits match uniquely.
+Netlists match uniquely.
+
+Subcircuit pins:
+Circuit 1: detronyx_12t_write_conflict_rc1 |Circuit 2: detronyx_12t_write_conflict_rc1 
+-------------------------------------------|-------------------------------------------
+VDD                                        |VDD                                        
+VSS                                        |VSS                                        
+w0_en                                      |w0_en                                      
+w1_en                                      |w1_en                                      
+addr_eq                                    |addr_eq                                    
+write_conflict                             |write_conflict                             
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes detronyx_12t_write_conflict_rc1 and detronyx_12t_write_conflict_rc1 are equivalent.
+Circuits match uniquely.

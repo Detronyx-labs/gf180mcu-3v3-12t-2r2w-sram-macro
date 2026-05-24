@@ -1,0 +1,42 @@
+* Independent intended-topology CDL for detronyx_12t_write_row_decode7_wl_driver_rc1
+* Generated from the periphery RC1 role map.
+.subckt detronyx_12t_write_row_decode7_wl_driver_rc1 VDD VSS wdecen a[0] a[1] a[2] a[3] a[4] a[5] a[6] wwl0
+X1_pre0_n_pull_a0 wdec_pre0_n a[0] wdec_pre0_s0 VSS nfet_03v3 w=1.055u l=0.28u
+X2_pre0_n_pull_a1 wdec_pre0_s0 a[1] wdec_pre0_s1 VSS nfet_03v3 w=1.055u l=0.28u
+X3_pre0_n_pull_a2 wdec_pre0_s1 a[2] VSS VSS nfet_03v3 w=1.055u l=0.28u
+X4_pre1_n_pull_a3 wdec_pre1_n a[3] wdec_pre1_s0 VSS nfet_03v3 w=1.055u l=0.28u
+X5_pre1_n_pull_a4 wdec_pre1_s0 a[4] VSS VSS nfet_03v3 w=1.055u l=0.28u
+X6_pre2_n_pull_a5 wdec_pre2_n a[5] wdec_pre2_s0 VSS nfet_03v3 w=1.055u l=0.28u
+X7_pre2_n_pull_a6 wdec_pre2_s0 a[6] wdec_pre2_s1 VSS nfet_03v3 w=1.055u l=0.28u
+X8_pre2_n_pull_en wdec_pre2_s1 wdecen VSS VSS nfet_03v3 w=1.055u l=0.28u
+X9_row_n_pull_pre0 wdec_row_n wdec_pre0 wdec_row_s0 VSS nfet_03v3 w=1.055u l=0.28u
+X10_row_n_pull_pre1 wdec_row_s0 wdec_pre1 wdec_row_s1 VSS nfet_03v3 w=1.055u l=0.28u
+X11_row_n_pull_pre2 wdec_row_s1 wdec_pre2 VSS VSS nfet_03v3 w=1.055u l=0.28u
+X12_pre0_inv_n wdec_pre0 wdec_pre0_n VSS VSS nfet_03v3 w=1.055u l=0.28u
+X13_pre1_inv_n wdec_pre1 wdec_pre1_n VSS VSS nfet_03v3 w=1.055u l=0.28u
+X14_pre2_inv_n wdec_pre2 wdec_pre2_n VSS VSS nfet_03v3 w=1.055u l=0.28u
+X15_row_inv_n wdec_row_sel wdec_row_n VSS VSS nfet_03v3 w=1.055u l=0.28u
+X16_wl_drv0_n wdec_wl_b0 wdec_row_sel VSS VSS nfet_03v3 w=1.055u l=0.28u
+X17_wl_drv1_n wdec_wl_s1 wdec_wl_b0 VSS VSS nfet_03v3 w=1.055u l=0.28u
+X18_wl_drv2_n wdec_wl_b2 wdec_wl_s1 VSS VSS nfet_03v3 w=1.055u l=0.28u
+X19_wl_drv3_n wwl0 wdec_wl_b2 VSS VSS nfet_03v3 w=1.055u l=0.28u
+X20_pre0_n_pullup_a0 wdec_pre0_n a[0] VDD VDD pfet_03v3 w=0.56u l=0.28u
+X21_pre0_n_pullup_a1 wdec_pre0_n a[1] VDD VDD pfet_03v3 w=0.56u l=0.28u
+X22_pre0_n_pullup_a2 wdec_pre0_n a[2] VDD VDD pfet_03v3 w=0.56u l=0.28u
+X23_pre1_n_pullup_a3 wdec_pre1_n a[3] VDD VDD pfet_03v3 w=0.56u l=0.28u
+X24_pre1_n_pullup_a4 wdec_pre1_n a[4] VDD VDD pfet_03v3 w=0.56u l=0.28u
+X25_pre2_n_pullup_a5 wdec_pre2_n a[5] VDD VDD pfet_03v3 w=0.56u l=0.28u
+X26_pre2_n_pullup_a6 wdec_pre2_n a[6] VDD VDD pfet_03v3 w=0.56u l=0.28u
+X27_pre2_n_pullup_en wdec_pre2_n wdecen VDD VDD pfet_03v3 w=0.56u l=0.28u
+X28_row_n_pullup_pre0 wdec_row_n wdec_pre0 VDD VDD pfet_03v3 w=0.56u l=0.28u
+X29_row_n_pullup_pre1 wdec_row_n wdec_pre1 VDD VDD pfet_03v3 w=0.56u l=0.28u
+X30_row_n_pullup_pre2 wdec_row_n wdec_pre2 VDD VDD pfet_03v3 w=0.56u l=0.28u
+X31_pre0_inv_p wdec_pre0 wdec_pre0_n VDD VDD pfet_03v3 w=0.56u l=0.28u
+X32_pre1_inv_p wdec_pre1 wdec_pre1_n VDD VDD pfet_03v3 w=0.56u l=0.28u
+X33_pre2_inv_p wdec_pre2 wdec_pre2_n VDD VDD pfet_03v3 w=0.56u l=0.28u
+X34_row_inv_p wdec_row_sel wdec_row_n VDD VDD pfet_03v3 w=0.56u l=0.28u
+X35_wl_drv0_p wdec_wl_b0 wdec_row_sel VDD VDD pfet_03v3 w=0.56u l=0.28u
+X36_wl_drv1_p wdec_wl_s1 wdec_wl_b0 VDD VDD pfet_03v3 w=0.56u l=0.28u
+X37_wl_drv2_p wdec_wl_b2 wdec_wl_s1 VDD VDD pfet_03v3 w=0.56u l=0.28u
+X38_wl_drv3_p wwl0 wdec_wl_b2 VDD VDD pfet_03v3 w=0.56u l=0.28u
+.ends detronyx_12t_write_row_decode7_wl_driver_rc1

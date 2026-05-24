@@ -1,0 +1,859 @@
+{
+  "cell": "detronyx_12t_write_driver_rc1",
+  "block": "write_driver",
+  "status": "block_leaf_rc1",
+  "pins": [
+    {
+      "name": "VDD",
+      "direction": "INOUT",
+      "use": "POWER",
+      "layer": "metal3",
+      "xlo": 9676,
+      "ylo": 26911,
+      "xhi": 9748,
+      "yhi": 27151
+    },
+    {
+      "name": "VSS",
+      "direction": "INOUT",
+      "use": "GROUND",
+      "layer": "metal3",
+      "xlo": 9536,
+      "ylo": 140,
+      "xhi": 9608,
+      "yhi": 380
+    },
+    {
+      "name": "din",
+      "direction": "INPUT",
+      "use": "SIGNAL",
+      "layer": "metal3",
+      "xlo": 9816,
+      "ylo": 140,
+      "xhi": 9888,
+      "yhi": 300
+    },
+    {
+      "name": "wen",
+      "direction": "INPUT",
+      "use": "SIGNAL",
+      "layer": "metal3",
+      "xlo": 11776,
+      "ylo": 27131,
+      "xhi": 11848,
+      "yhi": 27291
+    },
+    {
+      "name": "wbl0",
+      "direction": "INPUT",
+      "use": "SIGNAL",
+      "layer": "metal3",
+      "xlo": 10096,
+      "ylo": 140,
+      "xhi": 10168,
+      "yhi": 300
+    },
+    {
+      "name": "wbr0",
+      "direction": "INPUT",
+      "use": "SIGNAL",
+      "layer": "metal3",
+      "xlo": 10936,
+      "ylo": 27131,
+      "xhi": 11008,
+      "yhi": 27291
+    }
+  ],
+  "route_terms": [
+    {
+      "net": "din_b",
+      "kind": "diff",
+      "x": 636,
+      "y": 9629,
+      "block": "write_driver",
+      "role": "dinb_inv_n",
+      "terminal": "drain"
+    },
+    {
+      "net": "din",
+      "kind": "gate",
+      "x": 716,
+      "y": 9760,
+      "block": "write_driver",
+      "role": "dinb_inv_n",
+      "terminal": "gate"
+    },
+    {
+      "net": "VSS",
+      "kind": "diff",
+      "x": 796,
+      "y": 9629,
+      "block": "write_driver",
+      "role": "dinb_inv_n",
+      "terminal": "source"
+    },
+    {
+      "net": "wbl_up_n",
+      "kind": "diff",
+      "x": 1068,
+      "y": 9629,
+      "block": "write_driver",
+      "role": "wbl_up_nand_n0",
+      "terminal": "drain"
+    },
+    {
+      "net": "din",
+      "kind": "gate",
+      "x": 1148,
+      "y": 9760,
+      "block": "write_driver",
+      "role": "wbl_up_nand_n0",
+      "terminal": "gate"
+    },
+    {
+      "net": "wbl_up_mid",
+      "kind": "diff",
+      "x": 1228,
+      "y": 9629,
+      "block": "write_driver",
+      "role": "wbl_up_nand_n0",
+      "terminal": "source"
+    },
+    {
+      "net": "wbl_up_mid",
+      "kind": "diff",
+      "x": 1500,
+      "y": 9629,
+      "block": "write_driver",
+      "role": "wbl_up_nand_n1",
+      "terminal": "drain"
+    },
+    {
+      "net": "wen",
+      "kind": "gate",
+      "x": 1580,
+      "y": 9760,
+      "block": "write_driver",
+      "role": "wbl_up_nand_n1",
+      "terminal": "gate"
+    },
+    {
+      "net": "VSS",
+      "kind": "diff",
+      "x": 1660,
+      "y": 9629,
+      "block": "write_driver",
+      "role": "wbl_up_nand_n1",
+      "terminal": "source"
+    },
+    {
+      "net": "wbl_dn_n",
+      "kind": "diff",
+      "x": 1932,
+      "y": 9629,
+      "block": "write_driver",
+      "role": "wbl_dn_nand_n0",
+      "terminal": "drain"
+    },
+    {
+      "net": "din_b",
+      "kind": "gate",
+      "x": 2012,
+      "y": 9760,
+      "block": "write_driver",
+      "role": "wbl_dn_nand_n0",
+      "terminal": "gate"
+    },
+    {
+      "net": "wbl_dn_mid",
+      "kind": "diff",
+      "x": 2092,
+      "y": 9629,
+      "block": "write_driver",
+      "role": "wbl_dn_nand_n0",
+      "terminal": "source"
+    },
+    {
+      "net": "wbl_dn_mid",
+      "kind": "diff",
+      "x": 2364,
+      "y": 9629,
+      "block": "write_driver",
+      "role": "wbl_dn_nand_n1",
+      "terminal": "drain"
+    },
+    {
+      "net": "wen",
+      "kind": "gate",
+      "x": 2444,
+      "y": 9760,
+      "block": "write_driver",
+      "role": "wbl_dn_nand_n1",
+      "terminal": "gate"
+    },
+    {
+      "net": "VSS",
+      "kind": "diff",
+      "x": 2524,
+      "y": 9629,
+      "block": "write_driver",
+      "role": "wbl_dn_nand_n1",
+      "terminal": "source"
+    },
+    {
+      "net": "wbl_dn",
+      "kind": "diff",
+      "x": 2796,
+      "y": 9629,
+      "block": "write_driver",
+      "role": "wbl_dn_inv_n",
+      "terminal": "drain"
+    },
+    {
+      "net": "wbl_dn_n",
+      "kind": "gate",
+      "x": 2876,
+      "y": 9760,
+      "block": "write_driver",
+      "role": "wbl_dn_inv_n",
+      "terminal": "gate"
+    },
+    {
+      "net": "VSS",
+      "kind": "diff",
+      "x": 2956,
+      "y": 9629,
+      "block": "write_driver",
+      "role": "wbl_dn_inv_n",
+      "terminal": "source"
+    },
+    {
+      "net": "wbl0",
+      "kind": "diff",
+      "x": 3228,
+      "y": 9629,
+      "block": "write_driver",
+      "role": "wbl_pull_down",
+      "terminal": "drain"
+    },
+    {
+      "net": "wbl_dn",
+      "kind": "gate",
+      "x": 3308,
+      "y": 9760,
+      "block": "write_driver",
+      "role": "wbl_pull_down",
+      "terminal": "gate"
+    },
+    {
+      "net": "VSS",
+      "kind": "diff",
+      "x": 3388,
+      "y": 9629,
+      "block": "write_driver",
+      "role": "wbl_pull_down",
+      "terminal": "source"
+    },
+    {
+      "net": "wbr_up_n",
+      "kind": "diff",
+      "x": 3660,
+      "y": 9629,
+      "block": "write_driver",
+      "role": "wbr_up_nand_n0",
+      "terminal": "drain"
+    },
+    {
+      "net": "din_b",
+      "kind": "gate",
+      "x": 3740,
+      "y": 9760,
+      "block": "write_driver",
+      "role": "wbr_up_nand_n0",
+      "terminal": "gate"
+    },
+    {
+      "net": "wbr_up_mid",
+      "kind": "diff",
+      "x": 3820,
+      "y": 9629,
+      "block": "write_driver",
+      "role": "wbr_up_nand_n0",
+      "terminal": "source"
+    },
+    {
+      "net": "wbr_up_mid",
+      "kind": "diff",
+      "x": 4092,
+      "y": 9629,
+      "block": "write_driver",
+      "role": "wbr_up_nand_n1",
+      "terminal": "drain"
+    },
+    {
+      "net": "wen",
+      "kind": "gate",
+      "x": 4172,
+      "y": 9760,
+      "block": "write_driver",
+      "role": "wbr_up_nand_n1",
+      "terminal": "gate"
+    },
+    {
+      "net": "VSS",
+      "kind": "diff",
+      "x": 4252,
+      "y": 9629,
+      "block": "write_driver",
+      "role": "wbr_up_nand_n1",
+      "terminal": "source"
+    },
+    {
+      "net": "wbr_dn_n",
+      "kind": "diff",
+      "x": 4524,
+      "y": 9629,
+      "block": "write_driver",
+      "role": "wbr_dn_nand_n0",
+      "terminal": "drain"
+    },
+    {
+      "net": "din",
+      "kind": "gate",
+      "x": 4604,
+      "y": 9760,
+      "block": "write_driver",
+      "role": "wbr_dn_nand_n0",
+      "terminal": "gate"
+    },
+    {
+      "net": "wbr_dn_mid",
+      "kind": "diff",
+      "x": 4684,
+      "y": 9629,
+      "block": "write_driver",
+      "role": "wbr_dn_nand_n0",
+      "terminal": "source"
+    },
+    {
+      "net": "wbr_dn_mid",
+      "kind": "diff",
+      "x": 4956,
+      "y": 9629,
+      "block": "write_driver",
+      "role": "wbr_dn_nand_n1",
+      "terminal": "drain"
+    },
+    {
+      "net": "wen",
+      "kind": "gate",
+      "x": 5036,
+      "y": 9760,
+      "block": "write_driver",
+      "role": "wbr_dn_nand_n1",
+      "terminal": "gate"
+    },
+    {
+      "net": "VSS",
+      "kind": "diff",
+      "x": 5116,
+      "y": 9629,
+      "block": "write_driver",
+      "role": "wbr_dn_nand_n1",
+      "terminal": "source"
+    },
+    {
+      "net": "wbr_dn",
+      "kind": "diff",
+      "x": 5388,
+      "y": 9629,
+      "block": "write_driver",
+      "role": "wbr_dn_inv_n",
+      "terminal": "drain"
+    },
+    {
+      "net": "wbr_dn_n",
+      "kind": "gate",
+      "x": 5468,
+      "y": 9760,
+      "block": "write_driver",
+      "role": "wbr_dn_inv_n",
+      "terminal": "gate"
+    },
+    {
+      "net": "VSS",
+      "kind": "diff",
+      "x": 5548,
+      "y": 9629,
+      "block": "write_driver",
+      "role": "wbr_dn_inv_n",
+      "terminal": "source"
+    },
+    {
+      "net": "wbr0",
+      "kind": "diff",
+      "x": 5820,
+      "y": 9629,
+      "block": "write_driver",
+      "role": "wbr_pull_down",
+      "terminal": "drain"
+    },
+    {
+      "net": "wbr_dn",
+      "kind": "gate",
+      "x": 5900,
+      "y": 9760,
+      "block": "write_driver",
+      "role": "wbr_pull_down",
+      "terminal": "gate"
+    },
+    {
+      "net": "VSS",
+      "kind": "diff",
+      "x": 5980,
+      "y": 9629,
+      "block": "write_driver",
+      "role": "wbr_pull_down",
+      "terminal": "source"
+    },
+    {
+      "net": "din_b",
+      "kind": "diff",
+      "x": 722,
+      "y": 10561,
+      "block": "write_driver",
+      "role": "dinb_inv_p",
+      "terminal": "drain"
+    },
+    {
+      "net": "din",
+      "kind": "gate",
+      "x": 802,
+      "y": 10639,
+      "block": "write_driver",
+      "role": "dinb_inv_p",
+      "terminal": "gate"
+    },
+    {
+      "net": "VDD",
+      "kind": "diff",
+      "x": 882,
+      "y": 10561,
+      "block": "write_driver",
+      "role": "dinb_inv_p",
+      "terminal": "source"
+    },
+    {
+      "net": "wbl_up_n",
+      "kind": "diff",
+      "x": 1326,
+      "y": 10561,
+      "block": "write_driver",
+      "role": "wbl_up_nand_p0",
+      "terminal": "drain"
+    },
+    {
+      "net": "din",
+      "kind": "gate",
+      "x": 1406,
+      "y": 10639,
+      "block": "write_driver",
+      "role": "wbl_up_nand_p0",
+      "terminal": "gate"
+    },
+    {
+      "net": "VDD",
+      "kind": "diff",
+      "x": 1486,
+      "y": 10561,
+      "block": "write_driver",
+      "role": "wbl_up_nand_p0",
+      "terminal": "source"
+    },
+    {
+      "net": "wbl_up_n",
+      "kind": "diff",
+      "x": 1930,
+      "y": 10561,
+      "block": "write_driver",
+      "role": "wbl_up_nand_p1",
+      "terminal": "drain"
+    },
+    {
+      "net": "wen",
+      "kind": "gate",
+      "x": 2010,
+      "y": 10639,
+      "block": "write_driver",
+      "role": "wbl_up_nand_p1",
+      "terminal": "gate"
+    },
+    {
+      "net": "VDD",
+      "kind": "diff",
+      "x": 2090,
+      "y": 10561,
+      "block": "write_driver",
+      "role": "wbl_up_nand_p1",
+      "terminal": "source"
+    },
+    {
+      "net": "wbl_dn_n",
+      "kind": "diff",
+      "x": 2534,
+      "y": 10561,
+      "block": "write_driver",
+      "role": "wbl_dn_nand_p0",
+      "terminal": "drain"
+    },
+    {
+      "net": "din_b",
+      "kind": "gate",
+      "x": 2614,
+      "y": 10639,
+      "block": "write_driver",
+      "role": "wbl_dn_nand_p0",
+      "terminal": "gate"
+    },
+    {
+      "net": "VDD",
+      "kind": "diff",
+      "x": 2694,
+      "y": 10561,
+      "block": "write_driver",
+      "role": "wbl_dn_nand_p0",
+      "terminal": "source"
+    },
+    {
+      "net": "wbl_dn_n",
+      "kind": "diff",
+      "x": 3138,
+      "y": 10561,
+      "block": "write_driver",
+      "role": "wbl_dn_nand_p1",
+      "terminal": "drain"
+    },
+    {
+      "net": "wen",
+      "kind": "gate",
+      "x": 3218,
+      "y": 10639,
+      "block": "write_driver",
+      "role": "wbl_dn_nand_p1",
+      "terminal": "gate"
+    },
+    {
+      "net": "VDD",
+      "kind": "diff",
+      "x": 3298,
+      "y": 10561,
+      "block": "write_driver",
+      "role": "wbl_dn_nand_p1",
+      "terminal": "source"
+    },
+    {
+      "net": "wbl_dn",
+      "kind": "diff",
+      "x": 3742,
+      "y": 10561,
+      "block": "write_driver",
+      "role": "wbl_dn_inv_p",
+      "terminal": "drain"
+    },
+    {
+      "net": "wbl_dn_n",
+      "kind": "gate",
+      "x": 3822,
+      "y": 10639,
+      "block": "write_driver",
+      "role": "wbl_dn_inv_p",
+      "terminal": "gate"
+    },
+    {
+      "net": "VDD",
+      "kind": "diff",
+      "x": 3902,
+      "y": 10561,
+      "block": "write_driver",
+      "role": "wbl_dn_inv_p",
+      "terminal": "source"
+    },
+    {
+      "net": "wbl0",
+      "kind": "diff",
+      "x": 4346,
+      "y": 10561,
+      "block": "write_driver",
+      "role": "wbl_pull_up",
+      "terminal": "drain"
+    },
+    {
+      "net": "wbl_up_n",
+      "kind": "gate",
+      "x": 4426,
+      "y": 10639,
+      "block": "write_driver",
+      "role": "wbl_pull_up",
+      "terminal": "gate"
+    },
+    {
+      "net": "VDD",
+      "kind": "diff",
+      "x": 4506,
+      "y": 10561,
+      "block": "write_driver",
+      "role": "wbl_pull_up",
+      "terminal": "source"
+    },
+    {
+      "net": "wbr_up_n",
+      "kind": "diff",
+      "x": 4950,
+      "y": 10561,
+      "block": "write_driver",
+      "role": "wbr_up_nand_p0",
+      "terminal": "drain"
+    },
+    {
+      "net": "din_b",
+      "kind": "gate",
+      "x": 5030,
+      "y": 10639,
+      "block": "write_driver",
+      "role": "wbr_up_nand_p0",
+      "terminal": "gate"
+    },
+    {
+      "net": "VDD",
+      "kind": "diff",
+      "x": 5110,
+      "y": 10561,
+      "block": "write_driver",
+      "role": "wbr_up_nand_p0",
+      "terminal": "source"
+    },
+    {
+      "net": "wbr_up_n",
+      "kind": "diff",
+      "x": 5554,
+      "y": 10561,
+      "block": "write_driver",
+      "role": "wbr_up_nand_p1",
+      "terminal": "drain"
+    },
+    {
+      "net": "wen",
+      "kind": "gate",
+      "x": 5634,
+      "y": 10639,
+      "block": "write_driver",
+      "role": "wbr_up_nand_p1",
+      "terminal": "gate"
+    },
+    {
+      "net": "VDD",
+      "kind": "diff",
+      "x": 5714,
+      "y": 10561,
+      "block": "write_driver",
+      "role": "wbr_up_nand_p1",
+      "terminal": "source"
+    },
+    {
+      "net": "wbr_dn_n",
+      "kind": "diff",
+      "x": 6158,
+      "y": 10561,
+      "block": "write_driver",
+      "role": "wbr_dn_nand_p0",
+      "terminal": "drain"
+    },
+    {
+      "net": "din",
+      "kind": "gate",
+      "x": 6238,
+      "y": 10639,
+      "block": "write_driver",
+      "role": "wbr_dn_nand_p0",
+      "terminal": "gate"
+    },
+    {
+      "net": "VDD",
+      "kind": "diff",
+      "x": 6318,
+      "y": 10561,
+      "block": "write_driver",
+      "role": "wbr_dn_nand_p0",
+      "terminal": "source"
+    },
+    {
+      "net": "wbr_dn_n",
+      "kind": "diff",
+      "x": 6762,
+      "y": 10561,
+      "block": "write_driver",
+      "role": "wbr_dn_nand_p1",
+      "terminal": "drain"
+    },
+    {
+      "net": "wen",
+      "kind": "gate",
+      "x": 6842,
+      "y": 10639,
+      "block": "write_driver",
+      "role": "wbr_dn_nand_p1",
+      "terminal": "gate"
+    },
+    {
+      "net": "VDD",
+      "kind": "diff",
+      "x": 6922,
+      "y": 10561,
+      "block": "write_driver",
+      "role": "wbr_dn_nand_p1",
+      "terminal": "source"
+    },
+    {
+      "net": "wbr_dn",
+      "kind": "diff",
+      "x": 7366,
+      "y": 10561,
+      "block": "write_driver",
+      "role": "wbr_dn_inv_p",
+      "terminal": "drain"
+    },
+    {
+      "net": "wbr_dn_n",
+      "kind": "gate",
+      "x": 7446,
+      "y": 10639,
+      "block": "write_driver",
+      "role": "wbr_dn_inv_p",
+      "terminal": "gate"
+    },
+    {
+      "net": "VDD",
+      "kind": "diff",
+      "x": 7526,
+      "y": 10561,
+      "block": "write_driver",
+      "role": "wbr_dn_inv_p",
+      "terminal": "source"
+    },
+    {
+      "net": "wbr0",
+      "kind": "diff",
+      "x": 7970,
+      "y": 10561,
+      "block": "write_driver",
+      "role": "wbr_pull_up",
+      "terminal": "drain"
+    },
+    {
+      "net": "wbr_up_n",
+      "kind": "gate",
+      "x": 8050,
+      "y": 10639,
+      "block": "write_driver",
+      "role": "wbr_pull_up",
+      "terminal": "gate"
+    },
+    {
+      "net": "VDD",
+      "kind": "diff",
+      "x": 8130,
+      "y": 10561,
+      "block": "write_driver",
+      "role": "wbr_pull_up",
+      "terminal": "source"
+    },
+    {
+      "net": "VSS",
+      "kind": "diff",
+      "x": 8452,
+      "y": 9760,
+      "block": "write_driver",
+      "role": "psub_tap",
+      "terminal": "tap"
+    },
+    {
+      "net": "VDD",
+      "kind": "diff",
+      "x": 8452,
+      "y": 10423,
+      "block": "write_driver",
+      "role": "nsub_tap",
+      "terminal": "tap"
+    },
+    {
+      "net": "VDD",
+      "kind": "pin",
+      "x": 9712,
+      "y": 26991,
+      "block": "pin",
+      "role": "VDD",
+      "terminal": "pin"
+    },
+    {
+      "net": "VSS",
+      "kind": "pin",
+      "x": 9572,
+      "y": 220,
+      "block": "pin",
+      "role": "VSS",
+      "terminal": "pin"
+    },
+    {
+      "net": "din",
+      "kind": "pin",
+      "x": 9852,
+      "y": 220,
+      "block": "pin",
+      "role": "din",
+      "terminal": "pin"
+    },
+    {
+      "net": "wen",
+      "kind": "pin",
+      "x": 11812,
+      "y": 27211,
+      "block": "pin",
+      "role": "wen",
+      "terminal": "pin"
+    },
+    {
+      "net": "wbl0",
+      "kind": "pin",
+      "x": 10132,
+      "y": 220,
+      "block": "pin",
+      "role": "wbl0",
+      "terminal": "pin"
+    },
+    {
+      "net": "wbr0",
+      "kind": "pin",
+      "x": 10972,
+      "y": 27211,
+      "block": "pin",
+      "role": "wbr0",
+      "terminal": "pin"
+    }
+  ],
+  "primitive_sources": {
+    "nmos": {
+      "name": "periphery_nmos",
+      "source": "nmos_5p04310591302010_3v512x8m81.mag",
+      "width_units": 232,
+      "height_units": 299,
+      "rect_count": 17
+    },
+    "pmos": {
+      "name": "periphery_pmos",
+      "source": "pmos_5p04310591302038_3v512x8m81.mag",
+      "width_units": 404,
+      "height_units": 284,
+      "rect_count": 18
+    }
+  }
+}

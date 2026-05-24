@@ -1,0 +1,65 @@
+VERSION 5.8 ;
+BUSBITCHARS "[]" ;
+DIVIDERCHAR "/" ;
+MACRO detronyx_12t_precharge_sense_rc1
+  CLASS BLOCK ;
+  FOREIGN detronyx_12t_precharge_sense_rc1 0.000 0.000 ;
+  ORIGIN 0.000 0.000 ;
+  SIZE 25.280000 BY 62.075000 ;
+  SYMMETRY X Y ;
+  PIN VDD
+    DIRECTION INOUT ;
+    USE POWER ;
+    PORT
+      LAYER Metal3 ;
+        RECT 21.200000 60.875000 21.560000 62.075000 ;
+    END
+  END VDD
+  PIN VSS
+    DIRECTION INOUT ;
+    USE GROUND ;
+    PORT
+      LAYER Metal3 ;
+        RECT 20.500000 0.700000 20.860000 1.900000 ;
+    END
+  END VSS
+  PIN pchgb
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal3 ;
+        RECT 22.600000 0.700000 22.960000 1.500000 ;
+    END
+  END pchgb
+  PIN ren
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal3 ;
+        RECT 24.000000 61.975000 24.360000 62.775000 ;
+    END
+  END ren
+  PIN rbl0
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal3 ;
+        RECT 23.300000 0.700000 23.660000 1.500000 ;
+    END
+  END rbl0
+  PIN dout
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal3 ;
+        RECT 21.900000 61.975000 22.260000 62.775000 ;
+    END
+  END dout
+  OBS
+    LAYER Metal1 ;
+      RECT 0.000000 0.000000 25.280000 62.075000 ;
+    LAYER Metal2 ;
+      RECT 0.000000 0.000000 25.280000 62.075000 ;
+  END
+END detronyx_12t_precharge_sense_rc1
+END LIBRARY

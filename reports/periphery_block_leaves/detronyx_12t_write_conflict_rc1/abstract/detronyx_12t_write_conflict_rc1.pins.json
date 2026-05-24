@@ -1,0 +1,481 @@
+{
+  "cell": "detronyx_12t_write_conflict_rc1",
+  "block": "write_conflict",
+  "status": "block_leaf_rc1",
+  "pins": [
+    {
+      "name": "VDD",
+      "direction": "INOUT",
+      "use": "POWER",
+      "layer": "metal3",
+      "xlo": 5448,
+      "ylo": 16247,
+      "xhi": 5520,
+      "yhi": 16487
+    },
+    {
+      "name": "VSS",
+      "direction": "INOUT",
+      "use": "GROUND",
+      "layer": "metal3",
+      "xlo": 5308,
+      "ylo": 140,
+      "xhi": 5380,
+      "yhi": 380
+    },
+    {
+      "name": "w0_en",
+      "direction": "INPUT",
+      "use": "SIGNAL",
+      "layer": "metal3",
+      "xlo": 6428,
+      "ylo": 140,
+      "xhi": 6500,
+      "yhi": 300
+    },
+    {
+      "name": "w1_en",
+      "direction": "INPUT",
+      "use": "SIGNAL",
+      "layer": "metal3",
+      "xlo": 6568,
+      "ylo": 16467,
+      "xhi": 6640,
+      "yhi": 16627
+    },
+    {
+      "name": "addr_eq",
+      "direction": "INPUT",
+      "use": "SIGNAL",
+      "layer": "metal3",
+      "xlo": 5588,
+      "ylo": 140,
+      "xhi": 5660,
+      "yhi": 300
+    },
+    {
+      "name": "write_conflict",
+      "direction": "OUTPUT",
+      "use": "SIGNAL",
+      "layer": "metal3",
+      "xlo": 6708,
+      "ylo": 16467,
+      "xhi": 6780,
+      "yhi": 16627
+    }
+  ],
+  "route_terms": [
+    {
+      "net": "both_n",
+      "kind": "diff",
+      "x": 636,
+      "y": 5709,
+      "block": "write_conflict",
+      "role": "both_nand_n0",
+      "terminal": "drain"
+    },
+    {
+      "net": "w0_en",
+      "kind": "gate",
+      "x": 716,
+      "y": 5840,
+      "block": "write_conflict",
+      "role": "both_nand_n0",
+      "terminal": "gate"
+    },
+    {
+      "net": "both_mid",
+      "kind": "diff",
+      "x": 796,
+      "y": 5709,
+      "block": "write_conflict",
+      "role": "both_nand_n0",
+      "terminal": "source"
+    },
+    {
+      "net": "both_mid",
+      "kind": "diff",
+      "x": 1068,
+      "y": 5709,
+      "block": "write_conflict",
+      "role": "both_nand_n1",
+      "terminal": "drain"
+    },
+    {
+      "net": "w1_en",
+      "kind": "gate",
+      "x": 1148,
+      "y": 5840,
+      "block": "write_conflict",
+      "role": "both_nand_n1",
+      "terminal": "gate"
+    },
+    {
+      "net": "VSS",
+      "kind": "diff",
+      "x": 1228,
+      "y": 5709,
+      "block": "write_conflict",
+      "role": "both_nand_n1",
+      "terminal": "source"
+    },
+    {
+      "net": "both",
+      "kind": "diff",
+      "x": 1500,
+      "y": 5709,
+      "block": "write_conflict",
+      "role": "both_inv_n",
+      "terminal": "drain"
+    },
+    {
+      "net": "both_n",
+      "kind": "gate",
+      "x": 1580,
+      "y": 5840,
+      "block": "write_conflict",
+      "role": "both_inv_n",
+      "terminal": "gate"
+    },
+    {
+      "net": "VSS",
+      "kind": "diff",
+      "x": 1660,
+      "y": 5709,
+      "block": "write_conflict",
+      "role": "both_inv_n",
+      "terminal": "source"
+    },
+    {
+      "net": "conflict_n",
+      "kind": "diff",
+      "x": 1932,
+      "y": 5709,
+      "block": "write_conflict",
+      "role": "conflict_nand_n0",
+      "terminal": "drain"
+    },
+    {
+      "net": "both",
+      "kind": "gate",
+      "x": 2012,
+      "y": 5840,
+      "block": "write_conflict",
+      "role": "conflict_nand_n0",
+      "terminal": "gate"
+    },
+    {
+      "net": "conflict_mid",
+      "kind": "diff",
+      "x": 2092,
+      "y": 5709,
+      "block": "write_conflict",
+      "role": "conflict_nand_n0",
+      "terminal": "source"
+    },
+    {
+      "net": "conflict_mid",
+      "kind": "diff",
+      "x": 2364,
+      "y": 5709,
+      "block": "write_conflict",
+      "role": "conflict_nand_n1",
+      "terminal": "drain"
+    },
+    {
+      "net": "addr_eq",
+      "kind": "gate",
+      "x": 2444,
+      "y": 5840,
+      "block": "write_conflict",
+      "role": "conflict_nand_n1",
+      "terminal": "gate"
+    },
+    {
+      "net": "VSS",
+      "kind": "diff",
+      "x": 2524,
+      "y": 5709,
+      "block": "write_conflict",
+      "role": "conflict_nand_n1",
+      "terminal": "source"
+    },
+    {
+      "net": "write_conflict",
+      "kind": "diff",
+      "x": 2796,
+      "y": 5709,
+      "block": "write_conflict",
+      "role": "conflict_inv_n",
+      "terminal": "drain"
+    },
+    {
+      "net": "conflict_n",
+      "kind": "gate",
+      "x": 2876,
+      "y": 5840,
+      "block": "write_conflict",
+      "role": "conflict_inv_n",
+      "terminal": "gate"
+    },
+    {
+      "net": "VSS",
+      "kind": "diff",
+      "x": 2956,
+      "y": 5709,
+      "block": "write_conflict",
+      "role": "conflict_inv_n",
+      "terminal": "source"
+    },
+    {
+      "net": "both_n",
+      "kind": "diff",
+      "x": 722,
+      "y": 6641,
+      "block": "write_conflict",
+      "role": "both_nand_p0",
+      "terminal": "drain"
+    },
+    {
+      "net": "w0_en",
+      "kind": "gate",
+      "x": 802,
+      "y": 6719,
+      "block": "write_conflict",
+      "role": "both_nand_p0",
+      "terminal": "gate"
+    },
+    {
+      "net": "VDD",
+      "kind": "diff",
+      "x": 882,
+      "y": 6641,
+      "block": "write_conflict",
+      "role": "both_nand_p0",
+      "terminal": "source"
+    },
+    {
+      "net": "both_n",
+      "kind": "diff",
+      "x": 1326,
+      "y": 6641,
+      "block": "write_conflict",
+      "role": "both_nand_p1",
+      "terminal": "drain"
+    },
+    {
+      "net": "w1_en",
+      "kind": "gate",
+      "x": 1406,
+      "y": 6719,
+      "block": "write_conflict",
+      "role": "both_nand_p1",
+      "terminal": "gate"
+    },
+    {
+      "net": "VDD",
+      "kind": "diff",
+      "x": 1486,
+      "y": 6641,
+      "block": "write_conflict",
+      "role": "both_nand_p1",
+      "terminal": "source"
+    },
+    {
+      "net": "both",
+      "kind": "diff",
+      "x": 1930,
+      "y": 6641,
+      "block": "write_conflict",
+      "role": "both_inv_p",
+      "terminal": "drain"
+    },
+    {
+      "net": "both_n",
+      "kind": "gate",
+      "x": 2010,
+      "y": 6719,
+      "block": "write_conflict",
+      "role": "both_inv_p",
+      "terminal": "gate"
+    },
+    {
+      "net": "VDD",
+      "kind": "diff",
+      "x": 2090,
+      "y": 6641,
+      "block": "write_conflict",
+      "role": "both_inv_p",
+      "terminal": "source"
+    },
+    {
+      "net": "conflict_n",
+      "kind": "diff",
+      "x": 2534,
+      "y": 6641,
+      "block": "write_conflict",
+      "role": "conflict_nand_p0",
+      "terminal": "drain"
+    },
+    {
+      "net": "both",
+      "kind": "gate",
+      "x": 2614,
+      "y": 6719,
+      "block": "write_conflict",
+      "role": "conflict_nand_p0",
+      "terminal": "gate"
+    },
+    {
+      "net": "VDD",
+      "kind": "diff",
+      "x": 2694,
+      "y": 6641,
+      "block": "write_conflict",
+      "role": "conflict_nand_p0",
+      "terminal": "source"
+    },
+    {
+      "net": "conflict_n",
+      "kind": "diff",
+      "x": 3138,
+      "y": 6641,
+      "block": "write_conflict",
+      "role": "conflict_nand_p1",
+      "terminal": "drain"
+    },
+    {
+      "net": "addr_eq",
+      "kind": "gate",
+      "x": 3218,
+      "y": 6719,
+      "block": "write_conflict",
+      "role": "conflict_nand_p1",
+      "terminal": "gate"
+    },
+    {
+      "net": "VDD",
+      "kind": "diff",
+      "x": 3298,
+      "y": 6641,
+      "block": "write_conflict",
+      "role": "conflict_nand_p1",
+      "terminal": "source"
+    },
+    {
+      "net": "write_conflict",
+      "kind": "diff",
+      "x": 3742,
+      "y": 6641,
+      "block": "write_conflict",
+      "role": "conflict_inv_p",
+      "terminal": "drain"
+    },
+    {
+      "net": "conflict_n",
+      "kind": "gate",
+      "x": 3822,
+      "y": 6719,
+      "block": "write_conflict",
+      "role": "conflict_inv_p",
+      "terminal": "gate"
+    },
+    {
+      "net": "VDD",
+      "kind": "diff",
+      "x": 3902,
+      "y": 6641,
+      "block": "write_conflict",
+      "role": "conflict_inv_p",
+      "terminal": "source"
+    },
+    {
+      "net": "VSS",
+      "kind": "diff",
+      "x": 4224,
+      "y": 5840,
+      "block": "write_conflict",
+      "role": "psub_tap",
+      "terminal": "tap"
+    },
+    {
+      "net": "VDD",
+      "kind": "diff",
+      "x": 4224,
+      "y": 6503,
+      "block": "write_conflict",
+      "role": "nsub_tap",
+      "terminal": "tap"
+    },
+    {
+      "net": "VDD",
+      "kind": "pin",
+      "x": 5484,
+      "y": 16327,
+      "block": "pin",
+      "role": "VDD",
+      "terminal": "pin"
+    },
+    {
+      "net": "VSS",
+      "kind": "pin",
+      "x": 5344,
+      "y": 220,
+      "block": "pin",
+      "role": "VSS",
+      "terminal": "pin"
+    },
+    {
+      "net": "w0_en",
+      "kind": "pin",
+      "x": 6464,
+      "y": 220,
+      "block": "pin",
+      "role": "w0_en",
+      "terminal": "pin"
+    },
+    {
+      "net": "w1_en",
+      "kind": "pin",
+      "x": 6604,
+      "y": 16547,
+      "block": "pin",
+      "role": "w1_en",
+      "terminal": "pin"
+    },
+    {
+      "net": "addr_eq",
+      "kind": "pin",
+      "x": 5624,
+      "y": 220,
+      "block": "pin",
+      "role": "addr_eq",
+      "terminal": "pin"
+    },
+    {
+      "net": "write_conflict",
+      "kind": "pin",
+      "x": 6744,
+      "y": 16547,
+      "block": "pin",
+      "role": "write_conflict",
+      "terminal": "pin"
+    }
+  ],
+  "primitive_sources": {
+    "nmos": {
+      "name": "periphery_nmos",
+      "source": "nmos_5p04310591302010_3v512x8m81.mag",
+      "width_units": 232,
+      "height_units": 299,
+      "rect_count": 17
+    },
+    "pmos": {
+      "name": "periphery_pmos",
+      "source": "pmos_5p04310591302038_3v512x8m81.mag",
+      "width_units": 404,
+      "height_units": 284,
+      "rect_count": 18
+    }
+  }
+}

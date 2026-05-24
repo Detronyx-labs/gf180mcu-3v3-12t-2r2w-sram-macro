@@ -1,0 +1,44 @@
+* NGSPICE file created from detronyx_12t_read_row_decode7_wl_driver_rc1.ext - technology: gf180mcuD
+
+.subckt detronyx_12t_read_row_decode7_wl_driver_rc1 VDD VSS ren a[0] a[1] a[2] a[3]
++ a[4] a[5] a[6] rwl0
+X0 VDD a[1] a_600_12884# VDD pfet_03v3 ad=0.1232p pd=1u as=0.1232p ps=1u w=0.56u l=0.28u
+X1 VDD a[2] a_600_12884# VDD pfet_03v3 ad=0.1232p pd=1u as=0.1232p ps=1u w=0.56u l=0.28u
+X2 VSS a[4] a_2040_12884# VSS nfet_03v3 ad=0.4642p pd=2.99u as=0.4642p ps=2.99u w=1.055u l=0.28u
+X3 VSS a_600_12884# a_4144_12840# VSS nfet_03v3 ad=0.4642p pd=2.99u as=0.4642p ps=2.99u w=1.055u l=0.28u
+X4 VDD a[4] a_1896_12884# VDD pfet_03v3 ad=0.1232p pd=1u as=0.1232p ps=1u w=0.56u l=0.28u
+X5 VDD a_7944_12884# rwl0 VDD pfet_03v3 ad=0.1232p pd=1u as=0.1232p ps=1u w=0.56u l=0.28u
+X6 VDD a_5008_12840# a_4056_12884# VDD pfet_03v3 ad=0.1232p pd=1u as=0.1232p ps=1u w=0.56u l=0.28u
+X7 a_4200_12884# a_4144_12840# a_4056_12884# VSS nfet_03v3 ad=0.4642p pd=2.99u as=0.4642p ps=2.99u w=1.055u l=0.28u
+X8 VDD a_1896_12884# a_4576_12840# VDD pfet_03v3 ad=0.1232p pd=1u as=0.1232p ps=1u w=0.56u l=0.28u
+X9 VDD a[3] a_1896_12884# VDD pfet_03v3 ad=0.1232p pd=1u as=0.1232p ps=1u w=0.56u l=0.28u
+X10 VSS a[2] a_1176_12884# VSS nfet_03v3 ad=0.4642p pd=2.99u as=0.4642p ps=2.99u w=1.055u l=0.28u
+X11 VSS a_4056_12884# a_6648_12884# VSS nfet_03v3 ad=0.4642p pd=2.99u as=0.4642p ps=2.99u w=1.055u l=0.28u
+X12 VDD a_600_12884# a_4144_12840# VDD pfet_03v3 ad=0.1232p pd=1u as=0.1232p ps=1u w=0.56u l=0.28u
+X13 a_3336_12884# a[6] a_2904_12884# VSS nfet_03v3 ad=0.4642p pd=2.99u as=0.4642p ps=2.99u w=1.055u l=0.28u
+X14 VSS a_7944_12884# rwl0 VSS nfet_03v3 ad=0.4642p pd=2.99u as=0.4642p ps=2.99u w=1.055u l=0.28u
+X15 VDD a_4056_12884# a_6648_12884# VDD pfet_03v3 ad=0.1232p pd=1u as=0.1232p ps=1u w=0.56u l=0.28u
+X16 VDD a[5] a_2760_12884# VDD pfet_03v3 ad=0.1232p pd=1u as=0.1232p ps=1u w=0.56u l=0.28u
+X17 a_2904_12884# a[5] a_2760_12884# VSS nfet_03v3 ad=0.4642p pd=2.99u as=0.4642p ps=2.99u w=1.055u l=0.28u
+X18 VSS a_1896_12884# a_4576_12840# VSS nfet_03v3 ad=0.4642p pd=2.99u as=0.4642p ps=2.99u w=1.055u l=0.28u
+X19 VSS a_6648_12884# a_7080_12884# VSS nfet_03v3 ad=0.4642p pd=2.99u as=0.4642p ps=2.99u w=1.055u l=0.28u
+X20 VDD a_2760_12884# a_5008_12840# VDD pfet_03v3 ad=0.1232p pd=1u as=0.1232p ps=1u w=0.56u l=0.28u
+X21 a_4632_12884# a_4576_12840# a_4200_12884# VSS nfet_03v3 ad=0.4642p pd=2.99u as=0.4642p ps=2.99u w=1.055u l=0.28u
+X22 VDD a[6] a_2760_12884# VDD pfet_03v3 ad=0.1232p pd=1u as=0.1232p ps=1u w=0.56u l=0.28u
+X23 a_2040_12884# a[3] a_1896_12884# VSS nfet_03v3 ad=0.4642p pd=2.99u as=0.4642p ps=2.99u w=1.055u l=0.28u
+X24 VDD a_6648_12884# a_7080_12884# VDD pfet_03v3 ad=0.1232p pd=1u as=0.1232p ps=1u w=0.56u l=0.28u
+X25 a_744_12884# a[0] a_600_12884# VSS nfet_03v3 ad=0.4642p pd=2.99u as=0.4642p ps=2.99u w=1.055u l=0.28u
+X26 VDD ren a_2760_12884# VDD pfet_03v3 ad=0.1232p pd=1u as=0.1232p ps=1u w=0.56u l=0.28u
+X27 VDD a_7512_12884# a_7944_12884# VDD pfet_03v3 ad=0.1232p pd=1u as=0.1232p ps=1u w=0.56u l=0.28u
+X28 VSS a_7080_12884# a_7512_12884# VSS nfet_03v3 ad=0.4642p pd=2.99u as=0.4642p ps=2.99u w=1.055u l=0.28u
+X29 VDD a_4576_12840# a_4056_12884# VDD pfet_03v3 ad=0.1232p pd=1u as=0.1232p ps=1u w=0.56u l=0.28u
+X30 a_1176_12884# a[1] a_744_12884# VSS nfet_03v3 ad=0.4642p pd=2.99u as=0.4642p ps=2.99u w=1.055u l=0.28u
+X31 VSS a_2760_12884# a_5008_12840# VSS nfet_03v3 ad=0.4642p pd=2.99u as=0.4642p ps=2.99u w=1.055u l=0.28u
+X32 VDD a_7080_12884# a_7512_12884# VDD pfet_03v3 ad=0.1232p pd=1u as=0.1232p ps=1u w=0.56u l=0.28u
+X33 VSS ren a_3336_12884# VSS nfet_03v3 ad=0.4642p pd=2.99u as=0.4642p ps=2.99u w=1.055u l=0.28u
+X34 VDD a[0] a_600_12884# VDD pfet_03v3 ad=0.1232p pd=1u as=0.1232p ps=1u w=0.56u l=0.28u
+X35 VDD a_4144_12840# a_4056_12884# VDD pfet_03v3 ad=0.1232p pd=1u as=0.1232p ps=1u w=0.56u l=0.28u
+X36 VSS a_5008_12840# a_4632_12884# VSS nfet_03v3 ad=0.4642p pd=2.99u as=0.4642p ps=2.99u w=1.055u l=0.28u
+X37 VSS a_7512_12884# a_7944_12884# VSS nfet_03v3 ad=0.4642p pd=2.99u as=0.4642p ps=2.99u w=1.055u l=0.28u
+.ends
+

@@ -6,6 +6,9 @@ storage checks used before macro-level LVS/PEX work.
 
 - `gf180mcu_3v3_12t_2r2w_sram_lvs_gate.py` runs the full release LVS gate:
   extracted 4x4 tile device LVS plus macro-top blackbox connectivity LVS.
+- `gf180mcu_3v3_12t_2r2w_sram_periphery_lvs.py` gates the packaged
+  transistor-level row decode/WL-driver, write-driver, precharge/sense, and
+  write-conflict leaf reports.
 - `gf180mcu_3v3_12t_2r2w_sram_tile_lvs.py` checks the extracted 4x4 tile subcircuit against an
   independently generated 12T MOS reference.
 - `gf180mcu_3v3_12t_2r2w_sram_macro_lvs.py` checks the macro-top tile instance connectivity
@@ -26,6 +29,7 @@ reports, or `reports.zip` in the repository publication layout.
 
 ```bash
 python3 verification/gf180mcu_3v3_12t_2r2w_sram_lvs_gate.py
+python3 verification/gf180mcu_3v3_12t_2r2w_sram_periphery_lvs.py
 python3 verification/gf180mcu_3v3_12t_2r2w_sram_tile_lvs.py
 python3 verification/gf180mcu_3v3_12t_2r2w_sram_macro_lvs.py
 python3 verification/gf180mcu_3v3_12t_2r2w_sram_connectivity_check.py
@@ -41,6 +45,12 @@ the macro-top tile instance connectivity is clean. The release gate currently
 passes on all four published macro variants and reports no tile signal ports
 tied to `VDD` or `VSS`; the old `c3_r1_rbl` to `VSS` failure mode is kept as a
 regression target by these scripts.
+
+The periphery gate currently checks five generated Tim-derived leaf blocks:
+write row decode/WL driver, read row decode/WL driver, write driver,
+precharge/sense, and write-conflict control. Each leaf must have Magic DRC
+`0`, Netgen LVS `match`/`match_unique`, zero disconnected pins, and the expected
+pin contract, including `dout` as the SAOUT-equivalent read output.
 
 ## Leaf Storage
 

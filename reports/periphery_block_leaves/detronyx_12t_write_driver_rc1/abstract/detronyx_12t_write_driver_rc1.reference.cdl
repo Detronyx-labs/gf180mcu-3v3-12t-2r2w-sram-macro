@@ -1,0 +1,30 @@
+* Independent intended-topology CDL for detronyx_12t_write_driver_rc1
+* Generated from the periphery RC1 role map.
+.subckt detronyx_12t_write_driver_rc1 VDD VSS din wen wbl0 wbr0
+X1_dinb_inv_n din_b din VSS VSS nfet_03v3 w=1.055u l=0.28u
+X2_wbl_up_nand_n0 wbl_up_n din wbl_up_mid VSS nfet_03v3 w=1.055u l=0.28u
+X3_wbl_up_nand_n1 wbl_up_mid wen VSS VSS nfet_03v3 w=1.055u l=0.28u
+X4_wbl_dn_nand_n0 wbl_dn_n din_b wbl_dn_mid VSS nfet_03v3 w=1.055u l=0.28u
+X5_wbl_dn_nand_n1 wbl_dn_mid wen VSS VSS nfet_03v3 w=1.055u l=0.28u
+X6_wbl_dn_inv_n wbl_dn wbl_dn_n VSS VSS nfet_03v3 w=1.055u l=0.28u
+X7_wbl_pull_down wbl0 wbl_dn VSS VSS nfet_03v3 w=1.055u l=0.28u
+X8_wbr_up_nand_n0 wbr_up_n din_b wbr_up_mid VSS nfet_03v3 w=1.055u l=0.28u
+X9_wbr_up_nand_n1 wbr_up_mid wen VSS VSS nfet_03v3 w=1.055u l=0.28u
+X10_wbr_dn_nand_n0 wbr_dn_n din wbr_dn_mid VSS nfet_03v3 w=1.055u l=0.28u
+X11_wbr_dn_nand_n1 wbr_dn_mid wen VSS VSS nfet_03v3 w=1.055u l=0.28u
+X12_wbr_dn_inv_n wbr_dn wbr_dn_n VSS VSS nfet_03v3 w=1.055u l=0.28u
+X13_wbr_pull_down wbr0 wbr_dn VSS VSS nfet_03v3 w=1.055u l=0.28u
+X14_dinb_inv_p din_b din VDD VDD pfet_03v3 w=0.56u l=0.28u
+X15_wbl_up_nand_p0 wbl_up_n din VDD VDD pfet_03v3 w=0.56u l=0.28u
+X16_wbl_up_nand_p1 wbl_up_n wen VDD VDD pfet_03v3 w=0.56u l=0.28u
+X17_wbl_dn_nand_p0 wbl_dn_n din_b VDD VDD pfet_03v3 w=0.56u l=0.28u
+X18_wbl_dn_nand_p1 wbl_dn_n wen VDD VDD pfet_03v3 w=0.56u l=0.28u
+X19_wbl_dn_inv_p wbl_dn wbl_dn_n VDD VDD pfet_03v3 w=0.56u l=0.28u
+X20_wbl_pull_up wbl0 wbl_up_n VDD VDD pfet_03v3 w=0.56u l=0.28u
+X21_wbr_up_nand_p0 wbr_up_n din_b VDD VDD pfet_03v3 w=0.56u l=0.28u
+X22_wbr_up_nand_p1 wbr_up_n wen VDD VDD pfet_03v3 w=0.56u l=0.28u
+X23_wbr_dn_nand_p0 wbr_dn_n din VDD VDD pfet_03v3 w=0.56u l=0.28u
+X24_wbr_dn_nand_p1 wbr_dn_n wen VDD VDD pfet_03v3 w=0.56u l=0.28u
+X25_wbr_dn_inv_p wbr_dn wbr_dn_n VDD VDD pfet_03v3 w=0.56u l=0.28u
+X26_wbr_pull_up wbr0 wbr_up_n VDD VDD pfet_03v3 w=0.56u l=0.28u
+.ends detronyx_12t_write_driver_rc1

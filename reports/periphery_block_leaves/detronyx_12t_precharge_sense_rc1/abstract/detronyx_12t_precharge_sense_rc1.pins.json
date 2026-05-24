@@ -1,0 +1,346 @@
+{
+  "cell": "detronyx_12t_precharge_sense_rc1",
+  "block": "precharge_sense",
+  "status": "block_leaf_rc1",
+  "pins": [
+    {
+      "name": "VDD",
+      "direction": "INOUT",
+      "use": "POWER",
+      "layer": "metal3",
+      "xlo": 4240,
+      "ylo": 12175,
+      "xhi": 4312,
+      "yhi": 12415
+    },
+    {
+      "name": "VSS",
+      "direction": "INOUT",
+      "use": "GROUND",
+      "layer": "metal3",
+      "xlo": 4100,
+      "ylo": 140,
+      "xhi": 4172,
+      "yhi": 380
+    },
+    {
+      "name": "pchgb",
+      "direction": "INPUT",
+      "use": "SIGNAL",
+      "layer": "metal3",
+      "xlo": 4520,
+      "ylo": 140,
+      "xhi": 4592,
+      "yhi": 300
+    },
+    {
+      "name": "ren",
+      "direction": "INPUT",
+      "use": "SIGNAL",
+      "layer": "metal3",
+      "xlo": 4800,
+      "ylo": 12395,
+      "xhi": 4872,
+      "yhi": 12555
+    },
+    {
+      "name": "rbl0",
+      "direction": "INPUT",
+      "use": "SIGNAL",
+      "layer": "metal3",
+      "xlo": 4660,
+      "ylo": 140,
+      "xhi": 4732,
+      "yhi": 300
+    },
+    {
+      "name": "dout",
+      "direction": "OUTPUT",
+      "use": "SIGNAL",
+      "layer": "metal3",
+      "xlo": 4380,
+      "ylo": 12395,
+      "xhi": 4452,
+      "yhi": 12555
+    }
+  ],
+  "route_terms": [
+    {
+      "net": "sense0",
+      "kind": "diff",
+      "x": 636,
+      "y": 4169,
+      "block": "precharge_sense",
+      "role": "sense0_n",
+      "terminal": "drain"
+    },
+    {
+      "net": "rbl0",
+      "kind": "gate",
+      "x": 716,
+      "y": 4300,
+      "block": "precharge_sense",
+      "role": "sense0_n",
+      "terminal": "gate"
+    },
+    {
+      "net": "VSS",
+      "kind": "diff",
+      "x": 796,
+      "y": 4169,
+      "block": "precharge_sense",
+      "role": "sense0_n",
+      "terminal": "source"
+    },
+    {
+      "net": "sense1",
+      "kind": "diff",
+      "x": 1068,
+      "y": 4169,
+      "block": "precharge_sense",
+      "role": "sense1_n",
+      "terminal": "drain"
+    },
+    {
+      "net": "sense0",
+      "kind": "gate",
+      "x": 1148,
+      "y": 4300,
+      "block": "precharge_sense",
+      "role": "sense1_n",
+      "terminal": "gate"
+    },
+    {
+      "net": "VSS",
+      "kind": "diff",
+      "x": 1228,
+      "y": 4169,
+      "block": "precharge_sense",
+      "role": "sense1_n",
+      "terminal": "source"
+    },
+    {
+      "net": "dout",
+      "kind": "diff",
+      "x": 1500,
+      "y": 4169,
+      "block": "precharge_sense",
+      "role": "sense2_n",
+      "terminal": "drain"
+    },
+    {
+      "net": "sense1",
+      "kind": "gate",
+      "x": 1580,
+      "y": 4300,
+      "block": "precharge_sense",
+      "role": "sense2_n",
+      "terminal": "gate"
+    },
+    {
+      "net": "VSS",
+      "kind": "diff",
+      "x": 1660,
+      "y": 4169,
+      "block": "precharge_sense",
+      "role": "sense2_n",
+      "terminal": "source"
+    },
+    {
+      "net": "rbl0",
+      "kind": "diff",
+      "x": 722,
+      "y": 5101,
+      "block": "precharge_sense",
+      "role": "rbl_precharge_p",
+      "terminal": "drain"
+    },
+    {
+      "net": "pchgb",
+      "kind": "gate",
+      "x": 802,
+      "y": 5179,
+      "block": "precharge_sense",
+      "role": "rbl_precharge_p",
+      "terminal": "gate"
+    },
+    {
+      "net": "VDD",
+      "kind": "diff",
+      "x": 882,
+      "y": 5101,
+      "block": "precharge_sense",
+      "role": "rbl_precharge_p",
+      "terminal": "source"
+    },
+    {
+      "net": "sense0",
+      "kind": "diff",
+      "x": 1326,
+      "y": 5101,
+      "block": "precharge_sense",
+      "role": "sense0_p",
+      "terminal": "drain"
+    },
+    {
+      "net": "rbl0",
+      "kind": "gate",
+      "x": 1406,
+      "y": 5179,
+      "block": "precharge_sense",
+      "role": "sense0_p",
+      "terminal": "gate"
+    },
+    {
+      "net": "VDD",
+      "kind": "diff",
+      "x": 1486,
+      "y": 5101,
+      "block": "precharge_sense",
+      "role": "sense0_p",
+      "terminal": "source"
+    },
+    {
+      "net": "sense1",
+      "kind": "diff",
+      "x": 1930,
+      "y": 5101,
+      "block": "precharge_sense",
+      "role": "sense1_p",
+      "terminal": "drain"
+    },
+    {
+      "net": "sense0",
+      "kind": "gate",
+      "x": 2010,
+      "y": 5179,
+      "block": "precharge_sense",
+      "role": "sense1_p",
+      "terminal": "gate"
+    },
+    {
+      "net": "VDD",
+      "kind": "diff",
+      "x": 2090,
+      "y": 5101,
+      "block": "precharge_sense",
+      "role": "sense1_p",
+      "terminal": "source"
+    },
+    {
+      "net": "dout",
+      "kind": "diff",
+      "x": 2534,
+      "y": 5101,
+      "block": "precharge_sense",
+      "role": "sense2_p",
+      "terminal": "drain"
+    },
+    {
+      "net": "sense1",
+      "kind": "gate",
+      "x": 2614,
+      "y": 5179,
+      "block": "precharge_sense",
+      "role": "sense2_p",
+      "terminal": "gate"
+    },
+    {
+      "net": "VDD",
+      "kind": "diff",
+      "x": 2694,
+      "y": 5101,
+      "block": "precharge_sense",
+      "role": "sense2_p",
+      "terminal": "source"
+    },
+    {
+      "net": "VSS",
+      "kind": "diff",
+      "x": 3016,
+      "y": 4300,
+      "block": "precharge_sense",
+      "role": "psub_tap",
+      "terminal": "tap"
+    },
+    {
+      "net": "VDD",
+      "kind": "diff",
+      "x": 3016,
+      "y": 4963,
+      "block": "precharge_sense",
+      "role": "nsub_tap",
+      "terminal": "tap"
+    },
+    {
+      "net": "VDD",
+      "kind": "pin",
+      "x": 4276,
+      "y": 12255,
+      "block": "pin",
+      "role": "VDD",
+      "terminal": "pin"
+    },
+    {
+      "net": "VSS",
+      "kind": "pin",
+      "x": 4136,
+      "y": 220,
+      "block": "pin",
+      "role": "VSS",
+      "terminal": "pin"
+    },
+    {
+      "net": "pchgb",
+      "kind": "pin",
+      "x": 4556,
+      "y": 220,
+      "block": "pin",
+      "role": "pchgb",
+      "terminal": "pin"
+    },
+    {
+      "net": "ren",
+      "kind": "pin",
+      "x": 4836,
+      "y": 12475,
+      "block": "pin",
+      "role": "ren",
+      "terminal": "pin"
+    },
+    {
+      "net": "rbl0",
+      "kind": "pin",
+      "x": 4696,
+      "y": 220,
+      "block": "pin",
+      "role": "rbl0",
+      "terminal": "pin"
+    },
+    {
+      "net": "dout",
+      "kind": "pin",
+      "x": 4416,
+      "y": 12475,
+      "block": "pin",
+      "role": "dout",
+      "terminal": "pin"
+    }
+  ],
+  "primitive_sources": {
+    "nmos": {
+      "name": "periphery_nmos",
+      "source": "nmos_5p04310591302010_3v512x8m81.mag",
+      "width_units": 232,
+      "height_units": 299,
+      "rect_count": 17
+    },
+    "pmos": {
+      "name": "periphery_pmos",
+      "source": "pmos_5p04310591302038_3v512x8m81.mag",
+      "width_units": 404,
+      "height_units": 284,
+      "rect_count": 18
+    }
+  }
+}

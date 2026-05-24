@@ -1,0 +1,1278 @@
+{
+  "cell": "detronyx_12t_read_row_decode7_wl_driver_rc1",
+  "block": "read_row_decode7_wl_driver",
+  "status": "block_leaf_rc1",
+  "pins": [
+    {
+      "name": "VDD",
+      "direction": "INOUT",
+      "use": "POWER",
+      "layer": "metal3",
+      "xlo": 13300,
+      "ylo": 37739,
+      "xhi": 13372,
+      "yhi": 37979
+    },
+    {
+      "name": "VSS",
+      "direction": "INOUT",
+      "use": "GROUND",
+      "layer": "metal3",
+      "xlo": 13160,
+      "ylo": 140,
+      "xhi": 13232,
+      "yhi": 380
+    },
+    {
+      "name": "ren",
+      "direction": "INPUT",
+      "use": "SIGNAL",
+      "layer": "metal3",
+      "xlo": 16940,
+      "ylo": 140,
+      "xhi": 17012,
+      "yhi": 300
+    },
+    {
+      "name": "a[0]",
+      "direction": "INPUT",
+      "use": "SIGNAL",
+      "layer": "metal3",
+      "xlo": 13440,
+      "ylo": 37959,
+      "xhi": 13512,
+      "yhi": 38119
+    },
+    {
+      "name": "a[1]",
+      "direction": "INPUT",
+      "use": "SIGNAL",
+      "layer": "metal3",
+      "xlo": 13580,
+      "ylo": 140,
+      "xhi": 13652,
+      "yhi": 300
+    },
+    {
+      "name": "a[2]",
+      "direction": "INPUT",
+      "use": "SIGNAL",
+      "layer": "metal3",
+      "xlo": 13720,
+      "ylo": 37959,
+      "xhi": 13792,
+      "yhi": 38119
+    },
+    {
+      "name": "a[3]",
+      "direction": "INPUT",
+      "use": "SIGNAL",
+      "layer": "metal3",
+      "xlo": 13860,
+      "ylo": 140,
+      "xhi": 13932,
+      "yhi": 300
+    },
+    {
+      "name": "a[4]",
+      "direction": "INPUT",
+      "use": "SIGNAL",
+      "layer": "metal3",
+      "xlo": 14000,
+      "ylo": 37959,
+      "xhi": 14072,
+      "yhi": 38119
+    },
+    {
+      "name": "a[5]",
+      "direction": "INPUT",
+      "use": "SIGNAL",
+      "layer": "metal3",
+      "xlo": 14140,
+      "ylo": 140,
+      "xhi": 14212,
+      "yhi": 300
+    },
+    {
+      "name": "a[6]",
+      "direction": "INPUT",
+      "use": "SIGNAL",
+      "layer": "metal3",
+      "xlo": 14280,
+      "ylo": 37959,
+      "xhi": 14352,
+      "yhi": 38119
+    },
+    {
+      "name": "rwl0",
+      "direction": "OUTPUT",
+      "use": "SIGNAL",
+      "layer": "metal3",
+      "xlo": 17080,
+      "ylo": 140,
+      "xhi": 17152,
+      "yhi": 300
+    }
+  ],
+  "route_terms": [
+    {
+      "net": "rdec_pre0_n",
+      "kind": "diff",
+      "x": 636,
+      "y": 12989,
+      "block": "read_row_decode7_wl_driver",
+      "role": "pre0_n_pull_a0",
+      "terminal": "drain"
+    },
+    {
+      "net": "a[0]",
+      "kind": "gate",
+      "x": 716,
+      "y": 13120,
+      "block": "read_row_decode7_wl_driver",
+      "role": "pre0_n_pull_a0",
+      "terminal": "gate"
+    },
+    {
+      "net": "rdec_pre0_s0",
+      "kind": "diff",
+      "x": 796,
+      "y": 12989,
+      "block": "read_row_decode7_wl_driver",
+      "role": "pre0_n_pull_a0",
+      "terminal": "source"
+    },
+    {
+      "net": "rdec_pre0_s0",
+      "kind": "diff",
+      "x": 1068,
+      "y": 12989,
+      "block": "read_row_decode7_wl_driver",
+      "role": "pre0_n_pull_a1",
+      "terminal": "drain"
+    },
+    {
+      "net": "a[1]",
+      "kind": "gate",
+      "x": 1148,
+      "y": 13120,
+      "block": "read_row_decode7_wl_driver",
+      "role": "pre0_n_pull_a1",
+      "terminal": "gate"
+    },
+    {
+      "net": "rdec_pre0_s1",
+      "kind": "diff",
+      "x": 1228,
+      "y": 12989,
+      "block": "read_row_decode7_wl_driver",
+      "role": "pre0_n_pull_a1",
+      "terminal": "source"
+    },
+    {
+      "net": "rdec_pre0_s1",
+      "kind": "diff",
+      "x": 1500,
+      "y": 12989,
+      "block": "read_row_decode7_wl_driver",
+      "role": "pre0_n_pull_a2",
+      "terminal": "drain"
+    },
+    {
+      "net": "a[2]",
+      "kind": "gate",
+      "x": 1580,
+      "y": 13120,
+      "block": "read_row_decode7_wl_driver",
+      "role": "pre0_n_pull_a2",
+      "terminal": "gate"
+    },
+    {
+      "net": "VSS",
+      "kind": "diff",
+      "x": 1660,
+      "y": 12989,
+      "block": "read_row_decode7_wl_driver",
+      "role": "pre0_n_pull_a2",
+      "terminal": "source"
+    },
+    {
+      "net": "rdec_pre1_n",
+      "kind": "diff",
+      "x": 1932,
+      "y": 12989,
+      "block": "read_row_decode7_wl_driver",
+      "role": "pre1_n_pull_a3",
+      "terminal": "drain"
+    },
+    {
+      "net": "a[3]",
+      "kind": "gate",
+      "x": 2012,
+      "y": 13120,
+      "block": "read_row_decode7_wl_driver",
+      "role": "pre1_n_pull_a3",
+      "terminal": "gate"
+    },
+    {
+      "net": "rdec_pre1_s0",
+      "kind": "diff",
+      "x": 2092,
+      "y": 12989,
+      "block": "read_row_decode7_wl_driver",
+      "role": "pre1_n_pull_a3",
+      "terminal": "source"
+    },
+    {
+      "net": "rdec_pre1_s0",
+      "kind": "diff",
+      "x": 2364,
+      "y": 12989,
+      "block": "read_row_decode7_wl_driver",
+      "role": "pre1_n_pull_a4",
+      "terminal": "drain"
+    },
+    {
+      "net": "a[4]",
+      "kind": "gate",
+      "x": 2444,
+      "y": 13120,
+      "block": "read_row_decode7_wl_driver",
+      "role": "pre1_n_pull_a4",
+      "terminal": "gate"
+    },
+    {
+      "net": "VSS",
+      "kind": "diff",
+      "x": 2524,
+      "y": 12989,
+      "block": "read_row_decode7_wl_driver",
+      "role": "pre1_n_pull_a4",
+      "terminal": "source"
+    },
+    {
+      "net": "rdec_pre2_n",
+      "kind": "diff",
+      "x": 2796,
+      "y": 12989,
+      "block": "read_row_decode7_wl_driver",
+      "role": "pre2_n_pull_a5",
+      "terminal": "drain"
+    },
+    {
+      "net": "a[5]",
+      "kind": "gate",
+      "x": 2876,
+      "y": 13120,
+      "block": "read_row_decode7_wl_driver",
+      "role": "pre2_n_pull_a5",
+      "terminal": "gate"
+    },
+    {
+      "net": "rdec_pre2_s0",
+      "kind": "diff",
+      "x": 2956,
+      "y": 12989,
+      "block": "read_row_decode7_wl_driver",
+      "role": "pre2_n_pull_a5",
+      "terminal": "source"
+    },
+    {
+      "net": "rdec_pre2_s0",
+      "kind": "diff",
+      "x": 3228,
+      "y": 12989,
+      "block": "read_row_decode7_wl_driver",
+      "role": "pre2_n_pull_a6",
+      "terminal": "drain"
+    },
+    {
+      "net": "a[6]",
+      "kind": "gate",
+      "x": 3308,
+      "y": 13120,
+      "block": "read_row_decode7_wl_driver",
+      "role": "pre2_n_pull_a6",
+      "terminal": "gate"
+    },
+    {
+      "net": "rdec_pre2_s1",
+      "kind": "diff",
+      "x": 3388,
+      "y": 12989,
+      "block": "read_row_decode7_wl_driver",
+      "role": "pre2_n_pull_a6",
+      "terminal": "source"
+    },
+    {
+      "net": "rdec_pre2_s1",
+      "kind": "diff",
+      "x": 3660,
+      "y": 12989,
+      "block": "read_row_decode7_wl_driver",
+      "role": "pre2_n_pull_en",
+      "terminal": "drain"
+    },
+    {
+      "net": "ren",
+      "kind": "gate",
+      "x": 3740,
+      "y": 13120,
+      "block": "read_row_decode7_wl_driver",
+      "role": "pre2_n_pull_en",
+      "terminal": "gate"
+    },
+    {
+      "net": "VSS",
+      "kind": "diff",
+      "x": 3820,
+      "y": 12989,
+      "block": "read_row_decode7_wl_driver",
+      "role": "pre2_n_pull_en",
+      "terminal": "source"
+    },
+    {
+      "net": "rdec_row_n",
+      "kind": "diff",
+      "x": 4092,
+      "y": 12989,
+      "block": "read_row_decode7_wl_driver",
+      "role": "row_n_pull_pre0",
+      "terminal": "drain"
+    },
+    {
+      "net": "rdec_pre0",
+      "kind": "gate",
+      "x": 4172,
+      "y": 13120,
+      "block": "read_row_decode7_wl_driver",
+      "role": "row_n_pull_pre0",
+      "terminal": "gate"
+    },
+    {
+      "net": "rdec_row_s0",
+      "kind": "diff",
+      "x": 4252,
+      "y": 12989,
+      "block": "read_row_decode7_wl_driver",
+      "role": "row_n_pull_pre0",
+      "terminal": "source"
+    },
+    {
+      "net": "rdec_row_s0",
+      "kind": "diff",
+      "x": 4524,
+      "y": 12989,
+      "block": "read_row_decode7_wl_driver",
+      "role": "row_n_pull_pre1",
+      "terminal": "drain"
+    },
+    {
+      "net": "rdec_pre1",
+      "kind": "gate",
+      "x": 4604,
+      "y": 13120,
+      "block": "read_row_decode7_wl_driver",
+      "role": "row_n_pull_pre1",
+      "terminal": "gate"
+    },
+    {
+      "net": "rdec_row_s1",
+      "kind": "diff",
+      "x": 4684,
+      "y": 12989,
+      "block": "read_row_decode7_wl_driver",
+      "role": "row_n_pull_pre1",
+      "terminal": "source"
+    },
+    {
+      "net": "rdec_row_s1",
+      "kind": "diff",
+      "x": 4956,
+      "y": 12989,
+      "block": "read_row_decode7_wl_driver",
+      "role": "row_n_pull_pre2",
+      "terminal": "drain"
+    },
+    {
+      "net": "rdec_pre2",
+      "kind": "gate",
+      "x": 5036,
+      "y": 13120,
+      "block": "read_row_decode7_wl_driver",
+      "role": "row_n_pull_pre2",
+      "terminal": "gate"
+    },
+    {
+      "net": "VSS",
+      "kind": "diff",
+      "x": 5116,
+      "y": 12989,
+      "block": "read_row_decode7_wl_driver",
+      "role": "row_n_pull_pre2",
+      "terminal": "source"
+    },
+    {
+      "net": "rdec_pre0",
+      "kind": "diff",
+      "x": 5388,
+      "y": 12989,
+      "block": "read_row_decode7_wl_driver",
+      "role": "pre0_inv_n",
+      "terminal": "drain"
+    },
+    {
+      "net": "rdec_pre0_n",
+      "kind": "gate",
+      "x": 5468,
+      "y": 13120,
+      "block": "read_row_decode7_wl_driver",
+      "role": "pre0_inv_n",
+      "terminal": "gate"
+    },
+    {
+      "net": "VSS",
+      "kind": "diff",
+      "x": 5548,
+      "y": 12989,
+      "block": "read_row_decode7_wl_driver",
+      "role": "pre0_inv_n",
+      "terminal": "source"
+    },
+    {
+      "net": "rdec_pre1",
+      "kind": "diff",
+      "x": 5820,
+      "y": 12989,
+      "block": "read_row_decode7_wl_driver",
+      "role": "pre1_inv_n",
+      "terminal": "drain"
+    },
+    {
+      "net": "rdec_pre1_n",
+      "kind": "gate",
+      "x": 5900,
+      "y": 13120,
+      "block": "read_row_decode7_wl_driver",
+      "role": "pre1_inv_n",
+      "terminal": "gate"
+    },
+    {
+      "net": "VSS",
+      "kind": "diff",
+      "x": 5980,
+      "y": 12989,
+      "block": "read_row_decode7_wl_driver",
+      "role": "pre1_inv_n",
+      "terminal": "source"
+    },
+    {
+      "net": "rdec_pre2",
+      "kind": "diff",
+      "x": 6252,
+      "y": 12989,
+      "block": "read_row_decode7_wl_driver",
+      "role": "pre2_inv_n",
+      "terminal": "drain"
+    },
+    {
+      "net": "rdec_pre2_n",
+      "kind": "gate",
+      "x": 6332,
+      "y": 13120,
+      "block": "read_row_decode7_wl_driver",
+      "role": "pre2_inv_n",
+      "terminal": "gate"
+    },
+    {
+      "net": "VSS",
+      "kind": "diff",
+      "x": 6412,
+      "y": 12989,
+      "block": "read_row_decode7_wl_driver",
+      "role": "pre2_inv_n",
+      "terminal": "source"
+    },
+    {
+      "net": "rdec_row_sel",
+      "kind": "diff",
+      "x": 6684,
+      "y": 12989,
+      "block": "read_row_decode7_wl_driver",
+      "role": "row_inv_n",
+      "terminal": "drain"
+    },
+    {
+      "net": "rdec_row_n",
+      "kind": "gate",
+      "x": 6764,
+      "y": 13120,
+      "block": "read_row_decode7_wl_driver",
+      "role": "row_inv_n",
+      "terminal": "gate"
+    },
+    {
+      "net": "VSS",
+      "kind": "diff",
+      "x": 6844,
+      "y": 12989,
+      "block": "read_row_decode7_wl_driver",
+      "role": "row_inv_n",
+      "terminal": "source"
+    },
+    {
+      "net": "rdec_wl_b0",
+      "kind": "diff",
+      "x": 7116,
+      "y": 12989,
+      "block": "read_row_decode7_wl_driver",
+      "role": "wl_drv0_n",
+      "terminal": "drain"
+    },
+    {
+      "net": "rdec_row_sel",
+      "kind": "gate",
+      "x": 7196,
+      "y": 13120,
+      "block": "read_row_decode7_wl_driver",
+      "role": "wl_drv0_n",
+      "terminal": "gate"
+    },
+    {
+      "net": "VSS",
+      "kind": "diff",
+      "x": 7276,
+      "y": 12989,
+      "block": "read_row_decode7_wl_driver",
+      "role": "wl_drv0_n",
+      "terminal": "source"
+    },
+    {
+      "net": "rdec_wl_s1",
+      "kind": "diff",
+      "x": 7548,
+      "y": 12989,
+      "block": "read_row_decode7_wl_driver",
+      "role": "wl_drv1_n",
+      "terminal": "drain"
+    },
+    {
+      "net": "rdec_wl_b0",
+      "kind": "gate",
+      "x": 7628,
+      "y": 13120,
+      "block": "read_row_decode7_wl_driver",
+      "role": "wl_drv1_n",
+      "terminal": "gate"
+    },
+    {
+      "net": "VSS",
+      "kind": "diff",
+      "x": 7708,
+      "y": 12989,
+      "block": "read_row_decode7_wl_driver",
+      "role": "wl_drv1_n",
+      "terminal": "source"
+    },
+    {
+      "net": "rdec_wl_b2",
+      "kind": "diff",
+      "x": 7980,
+      "y": 12989,
+      "block": "read_row_decode7_wl_driver",
+      "role": "wl_drv2_n",
+      "terminal": "drain"
+    },
+    {
+      "net": "rdec_wl_s1",
+      "kind": "gate",
+      "x": 8060,
+      "y": 13120,
+      "block": "read_row_decode7_wl_driver",
+      "role": "wl_drv2_n",
+      "terminal": "gate"
+    },
+    {
+      "net": "VSS",
+      "kind": "diff",
+      "x": 8140,
+      "y": 12989,
+      "block": "read_row_decode7_wl_driver",
+      "role": "wl_drv2_n",
+      "terminal": "source"
+    },
+    {
+      "net": "rwl0",
+      "kind": "diff",
+      "x": 8412,
+      "y": 12989,
+      "block": "read_row_decode7_wl_driver",
+      "role": "wl_drv3_n",
+      "terminal": "drain"
+    },
+    {
+      "net": "rdec_wl_b2",
+      "kind": "gate",
+      "x": 8492,
+      "y": 13120,
+      "block": "read_row_decode7_wl_driver",
+      "role": "wl_drv3_n",
+      "terminal": "gate"
+    },
+    {
+      "net": "VSS",
+      "kind": "diff",
+      "x": 8572,
+      "y": 12989,
+      "block": "read_row_decode7_wl_driver",
+      "role": "wl_drv3_n",
+      "terminal": "source"
+    },
+    {
+      "net": "rdec_pre0_n",
+      "kind": "diff",
+      "x": 722,
+      "y": 13921,
+      "block": "read_row_decode7_wl_driver",
+      "role": "pre0_n_pullup_a0",
+      "terminal": "drain"
+    },
+    {
+      "net": "a[0]",
+      "kind": "gate",
+      "x": 802,
+      "y": 13999,
+      "block": "read_row_decode7_wl_driver",
+      "role": "pre0_n_pullup_a0",
+      "terminal": "gate"
+    },
+    {
+      "net": "VDD",
+      "kind": "diff",
+      "x": 882,
+      "y": 13921,
+      "block": "read_row_decode7_wl_driver",
+      "role": "pre0_n_pullup_a0",
+      "terminal": "source"
+    },
+    {
+      "net": "rdec_pre0_n",
+      "kind": "diff",
+      "x": 1326,
+      "y": 13921,
+      "block": "read_row_decode7_wl_driver",
+      "role": "pre0_n_pullup_a1",
+      "terminal": "drain"
+    },
+    {
+      "net": "a[1]",
+      "kind": "gate",
+      "x": 1406,
+      "y": 13999,
+      "block": "read_row_decode7_wl_driver",
+      "role": "pre0_n_pullup_a1",
+      "terminal": "gate"
+    },
+    {
+      "net": "VDD",
+      "kind": "diff",
+      "x": 1486,
+      "y": 13921,
+      "block": "read_row_decode7_wl_driver",
+      "role": "pre0_n_pullup_a1",
+      "terminal": "source"
+    },
+    {
+      "net": "rdec_pre0_n",
+      "kind": "diff",
+      "x": 1930,
+      "y": 13921,
+      "block": "read_row_decode7_wl_driver",
+      "role": "pre0_n_pullup_a2",
+      "terminal": "drain"
+    },
+    {
+      "net": "a[2]",
+      "kind": "gate",
+      "x": 2010,
+      "y": 13999,
+      "block": "read_row_decode7_wl_driver",
+      "role": "pre0_n_pullup_a2",
+      "terminal": "gate"
+    },
+    {
+      "net": "VDD",
+      "kind": "diff",
+      "x": 2090,
+      "y": 13921,
+      "block": "read_row_decode7_wl_driver",
+      "role": "pre0_n_pullup_a2",
+      "terminal": "source"
+    },
+    {
+      "net": "rdec_pre1_n",
+      "kind": "diff",
+      "x": 2534,
+      "y": 13921,
+      "block": "read_row_decode7_wl_driver",
+      "role": "pre1_n_pullup_a3",
+      "terminal": "drain"
+    },
+    {
+      "net": "a[3]",
+      "kind": "gate",
+      "x": 2614,
+      "y": 13999,
+      "block": "read_row_decode7_wl_driver",
+      "role": "pre1_n_pullup_a3",
+      "terminal": "gate"
+    },
+    {
+      "net": "VDD",
+      "kind": "diff",
+      "x": 2694,
+      "y": 13921,
+      "block": "read_row_decode7_wl_driver",
+      "role": "pre1_n_pullup_a3",
+      "terminal": "source"
+    },
+    {
+      "net": "rdec_pre1_n",
+      "kind": "diff",
+      "x": 3138,
+      "y": 13921,
+      "block": "read_row_decode7_wl_driver",
+      "role": "pre1_n_pullup_a4",
+      "terminal": "drain"
+    },
+    {
+      "net": "a[4]",
+      "kind": "gate",
+      "x": 3218,
+      "y": 13999,
+      "block": "read_row_decode7_wl_driver",
+      "role": "pre1_n_pullup_a4",
+      "terminal": "gate"
+    },
+    {
+      "net": "VDD",
+      "kind": "diff",
+      "x": 3298,
+      "y": 13921,
+      "block": "read_row_decode7_wl_driver",
+      "role": "pre1_n_pullup_a4",
+      "terminal": "source"
+    },
+    {
+      "net": "rdec_pre2_n",
+      "kind": "diff",
+      "x": 3742,
+      "y": 13921,
+      "block": "read_row_decode7_wl_driver",
+      "role": "pre2_n_pullup_a5",
+      "terminal": "drain"
+    },
+    {
+      "net": "a[5]",
+      "kind": "gate",
+      "x": 3822,
+      "y": 13999,
+      "block": "read_row_decode7_wl_driver",
+      "role": "pre2_n_pullup_a5",
+      "terminal": "gate"
+    },
+    {
+      "net": "VDD",
+      "kind": "diff",
+      "x": 3902,
+      "y": 13921,
+      "block": "read_row_decode7_wl_driver",
+      "role": "pre2_n_pullup_a5",
+      "terminal": "source"
+    },
+    {
+      "net": "rdec_pre2_n",
+      "kind": "diff",
+      "x": 4346,
+      "y": 13921,
+      "block": "read_row_decode7_wl_driver",
+      "role": "pre2_n_pullup_a6",
+      "terminal": "drain"
+    },
+    {
+      "net": "a[6]",
+      "kind": "gate",
+      "x": 4426,
+      "y": 13999,
+      "block": "read_row_decode7_wl_driver",
+      "role": "pre2_n_pullup_a6",
+      "terminal": "gate"
+    },
+    {
+      "net": "VDD",
+      "kind": "diff",
+      "x": 4506,
+      "y": 13921,
+      "block": "read_row_decode7_wl_driver",
+      "role": "pre2_n_pullup_a6",
+      "terminal": "source"
+    },
+    {
+      "net": "rdec_pre2_n",
+      "kind": "diff",
+      "x": 4950,
+      "y": 13921,
+      "block": "read_row_decode7_wl_driver",
+      "role": "pre2_n_pullup_en",
+      "terminal": "drain"
+    },
+    {
+      "net": "ren",
+      "kind": "gate",
+      "x": 5030,
+      "y": 13999,
+      "block": "read_row_decode7_wl_driver",
+      "role": "pre2_n_pullup_en",
+      "terminal": "gate"
+    },
+    {
+      "net": "VDD",
+      "kind": "diff",
+      "x": 5110,
+      "y": 13921,
+      "block": "read_row_decode7_wl_driver",
+      "role": "pre2_n_pullup_en",
+      "terminal": "source"
+    },
+    {
+      "net": "rdec_row_n",
+      "kind": "diff",
+      "x": 5554,
+      "y": 13921,
+      "block": "read_row_decode7_wl_driver",
+      "role": "row_n_pullup_pre0",
+      "terminal": "drain"
+    },
+    {
+      "net": "rdec_pre0",
+      "kind": "gate",
+      "x": 5634,
+      "y": 13999,
+      "block": "read_row_decode7_wl_driver",
+      "role": "row_n_pullup_pre0",
+      "terminal": "gate"
+    },
+    {
+      "net": "VDD",
+      "kind": "diff",
+      "x": 5714,
+      "y": 13921,
+      "block": "read_row_decode7_wl_driver",
+      "role": "row_n_pullup_pre0",
+      "terminal": "source"
+    },
+    {
+      "net": "rdec_row_n",
+      "kind": "diff",
+      "x": 6158,
+      "y": 13921,
+      "block": "read_row_decode7_wl_driver",
+      "role": "row_n_pullup_pre1",
+      "terminal": "drain"
+    },
+    {
+      "net": "rdec_pre1",
+      "kind": "gate",
+      "x": 6238,
+      "y": 13999,
+      "block": "read_row_decode7_wl_driver",
+      "role": "row_n_pullup_pre1",
+      "terminal": "gate"
+    },
+    {
+      "net": "VDD",
+      "kind": "diff",
+      "x": 6318,
+      "y": 13921,
+      "block": "read_row_decode7_wl_driver",
+      "role": "row_n_pullup_pre1",
+      "terminal": "source"
+    },
+    {
+      "net": "rdec_row_n",
+      "kind": "diff",
+      "x": 6762,
+      "y": 13921,
+      "block": "read_row_decode7_wl_driver",
+      "role": "row_n_pullup_pre2",
+      "terminal": "drain"
+    },
+    {
+      "net": "rdec_pre2",
+      "kind": "gate",
+      "x": 6842,
+      "y": 13999,
+      "block": "read_row_decode7_wl_driver",
+      "role": "row_n_pullup_pre2",
+      "terminal": "gate"
+    },
+    {
+      "net": "VDD",
+      "kind": "diff",
+      "x": 6922,
+      "y": 13921,
+      "block": "read_row_decode7_wl_driver",
+      "role": "row_n_pullup_pre2",
+      "terminal": "source"
+    },
+    {
+      "net": "rdec_pre0",
+      "kind": "diff",
+      "x": 7366,
+      "y": 13921,
+      "block": "read_row_decode7_wl_driver",
+      "role": "pre0_inv_p",
+      "terminal": "drain"
+    },
+    {
+      "net": "rdec_pre0_n",
+      "kind": "gate",
+      "x": 7446,
+      "y": 13999,
+      "block": "read_row_decode7_wl_driver",
+      "role": "pre0_inv_p",
+      "terminal": "gate"
+    },
+    {
+      "net": "VDD",
+      "kind": "diff",
+      "x": 7526,
+      "y": 13921,
+      "block": "read_row_decode7_wl_driver",
+      "role": "pre0_inv_p",
+      "terminal": "source"
+    },
+    {
+      "net": "rdec_pre1",
+      "kind": "diff",
+      "x": 7970,
+      "y": 13921,
+      "block": "read_row_decode7_wl_driver",
+      "role": "pre1_inv_p",
+      "terminal": "drain"
+    },
+    {
+      "net": "rdec_pre1_n",
+      "kind": "gate",
+      "x": 8050,
+      "y": 13999,
+      "block": "read_row_decode7_wl_driver",
+      "role": "pre1_inv_p",
+      "terminal": "gate"
+    },
+    {
+      "net": "VDD",
+      "kind": "diff",
+      "x": 8130,
+      "y": 13921,
+      "block": "read_row_decode7_wl_driver",
+      "role": "pre1_inv_p",
+      "terminal": "source"
+    },
+    {
+      "net": "rdec_pre2",
+      "kind": "diff",
+      "x": 8574,
+      "y": 13921,
+      "block": "read_row_decode7_wl_driver",
+      "role": "pre2_inv_p",
+      "terminal": "drain"
+    },
+    {
+      "net": "rdec_pre2_n",
+      "kind": "gate",
+      "x": 8654,
+      "y": 13999,
+      "block": "read_row_decode7_wl_driver",
+      "role": "pre2_inv_p",
+      "terminal": "gate"
+    },
+    {
+      "net": "VDD",
+      "kind": "diff",
+      "x": 8734,
+      "y": 13921,
+      "block": "read_row_decode7_wl_driver",
+      "role": "pre2_inv_p",
+      "terminal": "source"
+    },
+    {
+      "net": "rdec_row_sel",
+      "kind": "diff",
+      "x": 9178,
+      "y": 13921,
+      "block": "read_row_decode7_wl_driver",
+      "role": "row_inv_p",
+      "terminal": "drain"
+    },
+    {
+      "net": "rdec_row_n",
+      "kind": "gate",
+      "x": 9258,
+      "y": 13999,
+      "block": "read_row_decode7_wl_driver",
+      "role": "row_inv_p",
+      "terminal": "gate"
+    },
+    {
+      "net": "VDD",
+      "kind": "diff",
+      "x": 9338,
+      "y": 13921,
+      "block": "read_row_decode7_wl_driver",
+      "role": "row_inv_p",
+      "terminal": "source"
+    },
+    {
+      "net": "rdec_wl_b0",
+      "kind": "diff",
+      "x": 9782,
+      "y": 13921,
+      "block": "read_row_decode7_wl_driver",
+      "role": "wl_drv0_p",
+      "terminal": "drain"
+    },
+    {
+      "net": "rdec_row_sel",
+      "kind": "gate",
+      "x": 9862,
+      "y": 13999,
+      "block": "read_row_decode7_wl_driver",
+      "role": "wl_drv0_p",
+      "terminal": "gate"
+    },
+    {
+      "net": "VDD",
+      "kind": "diff",
+      "x": 9942,
+      "y": 13921,
+      "block": "read_row_decode7_wl_driver",
+      "role": "wl_drv0_p",
+      "terminal": "source"
+    },
+    {
+      "net": "rdec_wl_s1",
+      "kind": "diff",
+      "x": 10386,
+      "y": 13921,
+      "block": "read_row_decode7_wl_driver",
+      "role": "wl_drv1_p",
+      "terminal": "drain"
+    },
+    {
+      "net": "rdec_wl_b0",
+      "kind": "gate",
+      "x": 10466,
+      "y": 13999,
+      "block": "read_row_decode7_wl_driver",
+      "role": "wl_drv1_p",
+      "terminal": "gate"
+    },
+    {
+      "net": "VDD",
+      "kind": "diff",
+      "x": 10546,
+      "y": 13921,
+      "block": "read_row_decode7_wl_driver",
+      "role": "wl_drv1_p",
+      "terminal": "source"
+    },
+    {
+      "net": "rdec_wl_b2",
+      "kind": "diff",
+      "x": 10990,
+      "y": 13921,
+      "block": "read_row_decode7_wl_driver",
+      "role": "wl_drv2_p",
+      "terminal": "drain"
+    },
+    {
+      "net": "rdec_wl_s1",
+      "kind": "gate",
+      "x": 11070,
+      "y": 13999,
+      "block": "read_row_decode7_wl_driver",
+      "role": "wl_drv2_p",
+      "terminal": "gate"
+    },
+    {
+      "net": "VDD",
+      "kind": "diff",
+      "x": 11150,
+      "y": 13921,
+      "block": "read_row_decode7_wl_driver",
+      "role": "wl_drv2_p",
+      "terminal": "source"
+    },
+    {
+      "net": "rwl0",
+      "kind": "diff",
+      "x": 11594,
+      "y": 13921,
+      "block": "read_row_decode7_wl_driver",
+      "role": "wl_drv3_p",
+      "terminal": "drain"
+    },
+    {
+      "net": "rdec_wl_b2",
+      "kind": "gate",
+      "x": 11674,
+      "y": 13999,
+      "block": "read_row_decode7_wl_driver",
+      "role": "wl_drv3_p",
+      "terminal": "gate"
+    },
+    {
+      "net": "VDD",
+      "kind": "diff",
+      "x": 11754,
+      "y": 13921,
+      "block": "read_row_decode7_wl_driver",
+      "role": "wl_drv3_p",
+      "terminal": "source"
+    },
+    {
+      "net": "VSS",
+      "kind": "diff",
+      "x": 12076,
+      "y": 13120,
+      "block": "read_row_decode7_wl_driver",
+      "role": "psub_tap",
+      "terminal": "tap"
+    },
+    {
+      "net": "VDD",
+      "kind": "diff",
+      "x": 12076,
+      "y": 13783,
+      "block": "read_row_decode7_wl_driver",
+      "role": "nsub_tap",
+      "terminal": "tap"
+    },
+    {
+      "net": "VDD",
+      "kind": "pin",
+      "x": 13336,
+      "y": 37819,
+      "block": "pin",
+      "role": "VDD",
+      "terminal": "pin"
+    },
+    {
+      "net": "VSS",
+      "kind": "pin",
+      "x": 13196,
+      "y": 220,
+      "block": "pin",
+      "role": "VSS",
+      "terminal": "pin"
+    },
+    {
+      "net": "ren",
+      "kind": "pin",
+      "x": 16976,
+      "y": 220,
+      "block": "pin",
+      "role": "ren",
+      "terminal": "pin"
+    },
+    {
+      "net": "a[0]",
+      "kind": "pin",
+      "x": 13476,
+      "y": 38039,
+      "block": "pin",
+      "role": "a[0]",
+      "terminal": "pin"
+    },
+    {
+      "net": "a[1]",
+      "kind": "pin",
+      "x": 13616,
+      "y": 220,
+      "block": "pin",
+      "role": "a[1]",
+      "terminal": "pin"
+    },
+    {
+      "net": "a[2]",
+      "kind": "pin",
+      "x": 13756,
+      "y": 38039,
+      "block": "pin",
+      "role": "a[2]",
+      "terminal": "pin"
+    },
+    {
+      "net": "a[3]",
+      "kind": "pin",
+      "x": 13896,
+      "y": 220,
+      "block": "pin",
+      "role": "a[3]",
+      "terminal": "pin"
+    },
+    {
+      "net": "a[4]",
+      "kind": "pin",
+      "x": 14036,
+      "y": 38039,
+      "block": "pin",
+      "role": "a[4]",
+      "terminal": "pin"
+    },
+    {
+      "net": "a[5]",
+      "kind": "pin",
+      "x": 14176,
+      "y": 220,
+      "block": "pin",
+      "role": "a[5]",
+      "terminal": "pin"
+    },
+    {
+      "net": "a[6]",
+      "kind": "pin",
+      "x": 14316,
+      "y": 38039,
+      "block": "pin",
+      "role": "a[6]",
+      "terminal": "pin"
+    },
+    {
+      "net": "rwl0",
+      "kind": "pin",
+      "x": 17116,
+      "y": 220,
+      "block": "pin",
+      "role": "rwl0",
+      "terminal": "pin"
+    }
+  ],
+  "primitive_sources": {
+    "nmos": {
+      "name": "periphery_nmos",
+      "source": "nmos_5p04310591302010_3v512x8m81.mag",
+      "width_units": 232,
+      "height_units": 299,
+      "rect_count": 17
+    },
+    "pmos": {
+      "name": "periphery_pmos",
+      "source": "pmos_5p04310591302038_3v512x8m81.mag",
+      "width_units": 404,
+      "height_units": 284,
+      "rect_count": 18
+    }
+  }
+}
