@@ -1,0 +1,65 @@
+VERSION 5.8 ;
+BUSBITCHARS "[]" ;
+DIVIDERCHAR "/" ;
+MACRO detronyx_12t_write_conflict_rc1
+  CLASS BLOCK ;
+  FOREIGN detronyx_12t_write_conflict_rc1 0.000 0.000 ;
+  ORIGIN 0.000 0.000 ;
+  SIZE 29.100000 BY 53.395000 ;
+  SYMMETRY X Y ;
+  PIN VDD
+    DIRECTION INOUT ;
+    USE POWER ;
+    PORT
+      LAYER Metal3 ;
+        RECT 23.640000 52.195000 24.000000 53.395000 ;
+    END
+  END VDD
+  PIN VSS
+    DIRECTION INOUT ;
+    USE GROUND ;
+    PORT
+      LAYER Metal3 ;
+        RECT 22.940000 0.700000 23.300000 1.900000 ;
+    END
+  END VSS
+  PIN w0_en
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal3 ;
+        RECT 28.540000 0.700000 28.900000 1.500000 ;
+    END
+  END w0_en
+  PIN w1_en
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal3 ;
+        RECT 29.240000 53.295000 29.600000 54.095000 ;
+    END
+  END w1_en
+  PIN addr_eq
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal3 ;
+        RECT 24.340000 0.700000 24.700000 1.500000 ;
+    END
+  END addr_eq
+  PIN write_conflict
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal3 ;
+        RECT 29.940000 53.295000 30.300000 54.095000 ;
+    END
+  END write_conflict
+  OBS
+    LAYER Metal1 ;
+      RECT 0.000000 0.000000 29.100000 53.395000 ;
+    LAYER Metal2 ;
+      RECT 0.000000 0.000000 29.100000 53.395000 ;
+  END
+END detronyx_12t_write_conflict_rc1
+END LIBRARY

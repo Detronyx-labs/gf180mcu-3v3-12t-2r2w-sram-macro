@@ -1,0 +1,18 @@
+* RC7 transistor-level reference CDL for detronyx_12t_ctrl_row_select4_wlbuf_rc7
+* Uses Tim-derived 3.3V GF180 MOS primitive dimensions.
+.subckt detronyx_12t_ctrl_row_select4_wlbuf_rc7 VDD VSS P0 P1 P2 EN WL
+X1_row_nand4_n0 row_n P0 row_nand4_mid0 VSS nfet_03v3 w=1.055u l=0.28u
+X2_row_nand4_n1 row_nand4_mid0 P1 row_nand4_mid1 VSS nfet_03v3 w=1.055u l=0.28u
+X3_row_nand4_n2 row_nand4_mid1 P2 row_nand4_mid2 VSS nfet_03v3 w=1.055u l=0.28u
+X4_row_nand4_n3 row_nand4_mid2 EN VSS VSS nfet_03v3 w=1.055u l=0.28u
+X5_row_nand4_p0 row_n P0 VDD VDD pfet_03v3 w=0.56u l=0.28u
+X6_row_nand4_p1 row_n P1 VDD VDD pfet_03v3 w=0.56u l=0.28u
+X7_row_nand4_p2 row_n P2 VDD VDD pfet_03v3 w=0.56u l=0.28u
+X8_row_nand4_p3 row_n EN VDD VDD pfet_03v3 w=0.56u l=0.28u
+X9_buf0_n buf0 row_n VSS VSS nfet_03v3 w=1.055u l=0.28u
+X10_buf0_p buf0 row_n VDD VDD pfet_03v3 w=0.56u l=0.28u
+X11_buf1_n buf1 buf0 VSS VSS nfet_03v3 w=1.055u l=0.28u
+X12_buf1_p buf1 buf0 VDD VDD pfet_03v3 w=0.56u l=0.28u
+X13_buf2_n WL buf1 VSS VSS nfet_03v3 w=1.055u l=0.28u
+X14_buf2_p WL buf1 VDD VDD pfet_03v3 w=0.56u l=0.28u
+.ends detronyx_12t_ctrl_row_select4_wlbuf_rc7

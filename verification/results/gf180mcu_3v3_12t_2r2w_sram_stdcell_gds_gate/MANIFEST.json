@@ -1,0 +1,127 @@
+{
+  "checks": [
+    {
+      "check": "manifest status",
+      "detail": "status=PASS",
+      "evidence": "reports/stdcell_control_gds_merge/MANIFEST.json",
+      "scope": "gds_merge",
+      "status": "PASS"
+    },
+    {
+      "check": "merge status",
+      "detail": "PASS",
+      "evidence": "macros/gf180mcu_3v3_12t_2r2w_sram_512x8/layout/gf180mcu_3v3_12t_2r2w_sram_512x8.gds",
+      "scope": "gf180mcu_3v3_12t_2r2w_sram_512x8",
+      "status": "PASS"
+    },
+    {
+      "check": "footprint unchanged",
+      "detail": "bbox={'bottom_um': 0.0, 'height_um': 340.92, 'left_um': 0.0, 'right_um': 585.56, 'top_um': 340.92, 'width_um': 585.56}",
+      "evidence": "macros/gf180mcu_3v3_12t_2r2w_sram_512x8/layout/gf180mcu_3v3_12t_2r2w_sram_512x8.gds",
+      "scope": "gf180mcu_3v3_12t_2r2w_sram_512x8",
+      "status": "PASS"
+    },
+    {
+      "check": "placed stdcell count",
+      "detail": "expected=276 actual=276",
+      "evidence": "reports/stdcell_control_gds_merge/MANIFEST.json",
+      "scope": "gf180mcu_3v3_12t_2r2w_sram_512x8",
+      "status": "PASS"
+    },
+    {
+      "check": "stdcell GDS names present",
+      "detail": "missing=[]",
+      "evidence": "macros/gf180mcu_3v3_12t_2r2w_sram_512x8/layout/gf180mcu_3v3_12t_2r2w_sram_512x8.gds",
+      "scope": "gf180mcu_3v3_12t_2r2w_sram_512x8",
+      "status": "PASS"
+    },
+    {
+      "check": "merge status",
+      "detail": "PASS",
+      "evidence": "macros/gf180mcu_3v3_12t_2r2w_sram_512x32/layout/gf180mcu_3v3_12t_2r2w_sram_512x32.gds",
+      "scope": "gf180mcu_3v3_12t_2r2w_sram_512x32",
+      "status": "PASS"
+    },
+    {
+      "check": "footprint unchanged",
+      "detail": "bbox={'bottom_um': 0.0, 'height_um': 618.04, 'left_um': 0.0, 'right_um': 1003.96, 'top_um': 618.04, 'width_um': 1003.96}",
+      "evidence": "macros/gf180mcu_3v3_12t_2r2w_sram_512x32/layout/gf180mcu_3v3_12t_2r2w_sram_512x32.gds",
+      "scope": "gf180mcu_3v3_12t_2r2w_sram_512x32",
+      "status": "PASS"
+    },
+    {
+      "check": "placed stdcell count",
+      "detail": "expected=276 actual=276",
+      "evidence": "reports/stdcell_control_gds_merge/MANIFEST.json",
+      "scope": "gf180mcu_3v3_12t_2r2w_sram_512x32",
+      "status": "PASS"
+    },
+    {
+      "check": "stdcell GDS names present",
+      "detail": "missing=[]",
+      "evidence": "macros/gf180mcu_3v3_12t_2r2w_sram_512x32/layout/gf180mcu_3v3_12t_2r2w_sram_512x32.gds",
+      "scope": "gf180mcu_3v3_12t_2r2w_sram_512x32",
+      "status": "PASS"
+    },
+    {
+      "check": "merge status",
+      "detail": "PASS",
+      "evidence": "macros/gf180mcu_3v3_12t_2r2w_sram_1024x8/layout/gf180mcu_3v3_12t_2r2w_sram_1024x8.gds",
+      "scope": "gf180mcu_3v3_12t_2r2w_sram_1024x8",
+      "status": "PASS"
+    },
+    {
+      "check": "footprint unchanged",
+      "detail": "bbox={'bottom_um': 0.0, 'height_um': 618.04, 'left_um': 0.0, 'right_um': 585.56, 'top_um': 618.04, 'width_um': 585.56}",
+      "evidence": "macros/gf180mcu_3v3_12t_2r2w_sram_1024x8/layout/gf180mcu_3v3_12t_2r2w_sram_1024x8.gds",
+      "scope": "gf180mcu_3v3_12t_2r2w_sram_1024x8",
+      "status": "PASS"
+    },
+    {
+      "check": "placed stdcell count",
+      "detail": "expected=322 actual=322",
+      "evidence": "reports/stdcell_control_gds_merge/MANIFEST.json",
+      "scope": "gf180mcu_3v3_12t_2r2w_sram_1024x8",
+      "status": "PASS"
+    },
+    {
+      "check": "stdcell GDS names present",
+      "detail": "missing=[]",
+      "evidence": "macros/gf180mcu_3v3_12t_2r2w_sram_1024x8/layout/gf180mcu_3v3_12t_2r2w_sram_1024x8.gds",
+      "scope": "gf180mcu_3v3_12t_2r2w_sram_1024x8",
+      "status": "PASS"
+    },
+    {
+      "check": "merge status",
+      "detail": "PASS",
+      "evidence": "macros/gf180mcu_3v3_12t_2r2w_sram_1024x32/layout/gf180mcu_3v3_12t_2r2w_sram_1024x32.gds",
+      "scope": "gf180mcu_3v3_12t_2r2w_sram_1024x32",
+      "status": "PASS"
+    },
+    {
+      "check": "footprint unchanged",
+      "detail": "bbox={'bottom_um': 0.0, 'height_um': 1172.28, 'left_um': 0.0, 'right_um': 1003.96, 'top_um': 1172.28, 'width_um': 1003.96}",
+      "evidence": "macros/gf180mcu_3v3_12t_2r2w_sram_1024x32/layout/gf180mcu_3v3_12t_2r2w_sram_1024x32.gds",
+      "scope": "gf180mcu_3v3_12t_2r2w_sram_1024x32",
+      "status": "PASS"
+    },
+    {
+      "check": "placed stdcell count",
+      "detail": "expected=354 actual=354",
+      "evidence": "reports/stdcell_control_gds_merge/MANIFEST.json",
+      "scope": "gf180mcu_3v3_12t_2r2w_sram_1024x32",
+      "status": "PASS"
+    },
+    {
+      "check": "stdcell GDS names present",
+      "detail": "missing=[]",
+      "evidence": "macros/gf180mcu_3v3_12t_2r2w_sram_1024x32/layout/gf180mcu_3v3_12t_2r2w_sram_1024x32.gds",
+      "scope": "gf180mcu_3v3_12t_2r2w_sram_1024x32",
+      "status": "PASS"
+    }
+  ],
+  "counts": {
+    "PASS": 17
+  },
+  "failed": false
+}

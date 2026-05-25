@@ -1,0 +1,11 @@
+* Independent intended-topology CDL for detronyx_12t_precharge_sense_rc1
+* Generated from the periphery RC1 role map.
+.subckt detronyx_12t_precharge_sense_rc1 VDD VSS pchgb ren rbl0 dout
+X1_sense0_n sense0 rbl0 VSS VSS nfet_03v3 w=1.055u l=0.28u
+X2_sense1_n sense1 sense0 VSS VSS nfet_03v3 w=1.055u l=0.28u
+X3_sense2_n dout sense1 VSS VSS nfet_03v3 w=1.055u l=0.28u
+X4_rbl_precharge_p rbl0 pchgb VDD VDD pfet_03v3 w=0.56u l=0.28u
+X5_sense0_p sense0 rbl0 VDD VDD pfet_03v3 w=0.56u l=0.28u
+X6_sense1_p sense1 sense0 VDD VDD pfet_03v3 w=0.56u l=0.28u
+X7_sense2_p dout sense1 VDD VDD pfet_03v3 w=0.56u l=0.28u
+.ends detronyx_12t_precharge_sense_rc1

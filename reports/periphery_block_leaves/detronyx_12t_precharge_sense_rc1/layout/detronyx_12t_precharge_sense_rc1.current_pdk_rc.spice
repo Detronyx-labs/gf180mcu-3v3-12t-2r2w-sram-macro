@@ -1,0 +1,12 @@
+* NGSPICE file created from detronyx_12t_precharge_sense_rc1.ext - technology: gf180mcuD
+
+.subckt detronyx_12t_precharge_sense_rc1 VDD VSS pchgb ren rbl0 dout
+X0 VDD rbl0 a_240_2172# VDD pfet_03v3 ad=0.1232p pd=1u as=0.1232p ps=1u w=0.56u l=0.28u
+X1 VSS a_240_2172# a_672_2172# VSS nfet_03v3 ad=0.4642p pd=2.99u as=0.4642p ps=2.99u w=1.055u l=0.28u
+X2 VSS rbl0 a_240_2172# VSS nfet_03v3 ad=0.4642p pd=2.99u as=0.4642p ps=2.99u w=1.055u l=0.28u
+X3 VDD pchgb rbl0 VDD pfet_03v3 ad=0.1232p pd=1u as=0.1232p ps=1u w=0.56u l=0.28u
+X4 VDD a_672_2172# dout VDD pfet_03v3 ad=0.1232p pd=1u as=0.1232p ps=1u w=0.56u l=0.28u
+X5 VSS a_672_2172# dout VSS nfet_03v3 ad=0.4642p pd=2.99u as=0.4642p ps=2.99u w=1.055u l=0.28u
+X6 VDD a_240_2172# a_672_2172# VDD pfet_03v3 ad=0.1232p pd=1u as=0.1232p ps=1u w=0.56u l=0.28u
+.ends
+

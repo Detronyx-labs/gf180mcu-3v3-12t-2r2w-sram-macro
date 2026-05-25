@@ -1,0 +1,8 @@
+index,block,mos,role,x_units,y_units,x_um,y_um
+1,precharge_sense,nmos,sense0_n,240,2128,1.2,10.64
+2,precharge_sense,nmos,sense1_n,672,2128,3.36,10.64
+3,precharge_sense,nmos,sense2_n,1104,2128,5.52,10.64
+4,precharge_sense,pmos,rbl_precharge_p,240,3787,1.2,18.935
+5,precharge_sense,pmos,sense0_p,844,3787,4.22,18.935
+6,precharge_sense,pmos,sense1_p,1448,3787,7.24,18.935
+7,precharge_sense,pmos,sense2_p,2052,3787,10.26,18.935

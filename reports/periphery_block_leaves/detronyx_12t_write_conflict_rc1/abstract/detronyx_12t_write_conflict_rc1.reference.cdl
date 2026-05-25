@@ -1,0 +1,16 @@
+* Independent intended-topology CDL for detronyx_12t_write_conflict_rc1
+* Generated from the periphery RC1 role map.
+.subckt detronyx_12t_write_conflict_rc1 VDD VSS w0_en w1_en addr_eq write_conflict
+X1_both_nand_n0 both_n w0_en both_mid VSS nfet_03v3 w=1.055u l=0.28u
+X2_both_nand_n1 both_mid w1_en VSS VSS nfet_03v3 w=1.055u l=0.28u
+X3_both_inv_n both both_n VSS VSS nfet_03v3 w=1.055u l=0.28u
+X4_conflict_nand_n0 conflict_n both conflict_mid VSS nfet_03v3 w=1.055u l=0.28u
+X5_conflict_nand_n1 conflict_mid addr_eq VSS VSS nfet_03v3 w=1.055u l=0.28u
+X6_conflict_inv_n write_conflict conflict_n VSS VSS nfet_03v3 w=1.055u l=0.28u
+X7_both_nand_p0 both_n w0_en VDD VDD pfet_03v3 w=0.56u l=0.28u
+X8_both_nand_p1 both_n w1_en VDD VDD pfet_03v3 w=0.56u l=0.28u
+X9_both_inv_p both both_n VDD VDD pfet_03v3 w=0.56u l=0.28u
+X10_conflict_nand_p0 conflict_n both VDD VDD pfet_03v3 w=0.56u l=0.28u
+X11_conflict_nand_p1 conflict_n addr_eq VDD VDD pfet_03v3 w=0.56u l=0.28u
+X12_conflict_inv_p write_conflict conflict_n VDD VDD pfet_03v3 w=0.56u l=0.28u
+.ends detronyx_12t_write_conflict_rc1

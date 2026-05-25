@@ -1,0 +1,105 @@
+VERSION 5.8 ;
+BUSBITCHARS "[]" ;
+DIVIDERCHAR "/" ;
+MACRO detronyx_12t_write_row_decode7_wl_driver_rc1
+  CLASS BLOCK ;
+  FOREIGN detronyx_12t_write_row_decode7_wl_driver_rc1 0.000 0.000 ;
+  ORIGIN 0.000 0.000 ;
+  SIZE 80.960000 BY 120.715000 ;
+  SYMMETRY X Y ;
+  PIN VDD
+    DIRECTION INOUT ;
+    USE POWER ;
+    PORT
+      LAYER Metal3 ;
+        RECT 62.900000 119.515000 63.260000 120.715000 ;
+    END
+  END VDD
+  PIN VSS
+    DIRECTION INOUT ;
+    USE GROUND ;
+    PORT
+      LAYER Metal3 ;
+        RECT 62.200000 0.700000 62.560000 1.900000 ;
+    END
+  END VSS
+  PIN wdecen
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal3 ;
+        RECT 81.100000 0.700000 81.460000 1.500000 ;
+    END
+  END wdecen
+  PIN a[0]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal3 ;
+        RECT 63.600000 120.615000 63.960000 121.415000 ;
+    END
+  END a[0]
+  PIN a[1]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal3 ;
+        RECT 64.300000 0.700000 64.660000 1.500000 ;
+    END
+  END a[1]
+  PIN a[2]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal3 ;
+        RECT 65.000000 120.615000 65.360000 121.415000 ;
+    END
+  END a[2]
+  PIN a[3]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal3 ;
+        RECT 65.700000 0.700000 66.060000 1.500000 ;
+    END
+  END a[3]
+  PIN a[4]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal3 ;
+        RECT 66.400000 120.615000 66.760000 121.415000 ;
+    END
+  END a[4]
+  PIN a[5]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal3 ;
+        RECT 67.100000 0.700000 67.460000 1.500000 ;
+    END
+  END a[5]
+  PIN a[6]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal3 ;
+        RECT 67.800000 120.615000 68.160000 121.415000 ;
+    END
+  END a[6]
+  PIN wwl0
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal3 ;
+        RECT 81.800000 0.700000 82.160000 1.500000 ;
+    END
+  END wwl0
+  OBS
+    LAYER Metal1 ;
+      RECT 0.000000 0.000000 80.960000 120.715000 ;
+    LAYER Metal2 ;
+      RECT 0.000000 0.000000 80.960000 120.715000 ;
+  END
+END detronyx_12t_write_row_decode7_wl_driver_rc1
+END LIBRARY

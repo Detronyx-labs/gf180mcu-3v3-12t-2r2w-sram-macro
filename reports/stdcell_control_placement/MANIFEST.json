@@ -1,0 +1,601 @@
+{
+  "avalon_lef": "third_party/gf180mcu_as_sc_mcu7t3v3/pdk/libs.ref/gf180mcu_as_sc_mcu7t3v3/lef/gf180mcu_as_sc_mcu7t3v3.lef",
+  "avalon_techlef": "third_party/gf180mcu_as_sc_mcu7t3v3/pdk/libs.ref/gf180mcu_as_sc_mcu7t3v3/techlef/gf180mcu_as_sc_mcu7t3v3__nom.tlef",
+  "errors": [],
+  "final_physical_manifest": "reports/final_physical/MANIFEST.json",
+  "footprint_policy": "do not change macro width_um or height_um from reports/final_physical/MANIFEST.json",
+  "gds_guard_band": {
+    "horizontal_guard_sites": 1,
+    "vertical_guard_rows": 1
+  },
+  "package": "gf180mcu-3v3-12t-2r2w-sram-macro",
+  "results": [
+    {
+      "available_control_band_area_um2": 27475.1232,
+      "control_bottom_um": 40.0,
+      "control_top_um": 24.0,
+      "def": "reports/stdcell_control_placement/gf180mcu_3v3_12t_2r2w_sram_512x8/gf180mcu_3v3_12t_2r2w_sram_512x8.stdcell_control_placement.def",
+      "deferred_row_select_instances": 256,
+      "errors": [],
+      "footprint_unchanged": true,
+      "macro": "gf180mcu_3v3_12t_2r2w_sram_512x8",
+      "macro_height_um": 340.92,
+      "macro_width_um": 585.56,
+      "max_row_utilization": 0.128476,
+      "overall_utilization": 0.126798,
+      "placement_csv": "reports/stdcell_control_placement/gf180mcu_3v3_12t_2r2w_sram_512x8/gf180mcu_3v3_12t_2r2w_sram_512x8.stdcell_control_placement.csv",
+      "rows": [
+        {
+          "height_um": 3.92,
+          "name": "bottom_ctrl_0",
+          "orient": "N",
+          "used_width_um": 75.04,
+          "utilization": 0.128476,
+          "width_um": 584.08,
+          "x_um": 0.56,
+          "y_um": 3.92
+        },
+        {
+          "height_um": 3.92,
+          "name": "bottom_ctrl_1",
+          "orient": "FS",
+          "used_width_um": 75.04,
+          "utilization": 0.128476,
+          "width_um": 584.08,
+          "x_um": 0.56,
+          "y_um": 7.84
+        },
+        {
+          "height_um": 3.92,
+          "name": "bottom_ctrl_2",
+          "orient": "N",
+          "used_width_um": 75.04,
+          "utilization": 0.128476,
+          "width_um": 584.08,
+          "x_um": 0.56,
+          "y_um": 11.76
+        },
+        {
+          "height_um": 3.92,
+          "name": "bottom_ctrl_3",
+          "orient": "FS",
+          "used_width_um": 75.04,
+          "utilization": 0.128476,
+          "width_um": 584.08,
+          "x_um": 0.56,
+          "y_um": 15.68
+        },
+        {
+          "height_um": 3.92,
+          "name": "bottom_ctrl_4",
+          "orient": "N",
+          "used_width_um": 75.04,
+          "utilization": 0.128476,
+          "width_um": 584.08,
+          "x_um": 0.56,
+          "y_um": 19.6
+        },
+        {
+          "height_um": 3.92,
+          "name": "bottom_ctrl_5",
+          "orient": "FS",
+          "used_width_um": 73.36,
+          "utilization": 0.125599,
+          "width_um": 584.08,
+          "x_um": 0.56,
+          "y_um": 23.52
+        },
+        {
+          "height_um": 3.92,
+          "name": "bottom_ctrl_6",
+          "orient": "N",
+          "used_width_um": 73.36,
+          "utilization": 0.125599,
+          "width_um": 584.08,
+          "x_um": 0.56,
+          "y_um": 27.439999999999998
+        },
+        {
+          "height_um": 3.92,
+          "name": "bottom_ctrl_7",
+          "orient": "FS",
+          "used_width_um": 73.36,
+          "utilization": 0.125599,
+          "width_um": 584.08,
+          "x_um": 0.56,
+          "y_um": 31.36
+        },
+        {
+          "height_um": 3.92,
+          "name": "top_ctrl_0",
+          "orient": "N",
+          "used_width_um": 73.36,
+          "utilization": 0.125599,
+          "width_um": 584.08,
+          "x_um": 0.56,
+          "y_um": 321.32
+        },
+        {
+          "height_um": 3.92,
+          "name": "top_ctrl_1",
+          "orient": "FS",
+          "used_width_um": 73.36,
+          "utilization": 0.125599,
+          "width_um": 584.08,
+          "x_um": 0.56,
+          "y_um": 325.24
+        },
+        {
+          "height_um": 3.92,
+          "name": "top_ctrl_2",
+          "orient": "N",
+          "used_width_um": 73.36,
+          "utilization": 0.125599,
+          "width_um": 584.08,
+          "x_um": 0.56,
+          "y_um": 329.15999999999997
+        },
+        {
+          "height_um": 3.92,
+          "name": "top_ctrl_3",
+          "orient": "FS",
+          "used_width_um": 73.36,
+          "utilization": 0.125599,
+          "width_um": 584.08,
+          "x_um": 0.56,
+          "y_um": 333.08
+        }
+      ],
+      "site": {
+        "height_um": 3.92,
+        "name": "unithd",
+        "width_um": 0.56
+      },
+      "status": "PASS",
+      "stdcell_area_um2": 3483.7824,
+      "stdcell_instances_expected": 276,
+      "stdcell_instances_placed": 276
+    },
+    {
+      "available_control_band_area_um2": 47152.896,
+      "control_bottom_um": 40.0,
+      "control_top_um": 24.0,
+      "def": "reports/stdcell_control_placement/gf180mcu_3v3_12t_2r2w_sram_512x32/gf180mcu_3v3_12t_2r2w_sram_512x32.stdcell_control_placement.def",
+      "deferred_row_select_instances": 512,
+      "errors": [],
+      "footprint_unchanged": true,
+      "macro": "gf180mcu_3v3_12t_2r2w_sram_512x32",
+      "macro_height_um": 618.04,
+      "macro_width_um": 1003.96,
+      "max_row_utilization": 0.07486,
+      "overall_utilization": 0.073883,
+      "placement_csv": "reports/stdcell_control_placement/gf180mcu_3v3_12t_2r2w_sram_512x32/gf180mcu_3v3_12t_2r2w_sram_512x32.stdcell_control_placement.csv",
+      "rows": [
+        {
+          "height_um": 3.92,
+          "name": "bottom_ctrl_0",
+          "orient": "N",
+          "used_width_um": 75.04,
+          "utilization": 0.07486,
+          "width_um": 1002.4000000000001,
+          "x_um": 0.56,
+          "y_um": 3.92
+        },
+        {
+          "height_um": 3.92,
+          "name": "bottom_ctrl_1",
+          "orient": "FS",
+          "used_width_um": 75.04,
+          "utilization": 0.07486,
+          "width_um": 1002.4000000000001,
+          "x_um": 0.56,
+          "y_um": 7.84
+        },
+        {
+          "height_um": 3.92,
+          "name": "bottom_ctrl_2",
+          "orient": "N",
+          "used_width_um": 75.04,
+          "utilization": 0.07486,
+          "width_um": 1002.4000000000001,
+          "x_um": 0.56,
+          "y_um": 11.76
+        },
+        {
+          "height_um": 3.92,
+          "name": "bottom_ctrl_3",
+          "orient": "FS",
+          "used_width_um": 75.04,
+          "utilization": 0.07486,
+          "width_um": 1002.4000000000001,
+          "x_um": 0.56,
+          "y_um": 15.68
+        },
+        {
+          "height_um": 3.92,
+          "name": "bottom_ctrl_4",
+          "orient": "N",
+          "used_width_um": 75.04,
+          "utilization": 0.07486,
+          "width_um": 1002.4000000000001,
+          "x_um": 0.56,
+          "y_um": 19.6
+        },
+        {
+          "height_um": 3.92,
+          "name": "bottom_ctrl_5",
+          "orient": "FS",
+          "used_width_um": 73.36,
+          "utilization": 0.073184,
+          "width_um": 1002.4000000000001,
+          "x_um": 0.56,
+          "y_um": 23.52
+        },
+        {
+          "height_um": 3.92,
+          "name": "bottom_ctrl_6",
+          "orient": "N",
+          "used_width_um": 73.36,
+          "utilization": 0.073184,
+          "width_um": 1002.4000000000001,
+          "x_um": 0.56,
+          "y_um": 27.439999999999998
+        },
+        {
+          "height_um": 3.92,
+          "name": "bottom_ctrl_7",
+          "orient": "FS",
+          "used_width_um": 73.36,
+          "utilization": 0.073184,
+          "width_um": 1002.4000000000001,
+          "x_um": 0.56,
+          "y_um": 31.36
+        },
+        {
+          "height_um": 3.92,
+          "name": "top_ctrl_0",
+          "orient": "N",
+          "used_width_um": 73.36,
+          "utilization": 0.073184,
+          "width_um": 1002.4000000000001,
+          "x_um": 0.56,
+          "y_um": 598.4399999999999
+        },
+        {
+          "height_um": 3.92,
+          "name": "top_ctrl_1",
+          "orient": "FS",
+          "used_width_um": 73.36,
+          "utilization": 0.073184,
+          "width_um": 1002.4000000000001,
+          "x_um": 0.56,
+          "y_um": 602.3599999999999
+        },
+        {
+          "height_um": 3.92,
+          "name": "top_ctrl_2",
+          "orient": "N",
+          "used_width_um": 73.36,
+          "utilization": 0.073184,
+          "width_um": 1002.4000000000001,
+          "x_um": 0.56,
+          "y_um": 606.28
+        },
+        {
+          "height_um": 3.92,
+          "name": "top_ctrl_3",
+          "orient": "FS",
+          "used_width_um": 73.36,
+          "utilization": 0.073184,
+          "width_um": 1002.4000000000001,
+          "x_um": 0.56,
+          "y_um": 610.1999999999999
+        }
+      ],
+      "site": {
+        "height_um": 3.92,
+        "name": "unithd",
+        "width_um": 0.56
+      },
+      "status": "PASS",
+      "stdcell_area_um2": 3483.7824,
+      "stdcell_instances_expected": 276,
+      "stdcell_instances_placed": 276
+    },
+    {
+      "available_control_band_area_um2": 27475.1232,
+      "control_bottom_um": 40.0,
+      "control_top_um": 24.0,
+      "def": "reports/stdcell_control_placement/gf180mcu_3v3_12t_2r2w_sram_1024x8/gf180mcu_3v3_12t_2r2w_sram_1024x8.stdcell_control_placement.def",
+      "deferred_row_select_instances": 512,
+      "errors": [],
+      "footprint_unchanged": true,
+      "macro": "gf180mcu_3v3_12t_2r2w_sram_1024x8",
+      "macro_height_um": 618.04,
+      "macro_width_um": 585.56,
+      "max_row_utilization": 0.158198,
+      "overall_utilization": 0.15652,
+      "placement_csv": "reports/stdcell_control_placement/gf180mcu_3v3_12t_2r2w_sram_1024x8/gf180mcu_3v3_12t_2r2w_sram_1024x8.stdcell_control_placement.csv",
+      "rows": [
+        {
+          "height_um": 3.92,
+          "name": "bottom_ctrl_0",
+          "orient": "N",
+          "used_width_um": 91.84,
+          "utilization": 0.157239,
+          "width_um": 584.08,
+          "x_um": 0.56,
+          "y_um": 3.92
+        },
+        {
+          "height_um": 3.92,
+          "name": "bottom_ctrl_1",
+          "orient": "FS",
+          "used_width_um": 91.84,
+          "utilization": 0.157239,
+          "width_um": 584.08,
+          "x_um": 0.56,
+          "y_um": 7.84
+        },
+        {
+          "height_um": 3.92,
+          "name": "bottom_ctrl_2",
+          "orient": "N",
+          "used_width_um": 92.4,
+          "utilization": 0.158198,
+          "width_um": 584.08,
+          "x_um": 0.56,
+          "y_um": 11.76
+        },
+        {
+          "height_um": 3.92,
+          "name": "bottom_ctrl_3",
+          "orient": "FS",
+          "used_width_um": 92.4,
+          "utilization": 0.158198,
+          "width_um": 584.08,
+          "x_um": 0.56,
+          "y_um": 15.68
+        },
+        {
+          "height_um": 3.92,
+          "name": "bottom_ctrl_4",
+          "orient": "N",
+          "used_width_um": 92.4,
+          "utilization": 0.158198,
+          "width_um": 584.08,
+          "x_um": 0.56,
+          "y_um": 19.6
+        },
+        {
+          "height_um": 3.92,
+          "name": "bottom_ctrl_5",
+          "orient": "FS",
+          "used_width_um": 92.4,
+          "utilization": 0.158198,
+          "width_um": 584.08,
+          "x_um": 0.56,
+          "y_um": 23.52
+        },
+        {
+          "height_um": 3.92,
+          "name": "bottom_ctrl_6",
+          "orient": "N",
+          "used_width_um": 92.4,
+          "utilization": 0.158198,
+          "width_um": 584.08,
+          "x_um": 0.56,
+          "y_um": 27.439999999999998
+        },
+        {
+          "height_um": 3.92,
+          "name": "bottom_ctrl_7",
+          "orient": "FS",
+          "used_width_um": 90.16,
+          "utilization": 0.154362,
+          "width_um": 584.08,
+          "x_um": 0.56,
+          "y_um": 31.36
+        },
+        {
+          "height_um": 3.92,
+          "name": "top_ctrl_0",
+          "orient": "N",
+          "used_width_um": 90.16,
+          "utilization": 0.154362,
+          "width_um": 584.08,
+          "x_um": 0.56,
+          "y_um": 598.4399999999999
+        },
+        {
+          "height_um": 3.92,
+          "name": "top_ctrl_1",
+          "orient": "FS",
+          "used_width_um": 90.72,
+          "utilization": 0.155321,
+          "width_um": 584.08,
+          "x_um": 0.56,
+          "y_um": 602.3599999999999
+        },
+        {
+          "height_um": 3.92,
+          "name": "top_ctrl_2",
+          "orient": "N",
+          "used_width_um": 90.16,
+          "utilization": 0.154362,
+          "width_um": 584.08,
+          "x_um": 0.56,
+          "y_um": 606.28
+        },
+        {
+          "height_um": 3.92,
+          "name": "top_ctrl_3",
+          "orient": "FS",
+          "used_width_um": 90.16,
+          "utilization": 0.154362,
+          "width_um": 584.08,
+          "x_um": 0.56,
+          "y_um": 610.1999999999999
+        }
+      ],
+      "site": {
+        "height_um": 3.92,
+        "name": "unithd",
+        "width_um": 0.56
+      },
+      "status": "PASS",
+      "stdcell_area_um2": 4300.3968,
+      "stdcell_instances_expected": 322,
+      "stdcell_instances_placed": 322
+    },
+    {
+      "available_control_band_area_um2": 47152.896,
+      "control_bottom_um": 40.0,
+      "control_top_um": 24.0,
+      "def": "reports/stdcell_control_placement/gf180mcu_3v3_12t_2r2w_sram_1024x32/gf180mcu_3v3_12t_2r2w_sram_1024x32.stdcell_control_placement.def",
+      "deferred_row_select_instances": 1024,
+      "errors": [],
+      "footprint_unchanged": true,
+      "macro": "gf180mcu_3v3_12t_2r2w_sram_1024x32",
+      "macro_height_um": 1172.28,
+      "macro_width_um": 1003.96,
+      "max_row_utilization": 0.108939,
+      "overall_utilization": 0.108333,
+      "placement_csv": "reports/stdcell_control_placement/gf180mcu_3v3_12t_2r2w_sram_1024x32/gf180mcu_3v3_12t_2r2w_sram_1024x32.stdcell_control_placement.csv",
+      "rows": [
+        {
+          "height_um": 3.92,
+          "name": "bottom_ctrl_0",
+          "orient": "N",
+          "used_width_um": 108.64,
+          "utilization": 0.10838,
+          "width_um": 1002.4000000000001,
+          "x_um": 0.56,
+          "y_um": 3.92
+        },
+        {
+          "height_um": 3.92,
+          "name": "bottom_ctrl_1",
+          "orient": "FS",
+          "used_width_um": 108.64,
+          "utilization": 0.10838,
+          "width_um": 1002.4000000000001,
+          "x_um": 0.56,
+          "y_um": 7.84
+        },
+        {
+          "height_um": 3.92,
+          "name": "bottom_ctrl_2",
+          "orient": "N",
+          "used_width_um": 108.64,
+          "utilization": 0.10838,
+          "width_um": 1002.4000000000001,
+          "x_um": 0.56,
+          "y_um": 11.76
+        },
+        {
+          "height_um": 3.92,
+          "name": "bottom_ctrl_3",
+          "orient": "FS",
+          "used_width_um": 108.64,
+          "utilization": 0.10838,
+          "width_um": 1002.4000000000001,
+          "x_um": 0.56,
+          "y_um": 15.68
+        },
+        {
+          "height_um": 3.92,
+          "name": "bottom_ctrl_4",
+          "orient": "N",
+          "used_width_um": 108.64,
+          "utilization": 0.10838,
+          "width_um": 1002.4000000000001,
+          "x_um": 0.56,
+          "y_um": 19.6
+        },
+        {
+          "height_um": 3.92,
+          "name": "bottom_ctrl_5",
+          "orient": "FS",
+          "used_width_um": 108.64,
+          "utilization": 0.10838,
+          "width_um": 1002.4000000000001,
+          "x_um": 0.56,
+          "y_um": 23.52
+        },
+        {
+          "height_um": 3.92,
+          "name": "bottom_ctrl_6",
+          "orient": "N",
+          "used_width_um": 109.2,
+          "utilization": 0.108939,
+          "width_um": 1002.4000000000001,
+          "x_um": 0.56,
+          "y_um": 27.439999999999998
+        },
+        {
+          "height_um": 3.92,
+          "name": "bottom_ctrl_7",
+          "orient": "FS",
+          "used_width_um": 109.2,
+          "utilization": 0.108939,
+          "width_um": 1002.4000000000001,
+          "x_um": 0.56,
+          "y_um": 31.36
+        },
+        {
+          "height_um": 3.92,
+          "name": "top_ctrl_0",
+          "orient": "N",
+          "used_width_um": 108.64,
+          "utilization": 0.10838,
+          "width_um": 1002.4000000000001,
+          "x_um": 0.56,
+          "y_um": 1152.68
+        },
+        {
+          "height_um": 3.92,
+          "name": "top_ctrl_1",
+          "orient": "FS",
+          "used_width_um": 108.64,
+          "utilization": 0.10838,
+          "width_um": 1002.4000000000001,
+          "x_um": 0.56,
+          "y_um": 1156.6000000000001
+        },
+        {
+          "height_um": 3.92,
+          "name": "top_ctrl_2",
+          "orient": "N",
+          "used_width_um": 108.64,
+          "utilization": 0.10838,
+          "width_um": 1002.4000000000001,
+          "x_um": 0.56,
+          "y_um": 1160.52
+        },
+        {
+          "height_um": 3.92,
+          "name": "top_ctrl_3",
+          "orient": "FS",
+          "used_width_um": 106.96,
+          "utilization": 0.106704,
+          "width_um": 1002.4000000000001,
+          "x_um": 0.56,
+          "y_um": 1164.44
+        }
+      ],
+      "site": {
+        "height_um": 3.92,
+        "name": "unithd",
+        "width_um": 0.56
+      },
+      "status": "PASS",
+      "stdcell_area_um2": 5108.2304,
+      "stdcell_instances_expected": 354,
+      "stdcell_instances_placed": 354
+    }
+  ],
+  "scope": "Avalon stdcell control placement only; row-select/WL-buffer/periphery leaf placement is deferred.",
+  "status": "PASS",
+  "stdcell_control_manifest": "reports/stdcell_control_integration/MANIFEST.json"
+}

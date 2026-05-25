@@ -17,10 +17,7 @@ SUPPLIES = {"VDD", "VSS", "VSUBS"}
 
 
 def default_reports_path() -> Path:
-    unpacked = Path("reports/pin_lvs_pex_signoff")
-    if unpacked.exists():
-        return unpacked
-    return Path("reports.zip")
+    return Path("reports/pin_lvs_pex_signoff")
 
 
 @dataclass(frozen=True)
@@ -202,7 +199,7 @@ def main(argv: list[str]) -> int:
         "path",
         nargs="?",
         default=default_reports_path(),
-        help="reports.zip, a directory containing extracted reports, or one .current_pdk.spice file",
+        help="directory containing extracted reports, or one .current_pdk.spice file",
     )
     args = parser.parse_args(argv)
 

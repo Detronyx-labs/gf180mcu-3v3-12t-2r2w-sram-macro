@@ -1,0 +1,29 @@
+
+Cell detronyx_12t_precharge_sense_rc1 disconnected node: ren
+
+Cell detronyx_12t_precharge_sense_rc1 disconnected node: ren
+
+Subcircuit summary:
+Circuit 1: detronyx_12t_precharge_sense_rc |Circuit 2: detronyx_12t_precharge_sense_rc 
+-------------------------------------------|-------------------------------------------
+pfet_03v3 (4)                              |pfet_03v3 (4)                              
+nfet_03v3 (3)                              |nfet_03v3 (3)                              
+Number of devices: 7                       |Number of devices: 7                       
+Number of nets: 7                          |Number of nets: 7                          
+---------------------------------------------------------------------------------------
+Circuits match uniquely.
+Netlists match uniquely.
+
+Subcircuit pins:
+Circuit 1: detronyx_12t_precharge_sense_rc |Circuit 2: detronyx_12t_precharge_sense_rc 
+-------------------------------------------|-------------------------------------------
+dout                                       |dout                                       
+pchgb                                      |pchgb                                      
+VSS                                        |VSS                                        
+rbl0                                       |rbl0                                       
+VDD                                        |VDD                                        
+ren                                        |ren                                        
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes detronyx_12t_precharge_sense_rc1 and detronyx_12t_precharge_sense_rc1 are equivalent.
+Circuits match uniquely.

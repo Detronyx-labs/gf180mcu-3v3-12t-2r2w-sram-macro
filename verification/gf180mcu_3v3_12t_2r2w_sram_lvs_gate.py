@@ -153,10 +153,7 @@ def read_sources_from_zip(path: Path) -> list[Source]:
 
 
 def default_reports_path() -> Path:
-    unpacked = Path("reports/pin_lvs_pex_signoff")
-    if unpacked.exists():
-        return unpacked
-    return Path("reports.zip")
+    return Path("reports/pin_lvs_pex_signoff")
 
 
 def subckt_headers(text: str) -> dict[str, list[str]]:

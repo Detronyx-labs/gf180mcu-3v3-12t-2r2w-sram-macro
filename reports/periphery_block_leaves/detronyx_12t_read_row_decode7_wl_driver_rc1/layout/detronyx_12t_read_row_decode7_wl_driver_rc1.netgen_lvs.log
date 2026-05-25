@@ -1,0 +1,30 @@
+
+Subcircuit summary:
+Circuit 1: detronyx_12t_read_row_decode7_w |Circuit 2: detronyx_12t_read_row_decode7_w 
+-------------------------------------------|-------------------------------------------
+pfet_03v3 (19)                             |pfet_03v3 (19)                             
+nfet_03v3 (19)                             |nfet_03v3 (19)                             
+Number of devices: 38                      |Number of devices: 38                      
+Number of nets: 29                         |Number of nets: 29                         
+---------------------------------------------------------------------------------------
+Circuits match uniquely.
+Netlists match uniquely.
+
+Subcircuit pins:
+Circuit 1: detronyx_12t_read_row_decode7_w |Circuit 2: detronyx_12t_read_row_decode7_w 
+-------------------------------------------|-------------------------------------------
+VSS                                        |VSS                                        
+a[3]                                       |a[3]                                       
+a[4]                                       |a[4]                                       
+a[0]                                       |a[0]                                       
+a[5]                                       |a[5]                                       
+a[1]                                       |a[1]                                       
+a[6]                                       |a[6]                                       
+a[2]                                       |a[2]                                       
+ren                                        |ren                                        
+rwl0                                       |rwl0                                       
+VDD                                        |VDD                                        
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes detronyx_12t_read_row_decode7_wl_driver_rc1 and detronyx_12t_read_row_decode7_wl_driver_rc1 are equivalent.
+Circuits match uniquely.

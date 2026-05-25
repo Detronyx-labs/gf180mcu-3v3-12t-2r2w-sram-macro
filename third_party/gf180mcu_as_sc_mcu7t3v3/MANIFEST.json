@@ -1,0 +1,80 @@
+{
+  "files": [
+    {
+      "bytes": 11357,
+      "path": "third_party/gf180mcu_as_sc_mcu7t3v3/LICENSE",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    {
+      "bytes": 653,
+      "path": "third_party/gf180mcu_as_sc_mcu7t3v3/README.md",
+      "sha256": "fe728b630d40b0357f0eda57940b009ca987e7996d4b6be15a5771655b4869ab"
+    },
+    {
+      "bytes": 1721,
+      "path": "third_party/gf180mcu_as_sc_mcu7t3v3/README.upstream.md",
+      "sha256": "6e7a3b30660aa7d63318bcf1421c208cc7d352d10130194dc53e74da9ba5b9b8"
+    },
+    {
+      "bytes": 504400,
+      "path": "third_party/gf180mcu_as_sc_mcu7t3v3/pdk/libs.ref/gf180mcu_as_sc_mcu7t3v3/gf180mcu_as_sc_mcu7t3v3__merged.gds",
+      "sha256": "60a11d11c4a507765378540dd5517ac8ec50d24183dfc404efe5aec5a296e16d"
+    },
+    {
+      "bytes": 106994,
+      "path": "third_party/gf180mcu_as_sc_mcu7t3v3/pdk/libs.ref/gf180mcu_as_sc_mcu7t3v3/cdl/gf180mcu_as_sc_mcu7t3v3.cdl",
+      "sha256": "94baa7f36438aba9922c4495dd9829f395801c2a944d21a9545793a34afa9df0"
+    },
+    {
+      "bytes": 175105,
+      "path": "third_party/gf180mcu_as_sc_mcu7t3v3/pdk/libs.ref/gf180mcu_as_sc_mcu7t3v3/lef/gf180mcu_as_sc_mcu7t3v3.lef",
+      "sha256": "cec7ad593d236aff09a5da524cba1a548dbd668c32cc179a0f93e64f9be5920f"
+    },
+    {
+      "bytes": 989058,
+      "path": "third_party/gf180mcu_as_sc_mcu7t3v3/pdk/libs.ref/gf180mcu_as_sc_mcu7t3v3/lib/gf180mcu_as_sc_mcu7t3v3__ff_n40C_3v60.lib",
+      "sha256": "2dc44a3fafa38c567fa6ba1c9aebe9d9cf0bd3b3d8a5aca16188d83e735bca12"
+    },
+    {
+      "bytes": 988550,
+      "path": "third_party/gf180mcu_as_sc_mcu7t3v3/pdk/libs.ref/gf180mcu_as_sc_mcu7t3v3/lib/gf180mcu_as_sc_mcu7t3v3__ss_125C_3v00.lib",
+      "sha256": "4bc395f9f03fa7b7b64ee0ffb9281a5a451ff637aeb57ebacfb7a4ecbe8aab14"
+    },
+    {
+      "bytes": 988729,
+      "path": "third_party/gf180mcu_as_sc_mcu7t3v3/pdk/libs.ref/gf180mcu_as_sc_mcu7t3v3/lib/gf180mcu_as_sc_mcu7t3v3__tt_025C_3v30.lib",
+      "sha256": "7a5a01ae6efc0dd3e121119d7dcfb4aa0a83193c78bc5236b26bbee2733b81f5"
+    },
+    {
+      "bytes": 33034,
+      "path": "third_party/gf180mcu_as_sc_mcu7t3v3/pdk/libs.ref/gf180mcu_as_sc_mcu7t3v3/techlef/gf180mcu_as_sc_mcu7t3v3__max.tlef",
+      "sha256": "7e59a01410695c4e47457ac53c6d9682e6eb0216d9ac4153281635f8c039953f"
+    },
+    {
+      "bytes": 33030,
+      "path": "third_party/gf180mcu_as_sc_mcu7t3v3/pdk/libs.ref/gf180mcu_as_sc_mcu7t3v3/techlef/gf180mcu_as_sc_mcu7t3v3__min.tlef",
+      "sha256": "8553e68c91c2025eda4bc33610278d8383e27f47b830fb19144e6a47e740a466"
+    },
+    {
+      "bytes": 33021,
+      "path": "third_party/gf180mcu_as_sc_mcu7t3v3/pdk/libs.ref/gf180mcu_as_sc_mcu7t3v3/techlef/gf180mcu_as_sc_mcu7t3v3__nom.tlef",
+      "sha256": "a9e401acb225c5f0276529071ea5bd282d48139f5d959df50edbb029709e76d2"
+    },
+    {
+      "bytes": 10758,
+      "path": "third_party/gf180mcu_as_sc_mcu7t3v3/pdk/libs.ref/gf180mcu_as_sc_mcu7t3v3/verilog/gf180mcu_as_sc_mcu7t3v3.v",
+      "sha256": "c3edd0b7100d4aff3dd111f7bc9a7f8fc3b6309b83decb39f6dfdce7c5a1231d"
+    }
+  ],
+  "library": "gf180mcu_as_sc_mcu7t3v3",
+  "license": "Apache-2.0",
+  "required_cells": [
+    "gf180mcu_as_sc_mcu7t3v3__inv_2",
+    "gf180mcu_as_sc_mcu7t3v3__nand2_2",
+    "gf180mcu_as_sc_mcu7t3v3__nand3_2",
+    "gf180mcu_as_sc_mcu7t3v3__nand4_2",
+    "gf180mcu_as_sc_mcu7t3v3__nor2_2"
+  ],
+  "role": "GF180MCU 3.3V stdcell collateral for SRAM digital control logic",
+  "source_repository": "https://github.com/AvalonSemiconductors/gf180mcu_as_sc_mcu7t3v3"
+}

@@ -1,0 +1,19 @@
+* NGSPICE file created from detronyx_12t_ctrl_row_select4_wlbuf_rc7.ext - technology: gf180mcuD
+
+.subckt detronyx_12t_ctrl_row_select4_wlbuf_rc7 VDD VSS P0 P1 P2 EN WL
+X0 VDD P2 a_600_6164# VDD pfet_03v3 ad=0.1232p pd=1u as=0.1232p ps=1u w=0.56u l=0.28u
+X1 VSS a_2760_6164# WL VSS nfet_03v3 ad=0.4642p pd=2.99u as=0.4642p ps=2.99u w=1.055u l=0.28u
+X2 VDD P1 a_600_6164# VDD pfet_03v3 ad=0.1232p pd=1u as=0.1232p ps=1u w=0.56u l=0.28u
+X3 VSS a_600_6164# a_2328_6164# VSS nfet_03v3 ad=0.4642p pd=2.99u as=0.4642p ps=2.99u w=1.055u l=0.28u
+X4 a_1176_6164# P1 a_744_6164# VSS nfet_03v3 ad=0.4642p pd=2.99u as=0.4642p ps=2.99u w=1.055u l=0.28u
+X5 VDD a_2760_6164# WL VDD pfet_03v3 ad=0.1232p pd=1u as=0.1232p ps=1u w=0.56u l=0.28u
+X6 VDD a_2328_6164# a_2760_6164# VDD pfet_03v3 ad=0.1232p pd=1u as=0.1232p ps=1u w=0.56u l=0.28u
+X7 VSS EN a_1608_6164# VSS nfet_03v3 ad=0.4642p pd=2.99u as=0.4642p ps=2.99u w=1.055u l=0.28u
+X8 VDD P0 a_600_6164# VDD pfet_03v3 ad=0.1232p pd=1u as=0.1232p ps=1u w=0.56u l=0.28u
+X9 a_744_6164# P0 a_600_6164# VSS nfet_03v3 ad=0.4642p pd=2.99u as=0.4642p ps=2.99u w=1.055u l=0.28u
+X10 VDD EN a_600_6164# VDD pfet_03v3 ad=0.1232p pd=1u as=0.1232p ps=1u w=0.56u l=0.28u
+X11 VSS a_2328_6164# a_2760_6164# VSS nfet_03v3 ad=0.4642p pd=2.99u as=0.4642p ps=2.99u w=1.055u l=0.28u
+X12 a_1608_6164# P2 a_1176_6164# VSS nfet_03v3 ad=0.4642p pd=2.99u as=0.4642p ps=2.99u w=1.055u l=0.28u
+X13 VDD a_600_6164# a_2328_6164# VDD pfet_03v3 ad=0.1232p pd=1u as=0.1232p ps=1u w=0.56u l=0.28u
+.ends
+

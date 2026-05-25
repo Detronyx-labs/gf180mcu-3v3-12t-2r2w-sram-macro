@@ -1,0 +1,82 @@
+{
+  "avalon_lef": "third_party/gf180mcu_as_sc_mcu7t3v3/pdk/libs.ref/gf180mcu_as_sc_mcu7t3v3/lef/gf180mcu_as_sc_mcu7t3v3.lef",
+  "final_physical_manifest": "reports/final_physical/MANIFEST.json",
+  "package": "gf180mcu-3v3-12t-2r2w-sram-macro",
+  "results": [
+    {
+      "def": "reports/stdcell_row_select_placement/gf180mcu_3v3_12t_2r2w_sram_512x8/gf180mcu_3v3_12t_2r2w_sram_512x8.row_select_stdcell_placement.def",
+      "expanded_cdl": "reports/stdcell_row_select_placement/gf180mcu_3v3_12t_2r2w_sram_512x8/gf180mcu_3v3_12t_2r2w_sram_512x8.stdcell_full_control_matrix.cdl",
+      "footprint_unchanged": true,
+      "macro": "gf180mcu_3v3_12t_2r2w_sram_512x8",
+      "macro_expanded_cdl": "macros/gf180mcu_3v3_12t_2r2w_sram_512x8/abstract/gf180mcu_3v3_12t_2r2w_sram_512x8.stdcell_full_control_matrix.cdl",
+      "physical_rows": 64,
+      "placed_stdcells": 1024,
+      "placement_csv": "reports/stdcell_row_select_placement/gf180mcu_3v3_12t_2r2w_sram_512x8/gf180mcu_3v3_12t_2r2w_sram_512x8.row_select_stdcell_placement.csv",
+      "row_pitch_um": 4.326875,
+      "row_select_instances": 256,
+      "status": "PASS",
+      "stdcell_counts": {
+        "gf180mcu_as_sc_mcu7t3v3__inv_2": 768,
+        "gf180mcu_as_sc_mcu7t3v3__nand4_2": 256
+      },
+      "stdcell_height_um": 3.92
+    },
+    {
+      "def": "reports/stdcell_row_select_placement/gf180mcu_3v3_12t_2r2w_sram_512x32/gf180mcu_3v3_12t_2r2w_sram_512x32.row_select_stdcell_placement.def",
+      "expanded_cdl": "reports/stdcell_row_select_placement/gf180mcu_3v3_12t_2r2w_sram_512x32/gf180mcu_3v3_12t_2r2w_sram_512x32.stdcell_full_control_matrix.cdl",
+      "footprint_unchanged": true,
+      "macro": "gf180mcu_3v3_12t_2r2w_sram_512x32",
+      "macro_expanded_cdl": "macros/gf180mcu_3v3_12t_2r2w_sram_512x32/abstract/gf180mcu_3v3_12t_2r2w_sram_512x32.stdcell_full_control_matrix.cdl",
+      "physical_rows": 128,
+      "placed_stdcells": 2048,
+      "placement_csv": "reports/stdcell_row_select_placement/gf180mcu_3v3_12t_2r2w_sram_512x32/gf180mcu_3v3_12t_2r2w_sram_512x32.row_select_stdcell_placement.csv",
+      "row_pitch_um": 4.328437,
+      "row_select_instances": 512,
+      "status": "PASS",
+      "stdcell_counts": {
+        "gf180mcu_as_sc_mcu7t3v3__inv_2": 1536,
+        "gf180mcu_as_sc_mcu7t3v3__nand4_2": 512
+      },
+      "stdcell_height_um": 3.92
+    },
+    {
+      "def": "reports/stdcell_row_select_placement/gf180mcu_3v3_12t_2r2w_sram_1024x8/gf180mcu_3v3_12t_2r2w_sram_1024x8.row_select_stdcell_placement.def",
+      "expanded_cdl": "reports/stdcell_row_select_placement/gf180mcu_3v3_12t_2r2w_sram_1024x8/gf180mcu_3v3_12t_2r2w_sram_1024x8.stdcell_full_control_matrix.cdl",
+      "footprint_unchanged": true,
+      "macro": "gf180mcu_3v3_12t_2r2w_sram_1024x8",
+      "macro_expanded_cdl": "macros/gf180mcu_3v3_12t_2r2w_sram_1024x8/abstract/gf180mcu_3v3_12t_2r2w_sram_1024x8.stdcell_full_control_matrix.cdl",
+      "physical_rows": 128,
+      "placed_stdcells": 2048,
+      "placement_csv": "reports/stdcell_row_select_placement/gf180mcu_3v3_12t_2r2w_sram_1024x8/gf180mcu_3v3_12t_2r2w_sram_1024x8.row_select_stdcell_placement.csv",
+      "row_pitch_um": 4.328437,
+      "row_select_instances": 512,
+      "status": "PASS",
+      "stdcell_counts": {
+        "gf180mcu_as_sc_mcu7t3v3__inv_2": 1536,
+        "gf180mcu_as_sc_mcu7t3v3__nand4_2": 512
+      },
+      "stdcell_height_um": 3.92
+    },
+    {
+      "def": "reports/stdcell_row_select_placement/gf180mcu_3v3_12t_2r2w_sram_1024x32/gf180mcu_3v3_12t_2r2w_sram_1024x32.row_select_stdcell_placement.def",
+      "expanded_cdl": "reports/stdcell_row_select_placement/gf180mcu_3v3_12t_2r2w_sram_1024x32/gf180mcu_3v3_12t_2r2w_sram_1024x32.stdcell_full_control_matrix.cdl",
+      "footprint_unchanged": true,
+      "macro": "gf180mcu_3v3_12t_2r2w_sram_1024x32",
+      "macro_expanded_cdl": "macros/gf180mcu_3v3_12t_2r2w_sram_1024x32/abstract/gf180mcu_3v3_12t_2r2w_sram_1024x32.stdcell_full_control_matrix.cdl",
+      "physical_rows": 256,
+      "placed_stdcells": 4096,
+      "placement_csv": "reports/stdcell_row_select_placement/gf180mcu_3v3_12t_2r2w_sram_1024x32/gf180mcu_3v3_12t_2r2w_sram_1024x32.row_select_stdcell_placement.csv",
+      "row_pitch_um": 4.329219,
+      "row_select_instances": 1024,
+      "status": "PASS",
+      "stdcell_counts": {
+        "gf180mcu_as_sc_mcu7t3v3__inv_2": 3072,
+        "gf180mcu_as_sc_mcu7t3v3__nand4_2": 1024
+      },
+      "stdcell_height_um": 3.92
+    }
+  ],
+  "scope": "row-select/WL-buffer expansion into row-pitch-compatible Avalon stdcells",
+  "status": "PASS",
+  "stdcell_control_manifest": "reports/stdcell_control_integration/MANIFEST.json"
+}

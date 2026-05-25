@@ -1,0 +1,26 @@
+
+Subcircuit summary:
+Circuit 1: detronyx_12t_ctrl_nand4_rc7     |Circuit 2: detronyx_12t_ctrl_nand4_rc7     
+-------------------------------------------|-------------------------------------------
+nfet_03v3 (4)                              |nfet_03v3 (4)                              
+pfet_03v3 (4)                              |pfet_03v3 (4)                              
+Number of devices: 8                       |Number of devices: 8                       
+Number of nets: 10                         |Number of nets: 10                         
+---------------------------------------------------------------------------------------
+Circuits match uniquely.
+Netlists match uniquely.
+
+Subcircuit pins:
+Circuit 1: detronyx_12t_ctrl_nand4_rc7     |Circuit 2: detronyx_12t_ctrl_nand4_rc7     
+-------------------------------------------|-------------------------------------------
+VDD                                        |VDD                                        
+B                                          |B                                          
+C                                          |C                                          
+A                                          |A                                          
+D                                          |D                                          
+Y                                          |Y                                          
+VSS                                        |VSS                                        
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes detronyx_12t_ctrl_nand4_rc7 and detronyx_12t_ctrl_nand4_rc7 are equivalent.
+Circuits match uniquely.

@@ -1,0 +1,229 @@
+{
+  "cell": "detronyx_12t_ctrl_nor2_rc7",
+  "pins": [
+    {
+      "direction": "INOUT",
+      "layer": "metal3",
+      "name": "VDD",
+      "use": "POWER",
+      "xhi": 3104,
+      "xlo": 3032,
+      "yhi": 10127,
+      "ylo": 9887
+    },
+    {
+      "direction": "INOUT",
+      "layer": "metal3",
+      "name": "VSS",
+      "use": "GROUND",
+      "xhi": 2964,
+      "xlo": 2892,
+      "yhi": 280,
+      "ylo": 40
+    },
+    {
+      "direction": "INPUT",
+      "layer": "metal3",
+      "name": "A",
+      "use": "SIGNAL",
+      "xhi": 3244,
+      "xlo": 3172,
+      "yhi": 240,
+      "ylo": 80
+    },
+    {
+      "direction": "INPUT",
+      "layer": "metal3",
+      "name": "B",
+      "use": "SIGNAL",
+      "xhi": 3384,
+      "xlo": 3312,
+      "yhi": 10267,
+      "ylo": 10107
+    },
+    {
+      "direction": "OUTPUT",
+      "layer": "metal3",
+      "name": "Y",
+      "use": "SIGNAL",
+      "xhi": 3524,
+      "xlo": 3452,
+      "yhi": 240,
+      "ylo": 80
+    }
+  ],
+  "primitive": "nor2",
+  "route_terms": [
+    {
+      "block": "nor2",
+      "kind": "diff",
+      "net": "Y",
+      "role": "nor_n0",
+      "terminal": "drain",
+      "x": 636,
+      "y": 3469
+    },
+    {
+      "block": "nor2",
+      "kind": "gate",
+      "net": "A",
+      "role": "nor_n0",
+      "terminal": "gate",
+      "x": 716,
+      "y": 3600
+    },
+    {
+      "block": "nor2",
+      "kind": "diff",
+      "net": "VSS",
+      "role": "nor_n0",
+      "terminal": "source",
+      "x": 796,
+      "y": 3469
+    },
+    {
+      "block": "nor2",
+      "kind": "diff",
+      "net": "Y",
+      "role": "nor_n1",
+      "terminal": "drain",
+      "x": 1068,
+      "y": 3469
+    },
+    {
+      "block": "nor2",
+      "kind": "gate",
+      "net": "B",
+      "role": "nor_n1",
+      "terminal": "gate",
+      "x": 1148,
+      "y": 3600
+    },
+    {
+      "block": "nor2",
+      "kind": "diff",
+      "net": "VSS",
+      "role": "nor_n1",
+      "terminal": "source",
+      "x": 1228,
+      "y": 3469
+    },
+    {
+      "block": "nor2",
+      "kind": "diff",
+      "net": "Y",
+      "role": "nor_p0",
+      "terminal": "drain",
+      "x": 722,
+      "y": 4401
+    },
+    {
+      "block": "nor2",
+      "kind": "gate",
+      "net": "A",
+      "role": "nor_p0",
+      "terminal": "gate",
+      "x": 802,
+      "y": 4479
+    },
+    {
+      "block": "nor2",
+      "kind": "diff",
+      "net": "nor_pmid",
+      "role": "nor_p0",
+      "terminal": "source",
+      "x": 882,
+      "y": 4401
+    },
+    {
+      "block": "nor2",
+      "kind": "diff",
+      "net": "nor_pmid",
+      "role": "nor_p1",
+      "terminal": "drain",
+      "x": 1326,
+      "y": 4401
+    },
+    {
+      "block": "nor2",
+      "kind": "gate",
+      "net": "B",
+      "role": "nor_p1",
+      "terminal": "gate",
+      "x": 1406,
+      "y": 4479
+    },
+    {
+      "block": "nor2",
+      "kind": "diff",
+      "net": "VDD",
+      "role": "nor_p1",
+      "terminal": "source",
+      "x": 1486,
+      "y": 4401
+    },
+    {
+      "block": "nor2",
+      "kind": "diff",
+      "net": "VSS",
+      "role": "psub_tap",
+      "terminal": "tap",
+      "x": 1808,
+      "y": 3600
+    },
+    {
+      "block": "nor2",
+      "kind": "diff",
+      "net": "VDD",
+      "role": "nsub_tap",
+      "terminal": "tap",
+      "x": 1808,
+      "y": 4263
+    },
+    {
+      "block": "nor2",
+      "kind": "pin",
+      "net": "VDD",
+      "role": "VDD",
+      "terminal": "pin",
+      "x": 3068,
+      "y": 10007
+    },
+    {
+      "block": "nor2",
+      "kind": "pin",
+      "net": "VSS",
+      "role": "VSS",
+      "terminal": "pin",
+      "x": 2928,
+      "y": 160
+    },
+    {
+      "block": "nor2",
+      "kind": "pin",
+      "net": "A",
+      "role": "A",
+      "terminal": "pin",
+      "x": 3208,
+      "y": 160
+    },
+    {
+      "block": "nor2",
+      "kind": "pin",
+      "net": "B",
+      "role": "B",
+      "terminal": "pin",
+      "x": 3348,
+      "y": 10187
+    },
+    {
+      "block": "nor2",
+      "kind": "pin",
+      "net": "Y",
+      "role": "Y",
+      "terminal": "pin",
+      "x": 3488,
+      "y": 160
+    }
+  ]
+}

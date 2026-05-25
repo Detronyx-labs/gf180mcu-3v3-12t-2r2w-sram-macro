@@ -1,0 +1,25 @@
+
+Subcircuit summary:
+Circuit 1: detronyx_12t_write_driver_rc1   |Circuit 2: detronyx_12t_write_driver_rc1   
+-------------------------------------------|-------------------------------------------
+pfet_03v3 (13)                             |pfet_03v3 (13)                             
+nfet_03v3 (13)                             |nfet_03v3 (13)                             
+Number of devices: 26                      |Number of devices: 26                      
+Number of nets: 17                         |Number of nets: 17                         
+---------------------------------------------------------------------------------------
+Circuits match uniquely.
+Netlists match uniquely.
+
+Subcircuit pins:
+Circuit 1: detronyx_12t_write_driver_rc1   |Circuit 2: detronyx_12t_write_driver_rc1   
+-------------------------------------------|-------------------------------------------
+wbl0                                       |wbl0                                       
+wbr0                                       |wbr0                                       
+wen                                        |wen                                        
+VSS                                        |VSS                                        
+din                                        |din                                        
+VDD                                        |VDD                                        
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes detronyx_12t_write_driver_rc1 and detronyx_12t_write_driver_rc1 are equivalent.
+Circuits match uniquely.

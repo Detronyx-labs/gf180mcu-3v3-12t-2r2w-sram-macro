@@ -1,0 +1,2 @@
+.subckt detronyx_12t_ctrl_row_select3_wlbuf_rc7 VDD VSS P0 P1 P2 WL
+.ends detronyx_12t_ctrl_row_select3_wlbuf_rc7

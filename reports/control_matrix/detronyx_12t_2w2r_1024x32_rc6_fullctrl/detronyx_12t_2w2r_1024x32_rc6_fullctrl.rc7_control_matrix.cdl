@@ -1,0 +1,1382 @@
+* RC7 structural custom-gate control matrix for detronyx_12t_2w2r_1024x32_rc6_fullctrl
+* Folded contract: 1024 logical rows -> 256 physical WL rows + 4-way group select.
+.subckt detronyx_12t_2w2r_1024x32_rc6_fullctrl_rc7_control_matrix VDD VSS w0_en w1_en r0_en r1_en write_conflict w0_addr[0] w0_addr[1] w0_addr[2] w0_addr[3] w0_addr[4] w0_addr[5] w0_addr[6] w0_addr[7] w0_addr[8] w0_addr[9] w1_addr[0] w1_addr[1] w1_addr[2] w1_addr[3] w1_addr[4] w1_addr[5] w1_addr[6] w1_addr[7] w1_addr[8] w1_addr[9] r0_addr[0] r0_addr[1] r0_addr[2] r0_addr[3] r0_addr[4] r0_addr[5] r0_addr[6] r0_addr[7] r0_addr[8] r0_addr[9] r1_addr[0] r1_addr[1] r1_addr[2] r1_addr[3] r1_addr[4] r1_addr[5] r1_addr[6] r1_addr[7] r1_addr[8] r1_addr[9] w0_wl[0] w0_wl[1] w0_wl[2] w0_wl[3] w0_wl[4] w0_wl[5] w0_wl[6] w0_wl[7] w0_wl[8] w0_wl[9] w0_wl[10] w0_wl[11] w0_wl[12] w0_wl[13] w0_wl[14] w0_wl[15] w0_wl[16] w0_wl[17] w0_wl[18] w0_wl[19] w0_wl[20] w0_wl[21] w0_wl[22] w0_wl[23] w0_wl[24] w0_wl[25] w0_wl[26] w0_wl[27] w0_wl[28] w0_wl[29] w0_wl[30] w0_wl[31] w0_wl[32] w0_wl[33] w0_wl[34] w0_wl[35] w0_wl[36] w0_wl[37] w0_wl[38] w0_wl[39] w0_wl[40] w0_wl[41] w0_wl[42] w0_wl[43] w0_wl[44] w0_wl[45] w0_wl[46] w0_wl[47] w0_wl[48] w0_wl[49] w0_wl[50] w0_wl[51] w0_wl[52] w0_wl[53] w0_wl[54] w0_wl[55] w0_wl[56] w0_wl[57] w0_wl[58] w0_wl[59] w0_wl[60] w0_wl[61] w0_wl[62] w0_wl[63] w0_wl[64] w0_wl[65] w0_wl[66] w0_wl[67] w0_wl[68] w0_wl[69] w0_wl[70] w0_wl[71] w0_wl[72] w0_wl[73] w0_wl[74] w0_wl[75] w0_wl[76] w0_wl[77] w0_wl[78] w0_wl[79] w0_wl[80] w0_wl[81] w0_wl[82] w0_wl[83] w0_wl[84] w0_wl[85] w0_wl[86] w0_wl[87] w0_wl[88] w0_wl[89] w0_wl[90] w0_wl[91] w0_wl[92] w0_wl[93] w0_wl[94] w0_wl[95] w0_wl[96] w0_wl[97] w0_wl[98] w0_wl[99] w0_wl[100] w0_wl[101] w0_wl[102] w0_wl[103] w0_wl[104] w0_wl[105] w0_wl[106] w0_wl[107] w0_wl[108] w0_wl[109] w0_wl[110] w0_wl[111] w0_wl[112] w0_wl[113] w0_wl[114] w0_wl[115] w0_wl[116] w0_wl[117] w0_wl[118] w0_wl[119] w0_wl[120] w0_wl[121] w0_wl[122] w0_wl[123] w0_wl[124] w0_wl[125] w0_wl[126] w0_wl[127] w0_wl[128] w0_wl[129] w0_wl[130] w0_wl[131] w0_wl[132] w0_wl[133] w0_wl[134] w0_wl[135] w0_wl[136] w0_wl[137] w0_wl[138] w0_wl[139] w0_wl[140] w0_wl[141] w0_wl[142] w0_wl[143] w0_wl[144] w0_wl[145] w0_wl[146] w0_wl[147] w0_wl[148] w0_wl[149] w0_wl[150] w0_wl[151] w0_wl[152] w0_wl[153] w0_wl[154] w0_wl[155] w0_wl[156] w0_wl[157] w0_wl[158] w0_wl[159] w0_wl[160] w0_wl[161] w0_wl[162] w0_wl[163] w0_wl[164] w0_wl[165] w0_wl[166] w0_wl[167] w0_wl[168] w0_wl[169] w0_wl[170] w0_wl[171] w0_wl[172] w0_wl[173] w0_wl[174] w0_wl[175] w0_wl[176] w0_wl[177] w0_wl[178] w0_wl[179] w0_wl[180] w0_wl[181] w0_wl[182] w0_wl[183] w0_wl[184] w0_wl[185] w0_wl[186] w0_wl[187] w0_wl[188] w0_wl[189] w0_wl[190] w0_wl[191] w0_wl[192] w0_wl[193] w0_wl[194] w0_wl[195] w0_wl[196] w0_wl[197] w0_wl[198] w0_wl[199] w0_wl[200] w0_wl[201] w0_wl[202] w0_wl[203] w0_wl[204] w0_wl[205] w0_wl[206] w0_wl[207] w0_wl[208] w0_wl[209] w0_wl[210] w0_wl[211] w0_wl[212] w0_wl[213] w0_wl[214] w0_wl[215] w0_wl[216] w0_wl[217] w0_wl[218] w0_wl[219] w0_wl[220] w0_wl[221] w0_wl[222] w0_wl[223] w0_wl[224] w0_wl[225] w0_wl[226] w0_wl[227] w0_wl[228] w0_wl[229] w0_wl[230] w0_wl[231] w0_wl[232] w0_wl[233] w0_wl[234] w0_wl[235] w0_wl[236] w0_wl[237] w0_wl[238] w0_wl[239] w0_wl[240] w0_wl[241] w0_wl[242] w0_wl[243] w0_wl[244] w0_wl[245] w0_wl[246] w0_wl[247] w0_wl[248] w0_wl[249] w0_wl[250] w0_wl[251] w0_wl[252] w0_wl[253] w0_wl[254] w0_wl[255] w0_grp[0] w0_grp[1] w0_grp[2] w0_grp[3] w1_wl[0] w1_wl[1] w1_wl[2] w1_wl[3] w1_wl[4] w1_wl[5] w1_wl[6] w1_wl[7] w1_wl[8] w1_wl[9] w1_wl[10] w1_wl[11] w1_wl[12] w1_wl[13] w1_wl[14] w1_wl[15] w1_wl[16] w1_wl[17] w1_wl[18] w1_wl[19] w1_wl[20] w1_wl[21] w1_wl[22] w1_wl[23] w1_wl[24] w1_wl[25] w1_wl[26] w1_wl[27] w1_wl[28] w1_wl[29] w1_wl[30] w1_wl[31] w1_wl[32] w1_wl[33] w1_wl[34] w1_wl[35] w1_wl[36] w1_wl[37] w1_wl[38] w1_wl[39] w1_wl[40] w1_wl[41] w1_wl[42] w1_wl[43] w1_wl[44] w1_wl[45] w1_wl[46] w1_wl[47] w1_wl[48] w1_wl[49] w1_wl[50] w1_wl[51] w1_wl[52] w1_wl[53] w1_wl[54] w1_wl[55] w1_wl[56] w1_wl[57] w1_wl[58] w1_wl[59] w1_wl[60] w1_wl[61] w1_wl[62] w1_wl[63] w1_wl[64] w1_wl[65] w1_wl[66] w1_wl[67] w1_wl[68] w1_wl[69] w1_wl[70] w1_wl[71] w1_wl[72] w1_wl[73] w1_wl[74] w1_wl[75] w1_wl[76] w1_wl[77] w1_wl[78] w1_wl[79] w1_wl[80] w1_wl[81] w1_wl[82] w1_wl[83] w1_wl[84] w1_wl[85] w1_wl[86] w1_wl[87] w1_wl[88] w1_wl[89] w1_wl[90] w1_wl[91] w1_wl[92] w1_wl[93] w1_wl[94] w1_wl[95] w1_wl[96] w1_wl[97] w1_wl[98] w1_wl[99] w1_wl[100] w1_wl[101] w1_wl[102] w1_wl[103] w1_wl[104] w1_wl[105] w1_wl[106] w1_wl[107] w1_wl[108] w1_wl[109] w1_wl[110] w1_wl[111] w1_wl[112] w1_wl[113] w1_wl[114] w1_wl[115] w1_wl[116] w1_wl[117] w1_wl[118] w1_wl[119] w1_wl[120] w1_wl[121] w1_wl[122] w1_wl[123] w1_wl[124] w1_wl[125] w1_wl[126] w1_wl[127] w1_wl[128] w1_wl[129] w1_wl[130] w1_wl[131] w1_wl[132] w1_wl[133] w1_wl[134] w1_wl[135] w1_wl[136] w1_wl[137] w1_wl[138] w1_wl[139] w1_wl[140] w1_wl[141] w1_wl[142] w1_wl[143] w1_wl[144] w1_wl[145] w1_wl[146] w1_wl[147] w1_wl[148] w1_wl[149] w1_wl[150] w1_wl[151] w1_wl[152] w1_wl[153] w1_wl[154] w1_wl[155] w1_wl[156] w1_wl[157] w1_wl[158] w1_wl[159] w1_wl[160] w1_wl[161] w1_wl[162] w1_wl[163] w1_wl[164] w1_wl[165] w1_wl[166] w1_wl[167] w1_wl[168] w1_wl[169] w1_wl[170] w1_wl[171] w1_wl[172] w1_wl[173] w1_wl[174] w1_wl[175] w1_wl[176] w1_wl[177] w1_wl[178] w1_wl[179] w1_wl[180] w1_wl[181] w1_wl[182] w1_wl[183] w1_wl[184] w1_wl[185] w1_wl[186] w1_wl[187] w1_wl[188] w1_wl[189] w1_wl[190] w1_wl[191] w1_wl[192] w1_wl[193] w1_wl[194] w1_wl[195] w1_wl[196] w1_wl[197] w1_wl[198] w1_wl[199] w1_wl[200] w1_wl[201] w1_wl[202] w1_wl[203] w1_wl[204] w1_wl[205] w1_wl[206] w1_wl[207] w1_wl[208] w1_wl[209] w1_wl[210] w1_wl[211] w1_wl[212] w1_wl[213] w1_wl[214] w1_wl[215] w1_wl[216] w1_wl[217] w1_wl[218] w1_wl[219] w1_wl[220] w1_wl[221] w1_wl[222] w1_wl[223] w1_wl[224] w1_wl[225] w1_wl[226] w1_wl[227] w1_wl[228] w1_wl[229] w1_wl[230] w1_wl[231] w1_wl[232] w1_wl[233] w1_wl[234] w1_wl[235] w1_wl[236] w1_wl[237] w1_wl[238] w1_wl[239] w1_wl[240] w1_wl[241] w1_wl[242] w1_wl[243] w1_wl[244] w1_wl[245] w1_wl[246] w1_wl[247] w1_wl[248] w1_wl[249] w1_wl[250] w1_wl[251] w1_wl[252] w1_wl[253] w1_wl[254] w1_wl[255] w1_grp[0] w1_grp[1] w1_grp[2] w1_grp[3] r0_wl[0] r0_wl[1] r0_wl[2] r0_wl[3] r0_wl[4] r0_wl[5] r0_wl[6] r0_wl[7] r0_wl[8] r0_wl[9] r0_wl[10] r0_wl[11] r0_wl[12] r0_wl[13] r0_wl[14] r0_wl[15] r0_wl[16] r0_wl[17] r0_wl[18] r0_wl[19] r0_wl[20] r0_wl[21] r0_wl[22] r0_wl[23] r0_wl[24] r0_wl[25] r0_wl[26] r0_wl[27] r0_wl[28] r0_wl[29] r0_wl[30] r0_wl[31] r0_wl[32] r0_wl[33] r0_wl[34] r0_wl[35] r0_wl[36] r0_wl[37] r0_wl[38] r0_wl[39] r0_wl[40] r0_wl[41] r0_wl[42] r0_wl[43] r0_wl[44] r0_wl[45] r0_wl[46] r0_wl[47] r0_wl[48] r0_wl[49] r0_wl[50] r0_wl[51] r0_wl[52] r0_wl[53] r0_wl[54] r0_wl[55] r0_wl[56] r0_wl[57] r0_wl[58] r0_wl[59] r0_wl[60] r0_wl[61] r0_wl[62] r0_wl[63] r0_wl[64] r0_wl[65] r0_wl[66] r0_wl[67] r0_wl[68] r0_wl[69] r0_wl[70] r0_wl[71] r0_wl[72] r0_wl[73] r0_wl[74] r0_wl[75] r0_wl[76] r0_wl[77] r0_wl[78] r0_wl[79] r0_wl[80] r0_wl[81] r0_wl[82] r0_wl[83] r0_wl[84] r0_wl[85] r0_wl[86] r0_wl[87] r0_wl[88] r0_wl[89] r0_wl[90] r0_wl[91] r0_wl[92] r0_wl[93] r0_wl[94] r0_wl[95] r0_wl[96] r0_wl[97] r0_wl[98] r0_wl[99] r0_wl[100] r0_wl[101] r0_wl[102] r0_wl[103] r0_wl[104] r0_wl[105] r0_wl[106] r0_wl[107] r0_wl[108] r0_wl[109] r0_wl[110] r0_wl[111] r0_wl[112] r0_wl[113] r0_wl[114] r0_wl[115] r0_wl[116] r0_wl[117] r0_wl[118] r0_wl[119] r0_wl[120] r0_wl[121] r0_wl[122] r0_wl[123] r0_wl[124] r0_wl[125] r0_wl[126] r0_wl[127] r0_wl[128] r0_wl[129] r0_wl[130] r0_wl[131] r0_wl[132] r0_wl[133] r0_wl[134] r0_wl[135] r0_wl[136] r0_wl[137] r0_wl[138] r0_wl[139] r0_wl[140] r0_wl[141] r0_wl[142] r0_wl[143] r0_wl[144] r0_wl[145] r0_wl[146] r0_wl[147] r0_wl[148] r0_wl[149] r0_wl[150] r0_wl[151] r0_wl[152] r0_wl[153] r0_wl[154] r0_wl[155] r0_wl[156] r0_wl[157] r0_wl[158] r0_wl[159] r0_wl[160] r0_wl[161] r0_wl[162] r0_wl[163] r0_wl[164] r0_wl[165] r0_wl[166] r0_wl[167] r0_wl[168] r0_wl[169] r0_wl[170] r0_wl[171] r0_wl[172] r0_wl[173] r0_wl[174] r0_wl[175] r0_wl[176] r0_wl[177] r0_wl[178] r0_wl[179] r0_wl[180] r0_wl[181] r0_wl[182] r0_wl[183] r0_wl[184] r0_wl[185] r0_wl[186] r0_wl[187] r0_wl[188] r0_wl[189] r0_wl[190] r0_wl[191] r0_wl[192] r0_wl[193] r0_wl[194] r0_wl[195] r0_wl[196] r0_wl[197] r0_wl[198] r0_wl[199] r0_wl[200] r0_wl[201] r0_wl[202] r0_wl[203] r0_wl[204] r0_wl[205] r0_wl[206] r0_wl[207] r0_wl[208] r0_wl[209] r0_wl[210] r0_wl[211] r0_wl[212] r0_wl[213] r0_wl[214] r0_wl[215] r0_wl[216] r0_wl[217] r0_wl[218] r0_wl[219] r0_wl[220] r0_wl[221] r0_wl[222] r0_wl[223] r0_wl[224] r0_wl[225] r0_wl[226] r0_wl[227] r0_wl[228] r0_wl[229] r0_wl[230] r0_wl[231] r0_wl[232] r0_wl[233] r0_wl[234] r0_wl[235] r0_wl[236] r0_wl[237] r0_wl[238] r0_wl[239] r0_wl[240] r0_wl[241] r0_wl[242] r0_wl[243] r0_wl[244] r0_wl[245] r0_wl[246] r0_wl[247] r0_wl[248] r0_wl[249] r0_wl[250] r0_wl[251] r0_wl[252] r0_wl[253] r0_wl[254] r0_wl[255] r0_grp[0] r0_grp[1] r0_grp[2] r0_grp[3] r1_wl[0] r1_wl[1] r1_wl[2] r1_wl[3] r1_wl[4] r1_wl[5] r1_wl[6] r1_wl[7] r1_wl[8] r1_wl[9] r1_wl[10] r1_wl[11] r1_wl[12] r1_wl[13] r1_wl[14] r1_wl[15] r1_wl[16] r1_wl[17] r1_wl[18] r1_wl[19] r1_wl[20] r1_wl[21] r1_wl[22] r1_wl[23] r1_wl[24] r1_wl[25] r1_wl[26] r1_wl[27] r1_wl[28] r1_wl[29] r1_wl[30] r1_wl[31] r1_wl[32] r1_wl[33] r1_wl[34] r1_wl[35] r1_wl[36] r1_wl[37] r1_wl[38] r1_wl[39] r1_wl[40] r1_wl[41] r1_wl[42] r1_wl[43] r1_wl[44] r1_wl[45] r1_wl[46] r1_wl[47] r1_wl[48] r1_wl[49] r1_wl[50] r1_wl[51] r1_wl[52] r1_wl[53] r1_wl[54] r1_wl[55] r1_wl[56] r1_wl[57] r1_wl[58] r1_wl[59] r1_wl[60] r1_wl[61] r1_wl[62] r1_wl[63] r1_wl[64] r1_wl[65] r1_wl[66] r1_wl[67] r1_wl[68] r1_wl[69] r1_wl[70] r1_wl[71] r1_wl[72] r1_wl[73] r1_wl[74] r1_wl[75] r1_wl[76] r1_wl[77] r1_wl[78] r1_wl[79] r1_wl[80] r1_wl[81] r1_wl[82] r1_wl[83] r1_wl[84] r1_wl[85] r1_wl[86] r1_wl[87] r1_wl[88] r1_wl[89] r1_wl[90] r1_wl[91] r1_wl[92] r1_wl[93] r1_wl[94] r1_wl[95] r1_wl[96] r1_wl[97] r1_wl[98] r1_wl[99] r1_wl[100] r1_wl[101] r1_wl[102] r1_wl[103] r1_wl[104] r1_wl[105] r1_wl[106] r1_wl[107] r1_wl[108] r1_wl[109] r1_wl[110] r1_wl[111] r1_wl[112] r1_wl[113] r1_wl[114] r1_wl[115] r1_wl[116] r1_wl[117] r1_wl[118] r1_wl[119] r1_wl[120] r1_wl[121] r1_wl[122] r1_wl[123] r1_wl[124] r1_wl[125] r1_wl[126] r1_wl[127] r1_wl[128] r1_wl[129] r1_wl[130] r1_wl[131] r1_wl[132] r1_wl[133] r1_wl[134] r1_wl[135] r1_wl[136] r1_wl[137] r1_wl[138] r1_wl[139] r1_wl[140] r1_wl[141] r1_wl[142] r1_wl[143] r1_wl[144] r1_wl[145] r1_wl[146] r1_wl[147] r1_wl[148] r1_wl[149] r1_wl[150] r1_wl[151] r1_wl[152] r1_wl[153] r1_wl[154] r1_wl[155] r1_wl[156] r1_wl[157] r1_wl[158] r1_wl[159] r1_wl[160] r1_wl[161] r1_wl[162] r1_wl[163] r1_wl[164] r1_wl[165] r1_wl[166] r1_wl[167] r1_wl[168] r1_wl[169] r1_wl[170] r1_wl[171] r1_wl[172] r1_wl[173] r1_wl[174] r1_wl[175] r1_wl[176] r1_wl[177] r1_wl[178] r1_wl[179] r1_wl[180] r1_wl[181] r1_wl[182] r1_wl[183] r1_wl[184] r1_wl[185] r1_wl[186] r1_wl[187] r1_wl[188] r1_wl[189] r1_wl[190] r1_wl[191] r1_wl[192] r1_wl[193] r1_wl[194] r1_wl[195] r1_wl[196] r1_wl[197] r1_wl[198] r1_wl[199] r1_wl[200] r1_wl[201] r1_wl[202] r1_wl[203] r1_wl[204] r1_wl[205] r1_wl[206] r1_wl[207] r1_wl[208] r1_wl[209] r1_wl[210] r1_wl[211] r1_wl[212] r1_wl[213] r1_wl[214] r1_wl[215] r1_wl[216] r1_wl[217] r1_wl[218] r1_wl[219] r1_wl[220] r1_wl[221] r1_wl[222] r1_wl[223] r1_wl[224] r1_wl[225] r1_wl[226] r1_wl[227] r1_wl[228] r1_wl[229] r1_wl[230] r1_wl[231] r1_wl[232] r1_wl[233] r1_wl[234] r1_wl[235] r1_wl[236] r1_wl[237] r1_wl[238] r1_wl[239] r1_wl[240] r1_wl[241] r1_wl[242] r1_wl[243] r1_wl[244] r1_wl[245] r1_wl[246] r1_wl[247] r1_wl[248] r1_wl[249] r1_wl[250] r1_wl[251] r1_wl[252] r1_wl[253] r1_wl[254] r1_wl[255] r1_grp[0] r1_grp[1] r1_grp[2] r1_grp[3]
+Xw0_a0_inv VDD VSS w0_addr[0] w0_a0_n detronyx_12t_ctrl_inv_rc7
+Xw0_a1_inv VDD VSS w0_addr[1] w0_a1_n detronyx_12t_ctrl_inv_rc7
+Xw0_a2_inv VDD VSS w0_addr[2] w0_a2_n detronyx_12t_ctrl_inv_rc7
+Xw0_a3_inv VDD VSS w0_addr[3] w0_a3_n detronyx_12t_ctrl_inv_rc7
+Xw0_a4_inv VDD VSS w0_addr[4] w0_a4_n detronyx_12t_ctrl_inv_rc7
+Xw0_a5_inv VDD VSS w0_addr[5] w0_a5_n detronyx_12t_ctrl_inv_rc7
+Xw0_a6_inv VDD VSS w0_addr[6] w0_a6_n detronyx_12t_ctrl_inv_rc7
+Xw0_a7_inv VDD VSS w0_addr[7] w0_a7_n detronyx_12t_ctrl_inv_rc7
+Xw0_a8_inv VDD VSS w0_addr[8] w0_a8_n detronyx_12t_ctrl_inv_rc7
+Xw0_a9_inv VDD VSS w0_addr[9] w0_a9_n detronyx_12t_ctrl_inv_rc7
+Xw0_grp0_nand2 VDD VSS w0_a0_n w0_a1_n w0_grp0_n detronyx_12t_ctrl_nand2_rc7
+Xw0_grp0_inv VDD VSS w0_grp0_n w0_grp[0] detronyx_12t_ctrl_inv_rc7
+Xw0_grp1_nand2 VDD VSS w0_addr[0] w0_a1_n w0_grp1_n detronyx_12t_ctrl_nand2_rc7
+Xw0_grp1_inv VDD VSS w0_grp1_n w0_grp[1] detronyx_12t_ctrl_inv_rc7
+Xw0_grp2_nand2 VDD VSS w0_a0_n w0_addr[1] w0_grp2_n detronyx_12t_ctrl_nand2_rc7
+Xw0_grp2_inv VDD VSS w0_grp2_n w0_grp[2] detronyx_12t_ctrl_inv_rc7
+Xw0_grp3_nand2 VDD VSS w0_addr[0] w0_addr[1] w0_grp3_n detronyx_12t_ctrl_nand2_rc7
+Xw0_grp3_inv VDD VSS w0_grp3_n w0_grp[3] detronyx_12t_ctrl_inv_rc7
+Xw0_pd0_0_nand2 VDD VSS w0_a2_n w0_a3_n w0_pd0_0_n detronyx_12t_ctrl_nand2_rc7
+Xw0_pd0_0_inv VDD VSS w0_pd0_0_n w0_pd0_0 detronyx_12t_ctrl_inv_rc7
+Xw0_pd0_1_nand2 VDD VSS w0_addr[2] w0_a3_n w0_pd0_1_n detronyx_12t_ctrl_nand2_rc7
+Xw0_pd0_1_inv VDD VSS w0_pd0_1_n w0_pd0_1 detronyx_12t_ctrl_inv_rc7
+Xw0_pd0_2_nand2 VDD VSS w0_a2_n w0_addr[3] w0_pd0_2_n detronyx_12t_ctrl_nand2_rc7
+Xw0_pd0_2_inv VDD VSS w0_pd0_2_n w0_pd0_2 detronyx_12t_ctrl_inv_rc7
+Xw0_pd0_3_nand2 VDD VSS w0_addr[2] w0_addr[3] w0_pd0_3_n detronyx_12t_ctrl_nand2_rc7
+Xw0_pd0_3_inv VDD VSS w0_pd0_3_n w0_pd0_3 detronyx_12t_ctrl_inv_rc7
+Xw0_pd1_0_nand2 VDD VSS w0_a4_n w0_a5_n w0_pd1_0_n detronyx_12t_ctrl_nand2_rc7
+Xw0_pd1_0_inv VDD VSS w0_pd1_0_n w0_pd1_0 detronyx_12t_ctrl_inv_rc7
+Xw0_pd1_1_nand2 VDD VSS w0_addr[4] w0_a5_n w0_pd1_1_n detronyx_12t_ctrl_nand2_rc7
+Xw0_pd1_1_inv VDD VSS w0_pd1_1_n w0_pd1_1 detronyx_12t_ctrl_inv_rc7
+Xw0_pd1_2_nand2 VDD VSS w0_a4_n w0_addr[5] w0_pd1_2_n detronyx_12t_ctrl_nand2_rc7
+Xw0_pd1_2_inv VDD VSS w0_pd1_2_n w0_pd1_2 detronyx_12t_ctrl_inv_rc7
+Xw0_pd1_3_nand2 VDD VSS w0_addr[4] w0_addr[5] w0_pd1_3_n detronyx_12t_ctrl_nand2_rc7
+Xw0_pd1_3_inv VDD VSS w0_pd1_3_n w0_pd1_3 detronyx_12t_ctrl_inv_rc7
+Xw0_pd2_0_nand4 VDD VSS w0_a6_n w0_a7_n w0_a8_n w0_a9_n w0_pd2_0_n detronyx_12t_ctrl_nand4_rc7
+Xw0_pd2_0_inv VDD VSS w0_pd2_0_n w0_pd2_0 detronyx_12t_ctrl_inv_rc7
+Xw0_pd2_1_nand4 VDD VSS w0_addr[6] w0_a7_n w0_a8_n w0_a9_n w0_pd2_1_n detronyx_12t_ctrl_nand4_rc7
+Xw0_pd2_1_inv VDD VSS w0_pd2_1_n w0_pd2_1 detronyx_12t_ctrl_inv_rc7
+Xw0_pd2_2_nand4 VDD VSS w0_a6_n w0_addr[7] w0_a8_n w0_a9_n w0_pd2_2_n detronyx_12t_ctrl_nand4_rc7
+Xw0_pd2_2_inv VDD VSS w0_pd2_2_n w0_pd2_2 detronyx_12t_ctrl_inv_rc7
+Xw0_pd2_3_nand4 VDD VSS w0_addr[6] w0_addr[7] w0_a8_n w0_a9_n w0_pd2_3_n detronyx_12t_ctrl_nand4_rc7
+Xw0_pd2_3_inv VDD VSS w0_pd2_3_n w0_pd2_3 detronyx_12t_ctrl_inv_rc7
+Xw0_pd2_4_nand4 VDD VSS w0_a6_n w0_a7_n w0_addr[8] w0_a9_n w0_pd2_4_n detronyx_12t_ctrl_nand4_rc7
+Xw0_pd2_4_inv VDD VSS w0_pd2_4_n w0_pd2_4 detronyx_12t_ctrl_inv_rc7
+Xw0_pd2_5_nand4 VDD VSS w0_addr[6] w0_a7_n w0_addr[8] w0_a9_n w0_pd2_5_n detronyx_12t_ctrl_nand4_rc7
+Xw0_pd2_5_inv VDD VSS w0_pd2_5_n w0_pd2_5 detronyx_12t_ctrl_inv_rc7
+Xw0_pd2_6_nand4 VDD VSS w0_a6_n w0_addr[7] w0_addr[8] w0_a9_n w0_pd2_6_n detronyx_12t_ctrl_nand4_rc7
+Xw0_pd2_6_inv VDD VSS w0_pd2_6_n w0_pd2_6 detronyx_12t_ctrl_inv_rc7
+Xw0_pd2_7_nand4 VDD VSS w0_addr[6] w0_addr[7] w0_addr[8] w0_a9_n w0_pd2_7_n detronyx_12t_ctrl_nand4_rc7
+Xw0_pd2_7_inv VDD VSS w0_pd2_7_n w0_pd2_7 detronyx_12t_ctrl_inv_rc7
+Xw0_pd2_8_nand4 VDD VSS w0_a6_n w0_a7_n w0_a8_n w0_addr[9] w0_pd2_8_n detronyx_12t_ctrl_nand4_rc7
+Xw0_pd2_8_inv VDD VSS w0_pd2_8_n w0_pd2_8 detronyx_12t_ctrl_inv_rc7
+Xw0_pd2_9_nand4 VDD VSS w0_addr[6] w0_a7_n w0_a8_n w0_addr[9] w0_pd2_9_n detronyx_12t_ctrl_nand4_rc7
+Xw0_pd2_9_inv VDD VSS w0_pd2_9_n w0_pd2_9 detronyx_12t_ctrl_inv_rc7
+Xw0_pd2_10_nand4 VDD VSS w0_a6_n w0_addr[7] w0_a8_n w0_addr[9] w0_pd2_10_n detronyx_12t_ctrl_nand4_rc7
+Xw0_pd2_10_inv VDD VSS w0_pd2_10_n w0_pd2_10 detronyx_12t_ctrl_inv_rc7
+Xw0_pd2_11_nand4 VDD VSS w0_addr[6] w0_addr[7] w0_a8_n w0_addr[9] w0_pd2_11_n detronyx_12t_ctrl_nand4_rc7
+Xw0_pd2_11_inv VDD VSS w0_pd2_11_n w0_pd2_11 detronyx_12t_ctrl_inv_rc7
+Xw0_pd2_12_nand4 VDD VSS w0_a6_n w0_a7_n w0_addr[8] w0_addr[9] w0_pd2_12_n detronyx_12t_ctrl_nand4_rc7
+Xw0_pd2_12_inv VDD VSS w0_pd2_12_n w0_pd2_12 detronyx_12t_ctrl_inv_rc7
+Xw0_pd2_13_nand4 VDD VSS w0_addr[6] w0_a7_n w0_addr[8] w0_addr[9] w0_pd2_13_n detronyx_12t_ctrl_nand4_rc7
+Xw0_pd2_13_inv VDD VSS w0_pd2_13_n w0_pd2_13 detronyx_12t_ctrl_inv_rc7
+Xw0_pd2_14_nand4 VDD VSS w0_a6_n w0_addr[7] w0_addr[8] w0_addr[9] w0_pd2_14_n detronyx_12t_ctrl_nand4_rc7
+Xw0_pd2_14_inv VDD VSS w0_pd2_14_n w0_pd2_14 detronyx_12t_ctrl_inv_rc7
+Xw0_pd2_15_nand4 VDD VSS w0_addr[6] w0_addr[7] w0_addr[8] w0_addr[9] w0_pd2_15_n detronyx_12t_ctrl_nand4_rc7
+Xw0_pd2_15_inv VDD VSS w0_pd2_15_n w0_pd2_15 detronyx_12t_ctrl_inv_rc7
+Xw0_row0000_sel VDD VSS w0_pd0_0 w0_pd1_0 w0_pd2_0 w0_en w0_wl[0] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0001_sel VDD VSS w0_pd0_1 w0_pd1_0 w0_pd2_0 w0_en w0_wl[1] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0002_sel VDD VSS w0_pd0_2 w0_pd1_0 w0_pd2_0 w0_en w0_wl[2] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0003_sel VDD VSS w0_pd0_3 w0_pd1_0 w0_pd2_0 w0_en w0_wl[3] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0004_sel VDD VSS w0_pd0_0 w0_pd1_1 w0_pd2_0 w0_en w0_wl[4] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0005_sel VDD VSS w0_pd0_1 w0_pd1_1 w0_pd2_0 w0_en w0_wl[5] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0006_sel VDD VSS w0_pd0_2 w0_pd1_1 w0_pd2_0 w0_en w0_wl[6] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0007_sel VDD VSS w0_pd0_3 w0_pd1_1 w0_pd2_0 w0_en w0_wl[7] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0008_sel VDD VSS w0_pd0_0 w0_pd1_2 w0_pd2_0 w0_en w0_wl[8] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0009_sel VDD VSS w0_pd0_1 w0_pd1_2 w0_pd2_0 w0_en w0_wl[9] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0010_sel VDD VSS w0_pd0_2 w0_pd1_2 w0_pd2_0 w0_en w0_wl[10] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0011_sel VDD VSS w0_pd0_3 w0_pd1_2 w0_pd2_0 w0_en w0_wl[11] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0012_sel VDD VSS w0_pd0_0 w0_pd1_3 w0_pd2_0 w0_en w0_wl[12] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0013_sel VDD VSS w0_pd0_1 w0_pd1_3 w0_pd2_0 w0_en w0_wl[13] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0014_sel VDD VSS w0_pd0_2 w0_pd1_3 w0_pd2_0 w0_en w0_wl[14] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0015_sel VDD VSS w0_pd0_3 w0_pd1_3 w0_pd2_0 w0_en w0_wl[15] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0016_sel VDD VSS w0_pd0_0 w0_pd1_0 w0_pd2_1 w0_en w0_wl[16] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0017_sel VDD VSS w0_pd0_1 w0_pd1_0 w0_pd2_1 w0_en w0_wl[17] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0018_sel VDD VSS w0_pd0_2 w0_pd1_0 w0_pd2_1 w0_en w0_wl[18] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0019_sel VDD VSS w0_pd0_3 w0_pd1_0 w0_pd2_1 w0_en w0_wl[19] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0020_sel VDD VSS w0_pd0_0 w0_pd1_1 w0_pd2_1 w0_en w0_wl[20] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0021_sel VDD VSS w0_pd0_1 w0_pd1_1 w0_pd2_1 w0_en w0_wl[21] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0022_sel VDD VSS w0_pd0_2 w0_pd1_1 w0_pd2_1 w0_en w0_wl[22] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0023_sel VDD VSS w0_pd0_3 w0_pd1_1 w0_pd2_1 w0_en w0_wl[23] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0024_sel VDD VSS w0_pd0_0 w0_pd1_2 w0_pd2_1 w0_en w0_wl[24] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0025_sel VDD VSS w0_pd0_1 w0_pd1_2 w0_pd2_1 w0_en w0_wl[25] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0026_sel VDD VSS w0_pd0_2 w0_pd1_2 w0_pd2_1 w0_en w0_wl[26] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0027_sel VDD VSS w0_pd0_3 w0_pd1_2 w0_pd2_1 w0_en w0_wl[27] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0028_sel VDD VSS w0_pd0_0 w0_pd1_3 w0_pd2_1 w0_en w0_wl[28] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0029_sel VDD VSS w0_pd0_1 w0_pd1_3 w0_pd2_1 w0_en w0_wl[29] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0030_sel VDD VSS w0_pd0_2 w0_pd1_3 w0_pd2_1 w0_en w0_wl[30] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0031_sel VDD VSS w0_pd0_3 w0_pd1_3 w0_pd2_1 w0_en w0_wl[31] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0032_sel VDD VSS w0_pd0_0 w0_pd1_0 w0_pd2_2 w0_en w0_wl[32] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0033_sel VDD VSS w0_pd0_1 w0_pd1_0 w0_pd2_2 w0_en w0_wl[33] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0034_sel VDD VSS w0_pd0_2 w0_pd1_0 w0_pd2_2 w0_en w0_wl[34] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0035_sel VDD VSS w0_pd0_3 w0_pd1_0 w0_pd2_2 w0_en w0_wl[35] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0036_sel VDD VSS w0_pd0_0 w0_pd1_1 w0_pd2_2 w0_en w0_wl[36] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0037_sel VDD VSS w0_pd0_1 w0_pd1_1 w0_pd2_2 w0_en w0_wl[37] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0038_sel VDD VSS w0_pd0_2 w0_pd1_1 w0_pd2_2 w0_en w0_wl[38] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0039_sel VDD VSS w0_pd0_3 w0_pd1_1 w0_pd2_2 w0_en w0_wl[39] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0040_sel VDD VSS w0_pd0_0 w0_pd1_2 w0_pd2_2 w0_en w0_wl[40] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0041_sel VDD VSS w0_pd0_1 w0_pd1_2 w0_pd2_2 w0_en w0_wl[41] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0042_sel VDD VSS w0_pd0_2 w0_pd1_2 w0_pd2_2 w0_en w0_wl[42] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0043_sel VDD VSS w0_pd0_3 w0_pd1_2 w0_pd2_2 w0_en w0_wl[43] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0044_sel VDD VSS w0_pd0_0 w0_pd1_3 w0_pd2_2 w0_en w0_wl[44] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0045_sel VDD VSS w0_pd0_1 w0_pd1_3 w0_pd2_2 w0_en w0_wl[45] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0046_sel VDD VSS w0_pd0_2 w0_pd1_3 w0_pd2_2 w0_en w0_wl[46] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0047_sel VDD VSS w0_pd0_3 w0_pd1_3 w0_pd2_2 w0_en w0_wl[47] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0048_sel VDD VSS w0_pd0_0 w0_pd1_0 w0_pd2_3 w0_en w0_wl[48] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0049_sel VDD VSS w0_pd0_1 w0_pd1_0 w0_pd2_3 w0_en w0_wl[49] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0050_sel VDD VSS w0_pd0_2 w0_pd1_0 w0_pd2_3 w0_en w0_wl[50] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0051_sel VDD VSS w0_pd0_3 w0_pd1_0 w0_pd2_3 w0_en w0_wl[51] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0052_sel VDD VSS w0_pd0_0 w0_pd1_1 w0_pd2_3 w0_en w0_wl[52] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0053_sel VDD VSS w0_pd0_1 w0_pd1_1 w0_pd2_3 w0_en w0_wl[53] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0054_sel VDD VSS w0_pd0_2 w0_pd1_1 w0_pd2_3 w0_en w0_wl[54] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0055_sel VDD VSS w0_pd0_3 w0_pd1_1 w0_pd2_3 w0_en w0_wl[55] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0056_sel VDD VSS w0_pd0_0 w0_pd1_2 w0_pd2_3 w0_en w0_wl[56] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0057_sel VDD VSS w0_pd0_1 w0_pd1_2 w0_pd2_3 w0_en w0_wl[57] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0058_sel VDD VSS w0_pd0_2 w0_pd1_2 w0_pd2_3 w0_en w0_wl[58] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0059_sel VDD VSS w0_pd0_3 w0_pd1_2 w0_pd2_3 w0_en w0_wl[59] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0060_sel VDD VSS w0_pd0_0 w0_pd1_3 w0_pd2_3 w0_en w0_wl[60] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0061_sel VDD VSS w0_pd0_1 w0_pd1_3 w0_pd2_3 w0_en w0_wl[61] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0062_sel VDD VSS w0_pd0_2 w0_pd1_3 w0_pd2_3 w0_en w0_wl[62] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0063_sel VDD VSS w0_pd0_3 w0_pd1_3 w0_pd2_3 w0_en w0_wl[63] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0064_sel VDD VSS w0_pd0_0 w0_pd1_0 w0_pd2_4 w0_en w0_wl[64] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0065_sel VDD VSS w0_pd0_1 w0_pd1_0 w0_pd2_4 w0_en w0_wl[65] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0066_sel VDD VSS w0_pd0_2 w0_pd1_0 w0_pd2_4 w0_en w0_wl[66] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0067_sel VDD VSS w0_pd0_3 w0_pd1_0 w0_pd2_4 w0_en w0_wl[67] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0068_sel VDD VSS w0_pd0_0 w0_pd1_1 w0_pd2_4 w0_en w0_wl[68] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0069_sel VDD VSS w0_pd0_1 w0_pd1_1 w0_pd2_4 w0_en w0_wl[69] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0070_sel VDD VSS w0_pd0_2 w0_pd1_1 w0_pd2_4 w0_en w0_wl[70] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0071_sel VDD VSS w0_pd0_3 w0_pd1_1 w0_pd2_4 w0_en w0_wl[71] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0072_sel VDD VSS w0_pd0_0 w0_pd1_2 w0_pd2_4 w0_en w0_wl[72] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0073_sel VDD VSS w0_pd0_1 w0_pd1_2 w0_pd2_4 w0_en w0_wl[73] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0074_sel VDD VSS w0_pd0_2 w0_pd1_2 w0_pd2_4 w0_en w0_wl[74] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0075_sel VDD VSS w0_pd0_3 w0_pd1_2 w0_pd2_4 w0_en w0_wl[75] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0076_sel VDD VSS w0_pd0_0 w0_pd1_3 w0_pd2_4 w0_en w0_wl[76] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0077_sel VDD VSS w0_pd0_1 w0_pd1_3 w0_pd2_4 w0_en w0_wl[77] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0078_sel VDD VSS w0_pd0_2 w0_pd1_3 w0_pd2_4 w0_en w0_wl[78] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0079_sel VDD VSS w0_pd0_3 w0_pd1_3 w0_pd2_4 w0_en w0_wl[79] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0080_sel VDD VSS w0_pd0_0 w0_pd1_0 w0_pd2_5 w0_en w0_wl[80] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0081_sel VDD VSS w0_pd0_1 w0_pd1_0 w0_pd2_5 w0_en w0_wl[81] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0082_sel VDD VSS w0_pd0_2 w0_pd1_0 w0_pd2_5 w0_en w0_wl[82] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0083_sel VDD VSS w0_pd0_3 w0_pd1_0 w0_pd2_5 w0_en w0_wl[83] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0084_sel VDD VSS w0_pd0_0 w0_pd1_1 w0_pd2_5 w0_en w0_wl[84] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0085_sel VDD VSS w0_pd0_1 w0_pd1_1 w0_pd2_5 w0_en w0_wl[85] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0086_sel VDD VSS w0_pd0_2 w0_pd1_1 w0_pd2_5 w0_en w0_wl[86] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0087_sel VDD VSS w0_pd0_3 w0_pd1_1 w0_pd2_5 w0_en w0_wl[87] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0088_sel VDD VSS w0_pd0_0 w0_pd1_2 w0_pd2_5 w0_en w0_wl[88] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0089_sel VDD VSS w0_pd0_1 w0_pd1_2 w0_pd2_5 w0_en w0_wl[89] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0090_sel VDD VSS w0_pd0_2 w0_pd1_2 w0_pd2_5 w0_en w0_wl[90] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0091_sel VDD VSS w0_pd0_3 w0_pd1_2 w0_pd2_5 w0_en w0_wl[91] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0092_sel VDD VSS w0_pd0_0 w0_pd1_3 w0_pd2_5 w0_en w0_wl[92] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0093_sel VDD VSS w0_pd0_1 w0_pd1_3 w0_pd2_5 w0_en w0_wl[93] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0094_sel VDD VSS w0_pd0_2 w0_pd1_3 w0_pd2_5 w0_en w0_wl[94] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0095_sel VDD VSS w0_pd0_3 w0_pd1_3 w0_pd2_5 w0_en w0_wl[95] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0096_sel VDD VSS w0_pd0_0 w0_pd1_0 w0_pd2_6 w0_en w0_wl[96] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0097_sel VDD VSS w0_pd0_1 w0_pd1_0 w0_pd2_6 w0_en w0_wl[97] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0098_sel VDD VSS w0_pd0_2 w0_pd1_0 w0_pd2_6 w0_en w0_wl[98] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0099_sel VDD VSS w0_pd0_3 w0_pd1_0 w0_pd2_6 w0_en w0_wl[99] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0100_sel VDD VSS w0_pd0_0 w0_pd1_1 w0_pd2_6 w0_en w0_wl[100] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0101_sel VDD VSS w0_pd0_1 w0_pd1_1 w0_pd2_6 w0_en w0_wl[101] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0102_sel VDD VSS w0_pd0_2 w0_pd1_1 w0_pd2_6 w0_en w0_wl[102] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0103_sel VDD VSS w0_pd0_3 w0_pd1_1 w0_pd2_6 w0_en w0_wl[103] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0104_sel VDD VSS w0_pd0_0 w0_pd1_2 w0_pd2_6 w0_en w0_wl[104] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0105_sel VDD VSS w0_pd0_1 w0_pd1_2 w0_pd2_6 w0_en w0_wl[105] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0106_sel VDD VSS w0_pd0_2 w0_pd1_2 w0_pd2_6 w0_en w0_wl[106] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0107_sel VDD VSS w0_pd0_3 w0_pd1_2 w0_pd2_6 w0_en w0_wl[107] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0108_sel VDD VSS w0_pd0_0 w0_pd1_3 w0_pd2_6 w0_en w0_wl[108] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0109_sel VDD VSS w0_pd0_1 w0_pd1_3 w0_pd2_6 w0_en w0_wl[109] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0110_sel VDD VSS w0_pd0_2 w0_pd1_3 w0_pd2_6 w0_en w0_wl[110] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0111_sel VDD VSS w0_pd0_3 w0_pd1_3 w0_pd2_6 w0_en w0_wl[111] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0112_sel VDD VSS w0_pd0_0 w0_pd1_0 w0_pd2_7 w0_en w0_wl[112] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0113_sel VDD VSS w0_pd0_1 w0_pd1_0 w0_pd2_7 w0_en w0_wl[113] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0114_sel VDD VSS w0_pd0_2 w0_pd1_0 w0_pd2_7 w0_en w0_wl[114] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0115_sel VDD VSS w0_pd0_3 w0_pd1_0 w0_pd2_7 w0_en w0_wl[115] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0116_sel VDD VSS w0_pd0_0 w0_pd1_1 w0_pd2_7 w0_en w0_wl[116] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0117_sel VDD VSS w0_pd0_1 w0_pd1_1 w0_pd2_7 w0_en w0_wl[117] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0118_sel VDD VSS w0_pd0_2 w0_pd1_1 w0_pd2_7 w0_en w0_wl[118] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0119_sel VDD VSS w0_pd0_3 w0_pd1_1 w0_pd2_7 w0_en w0_wl[119] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0120_sel VDD VSS w0_pd0_0 w0_pd1_2 w0_pd2_7 w0_en w0_wl[120] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0121_sel VDD VSS w0_pd0_1 w0_pd1_2 w0_pd2_7 w0_en w0_wl[121] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0122_sel VDD VSS w0_pd0_2 w0_pd1_2 w0_pd2_7 w0_en w0_wl[122] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0123_sel VDD VSS w0_pd0_3 w0_pd1_2 w0_pd2_7 w0_en w0_wl[123] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0124_sel VDD VSS w0_pd0_0 w0_pd1_3 w0_pd2_7 w0_en w0_wl[124] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0125_sel VDD VSS w0_pd0_1 w0_pd1_3 w0_pd2_7 w0_en w0_wl[125] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0126_sel VDD VSS w0_pd0_2 w0_pd1_3 w0_pd2_7 w0_en w0_wl[126] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0127_sel VDD VSS w0_pd0_3 w0_pd1_3 w0_pd2_7 w0_en w0_wl[127] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0128_sel VDD VSS w0_pd0_0 w0_pd1_0 w0_pd2_8 w0_en w0_wl[128] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0129_sel VDD VSS w0_pd0_1 w0_pd1_0 w0_pd2_8 w0_en w0_wl[129] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0130_sel VDD VSS w0_pd0_2 w0_pd1_0 w0_pd2_8 w0_en w0_wl[130] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0131_sel VDD VSS w0_pd0_3 w0_pd1_0 w0_pd2_8 w0_en w0_wl[131] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0132_sel VDD VSS w0_pd0_0 w0_pd1_1 w0_pd2_8 w0_en w0_wl[132] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0133_sel VDD VSS w0_pd0_1 w0_pd1_1 w0_pd2_8 w0_en w0_wl[133] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0134_sel VDD VSS w0_pd0_2 w0_pd1_1 w0_pd2_8 w0_en w0_wl[134] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0135_sel VDD VSS w0_pd0_3 w0_pd1_1 w0_pd2_8 w0_en w0_wl[135] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0136_sel VDD VSS w0_pd0_0 w0_pd1_2 w0_pd2_8 w0_en w0_wl[136] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0137_sel VDD VSS w0_pd0_1 w0_pd1_2 w0_pd2_8 w0_en w0_wl[137] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0138_sel VDD VSS w0_pd0_2 w0_pd1_2 w0_pd2_8 w0_en w0_wl[138] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0139_sel VDD VSS w0_pd0_3 w0_pd1_2 w0_pd2_8 w0_en w0_wl[139] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0140_sel VDD VSS w0_pd0_0 w0_pd1_3 w0_pd2_8 w0_en w0_wl[140] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0141_sel VDD VSS w0_pd0_1 w0_pd1_3 w0_pd2_8 w0_en w0_wl[141] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0142_sel VDD VSS w0_pd0_2 w0_pd1_3 w0_pd2_8 w0_en w0_wl[142] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0143_sel VDD VSS w0_pd0_3 w0_pd1_3 w0_pd2_8 w0_en w0_wl[143] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0144_sel VDD VSS w0_pd0_0 w0_pd1_0 w0_pd2_9 w0_en w0_wl[144] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0145_sel VDD VSS w0_pd0_1 w0_pd1_0 w0_pd2_9 w0_en w0_wl[145] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0146_sel VDD VSS w0_pd0_2 w0_pd1_0 w0_pd2_9 w0_en w0_wl[146] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0147_sel VDD VSS w0_pd0_3 w0_pd1_0 w0_pd2_9 w0_en w0_wl[147] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0148_sel VDD VSS w0_pd0_0 w0_pd1_1 w0_pd2_9 w0_en w0_wl[148] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0149_sel VDD VSS w0_pd0_1 w0_pd1_1 w0_pd2_9 w0_en w0_wl[149] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0150_sel VDD VSS w0_pd0_2 w0_pd1_1 w0_pd2_9 w0_en w0_wl[150] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0151_sel VDD VSS w0_pd0_3 w0_pd1_1 w0_pd2_9 w0_en w0_wl[151] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0152_sel VDD VSS w0_pd0_0 w0_pd1_2 w0_pd2_9 w0_en w0_wl[152] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0153_sel VDD VSS w0_pd0_1 w0_pd1_2 w0_pd2_9 w0_en w0_wl[153] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0154_sel VDD VSS w0_pd0_2 w0_pd1_2 w0_pd2_9 w0_en w0_wl[154] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0155_sel VDD VSS w0_pd0_3 w0_pd1_2 w0_pd2_9 w0_en w0_wl[155] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0156_sel VDD VSS w0_pd0_0 w0_pd1_3 w0_pd2_9 w0_en w0_wl[156] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0157_sel VDD VSS w0_pd0_1 w0_pd1_3 w0_pd2_9 w0_en w0_wl[157] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0158_sel VDD VSS w0_pd0_2 w0_pd1_3 w0_pd2_9 w0_en w0_wl[158] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0159_sel VDD VSS w0_pd0_3 w0_pd1_3 w0_pd2_9 w0_en w0_wl[159] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0160_sel VDD VSS w0_pd0_0 w0_pd1_0 w0_pd2_10 w0_en w0_wl[160] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0161_sel VDD VSS w0_pd0_1 w0_pd1_0 w0_pd2_10 w0_en w0_wl[161] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0162_sel VDD VSS w0_pd0_2 w0_pd1_0 w0_pd2_10 w0_en w0_wl[162] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0163_sel VDD VSS w0_pd0_3 w0_pd1_0 w0_pd2_10 w0_en w0_wl[163] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0164_sel VDD VSS w0_pd0_0 w0_pd1_1 w0_pd2_10 w0_en w0_wl[164] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0165_sel VDD VSS w0_pd0_1 w0_pd1_1 w0_pd2_10 w0_en w0_wl[165] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0166_sel VDD VSS w0_pd0_2 w0_pd1_1 w0_pd2_10 w0_en w0_wl[166] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0167_sel VDD VSS w0_pd0_3 w0_pd1_1 w0_pd2_10 w0_en w0_wl[167] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0168_sel VDD VSS w0_pd0_0 w0_pd1_2 w0_pd2_10 w0_en w0_wl[168] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0169_sel VDD VSS w0_pd0_1 w0_pd1_2 w0_pd2_10 w0_en w0_wl[169] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0170_sel VDD VSS w0_pd0_2 w0_pd1_2 w0_pd2_10 w0_en w0_wl[170] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0171_sel VDD VSS w0_pd0_3 w0_pd1_2 w0_pd2_10 w0_en w0_wl[171] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0172_sel VDD VSS w0_pd0_0 w0_pd1_3 w0_pd2_10 w0_en w0_wl[172] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0173_sel VDD VSS w0_pd0_1 w0_pd1_3 w0_pd2_10 w0_en w0_wl[173] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0174_sel VDD VSS w0_pd0_2 w0_pd1_3 w0_pd2_10 w0_en w0_wl[174] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0175_sel VDD VSS w0_pd0_3 w0_pd1_3 w0_pd2_10 w0_en w0_wl[175] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0176_sel VDD VSS w0_pd0_0 w0_pd1_0 w0_pd2_11 w0_en w0_wl[176] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0177_sel VDD VSS w0_pd0_1 w0_pd1_0 w0_pd2_11 w0_en w0_wl[177] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0178_sel VDD VSS w0_pd0_2 w0_pd1_0 w0_pd2_11 w0_en w0_wl[178] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0179_sel VDD VSS w0_pd0_3 w0_pd1_0 w0_pd2_11 w0_en w0_wl[179] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0180_sel VDD VSS w0_pd0_0 w0_pd1_1 w0_pd2_11 w0_en w0_wl[180] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0181_sel VDD VSS w0_pd0_1 w0_pd1_1 w0_pd2_11 w0_en w0_wl[181] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0182_sel VDD VSS w0_pd0_2 w0_pd1_1 w0_pd2_11 w0_en w0_wl[182] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0183_sel VDD VSS w0_pd0_3 w0_pd1_1 w0_pd2_11 w0_en w0_wl[183] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0184_sel VDD VSS w0_pd0_0 w0_pd1_2 w0_pd2_11 w0_en w0_wl[184] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0185_sel VDD VSS w0_pd0_1 w0_pd1_2 w0_pd2_11 w0_en w0_wl[185] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0186_sel VDD VSS w0_pd0_2 w0_pd1_2 w0_pd2_11 w0_en w0_wl[186] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0187_sel VDD VSS w0_pd0_3 w0_pd1_2 w0_pd2_11 w0_en w0_wl[187] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0188_sel VDD VSS w0_pd0_0 w0_pd1_3 w0_pd2_11 w0_en w0_wl[188] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0189_sel VDD VSS w0_pd0_1 w0_pd1_3 w0_pd2_11 w0_en w0_wl[189] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0190_sel VDD VSS w0_pd0_2 w0_pd1_3 w0_pd2_11 w0_en w0_wl[190] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0191_sel VDD VSS w0_pd0_3 w0_pd1_3 w0_pd2_11 w0_en w0_wl[191] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0192_sel VDD VSS w0_pd0_0 w0_pd1_0 w0_pd2_12 w0_en w0_wl[192] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0193_sel VDD VSS w0_pd0_1 w0_pd1_0 w0_pd2_12 w0_en w0_wl[193] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0194_sel VDD VSS w0_pd0_2 w0_pd1_0 w0_pd2_12 w0_en w0_wl[194] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0195_sel VDD VSS w0_pd0_3 w0_pd1_0 w0_pd2_12 w0_en w0_wl[195] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0196_sel VDD VSS w0_pd0_0 w0_pd1_1 w0_pd2_12 w0_en w0_wl[196] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0197_sel VDD VSS w0_pd0_1 w0_pd1_1 w0_pd2_12 w0_en w0_wl[197] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0198_sel VDD VSS w0_pd0_2 w0_pd1_1 w0_pd2_12 w0_en w0_wl[198] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0199_sel VDD VSS w0_pd0_3 w0_pd1_1 w0_pd2_12 w0_en w0_wl[199] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0200_sel VDD VSS w0_pd0_0 w0_pd1_2 w0_pd2_12 w0_en w0_wl[200] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0201_sel VDD VSS w0_pd0_1 w0_pd1_2 w0_pd2_12 w0_en w0_wl[201] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0202_sel VDD VSS w0_pd0_2 w0_pd1_2 w0_pd2_12 w0_en w0_wl[202] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0203_sel VDD VSS w0_pd0_3 w0_pd1_2 w0_pd2_12 w0_en w0_wl[203] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0204_sel VDD VSS w0_pd0_0 w0_pd1_3 w0_pd2_12 w0_en w0_wl[204] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0205_sel VDD VSS w0_pd0_1 w0_pd1_3 w0_pd2_12 w0_en w0_wl[205] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0206_sel VDD VSS w0_pd0_2 w0_pd1_3 w0_pd2_12 w0_en w0_wl[206] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0207_sel VDD VSS w0_pd0_3 w0_pd1_3 w0_pd2_12 w0_en w0_wl[207] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0208_sel VDD VSS w0_pd0_0 w0_pd1_0 w0_pd2_13 w0_en w0_wl[208] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0209_sel VDD VSS w0_pd0_1 w0_pd1_0 w0_pd2_13 w0_en w0_wl[209] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0210_sel VDD VSS w0_pd0_2 w0_pd1_0 w0_pd2_13 w0_en w0_wl[210] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0211_sel VDD VSS w0_pd0_3 w0_pd1_0 w0_pd2_13 w0_en w0_wl[211] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0212_sel VDD VSS w0_pd0_0 w0_pd1_1 w0_pd2_13 w0_en w0_wl[212] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0213_sel VDD VSS w0_pd0_1 w0_pd1_1 w0_pd2_13 w0_en w0_wl[213] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0214_sel VDD VSS w0_pd0_2 w0_pd1_1 w0_pd2_13 w0_en w0_wl[214] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0215_sel VDD VSS w0_pd0_3 w0_pd1_1 w0_pd2_13 w0_en w0_wl[215] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0216_sel VDD VSS w0_pd0_0 w0_pd1_2 w0_pd2_13 w0_en w0_wl[216] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0217_sel VDD VSS w0_pd0_1 w0_pd1_2 w0_pd2_13 w0_en w0_wl[217] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0218_sel VDD VSS w0_pd0_2 w0_pd1_2 w0_pd2_13 w0_en w0_wl[218] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0219_sel VDD VSS w0_pd0_3 w0_pd1_2 w0_pd2_13 w0_en w0_wl[219] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0220_sel VDD VSS w0_pd0_0 w0_pd1_3 w0_pd2_13 w0_en w0_wl[220] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0221_sel VDD VSS w0_pd0_1 w0_pd1_3 w0_pd2_13 w0_en w0_wl[221] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0222_sel VDD VSS w0_pd0_2 w0_pd1_3 w0_pd2_13 w0_en w0_wl[222] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0223_sel VDD VSS w0_pd0_3 w0_pd1_3 w0_pd2_13 w0_en w0_wl[223] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0224_sel VDD VSS w0_pd0_0 w0_pd1_0 w0_pd2_14 w0_en w0_wl[224] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0225_sel VDD VSS w0_pd0_1 w0_pd1_0 w0_pd2_14 w0_en w0_wl[225] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0226_sel VDD VSS w0_pd0_2 w0_pd1_0 w0_pd2_14 w0_en w0_wl[226] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0227_sel VDD VSS w0_pd0_3 w0_pd1_0 w0_pd2_14 w0_en w0_wl[227] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0228_sel VDD VSS w0_pd0_0 w0_pd1_1 w0_pd2_14 w0_en w0_wl[228] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0229_sel VDD VSS w0_pd0_1 w0_pd1_1 w0_pd2_14 w0_en w0_wl[229] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0230_sel VDD VSS w0_pd0_2 w0_pd1_1 w0_pd2_14 w0_en w0_wl[230] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0231_sel VDD VSS w0_pd0_3 w0_pd1_1 w0_pd2_14 w0_en w0_wl[231] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0232_sel VDD VSS w0_pd0_0 w0_pd1_2 w0_pd2_14 w0_en w0_wl[232] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0233_sel VDD VSS w0_pd0_1 w0_pd1_2 w0_pd2_14 w0_en w0_wl[233] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0234_sel VDD VSS w0_pd0_2 w0_pd1_2 w0_pd2_14 w0_en w0_wl[234] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0235_sel VDD VSS w0_pd0_3 w0_pd1_2 w0_pd2_14 w0_en w0_wl[235] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0236_sel VDD VSS w0_pd0_0 w0_pd1_3 w0_pd2_14 w0_en w0_wl[236] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0237_sel VDD VSS w0_pd0_1 w0_pd1_3 w0_pd2_14 w0_en w0_wl[237] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0238_sel VDD VSS w0_pd0_2 w0_pd1_3 w0_pd2_14 w0_en w0_wl[238] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0239_sel VDD VSS w0_pd0_3 w0_pd1_3 w0_pd2_14 w0_en w0_wl[239] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0240_sel VDD VSS w0_pd0_0 w0_pd1_0 w0_pd2_15 w0_en w0_wl[240] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0241_sel VDD VSS w0_pd0_1 w0_pd1_0 w0_pd2_15 w0_en w0_wl[241] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0242_sel VDD VSS w0_pd0_2 w0_pd1_0 w0_pd2_15 w0_en w0_wl[242] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0243_sel VDD VSS w0_pd0_3 w0_pd1_0 w0_pd2_15 w0_en w0_wl[243] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0244_sel VDD VSS w0_pd0_0 w0_pd1_1 w0_pd2_15 w0_en w0_wl[244] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0245_sel VDD VSS w0_pd0_1 w0_pd1_1 w0_pd2_15 w0_en w0_wl[245] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0246_sel VDD VSS w0_pd0_2 w0_pd1_1 w0_pd2_15 w0_en w0_wl[246] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0247_sel VDD VSS w0_pd0_3 w0_pd1_1 w0_pd2_15 w0_en w0_wl[247] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0248_sel VDD VSS w0_pd0_0 w0_pd1_2 w0_pd2_15 w0_en w0_wl[248] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0249_sel VDD VSS w0_pd0_1 w0_pd1_2 w0_pd2_15 w0_en w0_wl[249] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0250_sel VDD VSS w0_pd0_2 w0_pd1_2 w0_pd2_15 w0_en w0_wl[250] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0251_sel VDD VSS w0_pd0_3 w0_pd1_2 w0_pd2_15 w0_en w0_wl[251] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0252_sel VDD VSS w0_pd0_0 w0_pd1_3 w0_pd2_15 w0_en w0_wl[252] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0253_sel VDD VSS w0_pd0_1 w0_pd1_3 w0_pd2_15 w0_en w0_wl[253] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0254_sel VDD VSS w0_pd0_2 w0_pd1_3 w0_pd2_15 w0_en w0_wl[254] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw0_row0255_sel VDD VSS w0_pd0_3 w0_pd1_3 w0_pd2_15 w0_en w0_wl[255] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_a0_inv VDD VSS w1_addr[0] w1_a0_n detronyx_12t_ctrl_inv_rc7
+Xw1_a1_inv VDD VSS w1_addr[1] w1_a1_n detronyx_12t_ctrl_inv_rc7
+Xw1_a2_inv VDD VSS w1_addr[2] w1_a2_n detronyx_12t_ctrl_inv_rc7
+Xw1_a3_inv VDD VSS w1_addr[3] w1_a3_n detronyx_12t_ctrl_inv_rc7
+Xw1_a4_inv VDD VSS w1_addr[4] w1_a4_n detronyx_12t_ctrl_inv_rc7
+Xw1_a5_inv VDD VSS w1_addr[5] w1_a5_n detronyx_12t_ctrl_inv_rc7
+Xw1_a6_inv VDD VSS w1_addr[6] w1_a6_n detronyx_12t_ctrl_inv_rc7
+Xw1_a7_inv VDD VSS w1_addr[7] w1_a7_n detronyx_12t_ctrl_inv_rc7
+Xw1_a8_inv VDD VSS w1_addr[8] w1_a8_n detronyx_12t_ctrl_inv_rc7
+Xw1_a9_inv VDD VSS w1_addr[9] w1_a9_n detronyx_12t_ctrl_inv_rc7
+Xw1_grp0_nand2 VDD VSS w1_a0_n w1_a1_n w1_grp0_n detronyx_12t_ctrl_nand2_rc7
+Xw1_grp0_inv VDD VSS w1_grp0_n w1_grp[0] detronyx_12t_ctrl_inv_rc7
+Xw1_grp1_nand2 VDD VSS w1_addr[0] w1_a1_n w1_grp1_n detronyx_12t_ctrl_nand2_rc7
+Xw1_grp1_inv VDD VSS w1_grp1_n w1_grp[1] detronyx_12t_ctrl_inv_rc7
+Xw1_grp2_nand2 VDD VSS w1_a0_n w1_addr[1] w1_grp2_n detronyx_12t_ctrl_nand2_rc7
+Xw1_grp2_inv VDD VSS w1_grp2_n w1_grp[2] detronyx_12t_ctrl_inv_rc7
+Xw1_grp3_nand2 VDD VSS w1_addr[0] w1_addr[1] w1_grp3_n detronyx_12t_ctrl_nand2_rc7
+Xw1_grp3_inv VDD VSS w1_grp3_n w1_grp[3] detronyx_12t_ctrl_inv_rc7
+Xw1_pd0_0_nand2 VDD VSS w1_a2_n w1_a3_n w1_pd0_0_n detronyx_12t_ctrl_nand2_rc7
+Xw1_pd0_0_inv VDD VSS w1_pd0_0_n w1_pd0_0 detronyx_12t_ctrl_inv_rc7
+Xw1_pd0_1_nand2 VDD VSS w1_addr[2] w1_a3_n w1_pd0_1_n detronyx_12t_ctrl_nand2_rc7
+Xw1_pd0_1_inv VDD VSS w1_pd0_1_n w1_pd0_1 detronyx_12t_ctrl_inv_rc7
+Xw1_pd0_2_nand2 VDD VSS w1_a2_n w1_addr[3] w1_pd0_2_n detronyx_12t_ctrl_nand2_rc7
+Xw1_pd0_2_inv VDD VSS w1_pd0_2_n w1_pd0_2 detronyx_12t_ctrl_inv_rc7
+Xw1_pd0_3_nand2 VDD VSS w1_addr[2] w1_addr[3] w1_pd0_3_n detronyx_12t_ctrl_nand2_rc7
+Xw1_pd0_3_inv VDD VSS w1_pd0_3_n w1_pd0_3 detronyx_12t_ctrl_inv_rc7
+Xw1_pd1_0_nand2 VDD VSS w1_a4_n w1_a5_n w1_pd1_0_n detronyx_12t_ctrl_nand2_rc7
+Xw1_pd1_0_inv VDD VSS w1_pd1_0_n w1_pd1_0 detronyx_12t_ctrl_inv_rc7
+Xw1_pd1_1_nand2 VDD VSS w1_addr[4] w1_a5_n w1_pd1_1_n detronyx_12t_ctrl_nand2_rc7
+Xw1_pd1_1_inv VDD VSS w1_pd1_1_n w1_pd1_1 detronyx_12t_ctrl_inv_rc7
+Xw1_pd1_2_nand2 VDD VSS w1_a4_n w1_addr[5] w1_pd1_2_n detronyx_12t_ctrl_nand2_rc7
+Xw1_pd1_2_inv VDD VSS w1_pd1_2_n w1_pd1_2 detronyx_12t_ctrl_inv_rc7
+Xw1_pd1_3_nand2 VDD VSS w1_addr[4] w1_addr[5] w1_pd1_3_n detronyx_12t_ctrl_nand2_rc7
+Xw1_pd1_3_inv VDD VSS w1_pd1_3_n w1_pd1_3 detronyx_12t_ctrl_inv_rc7
+Xw1_pd2_0_nand4 VDD VSS w1_a6_n w1_a7_n w1_a8_n w1_a9_n w1_pd2_0_n detronyx_12t_ctrl_nand4_rc7
+Xw1_pd2_0_inv VDD VSS w1_pd2_0_n w1_pd2_0 detronyx_12t_ctrl_inv_rc7
+Xw1_pd2_1_nand4 VDD VSS w1_addr[6] w1_a7_n w1_a8_n w1_a9_n w1_pd2_1_n detronyx_12t_ctrl_nand4_rc7
+Xw1_pd2_1_inv VDD VSS w1_pd2_1_n w1_pd2_1 detronyx_12t_ctrl_inv_rc7
+Xw1_pd2_2_nand4 VDD VSS w1_a6_n w1_addr[7] w1_a8_n w1_a9_n w1_pd2_2_n detronyx_12t_ctrl_nand4_rc7
+Xw1_pd2_2_inv VDD VSS w1_pd2_2_n w1_pd2_2 detronyx_12t_ctrl_inv_rc7
+Xw1_pd2_3_nand4 VDD VSS w1_addr[6] w1_addr[7] w1_a8_n w1_a9_n w1_pd2_3_n detronyx_12t_ctrl_nand4_rc7
+Xw1_pd2_3_inv VDD VSS w1_pd2_3_n w1_pd2_3 detronyx_12t_ctrl_inv_rc7
+Xw1_pd2_4_nand4 VDD VSS w1_a6_n w1_a7_n w1_addr[8] w1_a9_n w1_pd2_4_n detronyx_12t_ctrl_nand4_rc7
+Xw1_pd2_4_inv VDD VSS w1_pd2_4_n w1_pd2_4 detronyx_12t_ctrl_inv_rc7
+Xw1_pd2_5_nand4 VDD VSS w1_addr[6] w1_a7_n w1_addr[8] w1_a9_n w1_pd2_5_n detronyx_12t_ctrl_nand4_rc7
+Xw1_pd2_5_inv VDD VSS w1_pd2_5_n w1_pd2_5 detronyx_12t_ctrl_inv_rc7
+Xw1_pd2_6_nand4 VDD VSS w1_a6_n w1_addr[7] w1_addr[8] w1_a9_n w1_pd2_6_n detronyx_12t_ctrl_nand4_rc7
+Xw1_pd2_6_inv VDD VSS w1_pd2_6_n w1_pd2_6 detronyx_12t_ctrl_inv_rc7
+Xw1_pd2_7_nand4 VDD VSS w1_addr[6] w1_addr[7] w1_addr[8] w1_a9_n w1_pd2_7_n detronyx_12t_ctrl_nand4_rc7
+Xw1_pd2_7_inv VDD VSS w1_pd2_7_n w1_pd2_7 detronyx_12t_ctrl_inv_rc7
+Xw1_pd2_8_nand4 VDD VSS w1_a6_n w1_a7_n w1_a8_n w1_addr[9] w1_pd2_8_n detronyx_12t_ctrl_nand4_rc7
+Xw1_pd2_8_inv VDD VSS w1_pd2_8_n w1_pd2_8 detronyx_12t_ctrl_inv_rc7
+Xw1_pd2_9_nand4 VDD VSS w1_addr[6] w1_a7_n w1_a8_n w1_addr[9] w1_pd2_9_n detronyx_12t_ctrl_nand4_rc7
+Xw1_pd2_9_inv VDD VSS w1_pd2_9_n w1_pd2_9 detronyx_12t_ctrl_inv_rc7
+Xw1_pd2_10_nand4 VDD VSS w1_a6_n w1_addr[7] w1_a8_n w1_addr[9] w1_pd2_10_n detronyx_12t_ctrl_nand4_rc7
+Xw1_pd2_10_inv VDD VSS w1_pd2_10_n w1_pd2_10 detronyx_12t_ctrl_inv_rc7
+Xw1_pd2_11_nand4 VDD VSS w1_addr[6] w1_addr[7] w1_a8_n w1_addr[9] w1_pd2_11_n detronyx_12t_ctrl_nand4_rc7
+Xw1_pd2_11_inv VDD VSS w1_pd2_11_n w1_pd2_11 detronyx_12t_ctrl_inv_rc7
+Xw1_pd2_12_nand4 VDD VSS w1_a6_n w1_a7_n w1_addr[8] w1_addr[9] w1_pd2_12_n detronyx_12t_ctrl_nand4_rc7
+Xw1_pd2_12_inv VDD VSS w1_pd2_12_n w1_pd2_12 detronyx_12t_ctrl_inv_rc7
+Xw1_pd2_13_nand4 VDD VSS w1_addr[6] w1_a7_n w1_addr[8] w1_addr[9] w1_pd2_13_n detronyx_12t_ctrl_nand4_rc7
+Xw1_pd2_13_inv VDD VSS w1_pd2_13_n w1_pd2_13 detronyx_12t_ctrl_inv_rc7
+Xw1_pd2_14_nand4 VDD VSS w1_a6_n w1_addr[7] w1_addr[8] w1_addr[9] w1_pd2_14_n detronyx_12t_ctrl_nand4_rc7
+Xw1_pd2_14_inv VDD VSS w1_pd2_14_n w1_pd2_14 detronyx_12t_ctrl_inv_rc7
+Xw1_pd2_15_nand4 VDD VSS w1_addr[6] w1_addr[7] w1_addr[8] w1_addr[9] w1_pd2_15_n detronyx_12t_ctrl_nand4_rc7
+Xw1_pd2_15_inv VDD VSS w1_pd2_15_n w1_pd2_15 detronyx_12t_ctrl_inv_rc7
+Xw1_row0000_sel VDD VSS w1_pd0_0 w1_pd1_0 w1_pd2_0 w1_en w1_wl[0] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0001_sel VDD VSS w1_pd0_1 w1_pd1_0 w1_pd2_0 w1_en w1_wl[1] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0002_sel VDD VSS w1_pd0_2 w1_pd1_0 w1_pd2_0 w1_en w1_wl[2] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0003_sel VDD VSS w1_pd0_3 w1_pd1_0 w1_pd2_0 w1_en w1_wl[3] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0004_sel VDD VSS w1_pd0_0 w1_pd1_1 w1_pd2_0 w1_en w1_wl[4] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0005_sel VDD VSS w1_pd0_1 w1_pd1_1 w1_pd2_0 w1_en w1_wl[5] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0006_sel VDD VSS w1_pd0_2 w1_pd1_1 w1_pd2_0 w1_en w1_wl[6] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0007_sel VDD VSS w1_pd0_3 w1_pd1_1 w1_pd2_0 w1_en w1_wl[7] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0008_sel VDD VSS w1_pd0_0 w1_pd1_2 w1_pd2_0 w1_en w1_wl[8] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0009_sel VDD VSS w1_pd0_1 w1_pd1_2 w1_pd2_0 w1_en w1_wl[9] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0010_sel VDD VSS w1_pd0_2 w1_pd1_2 w1_pd2_0 w1_en w1_wl[10] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0011_sel VDD VSS w1_pd0_3 w1_pd1_2 w1_pd2_0 w1_en w1_wl[11] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0012_sel VDD VSS w1_pd0_0 w1_pd1_3 w1_pd2_0 w1_en w1_wl[12] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0013_sel VDD VSS w1_pd0_1 w1_pd1_3 w1_pd2_0 w1_en w1_wl[13] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0014_sel VDD VSS w1_pd0_2 w1_pd1_3 w1_pd2_0 w1_en w1_wl[14] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0015_sel VDD VSS w1_pd0_3 w1_pd1_3 w1_pd2_0 w1_en w1_wl[15] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0016_sel VDD VSS w1_pd0_0 w1_pd1_0 w1_pd2_1 w1_en w1_wl[16] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0017_sel VDD VSS w1_pd0_1 w1_pd1_0 w1_pd2_1 w1_en w1_wl[17] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0018_sel VDD VSS w1_pd0_2 w1_pd1_0 w1_pd2_1 w1_en w1_wl[18] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0019_sel VDD VSS w1_pd0_3 w1_pd1_0 w1_pd2_1 w1_en w1_wl[19] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0020_sel VDD VSS w1_pd0_0 w1_pd1_1 w1_pd2_1 w1_en w1_wl[20] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0021_sel VDD VSS w1_pd0_1 w1_pd1_1 w1_pd2_1 w1_en w1_wl[21] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0022_sel VDD VSS w1_pd0_2 w1_pd1_1 w1_pd2_1 w1_en w1_wl[22] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0023_sel VDD VSS w1_pd0_3 w1_pd1_1 w1_pd2_1 w1_en w1_wl[23] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0024_sel VDD VSS w1_pd0_0 w1_pd1_2 w1_pd2_1 w1_en w1_wl[24] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0025_sel VDD VSS w1_pd0_1 w1_pd1_2 w1_pd2_1 w1_en w1_wl[25] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0026_sel VDD VSS w1_pd0_2 w1_pd1_2 w1_pd2_1 w1_en w1_wl[26] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0027_sel VDD VSS w1_pd0_3 w1_pd1_2 w1_pd2_1 w1_en w1_wl[27] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0028_sel VDD VSS w1_pd0_0 w1_pd1_3 w1_pd2_1 w1_en w1_wl[28] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0029_sel VDD VSS w1_pd0_1 w1_pd1_3 w1_pd2_1 w1_en w1_wl[29] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0030_sel VDD VSS w1_pd0_2 w1_pd1_3 w1_pd2_1 w1_en w1_wl[30] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0031_sel VDD VSS w1_pd0_3 w1_pd1_3 w1_pd2_1 w1_en w1_wl[31] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0032_sel VDD VSS w1_pd0_0 w1_pd1_0 w1_pd2_2 w1_en w1_wl[32] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0033_sel VDD VSS w1_pd0_1 w1_pd1_0 w1_pd2_2 w1_en w1_wl[33] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0034_sel VDD VSS w1_pd0_2 w1_pd1_0 w1_pd2_2 w1_en w1_wl[34] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0035_sel VDD VSS w1_pd0_3 w1_pd1_0 w1_pd2_2 w1_en w1_wl[35] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0036_sel VDD VSS w1_pd0_0 w1_pd1_1 w1_pd2_2 w1_en w1_wl[36] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0037_sel VDD VSS w1_pd0_1 w1_pd1_1 w1_pd2_2 w1_en w1_wl[37] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0038_sel VDD VSS w1_pd0_2 w1_pd1_1 w1_pd2_2 w1_en w1_wl[38] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0039_sel VDD VSS w1_pd0_3 w1_pd1_1 w1_pd2_2 w1_en w1_wl[39] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0040_sel VDD VSS w1_pd0_0 w1_pd1_2 w1_pd2_2 w1_en w1_wl[40] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0041_sel VDD VSS w1_pd0_1 w1_pd1_2 w1_pd2_2 w1_en w1_wl[41] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0042_sel VDD VSS w1_pd0_2 w1_pd1_2 w1_pd2_2 w1_en w1_wl[42] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0043_sel VDD VSS w1_pd0_3 w1_pd1_2 w1_pd2_2 w1_en w1_wl[43] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0044_sel VDD VSS w1_pd0_0 w1_pd1_3 w1_pd2_2 w1_en w1_wl[44] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0045_sel VDD VSS w1_pd0_1 w1_pd1_3 w1_pd2_2 w1_en w1_wl[45] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0046_sel VDD VSS w1_pd0_2 w1_pd1_3 w1_pd2_2 w1_en w1_wl[46] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0047_sel VDD VSS w1_pd0_3 w1_pd1_3 w1_pd2_2 w1_en w1_wl[47] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0048_sel VDD VSS w1_pd0_0 w1_pd1_0 w1_pd2_3 w1_en w1_wl[48] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0049_sel VDD VSS w1_pd0_1 w1_pd1_0 w1_pd2_3 w1_en w1_wl[49] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0050_sel VDD VSS w1_pd0_2 w1_pd1_0 w1_pd2_3 w1_en w1_wl[50] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0051_sel VDD VSS w1_pd0_3 w1_pd1_0 w1_pd2_3 w1_en w1_wl[51] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0052_sel VDD VSS w1_pd0_0 w1_pd1_1 w1_pd2_3 w1_en w1_wl[52] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0053_sel VDD VSS w1_pd0_1 w1_pd1_1 w1_pd2_3 w1_en w1_wl[53] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0054_sel VDD VSS w1_pd0_2 w1_pd1_1 w1_pd2_3 w1_en w1_wl[54] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0055_sel VDD VSS w1_pd0_3 w1_pd1_1 w1_pd2_3 w1_en w1_wl[55] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0056_sel VDD VSS w1_pd0_0 w1_pd1_2 w1_pd2_3 w1_en w1_wl[56] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0057_sel VDD VSS w1_pd0_1 w1_pd1_2 w1_pd2_3 w1_en w1_wl[57] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0058_sel VDD VSS w1_pd0_2 w1_pd1_2 w1_pd2_3 w1_en w1_wl[58] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0059_sel VDD VSS w1_pd0_3 w1_pd1_2 w1_pd2_3 w1_en w1_wl[59] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0060_sel VDD VSS w1_pd0_0 w1_pd1_3 w1_pd2_3 w1_en w1_wl[60] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0061_sel VDD VSS w1_pd0_1 w1_pd1_3 w1_pd2_3 w1_en w1_wl[61] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0062_sel VDD VSS w1_pd0_2 w1_pd1_3 w1_pd2_3 w1_en w1_wl[62] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0063_sel VDD VSS w1_pd0_3 w1_pd1_3 w1_pd2_3 w1_en w1_wl[63] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0064_sel VDD VSS w1_pd0_0 w1_pd1_0 w1_pd2_4 w1_en w1_wl[64] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0065_sel VDD VSS w1_pd0_1 w1_pd1_0 w1_pd2_4 w1_en w1_wl[65] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0066_sel VDD VSS w1_pd0_2 w1_pd1_0 w1_pd2_4 w1_en w1_wl[66] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0067_sel VDD VSS w1_pd0_3 w1_pd1_0 w1_pd2_4 w1_en w1_wl[67] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0068_sel VDD VSS w1_pd0_0 w1_pd1_1 w1_pd2_4 w1_en w1_wl[68] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0069_sel VDD VSS w1_pd0_1 w1_pd1_1 w1_pd2_4 w1_en w1_wl[69] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0070_sel VDD VSS w1_pd0_2 w1_pd1_1 w1_pd2_4 w1_en w1_wl[70] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0071_sel VDD VSS w1_pd0_3 w1_pd1_1 w1_pd2_4 w1_en w1_wl[71] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0072_sel VDD VSS w1_pd0_0 w1_pd1_2 w1_pd2_4 w1_en w1_wl[72] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0073_sel VDD VSS w1_pd0_1 w1_pd1_2 w1_pd2_4 w1_en w1_wl[73] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0074_sel VDD VSS w1_pd0_2 w1_pd1_2 w1_pd2_4 w1_en w1_wl[74] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0075_sel VDD VSS w1_pd0_3 w1_pd1_2 w1_pd2_4 w1_en w1_wl[75] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0076_sel VDD VSS w1_pd0_0 w1_pd1_3 w1_pd2_4 w1_en w1_wl[76] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0077_sel VDD VSS w1_pd0_1 w1_pd1_3 w1_pd2_4 w1_en w1_wl[77] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0078_sel VDD VSS w1_pd0_2 w1_pd1_3 w1_pd2_4 w1_en w1_wl[78] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0079_sel VDD VSS w1_pd0_3 w1_pd1_3 w1_pd2_4 w1_en w1_wl[79] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0080_sel VDD VSS w1_pd0_0 w1_pd1_0 w1_pd2_5 w1_en w1_wl[80] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0081_sel VDD VSS w1_pd0_1 w1_pd1_0 w1_pd2_5 w1_en w1_wl[81] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0082_sel VDD VSS w1_pd0_2 w1_pd1_0 w1_pd2_5 w1_en w1_wl[82] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0083_sel VDD VSS w1_pd0_3 w1_pd1_0 w1_pd2_5 w1_en w1_wl[83] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0084_sel VDD VSS w1_pd0_0 w1_pd1_1 w1_pd2_5 w1_en w1_wl[84] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0085_sel VDD VSS w1_pd0_1 w1_pd1_1 w1_pd2_5 w1_en w1_wl[85] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0086_sel VDD VSS w1_pd0_2 w1_pd1_1 w1_pd2_5 w1_en w1_wl[86] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0087_sel VDD VSS w1_pd0_3 w1_pd1_1 w1_pd2_5 w1_en w1_wl[87] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0088_sel VDD VSS w1_pd0_0 w1_pd1_2 w1_pd2_5 w1_en w1_wl[88] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0089_sel VDD VSS w1_pd0_1 w1_pd1_2 w1_pd2_5 w1_en w1_wl[89] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0090_sel VDD VSS w1_pd0_2 w1_pd1_2 w1_pd2_5 w1_en w1_wl[90] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0091_sel VDD VSS w1_pd0_3 w1_pd1_2 w1_pd2_5 w1_en w1_wl[91] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0092_sel VDD VSS w1_pd0_0 w1_pd1_3 w1_pd2_5 w1_en w1_wl[92] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0093_sel VDD VSS w1_pd0_1 w1_pd1_3 w1_pd2_5 w1_en w1_wl[93] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0094_sel VDD VSS w1_pd0_2 w1_pd1_3 w1_pd2_5 w1_en w1_wl[94] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0095_sel VDD VSS w1_pd0_3 w1_pd1_3 w1_pd2_5 w1_en w1_wl[95] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0096_sel VDD VSS w1_pd0_0 w1_pd1_0 w1_pd2_6 w1_en w1_wl[96] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0097_sel VDD VSS w1_pd0_1 w1_pd1_0 w1_pd2_6 w1_en w1_wl[97] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0098_sel VDD VSS w1_pd0_2 w1_pd1_0 w1_pd2_6 w1_en w1_wl[98] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0099_sel VDD VSS w1_pd0_3 w1_pd1_0 w1_pd2_6 w1_en w1_wl[99] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0100_sel VDD VSS w1_pd0_0 w1_pd1_1 w1_pd2_6 w1_en w1_wl[100] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0101_sel VDD VSS w1_pd0_1 w1_pd1_1 w1_pd2_6 w1_en w1_wl[101] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0102_sel VDD VSS w1_pd0_2 w1_pd1_1 w1_pd2_6 w1_en w1_wl[102] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0103_sel VDD VSS w1_pd0_3 w1_pd1_1 w1_pd2_6 w1_en w1_wl[103] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0104_sel VDD VSS w1_pd0_0 w1_pd1_2 w1_pd2_6 w1_en w1_wl[104] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0105_sel VDD VSS w1_pd0_1 w1_pd1_2 w1_pd2_6 w1_en w1_wl[105] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0106_sel VDD VSS w1_pd0_2 w1_pd1_2 w1_pd2_6 w1_en w1_wl[106] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0107_sel VDD VSS w1_pd0_3 w1_pd1_2 w1_pd2_6 w1_en w1_wl[107] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0108_sel VDD VSS w1_pd0_0 w1_pd1_3 w1_pd2_6 w1_en w1_wl[108] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0109_sel VDD VSS w1_pd0_1 w1_pd1_3 w1_pd2_6 w1_en w1_wl[109] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0110_sel VDD VSS w1_pd0_2 w1_pd1_3 w1_pd2_6 w1_en w1_wl[110] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0111_sel VDD VSS w1_pd0_3 w1_pd1_3 w1_pd2_6 w1_en w1_wl[111] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0112_sel VDD VSS w1_pd0_0 w1_pd1_0 w1_pd2_7 w1_en w1_wl[112] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0113_sel VDD VSS w1_pd0_1 w1_pd1_0 w1_pd2_7 w1_en w1_wl[113] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0114_sel VDD VSS w1_pd0_2 w1_pd1_0 w1_pd2_7 w1_en w1_wl[114] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0115_sel VDD VSS w1_pd0_3 w1_pd1_0 w1_pd2_7 w1_en w1_wl[115] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0116_sel VDD VSS w1_pd0_0 w1_pd1_1 w1_pd2_7 w1_en w1_wl[116] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0117_sel VDD VSS w1_pd0_1 w1_pd1_1 w1_pd2_7 w1_en w1_wl[117] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0118_sel VDD VSS w1_pd0_2 w1_pd1_1 w1_pd2_7 w1_en w1_wl[118] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0119_sel VDD VSS w1_pd0_3 w1_pd1_1 w1_pd2_7 w1_en w1_wl[119] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0120_sel VDD VSS w1_pd0_0 w1_pd1_2 w1_pd2_7 w1_en w1_wl[120] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0121_sel VDD VSS w1_pd0_1 w1_pd1_2 w1_pd2_7 w1_en w1_wl[121] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0122_sel VDD VSS w1_pd0_2 w1_pd1_2 w1_pd2_7 w1_en w1_wl[122] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0123_sel VDD VSS w1_pd0_3 w1_pd1_2 w1_pd2_7 w1_en w1_wl[123] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0124_sel VDD VSS w1_pd0_0 w1_pd1_3 w1_pd2_7 w1_en w1_wl[124] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0125_sel VDD VSS w1_pd0_1 w1_pd1_3 w1_pd2_7 w1_en w1_wl[125] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0126_sel VDD VSS w1_pd0_2 w1_pd1_3 w1_pd2_7 w1_en w1_wl[126] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0127_sel VDD VSS w1_pd0_3 w1_pd1_3 w1_pd2_7 w1_en w1_wl[127] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0128_sel VDD VSS w1_pd0_0 w1_pd1_0 w1_pd2_8 w1_en w1_wl[128] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0129_sel VDD VSS w1_pd0_1 w1_pd1_0 w1_pd2_8 w1_en w1_wl[129] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0130_sel VDD VSS w1_pd0_2 w1_pd1_0 w1_pd2_8 w1_en w1_wl[130] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0131_sel VDD VSS w1_pd0_3 w1_pd1_0 w1_pd2_8 w1_en w1_wl[131] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0132_sel VDD VSS w1_pd0_0 w1_pd1_1 w1_pd2_8 w1_en w1_wl[132] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0133_sel VDD VSS w1_pd0_1 w1_pd1_1 w1_pd2_8 w1_en w1_wl[133] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0134_sel VDD VSS w1_pd0_2 w1_pd1_1 w1_pd2_8 w1_en w1_wl[134] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0135_sel VDD VSS w1_pd0_3 w1_pd1_1 w1_pd2_8 w1_en w1_wl[135] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0136_sel VDD VSS w1_pd0_0 w1_pd1_2 w1_pd2_8 w1_en w1_wl[136] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0137_sel VDD VSS w1_pd0_1 w1_pd1_2 w1_pd2_8 w1_en w1_wl[137] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0138_sel VDD VSS w1_pd0_2 w1_pd1_2 w1_pd2_8 w1_en w1_wl[138] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0139_sel VDD VSS w1_pd0_3 w1_pd1_2 w1_pd2_8 w1_en w1_wl[139] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0140_sel VDD VSS w1_pd0_0 w1_pd1_3 w1_pd2_8 w1_en w1_wl[140] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0141_sel VDD VSS w1_pd0_1 w1_pd1_3 w1_pd2_8 w1_en w1_wl[141] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0142_sel VDD VSS w1_pd0_2 w1_pd1_3 w1_pd2_8 w1_en w1_wl[142] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0143_sel VDD VSS w1_pd0_3 w1_pd1_3 w1_pd2_8 w1_en w1_wl[143] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0144_sel VDD VSS w1_pd0_0 w1_pd1_0 w1_pd2_9 w1_en w1_wl[144] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0145_sel VDD VSS w1_pd0_1 w1_pd1_0 w1_pd2_9 w1_en w1_wl[145] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0146_sel VDD VSS w1_pd0_2 w1_pd1_0 w1_pd2_9 w1_en w1_wl[146] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0147_sel VDD VSS w1_pd0_3 w1_pd1_0 w1_pd2_9 w1_en w1_wl[147] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0148_sel VDD VSS w1_pd0_0 w1_pd1_1 w1_pd2_9 w1_en w1_wl[148] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0149_sel VDD VSS w1_pd0_1 w1_pd1_1 w1_pd2_9 w1_en w1_wl[149] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0150_sel VDD VSS w1_pd0_2 w1_pd1_1 w1_pd2_9 w1_en w1_wl[150] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0151_sel VDD VSS w1_pd0_3 w1_pd1_1 w1_pd2_9 w1_en w1_wl[151] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0152_sel VDD VSS w1_pd0_0 w1_pd1_2 w1_pd2_9 w1_en w1_wl[152] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0153_sel VDD VSS w1_pd0_1 w1_pd1_2 w1_pd2_9 w1_en w1_wl[153] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0154_sel VDD VSS w1_pd0_2 w1_pd1_2 w1_pd2_9 w1_en w1_wl[154] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0155_sel VDD VSS w1_pd0_3 w1_pd1_2 w1_pd2_9 w1_en w1_wl[155] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0156_sel VDD VSS w1_pd0_0 w1_pd1_3 w1_pd2_9 w1_en w1_wl[156] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0157_sel VDD VSS w1_pd0_1 w1_pd1_3 w1_pd2_9 w1_en w1_wl[157] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0158_sel VDD VSS w1_pd0_2 w1_pd1_3 w1_pd2_9 w1_en w1_wl[158] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0159_sel VDD VSS w1_pd0_3 w1_pd1_3 w1_pd2_9 w1_en w1_wl[159] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0160_sel VDD VSS w1_pd0_0 w1_pd1_0 w1_pd2_10 w1_en w1_wl[160] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0161_sel VDD VSS w1_pd0_1 w1_pd1_0 w1_pd2_10 w1_en w1_wl[161] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0162_sel VDD VSS w1_pd0_2 w1_pd1_0 w1_pd2_10 w1_en w1_wl[162] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0163_sel VDD VSS w1_pd0_3 w1_pd1_0 w1_pd2_10 w1_en w1_wl[163] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0164_sel VDD VSS w1_pd0_0 w1_pd1_1 w1_pd2_10 w1_en w1_wl[164] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0165_sel VDD VSS w1_pd0_1 w1_pd1_1 w1_pd2_10 w1_en w1_wl[165] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0166_sel VDD VSS w1_pd0_2 w1_pd1_1 w1_pd2_10 w1_en w1_wl[166] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0167_sel VDD VSS w1_pd0_3 w1_pd1_1 w1_pd2_10 w1_en w1_wl[167] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0168_sel VDD VSS w1_pd0_0 w1_pd1_2 w1_pd2_10 w1_en w1_wl[168] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0169_sel VDD VSS w1_pd0_1 w1_pd1_2 w1_pd2_10 w1_en w1_wl[169] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0170_sel VDD VSS w1_pd0_2 w1_pd1_2 w1_pd2_10 w1_en w1_wl[170] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0171_sel VDD VSS w1_pd0_3 w1_pd1_2 w1_pd2_10 w1_en w1_wl[171] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0172_sel VDD VSS w1_pd0_0 w1_pd1_3 w1_pd2_10 w1_en w1_wl[172] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0173_sel VDD VSS w1_pd0_1 w1_pd1_3 w1_pd2_10 w1_en w1_wl[173] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0174_sel VDD VSS w1_pd0_2 w1_pd1_3 w1_pd2_10 w1_en w1_wl[174] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0175_sel VDD VSS w1_pd0_3 w1_pd1_3 w1_pd2_10 w1_en w1_wl[175] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0176_sel VDD VSS w1_pd0_0 w1_pd1_0 w1_pd2_11 w1_en w1_wl[176] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0177_sel VDD VSS w1_pd0_1 w1_pd1_0 w1_pd2_11 w1_en w1_wl[177] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0178_sel VDD VSS w1_pd0_2 w1_pd1_0 w1_pd2_11 w1_en w1_wl[178] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0179_sel VDD VSS w1_pd0_3 w1_pd1_0 w1_pd2_11 w1_en w1_wl[179] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0180_sel VDD VSS w1_pd0_0 w1_pd1_1 w1_pd2_11 w1_en w1_wl[180] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0181_sel VDD VSS w1_pd0_1 w1_pd1_1 w1_pd2_11 w1_en w1_wl[181] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0182_sel VDD VSS w1_pd0_2 w1_pd1_1 w1_pd2_11 w1_en w1_wl[182] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0183_sel VDD VSS w1_pd0_3 w1_pd1_1 w1_pd2_11 w1_en w1_wl[183] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0184_sel VDD VSS w1_pd0_0 w1_pd1_2 w1_pd2_11 w1_en w1_wl[184] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0185_sel VDD VSS w1_pd0_1 w1_pd1_2 w1_pd2_11 w1_en w1_wl[185] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0186_sel VDD VSS w1_pd0_2 w1_pd1_2 w1_pd2_11 w1_en w1_wl[186] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0187_sel VDD VSS w1_pd0_3 w1_pd1_2 w1_pd2_11 w1_en w1_wl[187] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0188_sel VDD VSS w1_pd0_0 w1_pd1_3 w1_pd2_11 w1_en w1_wl[188] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0189_sel VDD VSS w1_pd0_1 w1_pd1_3 w1_pd2_11 w1_en w1_wl[189] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0190_sel VDD VSS w1_pd0_2 w1_pd1_3 w1_pd2_11 w1_en w1_wl[190] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0191_sel VDD VSS w1_pd0_3 w1_pd1_3 w1_pd2_11 w1_en w1_wl[191] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0192_sel VDD VSS w1_pd0_0 w1_pd1_0 w1_pd2_12 w1_en w1_wl[192] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0193_sel VDD VSS w1_pd0_1 w1_pd1_0 w1_pd2_12 w1_en w1_wl[193] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0194_sel VDD VSS w1_pd0_2 w1_pd1_0 w1_pd2_12 w1_en w1_wl[194] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0195_sel VDD VSS w1_pd0_3 w1_pd1_0 w1_pd2_12 w1_en w1_wl[195] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0196_sel VDD VSS w1_pd0_0 w1_pd1_1 w1_pd2_12 w1_en w1_wl[196] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0197_sel VDD VSS w1_pd0_1 w1_pd1_1 w1_pd2_12 w1_en w1_wl[197] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0198_sel VDD VSS w1_pd0_2 w1_pd1_1 w1_pd2_12 w1_en w1_wl[198] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0199_sel VDD VSS w1_pd0_3 w1_pd1_1 w1_pd2_12 w1_en w1_wl[199] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0200_sel VDD VSS w1_pd0_0 w1_pd1_2 w1_pd2_12 w1_en w1_wl[200] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0201_sel VDD VSS w1_pd0_1 w1_pd1_2 w1_pd2_12 w1_en w1_wl[201] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0202_sel VDD VSS w1_pd0_2 w1_pd1_2 w1_pd2_12 w1_en w1_wl[202] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0203_sel VDD VSS w1_pd0_3 w1_pd1_2 w1_pd2_12 w1_en w1_wl[203] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0204_sel VDD VSS w1_pd0_0 w1_pd1_3 w1_pd2_12 w1_en w1_wl[204] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0205_sel VDD VSS w1_pd0_1 w1_pd1_3 w1_pd2_12 w1_en w1_wl[205] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0206_sel VDD VSS w1_pd0_2 w1_pd1_3 w1_pd2_12 w1_en w1_wl[206] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0207_sel VDD VSS w1_pd0_3 w1_pd1_3 w1_pd2_12 w1_en w1_wl[207] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0208_sel VDD VSS w1_pd0_0 w1_pd1_0 w1_pd2_13 w1_en w1_wl[208] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0209_sel VDD VSS w1_pd0_1 w1_pd1_0 w1_pd2_13 w1_en w1_wl[209] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0210_sel VDD VSS w1_pd0_2 w1_pd1_0 w1_pd2_13 w1_en w1_wl[210] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0211_sel VDD VSS w1_pd0_3 w1_pd1_0 w1_pd2_13 w1_en w1_wl[211] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0212_sel VDD VSS w1_pd0_0 w1_pd1_1 w1_pd2_13 w1_en w1_wl[212] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0213_sel VDD VSS w1_pd0_1 w1_pd1_1 w1_pd2_13 w1_en w1_wl[213] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0214_sel VDD VSS w1_pd0_2 w1_pd1_1 w1_pd2_13 w1_en w1_wl[214] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0215_sel VDD VSS w1_pd0_3 w1_pd1_1 w1_pd2_13 w1_en w1_wl[215] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0216_sel VDD VSS w1_pd0_0 w1_pd1_2 w1_pd2_13 w1_en w1_wl[216] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0217_sel VDD VSS w1_pd0_1 w1_pd1_2 w1_pd2_13 w1_en w1_wl[217] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0218_sel VDD VSS w1_pd0_2 w1_pd1_2 w1_pd2_13 w1_en w1_wl[218] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0219_sel VDD VSS w1_pd0_3 w1_pd1_2 w1_pd2_13 w1_en w1_wl[219] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0220_sel VDD VSS w1_pd0_0 w1_pd1_3 w1_pd2_13 w1_en w1_wl[220] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0221_sel VDD VSS w1_pd0_1 w1_pd1_3 w1_pd2_13 w1_en w1_wl[221] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0222_sel VDD VSS w1_pd0_2 w1_pd1_3 w1_pd2_13 w1_en w1_wl[222] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0223_sel VDD VSS w1_pd0_3 w1_pd1_3 w1_pd2_13 w1_en w1_wl[223] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0224_sel VDD VSS w1_pd0_0 w1_pd1_0 w1_pd2_14 w1_en w1_wl[224] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0225_sel VDD VSS w1_pd0_1 w1_pd1_0 w1_pd2_14 w1_en w1_wl[225] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0226_sel VDD VSS w1_pd0_2 w1_pd1_0 w1_pd2_14 w1_en w1_wl[226] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0227_sel VDD VSS w1_pd0_3 w1_pd1_0 w1_pd2_14 w1_en w1_wl[227] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0228_sel VDD VSS w1_pd0_0 w1_pd1_1 w1_pd2_14 w1_en w1_wl[228] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0229_sel VDD VSS w1_pd0_1 w1_pd1_1 w1_pd2_14 w1_en w1_wl[229] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0230_sel VDD VSS w1_pd0_2 w1_pd1_1 w1_pd2_14 w1_en w1_wl[230] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0231_sel VDD VSS w1_pd0_3 w1_pd1_1 w1_pd2_14 w1_en w1_wl[231] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0232_sel VDD VSS w1_pd0_0 w1_pd1_2 w1_pd2_14 w1_en w1_wl[232] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0233_sel VDD VSS w1_pd0_1 w1_pd1_2 w1_pd2_14 w1_en w1_wl[233] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0234_sel VDD VSS w1_pd0_2 w1_pd1_2 w1_pd2_14 w1_en w1_wl[234] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0235_sel VDD VSS w1_pd0_3 w1_pd1_2 w1_pd2_14 w1_en w1_wl[235] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0236_sel VDD VSS w1_pd0_0 w1_pd1_3 w1_pd2_14 w1_en w1_wl[236] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0237_sel VDD VSS w1_pd0_1 w1_pd1_3 w1_pd2_14 w1_en w1_wl[237] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0238_sel VDD VSS w1_pd0_2 w1_pd1_3 w1_pd2_14 w1_en w1_wl[238] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0239_sel VDD VSS w1_pd0_3 w1_pd1_3 w1_pd2_14 w1_en w1_wl[239] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0240_sel VDD VSS w1_pd0_0 w1_pd1_0 w1_pd2_15 w1_en w1_wl[240] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0241_sel VDD VSS w1_pd0_1 w1_pd1_0 w1_pd2_15 w1_en w1_wl[241] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0242_sel VDD VSS w1_pd0_2 w1_pd1_0 w1_pd2_15 w1_en w1_wl[242] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0243_sel VDD VSS w1_pd0_3 w1_pd1_0 w1_pd2_15 w1_en w1_wl[243] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0244_sel VDD VSS w1_pd0_0 w1_pd1_1 w1_pd2_15 w1_en w1_wl[244] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0245_sel VDD VSS w1_pd0_1 w1_pd1_1 w1_pd2_15 w1_en w1_wl[245] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0246_sel VDD VSS w1_pd0_2 w1_pd1_1 w1_pd2_15 w1_en w1_wl[246] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0247_sel VDD VSS w1_pd0_3 w1_pd1_1 w1_pd2_15 w1_en w1_wl[247] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0248_sel VDD VSS w1_pd0_0 w1_pd1_2 w1_pd2_15 w1_en w1_wl[248] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0249_sel VDD VSS w1_pd0_1 w1_pd1_2 w1_pd2_15 w1_en w1_wl[249] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0250_sel VDD VSS w1_pd0_2 w1_pd1_2 w1_pd2_15 w1_en w1_wl[250] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0251_sel VDD VSS w1_pd0_3 w1_pd1_2 w1_pd2_15 w1_en w1_wl[251] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0252_sel VDD VSS w1_pd0_0 w1_pd1_3 w1_pd2_15 w1_en w1_wl[252] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0253_sel VDD VSS w1_pd0_1 w1_pd1_3 w1_pd2_15 w1_en w1_wl[253] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0254_sel VDD VSS w1_pd0_2 w1_pd1_3 w1_pd2_15 w1_en w1_wl[254] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xw1_row0255_sel VDD VSS w1_pd0_3 w1_pd1_3 w1_pd2_15 w1_en w1_wl[255] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_a0_inv VDD VSS r0_addr[0] r0_a0_n detronyx_12t_ctrl_inv_rc7
+Xr0_a1_inv VDD VSS r0_addr[1] r0_a1_n detronyx_12t_ctrl_inv_rc7
+Xr0_a2_inv VDD VSS r0_addr[2] r0_a2_n detronyx_12t_ctrl_inv_rc7
+Xr0_a3_inv VDD VSS r0_addr[3] r0_a3_n detronyx_12t_ctrl_inv_rc7
+Xr0_a4_inv VDD VSS r0_addr[4] r0_a4_n detronyx_12t_ctrl_inv_rc7
+Xr0_a5_inv VDD VSS r0_addr[5] r0_a5_n detronyx_12t_ctrl_inv_rc7
+Xr0_a6_inv VDD VSS r0_addr[6] r0_a6_n detronyx_12t_ctrl_inv_rc7
+Xr0_a7_inv VDD VSS r0_addr[7] r0_a7_n detronyx_12t_ctrl_inv_rc7
+Xr0_a8_inv VDD VSS r0_addr[8] r0_a8_n detronyx_12t_ctrl_inv_rc7
+Xr0_a9_inv VDD VSS r0_addr[9] r0_a9_n detronyx_12t_ctrl_inv_rc7
+Xr0_grp0_nand2 VDD VSS r0_a0_n r0_a1_n r0_grp0_n detronyx_12t_ctrl_nand2_rc7
+Xr0_grp0_inv VDD VSS r0_grp0_n r0_grp[0] detronyx_12t_ctrl_inv_rc7
+Xr0_grp1_nand2 VDD VSS r0_addr[0] r0_a1_n r0_grp1_n detronyx_12t_ctrl_nand2_rc7
+Xr0_grp1_inv VDD VSS r0_grp1_n r0_grp[1] detronyx_12t_ctrl_inv_rc7
+Xr0_grp2_nand2 VDD VSS r0_a0_n r0_addr[1] r0_grp2_n detronyx_12t_ctrl_nand2_rc7
+Xr0_grp2_inv VDD VSS r0_grp2_n r0_grp[2] detronyx_12t_ctrl_inv_rc7
+Xr0_grp3_nand2 VDD VSS r0_addr[0] r0_addr[1] r0_grp3_n detronyx_12t_ctrl_nand2_rc7
+Xr0_grp3_inv VDD VSS r0_grp3_n r0_grp[3] detronyx_12t_ctrl_inv_rc7
+Xr0_pd0_0_nand2 VDD VSS r0_a2_n r0_a3_n r0_pd0_0_n detronyx_12t_ctrl_nand2_rc7
+Xr0_pd0_0_inv VDD VSS r0_pd0_0_n r0_pd0_0 detronyx_12t_ctrl_inv_rc7
+Xr0_pd0_1_nand2 VDD VSS r0_addr[2] r0_a3_n r0_pd0_1_n detronyx_12t_ctrl_nand2_rc7
+Xr0_pd0_1_inv VDD VSS r0_pd0_1_n r0_pd0_1 detronyx_12t_ctrl_inv_rc7
+Xr0_pd0_2_nand2 VDD VSS r0_a2_n r0_addr[3] r0_pd0_2_n detronyx_12t_ctrl_nand2_rc7
+Xr0_pd0_2_inv VDD VSS r0_pd0_2_n r0_pd0_2 detronyx_12t_ctrl_inv_rc7
+Xr0_pd0_3_nand2 VDD VSS r0_addr[2] r0_addr[3] r0_pd0_3_n detronyx_12t_ctrl_nand2_rc7
+Xr0_pd0_3_inv VDD VSS r0_pd0_3_n r0_pd0_3 detronyx_12t_ctrl_inv_rc7
+Xr0_pd1_0_nand2 VDD VSS r0_a4_n r0_a5_n r0_pd1_0_n detronyx_12t_ctrl_nand2_rc7
+Xr0_pd1_0_inv VDD VSS r0_pd1_0_n r0_pd1_0 detronyx_12t_ctrl_inv_rc7
+Xr0_pd1_1_nand2 VDD VSS r0_addr[4] r0_a5_n r0_pd1_1_n detronyx_12t_ctrl_nand2_rc7
+Xr0_pd1_1_inv VDD VSS r0_pd1_1_n r0_pd1_1 detronyx_12t_ctrl_inv_rc7
+Xr0_pd1_2_nand2 VDD VSS r0_a4_n r0_addr[5] r0_pd1_2_n detronyx_12t_ctrl_nand2_rc7
+Xr0_pd1_2_inv VDD VSS r0_pd1_2_n r0_pd1_2 detronyx_12t_ctrl_inv_rc7
+Xr0_pd1_3_nand2 VDD VSS r0_addr[4] r0_addr[5] r0_pd1_3_n detronyx_12t_ctrl_nand2_rc7
+Xr0_pd1_3_inv VDD VSS r0_pd1_3_n r0_pd1_3 detronyx_12t_ctrl_inv_rc7
+Xr0_pd2_0_nand4 VDD VSS r0_a6_n r0_a7_n r0_a8_n r0_a9_n r0_pd2_0_n detronyx_12t_ctrl_nand4_rc7
+Xr0_pd2_0_inv VDD VSS r0_pd2_0_n r0_pd2_0 detronyx_12t_ctrl_inv_rc7
+Xr0_pd2_1_nand4 VDD VSS r0_addr[6] r0_a7_n r0_a8_n r0_a9_n r0_pd2_1_n detronyx_12t_ctrl_nand4_rc7
+Xr0_pd2_1_inv VDD VSS r0_pd2_1_n r0_pd2_1 detronyx_12t_ctrl_inv_rc7
+Xr0_pd2_2_nand4 VDD VSS r0_a6_n r0_addr[7] r0_a8_n r0_a9_n r0_pd2_2_n detronyx_12t_ctrl_nand4_rc7
+Xr0_pd2_2_inv VDD VSS r0_pd2_2_n r0_pd2_2 detronyx_12t_ctrl_inv_rc7
+Xr0_pd2_3_nand4 VDD VSS r0_addr[6] r0_addr[7] r0_a8_n r0_a9_n r0_pd2_3_n detronyx_12t_ctrl_nand4_rc7
+Xr0_pd2_3_inv VDD VSS r0_pd2_3_n r0_pd2_3 detronyx_12t_ctrl_inv_rc7
+Xr0_pd2_4_nand4 VDD VSS r0_a6_n r0_a7_n r0_addr[8] r0_a9_n r0_pd2_4_n detronyx_12t_ctrl_nand4_rc7
+Xr0_pd2_4_inv VDD VSS r0_pd2_4_n r0_pd2_4 detronyx_12t_ctrl_inv_rc7
+Xr0_pd2_5_nand4 VDD VSS r0_addr[6] r0_a7_n r0_addr[8] r0_a9_n r0_pd2_5_n detronyx_12t_ctrl_nand4_rc7
+Xr0_pd2_5_inv VDD VSS r0_pd2_5_n r0_pd2_5 detronyx_12t_ctrl_inv_rc7
+Xr0_pd2_6_nand4 VDD VSS r0_a6_n r0_addr[7] r0_addr[8] r0_a9_n r0_pd2_6_n detronyx_12t_ctrl_nand4_rc7
+Xr0_pd2_6_inv VDD VSS r0_pd2_6_n r0_pd2_6 detronyx_12t_ctrl_inv_rc7
+Xr0_pd2_7_nand4 VDD VSS r0_addr[6] r0_addr[7] r0_addr[8] r0_a9_n r0_pd2_7_n detronyx_12t_ctrl_nand4_rc7
+Xr0_pd2_7_inv VDD VSS r0_pd2_7_n r0_pd2_7 detronyx_12t_ctrl_inv_rc7
+Xr0_pd2_8_nand4 VDD VSS r0_a6_n r0_a7_n r0_a8_n r0_addr[9] r0_pd2_8_n detronyx_12t_ctrl_nand4_rc7
+Xr0_pd2_8_inv VDD VSS r0_pd2_8_n r0_pd2_8 detronyx_12t_ctrl_inv_rc7
+Xr0_pd2_9_nand4 VDD VSS r0_addr[6] r0_a7_n r0_a8_n r0_addr[9] r0_pd2_9_n detronyx_12t_ctrl_nand4_rc7
+Xr0_pd2_9_inv VDD VSS r0_pd2_9_n r0_pd2_9 detronyx_12t_ctrl_inv_rc7
+Xr0_pd2_10_nand4 VDD VSS r0_a6_n r0_addr[7] r0_a8_n r0_addr[9] r0_pd2_10_n detronyx_12t_ctrl_nand4_rc7
+Xr0_pd2_10_inv VDD VSS r0_pd2_10_n r0_pd2_10 detronyx_12t_ctrl_inv_rc7
+Xr0_pd2_11_nand4 VDD VSS r0_addr[6] r0_addr[7] r0_a8_n r0_addr[9] r0_pd2_11_n detronyx_12t_ctrl_nand4_rc7
+Xr0_pd2_11_inv VDD VSS r0_pd2_11_n r0_pd2_11 detronyx_12t_ctrl_inv_rc7
+Xr0_pd2_12_nand4 VDD VSS r0_a6_n r0_a7_n r0_addr[8] r0_addr[9] r0_pd2_12_n detronyx_12t_ctrl_nand4_rc7
+Xr0_pd2_12_inv VDD VSS r0_pd2_12_n r0_pd2_12 detronyx_12t_ctrl_inv_rc7
+Xr0_pd2_13_nand4 VDD VSS r0_addr[6] r0_a7_n r0_addr[8] r0_addr[9] r0_pd2_13_n detronyx_12t_ctrl_nand4_rc7
+Xr0_pd2_13_inv VDD VSS r0_pd2_13_n r0_pd2_13 detronyx_12t_ctrl_inv_rc7
+Xr0_pd2_14_nand4 VDD VSS r0_a6_n r0_addr[7] r0_addr[8] r0_addr[9] r0_pd2_14_n detronyx_12t_ctrl_nand4_rc7
+Xr0_pd2_14_inv VDD VSS r0_pd2_14_n r0_pd2_14 detronyx_12t_ctrl_inv_rc7
+Xr0_pd2_15_nand4 VDD VSS r0_addr[6] r0_addr[7] r0_addr[8] r0_addr[9] r0_pd2_15_n detronyx_12t_ctrl_nand4_rc7
+Xr0_pd2_15_inv VDD VSS r0_pd2_15_n r0_pd2_15 detronyx_12t_ctrl_inv_rc7
+Xr0_row0000_sel VDD VSS r0_pd0_0 r0_pd1_0 r0_pd2_0 r0_en r0_wl[0] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0001_sel VDD VSS r0_pd0_1 r0_pd1_0 r0_pd2_0 r0_en r0_wl[1] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0002_sel VDD VSS r0_pd0_2 r0_pd1_0 r0_pd2_0 r0_en r0_wl[2] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0003_sel VDD VSS r0_pd0_3 r0_pd1_0 r0_pd2_0 r0_en r0_wl[3] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0004_sel VDD VSS r0_pd0_0 r0_pd1_1 r0_pd2_0 r0_en r0_wl[4] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0005_sel VDD VSS r0_pd0_1 r0_pd1_1 r0_pd2_0 r0_en r0_wl[5] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0006_sel VDD VSS r0_pd0_2 r0_pd1_1 r0_pd2_0 r0_en r0_wl[6] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0007_sel VDD VSS r0_pd0_3 r0_pd1_1 r0_pd2_0 r0_en r0_wl[7] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0008_sel VDD VSS r0_pd0_0 r0_pd1_2 r0_pd2_0 r0_en r0_wl[8] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0009_sel VDD VSS r0_pd0_1 r0_pd1_2 r0_pd2_0 r0_en r0_wl[9] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0010_sel VDD VSS r0_pd0_2 r0_pd1_2 r0_pd2_0 r0_en r0_wl[10] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0011_sel VDD VSS r0_pd0_3 r0_pd1_2 r0_pd2_0 r0_en r0_wl[11] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0012_sel VDD VSS r0_pd0_0 r0_pd1_3 r0_pd2_0 r0_en r0_wl[12] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0013_sel VDD VSS r0_pd0_1 r0_pd1_3 r0_pd2_0 r0_en r0_wl[13] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0014_sel VDD VSS r0_pd0_2 r0_pd1_3 r0_pd2_0 r0_en r0_wl[14] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0015_sel VDD VSS r0_pd0_3 r0_pd1_3 r0_pd2_0 r0_en r0_wl[15] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0016_sel VDD VSS r0_pd0_0 r0_pd1_0 r0_pd2_1 r0_en r0_wl[16] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0017_sel VDD VSS r0_pd0_1 r0_pd1_0 r0_pd2_1 r0_en r0_wl[17] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0018_sel VDD VSS r0_pd0_2 r0_pd1_0 r0_pd2_1 r0_en r0_wl[18] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0019_sel VDD VSS r0_pd0_3 r0_pd1_0 r0_pd2_1 r0_en r0_wl[19] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0020_sel VDD VSS r0_pd0_0 r0_pd1_1 r0_pd2_1 r0_en r0_wl[20] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0021_sel VDD VSS r0_pd0_1 r0_pd1_1 r0_pd2_1 r0_en r0_wl[21] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0022_sel VDD VSS r0_pd0_2 r0_pd1_1 r0_pd2_1 r0_en r0_wl[22] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0023_sel VDD VSS r0_pd0_3 r0_pd1_1 r0_pd2_1 r0_en r0_wl[23] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0024_sel VDD VSS r0_pd0_0 r0_pd1_2 r0_pd2_1 r0_en r0_wl[24] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0025_sel VDD VSS r0_pd0_1 r0_pd1_2 r0_pd2_1 r0_en r0_wl[25] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0026_sel VDD VSS r0_pd0_2 r0_pd1_2 r0_pd2_1 r0_en r0_wl[26] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0027_sel VDD VSS r0_pd0_3 r0_pd1_2 r0_pd2_1 r0_en r0_wl[27] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0028_sel VDD VSS r0_pd0_0 r0_pd1_3 r0_pd2_1 r0_en r0_wl[28] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0029_sel VDD VSS r0_pd0_1 r0_pd1_3 r0_pd2_1 r0_en r0_wl[29] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0030_sel VDD VSS r0_pd0_2 r0_pd1_3 r0_pd2_1 r0_en r0_wl[30] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0031_sel VDD VSS r0_pd0_3 r0_pd1_3 r0_pd2_1 r0_en r0_wl[31] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0032_sel VDD VSS r0_pd0_0 r0_pd1_0 r0_pd2_2 r0_en r0_wl[32] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0033_sel VDD VSS r0_pd0_1 r0_pd1_0 r0_pd2_2 r0_en r0_wl[33] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0034_sel VDD VSS r0_pd0_2 r0_pd1_0 r0_pd2_2 r0_en r0_wl[34] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0035_sel VDD VSS r0_pd0_3 r0_pd1_0 r0_pd2_2 r0_en r0_wl[35] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0036_sel VDD VSS r0_pd0_0 r0_pd1_1 r0_pd2_2 r0_en r0_wl[36] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0037_sel VDD VSS r0_pd0_1 r0_pd1_1 r0_pd2_2 r0_en r0_wl[37] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0038_sel VDD VSS r0_pd0_2 r0_pd1_1 r0_pd2_2 r0_en r0_wl[38] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0039_sel VDD VSS r0_pd0_3 r0_pd1_1 r0_pd2_2 r0_en r0_wl[39] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0040_sel VDD VSS r0_pd0_0 r0_pd1_2 r0_pd2_2 r0_en r0_wl[40] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0041_sel VDD VSS r0_pd0_1 r0_pd1_2 r0_pd2_2 r0_en r0_wl[41] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0042_sel VDD VSS r0_pd0_2 r0_pd1_2 r0_pd2_2 r0_en r0_wl[42] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0043_sel VDD VSS r0_pd0_3 r0_pd1_2 r0_pd2_2 r0_en r0_wl[43] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0044_sel VDD VSS r0_pd0_0 r0_pd1_3 r0_pd2_2 r0_en r0_wl[44] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0045_sel VDD VSS r0_pd0_1 r0_pd1_3 r0_pd2_2 r0_en r0_wl[45] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0046_sel VDD VSS r0_pd0_2 r0_pd1_3 r0_pd2_2 r0_en r0_wl[46] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0047_sel VDD VSS r0_pd0_3 r0_pd1_3 r0_pd2_2 r0_en r0_wl[47] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0048_sel VDD VSS r0_pd0_0 r0_pd1_0 r0_pd2_3 r0_en r0_wl[48] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0049_sel VDD VSS r0_pd0_1 r0_pd1_0 r0_pd2_3 r0_en r0_wl[49] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0050_sel VDD VSS r0_pd0_2 r0_pd1_0 r0_pd2_3 r0_en r0_wl[50] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0051_sel VDD VSS r0_pd0_3 r0_pd1_0 r0_pd2_3 r0_en r0_wl[51] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0052_sel VDD VSS r0_pd0_0 r0_pd1_1 r0_pd2_3 r0_en r0_wl[52] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0053_sel VDD VSS r0_pd0_1 r0_pd1_1 r0_pd2_3 r0_en r0_wl[53] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0054_sel VDD VSS r0_pd0_2 r0_pd1_1 r0_pd2_3 r0_en r0_wl[54] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0055_sel VDD VSS r0_pd0_3 r0_pd1_1 r0_pd2_3 r0_en r0_wl[55] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0056_sel VDD VSS r0_pd0_0 r0_pd1_2 r0_pd2_3 r0_en r0_wl[56] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0057_sel VDD VSS r0_pd0_1 r0_pd1_2 r0_pd2_3 r0_en r0_wl[57] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0058_sel VDD VSS r0_pd0_2 r0_pd1_2 r0_pd2_3 r0_en r0_wl[58] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0059_sel VDD VSS r0_pd0_3 r0_pd1_2 r0_pd2_3 r0_en r0_wl[59] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0060_sel VDD VSS r0_pd0_0 r0_pd1_3 r0_pd2_3 r0_en r0_wl[60] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0061_sel VDD VSS r0_pd0_1 r0_pd1_3 r0_pd2_3 r0_en r0_wl[61] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0062_sel VDD VSS r0_pd0_2 r0_pd1_3 r0_pd2_3 r0_en r0_wl[62] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0063_sel VDD VSS r0_pd0_3 r0_pd1_3 r0_pd2_3 r0_en r0_wl[63] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0064_sel VDD VSS r0_pd0_0 r0_pd1_0 r0_pd2_4 r0_en r0_wl[64] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0065_sel VDD VSS r0_pd0_1 r0_pd1_0 r0_pd2_4 r0_en r0_wl[65] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0066_sel VDD VSS r0_pd0_2 r0_pd1_0 r0_pd2_4 r0_en r0_wl[66] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0067_sel VDD VSS r0_pd0_3 r0_pd1_0 r0_pd2_4 r0_en r0_wl[67] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0068_sel VDD VSS r0_pd0_0 r0_pd1_1 r0_pd2_4 r0_en r0_wl[68] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0069_sel VDD VSS r0_pd0_1 r0_pd1_1 r0_pd2_4 r0_en r0_wl[69] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0070_sel VDD VSS r0_pd0_2 r0_pd1_1 r0_pd2_4 r0_en r0_wl[70] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0071_sel VDD VSS r0_pd0_3 r0_pd1_1 r0_pd2_4 r0_en r0_wl[71] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0072_sel VDD VSS r0_pd0_0 r0_pd1_2 r0_pd2_4 r0_en r0_wl[72] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0073_sel VDD VSS r0_pd0_1 r0_pd1_2 r0_pd2_4 r0_en r0_wl[73] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0074_sel VDD VSS r0_pd0_2 r0_pd1_2 r0_pd2_4 r0_en r0_wl[74] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0075_sel VDD VSS r0_pd0_3 r0_pd1_2 r0_pd2_4 r0_en r0_wl[75] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0076_sel VDD VSS r0_pd0_0 r0_pd1_3 r0_pd2_4 r0_en r0_wl[76] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0077_sel VDD VSS r0_pd0_1 r0_pd1_3 r0_pd2_4 r0_en r0_wl[77] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0078_sel VDD VSS r0_pd0_2 r0_pd1_3 r0_pd2_4 r0_en r0_wl[78] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0079_sel VDD VSS r0_pd0_3 r0_pd1_3 r0_pd2_4 r0_en r0_wl[79] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0080_sel VDD VSS r0_pd0_0 r0_pd1_0 r0_pd2_5 r0_en r0_wl[80] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0081_sel VDD VSS r0_pd0_1 r0_pd1_0 r0_pd2_5 r0_en r0_wl[81] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0082_sel VDD VSS r0_pd0_2 r0_pd1_0 r0_pd2_5 r0_en r0_wl[82] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0083_sel VDD VSS r0_pd0_3 r0_pd1_0 r0_pd2_5 r0_en r0_wl[83] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0084_sel VDD VSS r0_pd0_0 r0_pd1_1 r0_pd2_5 r0_en r0_wl[84] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0085_sel VDD VSS r0_pd0_1 r0_pd1_1 r0_pd2_5 r0_en r0_wl[85] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0086_sel VDD VSS r0_pd0_2 r0_pd1_1 r0_pd2_5 r0_en r0_wl[86] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0087_sel VDD VSS r0_pd0_3 r0_pd1_1 r0_pd2_5 r0_en r0_wl[87] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0088_sel VDD VSS r0_pd0_0 r0_pd1_2 r0_pd2_5 r0_en r0_wl[88] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0089_sel VDD VSS r0_pd0_1 r0_pd1_2 r0_pd2_5 r0_en r0_wl[89] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0090_sel VDD VSS r0_pd0_2 r0_pd1_2 r0_pd2_5 r0_en r0_wl[90] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0091_sel VDD VSS r0_pd0_3 r0_pd1_2 r0_pd2_5 r0_en r0_wl[91] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0092_sel VDD VSS r0_pd0_0 r0_pd1_3 r0_pd2_5 r0_en r0_wl[92] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0093_sel VDD VSS r0_pd0_1 r0_pd1_3 r0_pd2_5 r0_en r0_wl[93] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0094_sel VDD VSS r0_pd0_2 r0_pd1_3 r0_pd2_5 r0_en r0_wl[94] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0095_sel VDD VSS r0_pd0_3 r0_pd1_3 r0_pd2_5 r0_en r0_wl[95] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0096_sel VDD VSS r0_pd0_0 r0_pd1_0 r0_pd2_6 r0_en r0_wl[96] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0097_sel VDD VSS r0_pd0_1 r0_pd1_0 r0_pd2_6 r0_en r0_wl[97] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0098_sel VDD VSS r0_pd0_2 r0_pd1_0 r0_pd2_6 r0_en r0_wl[98] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0099_sel VDD VSS r0_pd0_3 r0_pd1_0 r0_pd2_6 r0_en r0_wl[99] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0100_sel VDD VSS r0_pd0_0 r0_pd1_1 r0_pd2_6 r0_en r0_wl[100] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0101_sel VDD VSS r0_pd0_1 r0_pd1_1 r0_pd2_6 r0_en r0_wl[101] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0102_sel VDD VSS r0_pd0_2 r0_pd1_1 r0_pd2_6 r0_en r0_wl[102] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0103_sel VDD VSS r0_pd0_3 r0_pd1_1 r0_pd2_6 r0_en r0_wl[103] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0104_sel VDD VSS r0_pd0_0 r0_pd1_2 r0_pd2_6 r0_en r0_wl[104] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0105_sel VDD VSS r0_pd0_1 r0_pd1_2 r0_pd2_6 r0_en r0_wl[105] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0106_sel VDD VSS r0_pd0_2 r0_pd1_2 r0_pd2_6 r0_en r0_wl[106] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0107_sel VDD VSS r0_pd0_3 r0_pd1_2 r0_pd2_6 r0_en r0_wl[107] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0108_sel VDD VSS r0_pd0_0 r0_pd1_3 r0_pd2_6 r0_en r0_wl[108] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0109_sel VDD VSS r0_pd0_1 r0_pd1_3 r0_pd2_6 r0_en r0_wl[109] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0110_sel VDD VSS r0_pd0_2 r0_pd1_3 r0_pd2_6 r0_en r0_wl[110] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0111_sel VDD VSS r0_pd0_3 r0_pd1_3 r0_pd2_6 r0_en r0_wl[111] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0112_sel VDD VSS r0_pd0_0 r0_pd1_0 r0_pd2_7 r0_en r0_wl[112] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0113_sel VDD VSS r0_pd0_1 r0_pd1_0 r0_pd2_7 r0_en r0_wl[113] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0114_sel VDD VSS r0_pd0_2 r0_pd1_0 r0_pd2_7 r0_en r0_wl[114] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0115_sel VDD VSS r0_pd0_3 r0_pd1_0 r0_pd2_7 r0_en r0_wl[115] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0116_sel VDD VSS r0_pd0_0 r0_pd1_1 r0_pd2_7 r0_en r0_wl[116] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0117_sel VDD VSS r0_pd0_1 r0_pd1_1 r0_pd2_7 r0_en r0_wl[117] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0118_sel VDD VSS r0_pd0_2 r0_pd1_1 r0_pd2_7 r0_en r0_wl[118] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0119_sel VDD VSS r0_pd0_3 r0_pd1_1 r0_pd2_7 r0_en r0_wl[119] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0120_sel VDD VSS r0_pd0_0 r0_pd1_2 r0_pd2_7 r0_en r0_wl[120] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0121_sel VDD VSS r0_pd0_1 r0_pd1_2 r0_pd2_7 r0_en r0_wl[121] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0122_sel VDD VSS r0_pd0_2 r0_pd1_2 r0_pd2_7 r0_en r0_wl[122] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0123_sel VDD VSS r0_pd0_3 r0_pd1_2 r0_pd2_7 r0_en r0_wl[123] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0124_sel VDD VSS r0_pd0_0 r0_pd1_3 r0_pd2_7 r0_en r0_wl[124] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0125_sel VDD VSS r0_pd0_1 r0_pd1_3 r0_pd2_7 r0_en r0_wl[125] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0126_sel VDD VSS r0_pd0_2 r0_pd1_3 r0_pd2_7 r0_en r0_wl[126] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0127_sel VDD VSS r0_pd0_3 r0_pd1_3 r0_pd2_7 r0_en r0_wl[127] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0128_sel VDD VSS r0_pd0_0 r0_pd1_0 r0_pd2_8 r0_en r0_wl[128] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0129_sel VDD VSS r0_pd0_1 r0_pd1_0 r0_pd2_8 r0_en r0_wl[129] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0130_sel VDD VSS r0_pd0_2 r0_pd1_0 r0_pd2_8 r0_en r0_wl[130] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0131_sel VDD VSS r0_pd0_3 r0_pd1_0 r0_pd2_8 r0_en r0_wl[131] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0132_sel VDD VSS r0_pd0_0 r0_pd1_1 r0_pd2_8 r0_en r0_wl[132] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0133_sel VDD VSS r0_pd0_1 r0_pd1_1 r0_pd2_8 r0_en r0_wl[133] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0134_sel VDD VSS r0_pd0_2 r0_pd1_1 r0_pd2_8 r0_en r0_wl[134] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0135_sel VDD VSS r0_pd0_3 r0_pd1_1 r0_pd2_8 r0_en r0_wl[135] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0136_sel VDD VSS r0_pd0_0 r0_pd1_2 r0_pd2_8 r0_en r0_wl[136] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0137_sel VDD VSS r0_pd0_1 r0_pd1_2 r0_pd2_8 r0_en r0_wl[137] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0138_sel VDD VSS r0_pd0_2 r0_pd1_2 r0_pd2_8 r0_en r0_wl[138] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0139_sel VDD VSS r0_pd0_3 r0_pd1_2 r0_pd2_8 r0_en r0_wl[139] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0140_sel VDD VSS r0_pd0_0 r0_pd1_3 r0_pd2_8 r0_en r0_wl[140] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0141_sel VDD VSS r0_pd0_1 r0_pd1_3 r0_pd2_8 r0_en r0_wl[141] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0142_sel VDD VSS r0_pd0_2 r0_pd1_3 r0_pd2_8 r0_en r0_wl[142] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0143_sel VDD VSS r0_pd0_3 r0_pd1_3 r0_pd2_8 r0_en r0_wl[143] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0144_sel VDD VSS r0_pd0_0 r0_pd1_0 r0_pd2_9 r0_en r0_wl[144] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0145_sel VDD VSS r0_pd0_1 r0_pd1_0 r0_pd2_9 r0_en r0_wl[145] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0146_sel VDD VSS r0_pd0_2 r0_pd1_0 r0_pd2_9 r0_en r0_wl[146] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0147_sel VDD VSS r0_pd0_3 r0_pd1_0 r0_pd2_9 r0_en r0_wl[147] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0148_sel VDD VSS r0_pd0_0 r0_pd1_1 r0_pd2_9 r0_en r0_wl[148] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0149_sel VDD VSS r0_pd0_1 r0_pd1_1 r0_pd2_9 r0_en r0_wl[149] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0150_sel VDD VSS r0_pd0_2 r0_pd1_1 r0_pd2_9 r0_en r0_wl[150] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0151_sel VDD VSS r0_pd0_3 r0_pd1_1 r0_pd2_9 r0_en r0_wl[151] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0152_sel VDD VSS r0_pd0_0 r0_pd1_2 r0_pd2_9 r0_en r0_wl[152] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0153_sel VDD VSS r0_pd0_1 r0_pd1_2 r0_pd2_9 r0_en r0_wl[153] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0154_sel VDD VSS r0_pd0_2 r0_pd1_2 r0_pd2_9 r0_en r0_wl[154] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0155_sel VDD VSS r0_pd0_3 r0_pd1_2 r0_pd2_9 r0_en r0_wl[155] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0156_sel VDD VSS r0_pd0_0 r0_pd1_3 r0_pd2_9 r0_en r0_wl[156] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0157_sel VDD VSS r0_pd0_1 r0_pd1_3 r0_pd2_9 r0_en r0_wl[157] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0158_sel VDD VSS r0_pd0_2 r0_pd1_3 r0_pd2_9 r0_en r0_wl[158] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0159_sel VDD VSS r0_pd0_3 r0_pd1_3 r0_pd2_9 r0_en r0_wl[159] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0160_sel VDD VSS r0_pd0_0 r0_pd1_0 r0_pd2_10 r0_en r0_wl[160] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0161_sel VDD VSS r0_pd0_1 r0_pd1_0 r0_pd2_10 r0_en r0_wl[161] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0162_sel VDD VSS r0_pd0_2 r0_pd1_0 r0_pd2_10 r0_en r0_wl[162] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0163_sel VDD VSS r0_pd0_3 r0_pd1_0 r0_pd2_10 r0_en r0_wl[163] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0164_sel VDD VSS r0_pd0_0 r0_pd1_1 r0_pd2_10 r0_en r0_wl[164] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0165_sel VDD VSS r0_pd0_1 r0_pd1_1 r0_pd2_10 r0_en r0_wl[165] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0166_sel VDD VSS r0_pd0_2 r0_pd1_1 r0_pd2_10 r0_en r0_wl[166] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0167_sel VDD VSS r0_pd0_3 r0_pd1_1 r0_pd2_10 r0_en r0_wl[167] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0168_sel VDD VSS r0_pd0_0 r0_pd1_2 r0_pd2_10 r0_en r0_wl[168] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0169_sel VDD VSS r0_pd0_1 r0_pd1_2 r0_pd2_10 r0_en r0_wl[169] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0170_sel VDD VSS r0_pd0_2 r0_pd1_2 r0_pd2_10 r0_en r0_wl[170] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0171_sel VDD VSS r0_pd0_3 r0_pd1_2 r0_pd2_10 r0_en r0_wl[171] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0172_sel VDD VSS r0_pd0_0 r0_pd1_3 r0_pd2_10 r0_en r0_wl[172] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0173_sel VDD VSS r0_pd0_1 r0_pd1_3 r0_pd2_10 r0_en r0_wl[173] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0174_sel VDD VSS r0_pd0_2 r0_pd1_3 r0_pd2_10 r0_en r0_wl[174] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0175_sel VDD VSS r0_pd0_3 r0_pd1_3 r0_pd2_10 r0_en r0_wl[175] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0176_sel VDD VSS r0_pd0_0 r0_pd1_0 r0_pd2_11 r0_en r0_wl[176] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0177_sel VDD VSS r0_pd0_1 r0_pd1_0 r0_pd2_11 r0_en r0_wl[177] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0178_sel VDD VSS r0_pd0_2 r0_pd1_0 r0_pd2_11 r0_en r0_wl[178] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0179_sel VDD VSS r0_pd0_3 r0_pd1_0 r0_pd2_11 r0_en r0_wl[179] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0180_sel VDD VSS r0_pd0_0 r0_pd1_1 r0_pd2_11 r0_en r0_wl[180] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0181_sel VDD VSS r0_pd0_1 r0_pd1_1 r0_pd2_11 r0_en r0_wl[181] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0182_sel VDD VSS r0_pd0_2 r0_pd1_1 r0_pd2_11 r0_en r0_wl[182] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0183_sel VDD VSS r0_pd0_3 r0_pd1_1 r0_pd2_11 r0_en r0_wl[183] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0184_sel VDD VSS r0_pd0_0 r0_pd1_2 r0_pd2_11 r0_en r0_wl[184] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0185_sel VDD VSS r0_pd0_1 r0_pd1_2 r0_pd2_11 r0_en r0_wl[185] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0186_sel VDD VSS r0_pd0_2 r0_pd1_2 r0_pd2_11 r0_en r0_wl[186] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0187_sel VDD VSS r0_pd0_3 r0_pd1_2 r0_pd2_11 r0_en r0_wl[187] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0188_sel VDD VSS r0_pd0_0 r0_pd1_3 r0_pd2_11 r0_en r0_wl[188] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0189_sel VDD VSS r0_pd0_1 r0_pd1_3 r0_pd2_11 r0_en r0_wl[189] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0190_sel VDD VSS r0_pd0_2 r0_pd1_3 r0_pd2_11 r0_en r0_wl[190] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0191_sel VDD VSS r0_pd0_3 r0_pd1_3 r0_pd2_11 r0_en r0_wl[191] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0192_sel VDD VSS r0_pd0_0 r0_pd1_0 r0_pd2_12 r0_en r0_wl[192] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0193_sel VDD VSS r0_pd0_1 r0_pd1_0 r0_pd2_12 r0_en r0_wl[193] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0194_sel VDD VSS r0_pd0_2 r0_pd1_0 r0_pd2_12 r0_en r0_wl[194] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0195_sel VDD VSS r0_pd0_3 r0_pd1_0 r0_pd2_12 r0_en r0_wl[195] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0196_sel VDD VSS r0_pd0_0 r0_pd1_1 r0_pd2_12 r0_en r0_wl[196] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0197_sel VDD VSS r0_pd0_1 r0_pd1_1 r0_pd2_12 r0_en r0_wl[197] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0198_sel VDD VSS r0_pd0_2 r0_pd1_1 r0_pd2_12 r0_en r0_wl[198] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0199_sel VDD VSS r0_pd0_3 r0_pd1_1 r0_pd2_12 r0_en r0_wl[199] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0200_sel VDD VSS r0_pd0_0 r0_pd1_2 r0_pd2_12 r0_en r0_wl[200] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0201_sel VDD VSS r0_pd0_1 r0_pd1_2 r0_pd2_12 r0_en r0_wl[201] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0202_sel VDD VSS r0_pd0_2 r0_pd1_2 r0_pd2_12 r0_en r0_wl[202] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0203_sel VDD VSS r0_pd0_3 r0_pd1_2 r0_pd2_12 r0_en r0_wl[203] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0204_sel VDD VSS r0_pd0_0 r0_pd1_3 r0_pd2_12 r0_en r0_wl[204] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0205_sel VDD VSS r0_pd0_1 r0_pd1_3 r0_pd2_12 r0_en r0_wl[205] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0206_sel VDD VSS r0_pd0_2 r0_pd1_3 r0_pd2_12 r0_en r0_wl[206] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0207_sel VDD VSS r0_pd0_3 r0_pd1_3 r0_pd2_12 r0_en r0_wl[207] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0208_sel VDD VSS r0_pd0_0 r0_pd1_0 r0_pd2_13 r0_en r0_wl[208] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0209_sel VDD VSS r0_pd0_1 r0_pd1_0 r0_pd2_13 r0_en r0_wl[209] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0210_sel VDD VSS r0_pd0_2 r0_pd1_0 r0_pd2_13 r0_en r0_wl[210] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0211_sel VDD VSS r0_pd0_3 r0_pd1_0 r0_pd2_13 r0_en r0_wl[211] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0212_sel VDD VSS r0_pd0_0 r0_pd1_1 r0_pd2_13 r0_en r0_wl[212] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0213_sel VDD VSS r0_pd0_1 r0_pd1_1 r0_pd2_13 r0_en r0_wl[213] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0214_sel VDD VSS r0_pd0_2 r0_pd1_1 r0_pd2_13 r0_en r0_wl[214] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0215_sel VDD VSS r0_pd0_3 r0_pd1_1 r0_pd2_13 r0_en r0_wl[215] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0216_sel VDD VSS r0_pd0_0 r0_pd1_2 r0_pd2_13 r0_en r0_wl[216] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0217_sel VDD VSS r0_pd0_1 r0_pd1_2 r0_pd2_13 r0_en r0_wl[217] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0218_sel VDD VSS r0_pd0_2 r0_pd1_2 r0_pd2_13 r0_en r0_wl[218] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0219_sel VDD VSS r0_pd0_3 r0_pd1_2 r0_pd2_13 r0_en r0_wl[219] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0220_sel VDD VSS r0_pd0_0 r0_pd1_3 r0_pd2_13 r0_en r0_wl[220] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0221_sel VDD VSS r0_pd0_1 r0_pd1_3 r0_pd2_13 r0_en r0_wl[221] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0222_sel VDD VSS r0_pd0_2 r0_pd1_3 r0_pd2_13 r0_en r0_wl[222] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0223_sel VDD VSS r0_pd0_3 r0_pd1_3 r0_pd2_13 r0_en r0_wl[223] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0224_sel VDD VSS r0_pd0_0 r0_pd1_0 r0_pd2_14 r0_en r0_wl[224] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0225_sel VDD VSS r0_pd0_1 r0_pd1_0 r0_pd2_14 r0_en r0_wl[225] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0226_sel VDD VSS r0_pd0_2 r0_pd1_0 r0_pd2_14 r0_en r0_wl[226] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0227_sel VDD VSS r0_pd0_3 r0_pd1_0 r0_pd2_14 r0_en r0_wl[227] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0228_sel VDD VSS r0_pd0_0 r0_pd1_1 r0_pd2_14 r0_en r0_wl[228] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0229_sel VDD VSS r0_pd0_1 r0_pd1_1 r0_pd2_14 r0_en r0_wl[229] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0230_sel VDD VSS r0_pd0_2 r0_pd1_1 r0_pd2_14 r0_en r0_wl[230] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0231_sel VDD VSS r0_pd0_3 r0_pd1_1 r0_pd2_14 r0_en r0_wl[231] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0232_sel VDD VSS r0_pd0_0 r0_pd1_2 r0_pd2_14 r0_en r0_wl[232] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0233_sel VDD VSS r0_pd0_1 r0_pd1_2 r0_pd2_14 r0_en r0_wl[233] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0234_sel VDD VSS r0_pd0_2 r0_pd1_2 r0_pd2_14 r0_en r0_wl[234] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0235_sel VDD VSS r0_pd0_3 r0_pd1_2 r0_pd2_14 r0_en r0_wl[235] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0236_sel VDD VSS r0_pd0_0 r0_pd1_3 r0_pd2_14 r0_en r0_wl[236] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0237_sel VDD VSS r0_pd0_1 r0_pd1_3 r0_pd2_14 r0_en r0_wl[237] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0238_sel VDD VSS r0_pd0_2 r0_pd1_3 r0_pd2_14 r0_en r0_wl[238] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0239_sel VDD VSS r0_pd0_3 r0_pd1_3 r0_pd2_14 r0_en r0_wl[239] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0240_sel VDD VSS r0_pd0_0 r0_pd1_0 r0_pd2_15 r0_en r0_wl[240] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0241_sel VDD VSS r0_pd0_1 r0_pd1_0 r0_pd2_15 r0_en r0_wl[241] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0242_sel VDD VSS r0_pd0_2 r0_pd1_0 r0_pd2_15 r0_en r0_wl[242] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0243_sel VDD VSS r0_pd0_3 r0_pd1_0 r0_pd2_15 r0_en r0_wl[243] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0244_sel VDD VSS r0_pd0_0 r0_pd1_1 r0_pd2_15 r0_en r0_wl[244] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0245_sel VDD VSS r0_pd0_1 r0_pd1_1 r0_pd2_15 r0_en r0_wl[245] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0246_sel VDD VSS r0_pd0_2 r0_pd1_1 r0_pd2_15 r0_en r0_wl[246] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0247_sel VDD VSS r0_pd0_3 r0_pd1_1 r0_pd2_15 r0_en r0_wl[247] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0248_sel VDD VSS r0_pd0_0 r0_pd1_2 r0_pd2_15 r0_en r0_wl[248] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0249_sel VDD VSS r0_pd0_1 r0_pd1_2 r0_pd2_15 r0_en r0_wl[249] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0250_sel VDD VSS r0_pd0_2 r0_pd1_2 r0_pd2_15 r0_en r0_wl[250] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0251_sel VDD VSS r0_pd0_3 r0_pd1_2 r0_pd2_15 r0_en r0_wl[251] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0252_sel VDD VSS r0_pd0_0 r0_pd1_3 r0_pd2_15 r0_en r0_wl[252] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0253_sel VDD VSS r0_pd0_1 r0_pd1_3 r0_pd2_15 r0_en r0_wl[253] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0254_sel VDD VSS r0_pd0_2 r0_pd1_3 r0_pd2_15 r0_en r0_wl[254] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr0_row0255_sel VDD VSS r0_pd0_3 r0_pd1_3 r0_pd2_15 r0_en r0_wl[255] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_a0_inv VDD VSS r1_addr[0] r1_a0_n detronyx_12t_ctrl_inv_rc7
+Xr1_a1_inv VDD VSS r1_addr[1] r1_a1_n detronyx_12t_ctrl_inv_rc7
+Xr1_a2_inv VDD VSS r1_addr[2] r1_a2_n detronyx_12t_ctrl_inv_rc7
+Xr1_a3_inv VDD VSS r1_addr[3] r1_a3_n detronyx_12t_ctrl_inv_rc7
+Xr1_a4_inv VDD VSS r1_addr[4] r1_a4_n detronyx_12t_ctrl_inv_rc7
+Xr1_a5_inv VDD VSS r1_addr[5] r1_a5_n detronyx_12t_ctrl_inv_rc7
+Xr1_a6_inv VDD VSS r1_addr[6] r1_a6_n detronyx_12t_ctrl_inv_rc7
+Xr1_a7_inv VDD VSS r1_addr[7] r1_a7_n detronyx_12t_ctrl_inv_rc7
+Xr1_a8_inv VDD VSS r1_addr[8] r1_a8_n detronyx_12t_ctrl_inv_rc7
+Xr1_a9_inv VDD VSS r1_addr[9] r1_a9_n detronyx_12t_ctrl_inv_rc7
+Xr1_grp0_nand2 VDD VSS r1_a0_n r1_a1_n r1_grp0_n detronyx_12t_ctrl_nand2_rc7
+Xr1_grp0_inv VDD VSS r1_grp0_n r1_grp[0] detronyx_12t_ctrl_inv_rc7
+Xr1_grp1_nand2 VDD VSS r1_addr[0] r1_a1_n r1_grp1_n detronyx_12t_ctrl_nand2_rc7
+Xr1_grp1_inv VDD VSS r1_grp1_n r1_grp[1] detronyx_12t_ctrl_inv_rc7
+Xr1_grp2_nand2 VDD VSS r1_a0_n r1_addr[1] r1_grp2_n detronyx_12t_ctrl_nand2_rc7
+Xr1_grp2_inv VDD VSS r1_grp2_n r1_grp[2] detronyx_12t_ctrl_inv_rc7
+Xr1_grp3_nand2 VDD VSS r1_addr[0] r1_addr[1] r1_grp3_n detronyx_12t_ctrl_nand2_rc7
+Xr1_grp3_inv VDD VSS r1_grp3_n r1_grp[3] detronyx_12t_ctrl_inv_rc7
+Xr1_pd0_0_nand2 VDD VSS r1_a2_n r1_a3_n r1_pd0_0_n detronyx_12t_ctrl_nand2_rc7
+Xr1_pd0_0_inv VDD VSS r1_pd0_0_n r1_pd0_0 detronyx_12t_ctrl_inv_rc7
+Xr1_pd0_1_nand2 VDD VSS r1_addr[2] r1_a3_n r1_pd0_1_n detronyx_12t_ctrl_nand2_rc7
+Xr1_pd0_1_inv VDD VSS r1_pd0_1_n r1_pd0_1 detronyx_12t_ctrl_inv_rc7
+Xr1_pd0_2_nand2 VDD VSS r1_a2_n r1_addr[3] r1_pd0_2_n detronyx_12t_ctrl_nand2_rc7
+Xr1_pd0_2_inv VDD VSS r1_pd0_2_n r1_pd0_2 detronyx_12t_ctrl_inv_rc7
+Xr1_pd0_3_nand2 VDD VSS r1_addr[2] r1_addr[3] r1_pd0_3_n detronyx_12t_ctrl_nand2_rc7
+Xr1_pd0_3_inv VDD VSS r1_pd0_3_n r1_pd0_3 detronyx_12t_ctrl_inv_rc7
+Xr1_pd1_0_nand2 VDD VSS r1_a4_n r1_a5_n r1_pd1_0_n detronyx_12t_ctrl_nand2_rc7
+Xr1_pd1_0_inv VDD VSS r1_pd1_0_n r1_pd1_0 detronyx_12t_ctrl_inv_rc7
+Xr1_pd1_1_nand2 VDD VSS r1_addr[4] r1_a5_n r1_pd1_1_n detronyx_12t_ctrl_nand2_rc7
+Xr1_pd1_1_inv VDD VSS r1_pd1_1_n r1_pd1_1 detronyx_12t_ctrl_inv_rc7
+Xr1_pd1_2_nand2 VDD VSS r1_a4_n r1_addr[5] r1_pd1_2_n detronyx_12t_ctrl_nand2_rc7
+Xr1_pd1_2_inv VDD VSS r1_pd1_2_n r1_pd1_2 detronyx_12t_ctrl_inv_rc7
+Xr1_pd1_3_nand2 VDD VSS r1_addr[4] r1_addr[5] r1_pd1_3_n detronyx_12t_ctrl_nand2_rc7
+Xr1_pd1_3_inv VDD VSS r1_pd1_3_n r1_pd1_3 detronyx_12t_ctrl_inv_rc7
+Xr1_pd2_0_nand4 VDD VSS r1_a6_n r1_a7_n r1_a8_n r1_a9_n r1_pd2_0_n detronyx_12t_ctrl_nand4_rc7
+Xr1_pd2_0_inv VDD VSS r1_pd2_0_n r1_pd2_0 detronyx_12t_ctrl_inv_rc7
+Xr1_pd2_1_nand4 VDD VSS r1_addr[6] r1_a7_n r1_a8_n r1_a9_n r1_pd2_1_n detronyx_12t_ctrl_nand4_rc7
+Xr1_pd2_1_inv VDD VSS r1_pd2_1_n r1_pd2_1 detronyx_12t_ctrl_inv_rc7
+Xr1_pd2_2_nand4 VDD VSS r1_a6_n r1_addr[7] r1_a8_n r1_a9_n r1_pd2_2_n detronyx_12t_ctrl_nand4_rc7
+Xr1_pd2_2_inv VDD VSS r1_pd2_2_n r1_pd2_2 detronyx_12t_ctrl_inv_rc7
+Xr1_pd2_3_nand4 VDD VSS r1_addr[6] r1_addr[7] r1_a8_n r1_a9_n r1_pd2_3_n detronyx_12t_ctrl_nand4_rc7
+Xr1_pd2_3_inv VDD VSS r1_pd2_3_n r1_pd2_3 detronyx_12t_ctrl_inv_rc7
+Xr1_pd2_4_nand4 VDD VSS r1_a6_n r1_a7_n r1_addr[8] r1_a9_n r1_pd2_4_n detronyx_12t_ctrl_nand4_rc7
+Xr1_pd2_4_inv VDD VSS r1_pd2_4_n r1_pd2_4 detronyx_12t_ctrl_inv_rc7
+Xr1_pd2_5_nand4 VDD VSS r1_addr[6] r1_a7_n r1_addr[8] r1_a9_n r1_pd2_5_n detronyx_12t_ctrl_nand4_rc7
+Xr1_pd2_5_inv VDD VSS r1_pd2_5_n r1_pd2_5 detronyx_12t_ctrl_inv_rc7
+Xr1_pd2_6_nand4 VDD VSS r1_a6_n r1_addr[7] r1_addr[8] r1_a9_n r1_pd2_6_n detronyx_12t_ctrl_nand4_rc7
+Xr1_pd2_6_inv VDD VSS r1_pd2_6_n r1_pd2_6 detronyx_12t_ctrl_inv_rc7
+Xr1_pd2_7_nand4 VDD VSS r1_addr[6] r1_addr[7] r1_addr[8] r1_a9_n r1_pd2_7_n detronyx_12t_ctrl_nand4_rc7
+Xr1_pd2_7_inv VDD VSS r1_pd2_7_n r1_pd2_7 detronyx_12t_ctrl_inv_rc7
+Xr1_pd2_8_nand4 VDD VSS r1_a6_n r1_a7_n r1_a8_n r1_addr[9] r1_pd2_8_n detronyx_12t_ctrl_nand4_rc7
+Xr1_pd2_8_inv VDD VSS r1_pd2_8_n r1_pd2_8 detronyx_12t_ctrl_inv_rc7
+Xr1_pd2_9_nand4 VDD VSS r1_addr[6] r1_a7_n r1_a8_n r1_addr[9] r1_pd2_9_n detronyx_12t_ctrl_nand4_rc7
+Xr1_pd2_9_inv VDD VSS r1_pd2_9_n r1_pd2_9 detronyx_12t_ctrl_inv_rc7
+Xr1_pd2_10_nand4 VDD VSS r1_a6_n r1_addr[7] r1_a8_n r1_addr[9] r1_pd2_10_n detronyx_12t_ctrl_nand4_rc7
+Xr1_pd2_10_inv VDD VSS r1_pd2_10_n r1_pd2_10 detronyx_12t_ctrl_inv_rc7
+Xr1_pd2_11_nand4 VDD VSS r1_addr[6] r1_addr[7] r1_a8_n r1_addr[9] r1_pd2_11_n detronyx_12t_ctrl_nand4_rc7
+Xr1_pd2_11_inv VDD VSS r1_pd2_11_n r1_pd2_11 detronyx_12t_ctrl_inv_rc7
+Xr1_pd2_12_nand4 VDD VSS r1_a6_n r1_a7_n r1_addr[8] r1_addr[9] r1_pd2_12_n detronyx_12t_ctrl_nand4_rc7
+Xr1_pd2_12_inv VDD VSS r1_pd2_12_n r1_pd2_12 detronyx_12t_ctrl_inv_rc7
+Xr1_pd2_13_nand4 VDD VSS r1_addr[6] r1_a7_n r1_addr[8] r1_addr[9] r1_pd2_13_n detronyx_12t_ctrl_nand4_rc7
+Xr1_pd2_13_inv VDD VSS r1_pd2_13_n r1_pd2_13 detronyx_12t_ctrl_inv_rc7
+Xr1_pd2_14_nand4 VDD VSS r1_a6_n r1_addr[7] r1_addr[8] r1_addr[9] r1_pd2_14_n detronyx_12t_ctrl_nand4_rc7
+Xr1_pd2_14_inv VDD VSS r1_pd2_14_n r1_pd2_14 detronyx_12t_ctrl_inv_rc7
+Xr1_pd2_15_nand4 VDD VSS r1_addr[6] r1_addr[7] r1_addr[8] r1_addr[9] r1_pd2_15_n detronyx_12t_ctrl_nand4_rc7
+Xr1_pd2_15_inv VDD VSS r1_pd2_15_n r1_pd2_15 detronyx_12t_ctrl_inv_rc7
+Xr1_row0000_sel VDD VSS r1_pd0_0 r1_pd1_0 r1_pd2_0 r1_en r1_wl[0] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0001_sel VDD VSS r1_pd0_1 r1_pd1_0 r1_pd2_0 r1_en r1_wl[1] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0002_sel VDD VSS r1_pd0_2 r1_pd1_0 r1_pd2_0 r1_en r1_wl[2] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0003_sel VDD VSS r1_pd0_3 r1_pd1_0 r1_pd2_0 r1_en r1_wl[3] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0004_sel VDD VSS r1_pd0_0 r1_pd1_1 r1_pd2_0 r1_en r1_wl[4] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0005_sel VDD VSS r1_pd0_1 r1_pd1_1 r1_pd2_0 r1_en r1_wl[5] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0006_sel VDD VSS r1_pd0_2 r1_pd1_1 r1_pd2_0 r1_en r1_wl[6] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0007_sel VDD VSS r1_pd0_3 r1_pd1_1 r1_pd2_0 r1_en r1_wl[7] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0008_sel VDD VSS r1_pd0_0 r1_pd1_2 r1_pd2_0 r1_en r1_wl[8] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0009_sel VDD VSS r1_pd0_1 r1_pd1_2 r1_pd2_0 r1_en r1_wl[9] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0010_sel VDD VSS r1_pd0_2 r1_pd1_2 r1_pd2_0 r1_en r1_wl[10] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0011_sel VDD VSS r1_pd0_3 r1_pd1_2 r1_pd2_0 r1_en r1_wl[11] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0012_sel VDD VSS r1_pd0_0 r1_pd1_3 r1_pd2_0 r1_en r1_wl[12] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0013_sel VDD VSS r1_pd0_1 r1_pd1_3 r1_pd2_0 r1_en r1_wl[13] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0014_sel VDD VSS r1_pd0_2 r1_pd1_3 r1_pd2_0 r1_en r1_wl[14] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0015_sel VDD VSS r1_pd0_3 r1_pd1_3 r1_pd2_0 r1_en r1_wl[15] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0016_sel VDD VSS r1_pd0_0 r1_pd1_0 r1_pd2_1 r1_en r1_wl[16] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0017_sel VDD VSS r1_pd0_1 r1_pd1_0 r1_pd2_1 r1_en r1_wl[17] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0018_sel VDD VSS r1_pd0_2 r1_pd1_0 r1_pd2_1 r1_en r1_wl[18] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0019_sel VDD VSS r1_pd0_3 r1_pd1_0 r1_pd2_1 r1_en r1_wl[19] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0020_sel VDD VSS r1_pd0_0 r1_pd1_1 r1_pd2_1 r1_en r1_wl[20] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0021_sel VDD VSS r1_pd0_1 r1_pd1_1 r1_pd2_1 r1_en r1_wl[21] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0022_sel VDD VSS r1_pd0_2 r1_pd1_1 r1_pd2_1 r1_en r1_wl[22] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0023_sel VDD VSS r1_pd0_3 r1_pd1_1 r1_pd2_1 r1_en r1_wl[23] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0024_sel VDD VSS r1_pd0_0 r1_pd1_2 r1_pd2_1 r1_en r1_wl[24] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0025_sel VDD VSS r1_pd0_1 r1_pd1_2 r1_pd2_1 r1_en r1_wl[25] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0026_sel VDD VSS r1_pd0_2 r1_pd1_2 r1_pd2_1 r1_en r1_wl[26] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0027_sel VDD VSS r1_pd0_3 r1_pd1_2 r1_pd2_1 r1_en r1_wl[27] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0028_sel VDD VSS r1_pd0_0 r1_pd1_3 r1_pd2_1 r1_en r1_wl[28] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0029_sel VDD VSS r1_pd0_1 r1_pd1_3 r1_pd2_1 r1_en r1_wl[29] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0030_sel VDD VSS r1_pd0_2 r1_pd1_3 r1_pd2_1 r1_en r1_wl[30] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0031_sel VDD VSS r1_pd0_3 r1_pd1_3 r1_pd2_1 r1_en r1_wl[31] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0032_sel VDD VSS r1_pd0_0 r1_pd1_0 r1_pd2_2 r1_en r1_wl[32] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0033_sel VDD VSS r1_pd0_1 r1_pd1_0 r1_pd2_2 r1_en r1_wl[33] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0034_sel VDD VSS r1_pd0_2 r1_pd1_0 r1_pd2_2 r1_en r1_wl[34] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0035_sel VDD VSS r1_pd0_3 r1_pd1_0 r1_pd2_2 r1_en r1_wl[35] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0036_sel VDD VSS r1_pd0_0 r1_pd1_1 r1_pd2_2 r1_en r1_wl[36] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0037_sel VDD VSS r1_pd0_1 r1_pd1_1 r1_pd2_2 r1_en r1_wl[37] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0038_sel VDD VSS r1_pd0_2 r1_pd1_1 r1_pd2_2 r1_en r1_wl[38] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0039_sel VDD VSS r1_pd0_3 r1_pd1_1 r1_pd2_2 r1_en r1_wl[39] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0040_sel VDD VSS r1_pd0_0 r1_pd1_2 r1_pd2_2 r1_en r1_wl[40] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0041_sel VDD VSS r1_pd0_1 r1_pd1_2 r1_pd2_2 r1_en r1_wl[41] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0042_sel VDD VSS r1_pd0_2 r1_pd1_2 r1_pd2_2 r1_en r1_wl[42] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0043_sel VDD VSS r1_pd0_3 r1_pd1_2 r1_pd2_2 r1_en r1_wl[43] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0044_sel VDD VSS r1_pd0_0 r1_pd1_3 r1_pd2_2 r1_en r1_wl[44] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0045_sel VDD VSS r1_pd0_1 r1_pd1_3 r1_pd2_2 r1_en r1_wl[45] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0046_sel VDD VSS r1_pd0_2 r1_pd1_3 r1_pd2_2 r1_en r1_wl[46] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0047_sel VDD VSS r1_pd0_3 r1_pd1_3 r1_pd2_2 r1_en r1_wl[47] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0048_sel VDD VSS r1_pd0_0 r1_pd1_0 r1_pd2_3 r1_en r1_wl[48] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0049_sel VDD VSS r1_pd0_1 r1_pd1_0 r1_pd2_3 r1_en r1_wl[49] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0050_sel VDD VSS r1_pd0_2 r1_pd1_0 r1_pd2_3 r1_en r1_wl[50] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0051_sel VDD VSS r1_pd0_3 r1_pd1_0 r1_pd2_3 r1_en r1_wl[51] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0052_sel VDD VSS r1_pd0_0 r1_pd1_1 r1_pd2_3 r1_en r1_wl[52] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0053_sel VDD VSS r1_pd0_1 r1_pd1_1 r1_pd2_3 r1_en r1_wl[53] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0054_sel VDD VSS r1_pd0_2 r1_pd1_1 r1_pd2_3 r1_en r1_wl[54] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0055_sel VDD VSS r1_pd0_3 r1_pd1_1 r1_pd2_3 r1_en r1_wl[55] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0056_sel VDD VSS r1_pd0_0 r1_pd1_2 r1_pd2_3 r1_en r1_wl[56] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0057_sel VDD VSS r1_pd0_1 r1_pd1_2 r1_pd2_3 r1_en r1_wl[57] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0058_sel VDD VSS r1_pd0_2 r1_pd1_2 r1_pd2_3 r1_en r1_wl[58] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0059_sel VDD VSS r1_pd0_3 r1_pd1_2 r1_pd2_3 r1_en r1_wl[59] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0060_sel VDD VSS r1_pd0_0 r1_pd1_3 r1_pd2_3 r1_en r1_wl[60] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0061_sel VDD VSS r1_pd0_1 r1_pd1_3 r1_pd2_3 r1_en r1_wl[61] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0062_sel VDD VSS r1_pd0_2 r1_pd1_3 r1_pd2_3 r1_en r1_wl[62] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0063_sel VDD VSS r1_pd0_3 r1_pd1_3 r1_pd2_3 r1_en r1_wl[63] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0064_sel VDD VSS r1_pd0_0 r1_pd1_0 r1_pd2_4 r1_en r1_wl[64] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0065_sel VDD VSS r1_pd0_1 r1_pd1_0 r1_pd2_4 r1_en r1_wl[65] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0066_sel VDD VSS r1_pd0_2 r1_pd1_0 r1_pd2_4 r1_en r1_wl[66] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0067_sel VDD VSS r1_pd0_3 r1_pd1_0 r1_pd2_4 r1_en r1_wl[67] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0068_sel VDD VSS r1_pd0_0 r1_pd1_1 r1_pd2_4 r1_en r1_wl[68] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0069_sel VDD VSS r1_pd0_1 r1_pd1_1 r1_pd2_4 r1_en r1_wl[69] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0070_sel VDD VSS r1_pd0_2 r1_pd1_1 r1_pd2_4 r1_en r1_wl[70] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0071_sel VDD VSS r1_pd0_3 r1_pd1_1 r1_pd2_4 r1_en r1_wl[71] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0072_sel VDD VSS r1_pd0_0 r1_pd1_2 r1_pd2_4 r1_en r1_wl[72] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0073_sel VDD VSS r1_pd0_1 r1_pd1_2 r1_pd2_4 r1_en r1_wl[73] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0074_sel VDD VSS r1_pd0_2 r1_pd1_2 r1_pd2_4 r1_en r1_wl[74] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0075_sel VDD VSS r1_pd0_3 r1_pd1_2 r1_pd2_4 r1_en r1_wl[75] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0076_sel VDD VSS r1_pd0_0 r1_pd1_3 r1_pd2_4 r1_en r1_wl[76] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0077_sel VDD VSS r1_pd0_1 r1_pd1_3 r1_pd2_4 r1_en r1_wl[77] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0078_sel VDD VSS r1_pd0_2 r1_pd1_3 r1_pd2_4 r1_en r1_wl[78] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0079_sel VDD VSS r1_pd0_3 r1_pd1_3 r1_pd2_4 r1_en r1_wl[79] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0080_sel VDD VSS r1_pd0_0 r1_pd1_0 r1_pd2_5 r1_en r1_wl[80] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0081_sel VDD VSS r1_pd0_1 r1_pd1_0 r1_pd2_5 r1_en r1_wl[81] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0082_sel VDD VSS r1_pd0_2 r1_pd1_0 r1_pd2_5 r1_en r1_wl[82] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0083_sel VDD VSS r1_pd0_3 r1_pd1_0 r1_pd2_5 r1_en r1_wl[83] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0084_sel VDD VSS r1_pd0_0 r1_pd1_1 r1_pd2_5 r1_en r1_wl[84] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0085_sel VDD VSS r1_pd0_1 r1_pd1_1 r1_pd2_5 r1_en r1_wl[85] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0086_sel VDD VSS r1_pd0_2 r1_pd1_1 r1_pd2_5 r1_en r1_wl[86] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0087_sel VDD VSS r1_pd0_3 r1_pd1_1 r1_pd2_5 r1_en r1_wl[87] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0088_sel VDD VSS r1_pd0_0 r1_pd1_2 r1_pd2_5 r1_en r1_wl[88] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0089_sel VDD VSS r1_pd0_1 r1_pd1_2 r1_pd2_5 r1_en r1_wl[89] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0090_sel VDD VSS r1_pd0_2 r1_pd1_2 r1_pd2_5 r1_en r1_wl[90] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0091_sel VDD VSS r1_pd0_3 r1_pd1_2 r1_pd2_5 r1_en r1_wl[91] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0092_sel VDD VSS r1_pd0_0 r1_pd1_3 r1_pd2_5 r1_en r1_wl[92] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0093_sel VDD VSS r1_pd0_1 r1_pd1_3 r1_pd2_5 r1_en r1_wl[93] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0094_sel VDD VSS r1_pd0_2 r1_pd1_3 r1_pd2_5 r1_en r1_wl[94] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0095_sel VDD VSS r1_pd0_3 r1_pd1_3 r1_pd2_5 r1_en r1_wl[95] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0096_sel VDD VSS r1_pd0_0 r1_pd1_0 r1_pd2_6 r1_en r1_wl[96] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0097_sel VDD VSS r1_pd0_1 r1_pd1_0 r1_pd2_6 r1_en r1_wl[97] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0098_sel VDD VSS r1_pd0_2 r1_pd1_0 r1_pd2_6 r1_en r1_wl[98] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0099_sel VDD VSS r1_pd0_3 r1_pd1_0 r1_pd2_6 r1_en r1_wl[99] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0100_sel VDD VSS r1_pd0_0 r1_pd1_1 r1_pd2_6 r1_en r1_wl[100] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0101_sel VDD VSS r1_pd0_1 r1_pd1_1 r1_pd2_6 r1_en r1_wl[101] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0102_sel VDD VSS r1_pd0_2 r1_pd1_1 r1_pd2_6 r1_en r1_wl[102] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0103_sel VDD VSS r1_pd0_3 r1_pd1_1 r1_pd2_6 r1_en r1_wl[103] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0104_sel VDD VSS r1_pd0_0 r1_pd1_2 r1_pd2_6 r1_en r1_wl[104] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0105_sel VDD VSS r1_pd0_1 r1_pd1_2 r1_pd2_6 r1_en r1_wl[105] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0106_sel VDD VSS r1_pd0_2 r1_pd1_2 r1_pd2_6 r1_en r1_wl[106] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0107_sel VDD VSS r1_pd0_3 r1_pd1_2 r1_pd2_6 r1_en r1_wl[107] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0108_sel VDD VSS r1_pd0_0 r1_pd1_3 r1_pd2_6 r1_en r1_wl[108] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0109_sel VDD VSS r1_pd0_1 r1_pd1_3 r1_pd2_6 r1_en r1_wl[109] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0110_sel VDD VSS r1_pd0_2 r1_pd1_3 r1_pd2_6 r1_en r1_wl[110] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0111_sel VDD VSS r1_pd0_3 r1_pd1_3 r1_pd2_6 r1_en r1_wl[111] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0112_sel VDD VSS r1_pd0_0 r1_pd1_0 r1_pd2_7 r1_en r1_wl[112] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0113_sel VDD VSS r1_pd0_1 r1_pd1_0 r1_pd2_7 r1_en r1_wl[113] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0114_sel VDD VSS r1_pd0_2 r1_pd1_0 r1_pd2_7 r1_en r1_wl[114] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0115_sel VDD VSS r1_pd0_3 r1_pd1_0 r1_pd2_7 r1_en r1_wl[115] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0116_sel VDD VSS r1_pd0_0 r1_pd1_1 r1_pd2_7 r1_en r1_wl[116] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0117_sel VDD VSS r1_pd0_1 r1_pd1_1 r1_pd2_7 r1_en r1_wl[117] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0118_sel VDD VSS r1_pd0_2 r1_pd1_1 r1_pd2_7 r1_en r1_wl[118] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0119_sel VDD VSS r1_pd0_3 r1_pd1_1 r1_pd2_7 r1_en r1_wl[119] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0120_sel VDD VSS r1_pd0_0 r1_pd1_2 r1_pd2_7 r1_en r1_wl[120] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0121_sel VDD VSS r1_pd0_1 r1_pd1_2 r1_pd2_7 r1_en r1_wl[121] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0122_sel VDD VSS r1_pd0_2 r1_pd1_2 r1_pd2_7 r1_en r1_wl[122] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0123_sel VDD VSS r1_pd0_3 r1_pd1_2 r1_pd2_7 r1_en r1_wl[123] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0124_sel VDD VSS r1_pd0_0 r1_pd1_3 r1_pd2_7 r1_en r1_wl[124] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0125_sel VDD VSS r1_pd0_1 r1_pd1_3 r1_pd2_7 r1_en r1_wl[125] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0126_sel VDD VSS r1_pd0_2 r1_pd1_3 r1_pd2_7 r1_en r1_wl[126] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0127_sel VDD VSS r1_pd0_3 r1_pd1_3 r1_pd2_7 r1_en r1_wl[127] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0128_sel VDD VSS r1_pd0_0 r1_pd1_0 r1_pd2_8 r1_en r1_wl[128] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0129_sel VDD VSS r1_pd0_1 r1_pd1_0 r1_pd2_8 r1_en r1_wl[129] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0130_sel VDD VSS r1_pd0_2 r1_pd1_0 r1_pd2_8 r1_en r1_wl[130] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0131_sel VDD VSS r1_pd0_3 r1_pd1_0 r1_pd2_8 r1_en r1_wl[131] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0132_sel VDD VSS r1_pd0_0 r1_pd1_1 r1_pd2_8 r1_en r1_wl[132] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0133_sel VDD VSS r1_pd0_1 r1_pd1_1 r1_pd2_8 r1_en r1_wl[133] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0134_sel VDD VSS r1_pd0_2 r1_pd1_1 r1_pd2_8 r1_en r1_wl[134] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0135_sel VDD VSS r1_pd0_3 r1_pd1_1 r1_pd2_8 r1_en r1_wl[135] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0136_sel VDD VSS r1_pd0_0 r1_pd1_2 r1_pd2_8 r1_en r1_wl[136] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0137_sel VDD VSS r1_pd0_1 r1_pd1_2 r1_pd2_8 r1_en r1_wl[137] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0138_sel VDD VSS r1_pd0_2 r1_pd1_2 r1_pd2_8 r1_en r1_wl[138] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0139_sel VDD VSS r1_pd0_3 r1_pd1_2 r1_pd2_8 r1_en r1_wl[139] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0140_sel VDD VSS r1_pd0_0 r1_pd1_3 r1_pd2_8 r1_en r1_wl[140] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0141_sel VDD VSS r1_pd0_1 r1_pd1_3 r1_pd2_8 r1_en r1_wl[141] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0142_sel VDD VSS r1_pd0_2 r1_pd1_3 r1_pd2_8 r1_en r1_wl[142] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0143_sel VDD VSS r1_pd0_3 r1_pd1_3 r1_pd2_8 r1_en r1_wl[143] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0144_sel VDD VSS r1_pd0_0 r1_pd1_0 r1_pd2_9 r1_en r1_wl[144] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0145_sel VDD VSS r1_pd0_1 r1_pd1_0 r1_pd2_9 r1_en r1_wl[145] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0146_sel VDD VSS r1_pd0_2 r1_pd1_0 r1_pd2_9 r1_en r1_wl[146] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0147_sel VDD VSS r1_pd0_3 r1_pd1_0 r1_pd2_9 r1_en r1_wl[147] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0148_sel VDD VSS r1_pd0_0 r1_pd1_1 r1_pd2_9 r1_en r1_wl[148] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0149_sel VDD VSS r1_pd0_1 r1_pd1_1 r1_pd2_9 r1_en r1_wl[149] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0150_sel VDD VSS r1_pd0_2 r1_pd1_1 r1_pd2_9 r1_en r1_wl[150] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0151_sel VDD VSS r1_pd0_3 r1_pd1_1 r1_pd2_9 r1_en r1_wl[151] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0152_sel VDD VSS r1_pd0_0 r1_pd1_2 r1_pd2_9 r1_en r1_wl[152] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0153_sel VDD VSS r1_pd0_1 r1_pd1_2 r1_pd2_9 r1_en r1_wl[153] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0154_sel VDD VSS r1_pd0_2 r1_pd1_2 r1_pd2_9 r1_en r1_wl[154] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0155_sel VDD VSS r1_pd0_3 r1_pd1_2 r1_pd2_9 r1_en r1_wl[155] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0156_sel VDD VSS r1_pd0_0 r1_pd1_3 r1_pd2_9 r1_en r1_wl[156] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0157_sel VDD VSS r1_pd0_1 r1_pd1_3 r1_pd2_9 r1_en r1_wl[157] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0158_sel VDD VSS r1_pd0_2 r1_pd1_3 r1_pd2_9 r1_en r1_wl[158] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0159_sel VDD VSS r1_pd0_3 r1_pd1_3 r1_pd2_9 r1_en r1_wl[159] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0160_sel VDD VSS r1_pd0_0 r1_pd1_0 r1_pd2_10 r1_en r1_wl[160] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0161_sel VDD VSS r1_pd0_1 r1_pd1_0 r1_pd2_10 r1_en r1_wl[161] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0162_sel VDD VSS r1_pd0_2 r1_pd1_0 r1_pd2_10 r1_en r1_wl[162] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0163_sel VDD VSS r1_pd0_3 r1_pd1_0 r1_pd2_10 r1_en r1_wl[163] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0164_sel VDD VSS r1_pd0_0 r1_pd1_1 r1_pd2_10 r1_en r1_wl[164] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0165_sel VDD VSS r1_pd0_1 r1_pd1_1 r1_pd2_10 r1_en r1_wl[165] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0166_sel VDD VSS r1_pd0_2 r1_pd1_1 r1_pd2_10 r1_en r1_wl[166] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0167_sel VDD VSS r1_pd0_3 r1_pd1_1 r1_pd2_10 r1_en r1_wl[167] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0168_sel VDD VSS r1_pd0_0 r1_pd1_2 r1_pd2_10 r1_en r1_wl[168] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0169_sel VDD VSS r1_pd0_1 r1_pd1_2 r1_pd2_10 r1_en r1_wl[169] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0170_sel VDD VSS r1_pd0_2 r1_pd1_2 r1_pd2_10 r1_en r1_wl[170] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0171_sel VDD VSS r1_pd0_3 r1_pd1_2 r1_pd2_10 r1_en r1_wl[171] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0172_sel VDD VSS r1_pd0_0 r1_pd1_3 r1_pd2_10 r1_en r1_wl[172] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0173_sel VDD VSS r1_pd0_1 r1_pd1_3 r1_pd2_10 r1_en r1_wl[173] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0174_sel VDD VSS r1_pd0_2 r1_pd1_3 r1_pd2_10 r1_en r1_wl[174] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0175_sel VDD VSS r1_pd0_3 r1_pd1_3 r1_pd2_10 r1_en r1_wl[175] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0176_sel VDD VSS r1_pd0_0 r1_pd1_0 r1_pd2_11 r1_en r1_wl[176] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0177_sel VDD VSS r1_pd0_1 r1_pd1_0 r1_pd2_11 r1_en r1_wl[177] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0178_sel VDD VSS r1_pd0_2 r1_pd1_0 r1_pd2_11 r1_en r1_wl[178] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0179_sel VDD VSS r1_pd0_3 r1_pd1_0 r1_pd2_11 r1_en r1_wl[179] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0180_sel VDD VSS r1_pd0_0 r1_pd1_1 r1_pd2_11 r1_en r1_wl[180] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0181_sel VDD VSS r1_pd0_1 r1_pd1_1 r1_pd2_11 r1_en r1_wl[181] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0182_sel VDD VSS r1_pd0_2 r1_pd1_1 r1_pd2_11 r1_en r1_wl[182] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0183_sel VDD VSS r1_pd0_3 r1_pd1_1 r1_pd2_11 r1_en r1_wl[183] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0184_sel VDD VSS r1_pd0_0 r1_pd1_2 r1_pd2_11 r1_en r1_wl[184] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0185_sel VDD VSS r1_pd0_1 r1_pd1_2 r1_pd2_11 r1_en r1_wl[185] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0186_sel VDD VSS r1_pd0_2 r1_pd1_2 r1_pd2_11 r1_en r1_wl[186] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0187_sel VDD VSS r1_pd0_3 r1_pd1_2 r1_pd2_11 r1_en r1_wl[187] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0188_sel VDD VSS r1_pd0_0 r1_pd1_3 r1_pd2_11 r1_en r1_wl[188] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0189_sel VDD VSS r1_pd0_1 r1_pd1_3 r1_pd2_11 r1_en r1_wl[189] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0190_sel VDD VSS r1_pd0_2 r1_pd1_3 r1_pd2_11 r1_en r1_wl[190] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0191_sel VDD VSS r1_pd0_3 r1_pd1_3 r1_pd2_11 r1_en r1_wl[191] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0192_sel VDD VSS r1_pd0_0 r1_pd1_0 r1_pd2_12 r1_en r1_wl[192] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0193_sel VDD VSS r1_pd0_1 r1_pd1_0 r1_pd2_12 r1_en r1_wl[193] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0194_sel VDD VSS r1_pd0_2 r1_pd1_0 r1_pd2_12 r1_en r1_wl[194] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0195_sel VDD VSS r1_pd0_3 r1_pd1_0 r1_pd2_12 r1_en r1_wl[195] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0196_sel VDD VSS r1_pd0_0 r1_pd1_1 r1_pd2_12 r1_en r1_wl[196] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0197_sel VDD VSS r1_pd0_1 r1_pd1_1 r1_pd2_12 r1_en r1_wl[197] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0198_sel VDD VSS r1_pd0_2 r1_pd1_1 r1_pd2_12 r1_en r1_wl[198] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0199_sel VDD VSS r1_pd0_3 r1_pd1_1 r1_pd2_12 r1_en r1_wl[199] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0200_sel VDD VSS r1_pd0_0 r1_pd1_2 r1_pd2_12 r1_en r1_wl[200] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0201_sel VDD VSS r1_pd0_1 r1_pd1_2 r1_pd2_12 r1_en r1_wl[201] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0202_sel VDD VSS r1_pd0_2 r1_pd1_2 r1_pd2_12 r1_en r1_wl[202] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0203_sel VDD VSS r1_pd0_3 r1_pd1_2 r1_pd2_12 r1_en r1_wl[203] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0204_sel VDD VSS r1_pd0_0 r1_pd1_3 r1_pd2_12 r1_en r1_wl[204] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0205_sel VDD VSS r1_pd0_1 r1_pd1_3 r1_pd2_12 r1_en r1_wl[205] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0206_sel VDD VSS r1_pd0_2 r1_pd1_3 r1_pd2_12 r1_en r1_wl[206] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0207_sel VDD VSS r1_pd0_3 r1_pd1_3 r1_pd2_12 r1_en r1_wl[207] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0208_sel VDD VSS r1_pd0_0 r1_pd1_0 r1_pd2_13 r1_en r1_wl[208] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0209_sel VDD VSS r1_pd0_1 r1_pd1_0 r1_pd2_13 r1_en r1_wl[209] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0210_sel VDD VSS r1_pd0_2 r1_pd1_0 r1_pd2_13 r1_en r1_wl[210] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0211_sel VDD VSS r1_pd0_3 r1_pd1_0 r1_pd2_13 r1_en r1_wl[211] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0212_sel VDD VSS r1_pd0_0 r1_pd1_1 r1_pd2_13 r1_en r1_wl[212] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0213_sel VDD VSS r1_pd0_1 r1_pd1_1 r1_pd2_13 r1_en r1_wl[213] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0214_sel VDD VSS r1_pd0_2 r1_pd1_1 r1_pd2_13 r1_en r1_wl[214] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0215_sel VDD VSS r1_pd0_3 r1_pd1_1 r1_pd2_13 r1_en r1_wl[215] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0216_sel VDD VSS r1_pd0_0 r1_pd1_2 r1_pd2_13 r1_en r1_wl[216] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0217_sel VDD VSS r1_pd0_1 r1_pd1_2 r1_pd2_13 r1_en r1_wl[217] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0218_sel VDD VSS r1_pd0_2 r1_pd1_2 r1_pd2_13 r1_en r1_wl[218] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0219_sel VDD VSS r1_pd0_3 r1_pd1_2 r1_pd2_13 r1_en r1_wl[219] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0220_sel VDD VSS r1_pd0_0 r1_pd1_3 r1_pd2_13 r1_en r1_wl[220] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0221_sel VDD VSS r1_pd0_1 r1_pd1_3 r1_pd2_13 r1_en r1_wl[221] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0222_sel VDD VSS r1_pd0_2 r1_pd1_3 r1_pd2_13 r1_en r1_wl[222] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0223_sel VDD VSS r1_pd0_3 r1_pd1_3 r1_pd2_13 r1_en r1_wl[223] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0224_sel VDD VSS r1_pd0_0 r1_pd1_0 r1_pd2_14 r1_en r1_wl[224] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0225_sel VDD VSS r1_pd0_1 r1_pd1_0 r1_pd2_14 r1_en r1_wl[225] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0226_sel VDD VSS r1_pd0_2 r1_pd1_0 r1_pd2_14 r1_en r1_wl[226] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0227_sel VDD VSS r1_pd0_3 r1_pd1_0 r1_pd2_14 r1_en r1_wl[227] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0228_sel VDD VSS r1_pd0_0 r1_pd1_1 r1_pd2_14 r1_en r1_wl[228] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0229_sel VDD VSS r1_pd0_1 r1_pd1_1 r1_pd2_14 r1_en r1_wl[229] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0230_sel VDD VSS r1_pd0_2 r1_pd1_1 r1_pd2_14 r1_en r1_wl[230] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0231_sel VDD VSS r1_pd0_3 r1_pd1_1 r1_pd2_14 r1_en r1_wl[231] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0232_sel VDD VSS r1_pd0_0 r1_pd1_2 r1_pd2_14 r1_en r1_wl[232] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0233_sel VDD VSS r1_pd0_1 r1_pd1_2 r1_pd2_14 r1_en r1_wl[233] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0234_sel VDD VSS r1_pd0_2 r1_pd1_2 r1_pd2_14 r1_en r1_wl[234] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0235_sel VDD VSS r1_pd0_3 r1_pd1_2 r1_pd2_14 r1_en r1_wl[235] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0236_sel VDD VSS r1_pd0_0 r1_pd1_3 r1_pd2_14 r1_en r1_wl[236] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0237_sel VDD VSS r1_pd0_1 r1_pd1_3 r1_pd2_14 r1_en r1_wl[237] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0238_sel VDD VSS r1_pd0_2 r1_pd1_3 r1_pd2_14 r1_en r1_wl[238] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0239_sel VDD VSS r1_pd0_3 r1_pd1_3 r1_pd2_14 r1_en r1_wl[239] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0240_sel VDD VSS r1_pd0_0 r1_pd1_0 r1_pd2_15 r1_en r1_wl[240] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0241_sel VDD VSS r1_pd0_1 r1_pd1_0 r1_pd2_15 r1_en r1_wl[241] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0242_sel VDD VSS r1_pd0_2 r1_pd1_0 r1_pd2_15 r1_en r1_wl[242] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0243_sel VDD VSS r1_pd0_3 r1_pd1_0 r1_pd2_15 r1_en r1_wl[243] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0244_sel VDD VSS r1_pd0_0 r1_pd1_1 r1_pd2_15 r1_en r1_wl[244] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0245_sel VDD VSS r1_pd0_1 r1_pd1_1 r1_pd2_15 r1_en r1_wl[245] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0246_sel VDD VSS r1_pd0_2 r1_pd1_1 r1_pd2_15 r1_en r1_wl[246] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0247_sel VDD VSS r1_pd0_3 r1_pd1_1 r1_pd2_15 r1_en r1_wl[247] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0248_sel VDD VSS r1_pd0_0 r1_pd1_2 r1_pd2_15 r1_en r1_wl[248] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0249_sel VDD VSS r1_pd0_1 r1_pd1_2 r1_pd2_15 r1_en r1_wl[249] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0250_sel VDD VSS r1_pd0_2 r1_pd1_2 r1_pd2_15 r1_en r1_wl[250] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0251_sel VDD VSS r1_pd0_3 r1_pd1_2 r1_pd2_15 r1_en r1_wl[251] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0252_sel VDD VSS r1_pd0_0 r1_pd1_3 r1_pd2_15 r1_en r1_wl[252] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0253_sel VDD VSS r1_pd0_1 r1_pd1_3 r1_pd2_15 r1_en r1_wl[253] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0254_sel VDD VSS r1_pd0_2 r1_pd1_3 r1_pd2_15 r1_en r1_wl[254] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xr1_row0255_sel VDD VSS r1_pd0_3 r1_pd1_3 r1_pd2_15 r1_en r1_wl[255] detronyx_12t_ctrl_row_select4_wlbuf_rc7
+Xeq_a0_inv VDD VSS w0_addr[0] eq_a0_n detronyx_12t_ctrl_inv_rc7
+Xeq_b0_inv VDD VSS w1_addr[0] eq_b0_n detronyx_12t_ctrl_inv_rc7
+Xeq_ab0_nand VDD VSS w0_addr[0] w1_addr[0] eq_ab0_n detronyx_12t_ctrl_nand2_rc7
+Xeq_ab0_inv VDD VSS eq_ab0_n eq_ab0 detronyx_12t_ctrl_inv_rc7
+Xeq_nanb0_nand VDD VSS eq_a0_n eq_b0_n eq_nanb0_n detronyx_12t_ctrl_nand2_rc7
+Xeq_nanb0_inv VDD VSS eq_nanb0_n eq_nanb0 detronyx_12t_ctrl_inv_rc7
+Xeq_or0_nor VDD VSS eq_ab0 eq_nanb0 eq_or0_n detronyx_12t_ctrl_nor2_rc7
+Xeq_xnor0_inv VDD VSS eq_or0_n eq_bit0 detronyx_12t_ctrl_inv_rc7
+Xeq_a1_inv VDD VSS w0_addr[1] eq_a1_n detronyx_12t_ctrl_inv_rc7
+Xeq_b1_inv VDD VSS w1_addr[1] eq_b1_n detronyx_12t_ctrl_inv_rc7
+Xeq_ab1_nand VDD VSS w0_addr[1] w1_addr[1] eq_ab1_n detronyx_12t_ctrl_nand2_rc7
+Xeq_ab1_inv VDD VSS eq_ab1_n eq_ab1 detronyx_12t_ctrl_inv_rc7
+Xeq_nanb1_nand VDD VSS eq_a1_n eq_b1_n eq_nanb1_n detronyx_12t_ctrl_nand2_rc7
+Xeq_nanb1_inv VDD VSS eq_nanb1_n eq_nanb1 detronyx_12t_ctrl_inv_rc7
+Xeq_or1_nor VDD VSS eq_ab1 eq_nanb1 eq_or1_n detronyx_12t_ctrl_nor2_rc7
+Xeq_xnor1_inv VDD VSS eq_or1_n eq_bit1 detronyx_12t_ctrl_inv_rc7
+Xeq_a2_inv VDD VSS w0_addr[2] eq_a2_n detronyx_12t_ctrl_inv_rc7
+Xeq_b2_inv VDD VSS w1_addr[2] eq_b2_n detronyx_12t_ctrl_inv_rc7
+Xeq_ab2_nand VDD VSS w0_addr[2] w1_addr[2] eq_ab2_n detronyx_12t_ctrl_nand2_rc7
+Xeq_ab2_inv VDD VSS eq_ab2_n eq_ab2 detronyx_12t_ctrl_inv_rc7
+Xeq_nanb2_nand VDD VSS eq_a2_n eq_b2_n eq_nanb2_n detronyx_12t_ctrl_nand2_rc7
+Xeq_nanb2_inv VDD VSS eq_nanb2_n eq_nanb2 detronyx_12t_ctrl_inv_rc7
+Xeq_or2_nor VDD VSS eq_ab2 eq_nanb2 eq_or2_n detronyx_12t_ctrl_nor2_rc7
+Xeq_xnor2_inv VDD VSS eq_or2_n eq_bit2 detronyx_12t_ctrl_inv_rc7
+Xeq_a3_inv VDD VSS w0_addr[3] eq_a3_n detronyx_12t_ctrl_inv_rc7
+Xeq_b3_inv VDD VSS w1_addr[3] eq_b3_n detronyx_12t_ctrl_inv_rc7
+Xeq_ab3_nand VDD VSS w0_addr[3] w1_addr[3] eq_ab3_n detronyx_12t_ctrl_nand2_rc7
+Xeq_ab3_inv VDD VSS eq_ab3_n eq_ab3 detronyx_12t_ctrl_inv_rc7
+Xeq_nanb3_nand VDD VSS eq_a3_n eq_b3_n eq_nanb3_n detronyx_12t_ctrl_nand2_rc7
+Xeq_nanb3_inv VDD VSS eq_nanb3_n eq_nanb3 detronyx_12t_ctrl_inv_rc7
+Xeq_or3_nor VDD VSS eq_ab3 eq_nanb3 eq_or3_n detronyx_12t_ctrl_nor2_rc7
+Xeq_xnor3_inv VDD VSS eq_or3_n eq_bit3 detronyx_12t_ctrl_inv_rc7
+Xeq_a4_inv VDD VSS w0_addr[4] eq_a4_n detronyx_12t_ctrl_inv_rc7
+Xeq_b4_inv VDD VSS w1_addr[4] eq_b4_n detronyx_12t_ctrl_inv_rc7
+Xeq_ab4_nand VDD VSS w0_addr[4] w1_addr[4] eq_ab4_n detronyx_12t_ctrl_nand2_rc7
+Xeq_ab4_inv VDD VSS eq_ab4_n eq_ab4 detronyx_12t_ctrl_inv_rc7
+Xeq_nanb4_nand VDD VSS eq_a4_n eq_b4_n eq_nanb4_n detronyx_12t_ctrl_nand2_rc7
+Xeq_nanb4_inv VDD VSS eq_nanb4_n eq_nanb4 detronyx_12t_ctrl_inv_rc7
+Xeq_or4_nor VDD VSS eq_ab4 eq_nanb4 eq_or4_n detronyx_12t_ctrl_nor2_rc7
+Xeq_xnor4_inv VDD VSS eq_or4_n eq_bit4 detronyx_12t_ctrl_inv_rc7
+Xeq_a5_inv VDD VSS w0_addr[5] eq_a5_n detronyx_12t_ctrl_inv_rc7
+Xeq_b5_inv VDD VSS w1_addr[5] eq_b5_n detronyx_12t_ctrl_inv_rc7
+Xeq_ab5_nand VDD VSS w0_addr[5] w1_addr[5] eq_ab5_n detronyx_12t_ctrl_nand2_rc7
+Xeq_ab5_inv VDD VSS eq_ab5_n eq_ab5 detronyx_12t_ctrl_inv_rc7
+Xeq_nanb5_nand VDD VSS eq_a5_n eq_b5_n eq_nanb5_n detronyx_12t_ctrl_nand2_rc7
+Xeq_nanb5_inv VDD VSS eq_nanb5_n eq_nanb5 detronyx_12t_ctrl_inv_rc7
+Xeq_or5_nor VDD VSS eq_ab5 eq_nanb5 eq_or5_n detronyx_12t_ctrl_nor2_rc7
+Xeq_xnor5_inv VDD VSS eq_or5_n eq_bit5 detronyx_12t_ctrl_inv_rc7
+Xeq_a6_inv VDD VSS w0_addr[6] eq_a6_n detronyx_12t_ctrl_inv_rc7
+Xeq_b6_inv VDD VSS w1_addr[6] eq_b6_n detronyx_12t_ctrl_inv_rc7
+Xeq_ab6_nand VDD VSS w0_addr[6] w1_addr[6] eq_ab6_n detronyx_12t_ctrl_nand2_rc7
+Xeq_ab6_inv VDD VSS eq_ab6_n eq_ab6 detronyx_12t_ctrl_inv_rc7
+Xeq_nanb6_nand VDD VSS eq_a6_n eq_b6_n eq_nanb6_n detronyx_12t_ctrl_nand2_rc7
+Xeq_nanb6_inv VDD VSS eq_nanb6_n eq_nanb6 detronyx_12t_ctrl_inv_rc7
+Xeq_or6_nor VDD VSS eq_ab6 eq_nanb6 eq_or6_n detronyx_12t_ctrl_nor2_rc7
+Xeq_xnor6_inv VDD VSS eq_or6_n eq_bit6 detronyx_12t_ctrl_inv_rc7
+Xeq_a7_inv VDD VSS w0_addr[7] eq_a7_n detronyx_12t_ctrl_inv_rc7
+Xeq_b7_inv VDD VSS w1_addr[7] eq_b7_n detronyx_12t_ctrl_inv_rc7
+Xeq_ab7_nand VDD VSS w0_addr[7] w1_addr[7] eq_ab7_n detronyx_12t_ctrl_nand2_rc7
+Xeq_ab7_inv VDD VSS eq_ab7_n eq_ab7 detronyx_12t_ctrl_inv_rc7
+Xeq_nanb7_nand VDD VSS eq_a7_n eq_b7_n eq_nanb7_n detronyx_12t_ctrl_nand2_rc7
+Xeq_nanb7_inv VDD VSS eq_nanb7_n eq_nanb7 detronyx_12t_ctrl_inv_rc7
+Xeq_or7_nor VDD VSS eq_ab7 eq_nanb7 eq_or7_n detronyx_12t_ctrl_nor2_rc7
+Xeq_xnor7_inv VDD VSS eq_or7_n eq_bit7 detronyx_12t_ctrl_inv_rc7
+Xeq_a8_inv VDD VSS w0_addr[8] eq_a8_n detronyx_12t_ctrl_inv_rc7
+Xeq_b8_inv VDD VSS w1_addr[8] eq_b8_n detronyx_12t_ctrl_inv_rc7
+Xeq_ab8_nand VDD VSS w0_addr[8] w1_addr[8] eq_ab8_n detronyx_12t_ctrl_nand2_rc7
+Xeq_ab8_inv VDD VSS eq_ab8_n eq_ab8 detronyx_12t_ctrl_inv_rc7
+Xeq_nanb8_nand VDD VSS eq_a8_n eq_b8_n eq_nanb8_n detronyx_12t_ctrl_nand2_rc7
+Xeq_nanb8_inv VDD VSS eq_nanb8_n eq_nanb8 detronyx_12t_ctrl_inv_rc7
+Xeq_or8_nor VDD VSS eq_ab8 eq_nanb8 eq_or8_n detronyx_12t_ctrl_nor2_rc7
+Xeq_xnor8_inv VDD VSS eq_or8_n eq_bit8 detronyx_12t_ctrl_inv_rc7
+Xeq_a9_inv VDD VSS w0_addr[9] eq_a9_n detronyx_12t_ctrl_inv_rc7
+Xeq_b9_inv VDD VSS w1_addr[9] eq_b9_n detronyx_12t_ctrl_inv_rc7
+Xeq_ab9_nand VDD VSS w0_addr[9] w1_addr[9] eq_ab9_n detronyx_12t_ctrl_nand2_rc7
+Xeq_ab9_inv VDD VSS eq_ab9_n eq_ab9 detronyx_12t_ctrl_inv_rc7
+Xeq_nanb9_nand VDD VSS eq_a9_n eq_b9_n eq_nanb9_n detronyx_12t_ctrl_nand2_rc7
+Xeq_nanb9_inv VDD VSS eq_nanb9_n eq_nanb9 detronyx_12t_ctrl_inv_rc7
+Xeq_or9_nor VDD VSS eq_ab9 eq_nanb9 eq_or9_n detronyx_12t_ctrl_nor2_rc7
+Xeq_xnor9_inv VDD VSS eq_or9_n eq_bit9 detronyx_12t_ctrl_inv_rc7
+Xeq_reduce_s0_0_nand4 VDD VSS eq_bit0 eq_bit1 eq_bit2 eq_bit3 eq_reduce_s0_0_n detronyx_12t_ctrl_nand4_rc7
+Xeq_reduce_s0_0_inv VDD VSS eq_reduce_s0_0_n eq_reduce_s0_0 detronyx_12t_ctrl_inv_rc7
+Xeq_reduce_s0_4_nand4 VDD VSS eq_bit4 eq_bit5 eq_bit6 eq_bit7 eq_reduce_s0_4_n detronyx_12t_ctrl_nand4_rc7
+Xeq_reduce_s0_4_inv VDD VSS eq_reduce_s0_4_n eq_reduce_s0_4 detronyx_12t_ctrl_inv_rc7
+Xeq_reduce_s0_8_nand2 VDD VSS eq_bit8 eq_bit9 eq_reduce_s0_8_n detronyx_12t_ctrl_nand2_rc7
+Xeq_reduce_s0_8_inv VDD VSS eq_reduce_s0_8_n eq_reduce_s0_8 detronyx_12t_ctrl_inv_rc7
+Xeq_reduce_s1_0_nand3 VDD VSS eq_reduce_s0_0 eq_reduce_s0_4 eq_reduce_s0_8 eq_reduce_s1_0_n detronyx_12t_ctrl_nand3_rc7
+Xeq_reduce_s1_0_inv VDD VSS eq_reduce_s1_0_n eq_reduce_s1_0 detronyx_12t_ctrl_inv_rc7
+Xwrite_conflict_nand VDD VSS w0_en w1_en eq_reduce_s1_0 write_conflict_n detronyx_12t_ctrl_nand3_rc7
+Xwrite_conflict_inv VDD VSS write_conflict_n write_conflict detronyx_12t_ctrl_inv_rc7
+.ends detronyx_12t_2w2r_1024x32_rc6_fullctrl_rc7_control_matrix

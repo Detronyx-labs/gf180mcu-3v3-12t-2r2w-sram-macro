@@ -1,0 +1,85 @@
+Netgen 1.5.133 compiled on Thu Dec  1 22:32:11 UTC 2022
+Warning: netgen command 'global' use fully-qualified name '::netgen::global'
+Reading netlist file build/rc7_control_primitives/detronyx_12t_ctrl_row_select4_wlbuf_rc7/layout/detronyx_12t_ctrl_row_select4_wlbuf_rc7.current_pdk.spice
+Call to undefined subcircuit pfet_03v3
+Creating placeholder cell definition.
+Call to undefined subcircuit nfet_03v3
+Creating placeholder cell definition.
+Reading netlist file build/rc7_control_primitives/detronyx_12t_ctrl_row_select4_wlbuf_rc7/abstract/detronyx_12t_ctrl_row_select4_wlbuf_rc7.reference.cdl
+Call to undefined subcircuit nfet_03v3
+Creating placeholder cell definition.
+Call to undefined subcircuit pfet_03v3
+Creating placeholder cell definition.
+Reading setup file /home/yevhenii/IHP-Open-PDK/volare/gf180mcu/versions/c6d73a35f524070e85faff4a6a9eef49553ebc2b/gf180mcuD/libs.tech/netgen/setup.tcl
+Model nfet_03v3 pin 1 == 3
+No property par1 found for device nfet_03v3
+No property NRD found for device nfet_03v3
+No property NRS found for device nfet_03v3
+No property par found for device nfet_03v3
+No property sa found for device nfet_03v3
+No property sb found for device nfet_03v3
+No property sd found for device nfet_03v3
+No property par found for device nfet_03v3
+No property dtemp found for device nfet_03v3
+No property nf found for device nfet_03v3
+Model nfet_03v3 pin 1 == 3
+No property par1 found for device nfet_03v3
+No property NRD found for device nfet_03v3
+No property NRS found for device nfet_03v3
+No property par found for device nfet_03v3
+No property sa found for device nfet_03v3
+No property sb found for device nfet_03v3
+No property sd found for device nfet_03v3
+No property par found for device nfet_03v3
+No property dtemp found for device nfet_03v3
+No property nf found for device nfet_03v3
+No property as found for device nfet_03v3
+No property ad found for device nfet_03v3
+No property ps found for device nfet_03v3
+No property pd found for device nfet_03v3
+Model pfet_03v3 pin 1 == 3
+No property par1 found for device pfet_03v3
+No property NRD found for device pfet_03v3
+No property NRS found for device pfet_03v3
+No property par found for device pfet_03v3
+No property sa found for device pfet_03v3
+No property sb found for device pfet_03v3
+No property sd found for device pfet_03v3
+No property par found for device pfet_03v3
+No property dtemp found for device pfet_03v3
+No property nf found for device pfet_03v3
+Model pfet_03v3 pin 1 == 3
+No property par1 found for device pfet_03v3
+No property NRD found for device pfet_03v3
+No property NRS found for device pfet_03v3
+No property par found for device pfet_03v3
+No property sa found for device pfet_03v3
+No property sb found for device pfet_03v3
+No property sd found for device pfet_03v3
+No property par found for device pfet_03v3
+No property dtemp found for device pfet_03v3
+No property nf found for device pfet_03v3
+No property as found for device pfet_03v3
+No property ad found for device pfet_03v3
+No property ps found for device pfet_03v3
+No property pd found for device pfet_03v3
+Comparison output logged to file build/rc7_control_primitives/detronyx_12t_ctrl_row_select4_wlbuf_rc7/layout/detronyx_12t_ctrl_row_select4_wlbuf_rc7.netgen_lvs.log
+Logging to file "build/rc7_control_primitives/detronyx_12t_ctrl_row_select4_wlbuf_rc7/layout/detronyx_12t_ctrl_row_select4_wlbuf_rc7.netgen_lvs.log" enabled
+Contents of circuit 1:  Circuit: 'detronyx_12t_ctrl_row_select4_wlbuf_rc7'
+Circuit detronyx_12t_ctrl_row_select4_wlbuf_rc7 contains 14 device instances.
+  Class: nfet_03v3             instances:   7
+  Class: pfet_03v3             instances:   7
+Circuit contains 13 nets.
+Contents of circuit 2:  Circuit: 'detronyx_12t_ctrl_row_select4_wlbuf_rc7'
+Circuit detronyx_12t_ctrl_row_select4_wlbuf_rc7 contains 14 device instances.
+  Class: nfet_03v3             instances:   7
+  Class: pfet_03v3             instances:   7
+Circuit contains 13 nets.
+
+Circuit 1 contains 14 devices, Circuit 2 contains 14 devices.
+Circuit 1 contains 13 nets,    Circuit 2 contains 13 nets.
+
+Netlists match uniquely.
+Result: Circuits match uniquely.
+Logging to file "build/rc7_control_primitives/detronyx_12t_ctrl_row_select4_wlbuf_rc7/layout/detronyx_12t_ctrl_row_select4_wlbuf_rc7.netgen_lvs.log" disabled
+LVS Done.

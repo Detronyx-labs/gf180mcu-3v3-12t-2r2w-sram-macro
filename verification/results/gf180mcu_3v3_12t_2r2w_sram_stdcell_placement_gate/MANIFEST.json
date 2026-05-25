@@ -1,0 +1,238 @@
+{
+  "checks": [
+    {
+      "check": "manifest exists",
+      "detail": "present",
+      "evidence": "reports/stdcell_control_placement/MANIFEST.json",
+      "scope": "placement",
+      "status": "PASS"
+    },
+    {
+      "check": "placement status",
+      "detail": "status=PASS, errors=[]",
+      "evidence": "reports/stdcell_control_placement/gf180mcu_3v3_12t_2r2w_sram_512x8/gf180mcu_3v3_12t_2r2w_sram_512x8.stdcell_control_placement.def",
+      "scope": "gf180mcu_3v3_12t_2r2w_sram_512x8",
+      "status": "PASS"
+    },
+    {
+      "check": "footprint unchanged",
+      "detail": "width=585.56 height=340.92",
+      "evidence": "reports/stdcell_control_placement/MANIFEST.json",
+      "scope": "gf180mcu_3v3_12t_2r2w_sram_512x8",
+      "status": "PASS"
+    },
+    {
+      "check": "stdcell placement count",
+      "detail": "expected=276, placed=276",
+      "evidence": "reports/stdcell_control_placement/gf180mcu_3v3_12t_2r2w_sram_512x8/gf180mcu_3v3_12t_2r2w_sram_512x8.stdcell_control_placement.csv",
+      "scope": "gf180mcu_3v3_12t_2r2w_sram_512x8",
+      "status": "PASS"
+    },
+    {
+      "check": "DEF exists",
+      "detail": "non-empty DEF",
+      "evidence": "reports/stdcell_control_placement/gf180mcu_3v3_12t_2r2w_sram_512x8/gf180mcu_3v3_12t_2r2w_sram_512x8.stdcell_control_placement.def",
+      "scope": "gf180mcu_3v3_12t_2r2w_sram_512x8",
+      "status": "PASS"
+    },
+    {
+      "check": "CSV exists",
+      "detail": "non-empty placement CSV",
+      "evidence": "reports/stdcell_control_placement/gf180mcu_3v3_12t_2r2w_sram_512x8/gf180mcu_3v3_12t_2r2w_sram_512x8.stdcell_control_placement.csv",
+      "scope": "gf180mcu_3v3_12t_2r2w_sram_512x8",
+      "status": "PASS"
+    },
+    {
+      "check": "row utilization",
+      "detail": "overall=0.126798, max_row=0.128476",
+      "evidence": "reports/stdcell_control_placement/gf180mcu_3v3_12t_2r2w_sram_512x8/gf180mcu_3v3_12t_2r2w_sram_512x8.stdcell_control_placement.def",
+      "scope": "gf180mcu_3v3_12t_2r2w_sram_512x8",
+      "status": "PASS"
+    },
+    {
+      "check": "row geometry inside macro",
+      "detail": "errors=[]",
+      "evidence": "reports/stdcell_control_placement/gf180mcu_3v3_12t_2r2w_sram_512x8/gf180mcu_3v3_12t_2r2w_sram_512x8.stdcell_control_placement.def",
+      "scope": "gf180mcu_3v3_12t_2r2w_sram_512x8",
+      "status": "PASS"
+    },
+    {
+      "check": "row-select/WL-buffer placement",
+      "detail": "deferred_row_select_instances=256, row_select_closed=True",
+      "evidence": "reports/stdcell_row_select_placement/MANIFEST.json",
+      "scope": "gf180mcu_3v3_12t_2r2w_sram_512x8",
+      "status": "PASS"
+    },
+    {
+      "check": "placement status",
+      "detail": "status=PASS, errors=[]",
+      "evidence": "reports/stdcell_control_placement/gf180mcu_3v3_12t_2r2w_sram_512x32/gf180mcu_3v3_12t_2r2w_sram_512x32.stdcell_control_placement.def",
+      "scope": "gf180mcu_3v3_12t_2r2w_sram_512x32",
+      "status": "PASS"
+    },
+    {
+      "check": "footprint unchanged",
+      "detail": "width=1003.96 height=618.04",
+      "evidence": "reports/stdcell_control_placement/MANIFEST.json",
+      "scope": "gf180mcu_3v3_12t_2r2w_sram_512x32",
+      "status": "PASS"
+    },
+    {
+      "check": "stdcell placement count",
+      "detail": "expected=276, placed=276",
+      "evidence": "reports/stdcell_control_placement/gf180mcu_3v3_12t_2r2w_sram_512x32/gf180mcu_3v3_12t_2r2w_sram_512x32.stdcell_control_placement.csv",
+      "scope": "gf180mcu_3v3_12t_2r2w_sram_512x32",
+      "status": "PASS"
+    },
+    {
+      "check": "DEF exists",
+      "detail": "non-empty DEF",
+      "evidence": "reports/stdcell_control_placement/gf180mcu_3v3_12t_2r2w_sram_512x32/gf180mcu_3v3_12t_2r2w_sram_512x32.stdcell_control_placement.def",
+      "scope": "gf180mcu_3v3_12t_2r2w_sram_512x32",
+      "status": "PASS"
+    },
+    {
+      "check": "CSV exists",
+      "detail": "non-empty placement CSV",
+      "evidence": "reports/stdcell_control_placement/gf180mcu_3v3_12t_2r2w_sram_512x32/gf180mcu_3v3_12t_2r2w_sram_512x32.stdcell_control_placement.csv",
+      "scope": "gf180mcu_3v3_12t_2r2w_sram_512x32",
+      "status": "PASS"
+    },
+    {
+      "check": "row utilization",
+      "detail": "overall=0.073883, max_row=0.07486",
+      "evidence": "reports/stdcell_control_placement/gf180mcu_3v3_12t_2r2w_sram_512x32/gf180mcu_3v3_12t_2r2w_sram_512x32.stdcell_control_placement.def",
+      "scope": "gf180mcu_3v3_12t_2r2w_sram_512x32",
+      "status": "PASS"
+    },
+    {
+      "check": "row geometry inside macro",
+      "detail": "errors=[]",
+      "evidence": "reports/stdcell_control_placement/gf180mcu_3v3_12t_2r2w_sram_512x32/gf180mcu_3v3_12t_2r2w_sram_512x32.stdcell_control_placement.def",
+      "scope": "gf180mcu_3v3_12t_2r2w_sram_512x32",
+      "status": "PASS"
+    },
+    {
+      "check": "row-select/WL-buffer placement",
+      "detail": "deferred_row_select_instances=512, row_select_closed=True",
+      "evidence": "reports/stdcell_row_select_placement/MANIFEST.json",
+      "scope": "gf180mcu_3v3_12t_2r2w_sram_512x32",
+      "status": "PASS"
+    },
+    {
+      "check": "placement status",
+      "detail": "status=PASS, errors=[]",
+      "evidence": "reports/stdcell_control_placement/gf180mcu_3v3_12t_2r2w_sram_1024x8/gf180mcu_3v3_12t_2r2w_sram_1024x8.stdcell_control_placement.def",
+      "scope": "gf180mcu_3v3_12t_2r2w_sram_1024x8",
+      "status": "PASS"
+    },
+    {
+      "check": "footprint unchanged",
+      "detail": "width=585.56 height=618.04",
+      "evidence": "reports/stdcell_control_placement/MANIFEST.json",
+      "scope": "gf180mcu_3v3_12t_2r2w_sram_1024x8",
+      "status": "PASS"
+    },
+    {
+      "check": "stdcell placement count",
+      "detail": "expected=322, placed=322",
+      "evidence": "reports/stdcell_control_placement/gf180mcu_3v3_12t_2r2w_sram_1024x8/gf180mcu_3v3_12t_2r2w_sram_1024x8.stdcell_control_placement.csv",
+      "scope": "gf180mcu_3v3_12t_2r2w_sram_1024x8",
+      "status": "PASS"
+    },
+    {
+      "check": "DEF exists",
+      "detail": "non-empty DEF",
+      "evidence": "reports/stdcell_control_placement/gf180mcu_3v3_12t_2r2w_sram_1024x8/gf180mcu_3v3_12t_2r2w_sram_1024x8.stdcell_control_placement.def",
+      "scope": "gf180mcu_3v3_12t_2r2w_sram_1024x8",
+      "status": "PASS"
+    },
+    {
+      "check": "CSV exists",
+      "detail": "non-empty placement CSV",
+      "evidence": "reports/stdcell_control_placement/gf180mcu_3v3_12t_2r2w_sram_1024x8/gf180mcu_3v3_12t_2r2w_sram_1024x8.stdcell_control_placement.csv",
+      "scope": "gf180mcu_3v3_12t_2r2w_sram_1024x8",
+      "status": "PASS"
+    },
+    {
+      "check": "row utilization",
+      "detail": "overall=0.15652, max_row=0.158198",
+      "evidence": "reports/stdcell_control_placement/gf180mcu_3v3_12t_2r2w_sram_1024x8/gf180mcu_3v3_12t_2r2w_sram_1024x8.stdcell_control_placement.def",
+      "scope": "gf180mcu_3v3_12t_2r2w_sram_1024x8",
+      "status": "PASS"
+    },
+    {
+      "check": "row geometry inside macro",
+      "detail": "errors=[]",
+      "evidence": "reports/stdcell_control_placement/gf180mcu_3v3_12t_2r2w_sram_1024x8/gf180mcu_3v3_12t_2r2w_sram_1024x8.stdcell_control_placement.def",
+      "scope": "gf180mcu_3v3_12t_2r2w_sram_1024x8",
+      "status": "PASS"
+    },
+    {
+      "check": "row-select/WL-buffer placement",
+      "detail": "deferred_row_select_instances=512, row_select_closed=True",
+      "evidence": "reports/stdcell_row_select_placement/MANIFEST.json",
+      "scope": "gf180mcu_3v3_12t_2r2w_sram_1024x8",
+      "status": "PASS"
+    },
+    {
+      "check": "placement status",
+      "detail": "status=PASS, errors=[]",
+      "evidence": "reports/stdcell_control_placement/gf180mcu_3v3_12t_2r2w_sram_1024x32/gf180mcu_3v3_12t_2r2w_sram_1024x32.stdcell_control_placement.def",
+      "scope": "gf180mcu_3v3_12t_2r2w_sram_1024x32",
+      "status": "PASS"
+    },
+    {
+      "check": "footprint unchanged",
+      "detail": "width=1003.96 height=1172.28",
+      "evidence": "reports/stdcell_control_placement/MANIFEST.json",
+      "scope": "gf180mcu_3v3_12t_2r2w_sram_1024x32",
+      "status": "PASS"
+    },
+    {
+      "check": "stdcell placement count",
+      "detail": "expected=354, placed=354",
+      "evidence": "reports/stdcell_control_placement/gf180mcu_3v3_12t_2r2w_sram_1024x32/gf180mcu_3v3_12t_2r2w_sram_1024x32.stdcell_control_placement.csv",
+      "scope": "gf180mcu_3v3_12t_2r2w_sram_1024x32",
+      "status": "PASS"
+    },
+    {
+      "check": "DEF exists",
+      "detail": "non-empty DEF",
+      "evidence": "reports/stdcell_control_placement/gf180mcu_3v3_12t_2r2w_sram_1024x32/gf180mcu_3v3_12t_2r2w_sram_1024x32.stdcell_control_placement.def",
+      "scope": "gf180mcu_3v3_12t_2r2w_sram_1024x32",
+      "status": "PASS"
+    },
+    {
+      "check": "CSV exists",
+      "detail": "non-empty placement CSV",
+      "evidence": "reports/stdcell_control_placement/gf180mcu_3v3_12t_2r2w_sram_1024x32/gf180mcu_3v3_12t_2r2w_sram_1024x32.stdcell_control_placement.csv",
+      "scope": "gf180mcu_3v3_12t_2r2w_sram_1024x32",
+      "status": "PASS"
+    },
+    {
+      "check": "row utilization",
+      "detail": "overall=0.108333, max_row=0.108939",
+      "evidence": "reports/stdcell_control_placement/gf180mcu_3v3_12t_2r2w_sram_1024x32/gf180mcu_3v3_12t_2r2w_sram_1024x32.stdcell_control_placement.def",
+      "scope": "gf180mcu_3v3_12t_2r2w_sram_1024x32",
+      "status": "PASS"
+    },
+    {
+      "check": "row geometry inside macro",
+      "detail": "errors=[]",
+      "evidence": "reports/stdcell_control_placement/gf180mcu_3v3_12t_2r2w_sram_1024x32/gf180mcu_3v3_12t_2r2w_sram_1024x32.stdcell_control_placement.def",
+      "scope": "gf180mcu_3v3_12t_2r2w_sram_1024x32",
+      "status": "PASS"
+    },
+    {
+      "check": "row-select/WL-buffer placement",
+      "detail": "deferred_row_select_instances=1024, row_select_closed=True",
+      "evidence": "reports/stdcell_row_select_placement/MANIFEST.json",
+      "scope": "gf180mcu_3v3_12t_2r2w_sram_1024x32",
+      "status": "PASS"
+    }
+  ],
+  "counts": {
+    "PASS": 33
+  }
+}
