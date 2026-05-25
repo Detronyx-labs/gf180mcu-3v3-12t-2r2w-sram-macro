@@ -5,14 +5,14 @@ MACRO detronyx_12t_write_driver_rc1
   CLASS BLOCK ;
   FOREIGN detronyx_12t_write_driver_rc1 0.000 0.000 ;
   ORIGIN 0.000 0.000 ;
-  SIZE 58.760000 BY 135.755000 ;
+  SIZE 25.950000 BY 68.880000 ;
   SYMMETRY X Y ;
   PIN VDD
     DIRECTION INOUT ;
     USE POWER ;
     PORT
       LAYER Metal3 ;
-        RECT 48.380000 134.555000 48.740000 135.755000 ;
+        RECT 1.220000 68.380000 1.580000 69.580000 ;
     END
   END VDD
   PIN VSS
@@ -20,7 +20,7 @@ MACRO detronyx_12t_write_driver_rc1
     USE GROUND ;
     PORT
       LAYER Metal3 ;
-        RECT 47.680000 0.700000 48.040000 1.900000 ;
+        RECT 1.220000 0.700000 1.580000 1.900000 ;
     END
   END VSS
   PIN din
@@ -28,7 +28,7 @@ MACRO detronyx_12t_write_driver_rc1
     USE SIGNAL ;
     PORT
       LAYER Metal3 ;
-        RECT 49.080000 0.700000 49.440000 1.500000 ;
+        RECT 3.020000 1.500000 3.380000 2.300000 ;
     END
   END din
   PIN wen
@@ -36,7 +36,7 @@ MACRO detronyx_12t_write_driver_rc1
     USE SIGNAL ;
     PORT
       LAYER Metal3 ;
-        RECT 58.880000 135.655000 59.240000 136.455000 ;
+        RECT 5.020000 67.580000 5.380000 68.380000 ;
     END
   END wen
   PIN wbl0
@@ -44,7 +44,7 @@ MACRO detronyx_12t_write_driver_rc1
     USE SIGNAL ;
     PORT
       LAYER Metal3 ;
-        RECT 50.480000 0.700000 50.840000 1.500000 ;
+        RECT 21.570000 2.300000 21.930000 3.100000 ;
     END
   END wbl0
   PIN wbr0
@@ -52,14 +52,14 @@ MACRO detronyx_12t_write_driver_rc1
     USE SIGNAL ;
     PORT
       LAYER Metal3 ;
-        RECT 54.680000 135.655000 55.040000 136.455000 ;
+        RECT 23.570000 66.780000 23.930000 67.580000 ;
     END
   END wbr0
   OBS
     LAYER Metal1 ;
-      RECT 0.000000 0.000000 58.760000 135.755000 ;
+      RECT 0.000000 0.000000 25.950000 68.880000 ;
     LAYER Metal2 ;
-      RECT 0.000000 0.000000 58.760000 135.755000 ;
+      RECT 0.000000 0.000000 25.950000 68.880000 ;
   END
 END detronyx_12t_write_driver_rc1
 END LIBRARY

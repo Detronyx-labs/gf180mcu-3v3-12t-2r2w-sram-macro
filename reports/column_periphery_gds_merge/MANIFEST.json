@@ -1,0 +1,174 @@
+{
+  "package": "gf180mcu-3v3-12t-2r2w-sram-macro",
+  "status": "PASS",
+  "scope": "physically wrapped macro GDS with column periphery leaf instances, data/control routes, and BL landing trunks",
+  "placement_manifest": "reports/column_periphery_integration/MANIFEST.json",
+  "smoke_main_drc": {
+    "macro": "gf180mcu_3v3_12t_2r2w_sram_512x8",
+    "status": "PASS",
+    "violations": 0,
+    "report": "reports/column_periphery_gds_merge/gf180mcu_3v3_12t_2r2w_sram_512x8/main_drc.lyrdb"
+  },
+  "results": [
+    {
+      "macro": "gf180mcu_3v3_12t_2r2w_sram_512x8",
+      "status": "PASS",
+      "gds": "macros/gf180mcu_3v3_12t_2r2w_sram_512x8/layout/gf180mcu_3v3_12t_2r2w_sram_512x8.gds",
+      "old_core_cell": "gf180mcu_3v3_12t_2r2w_sram_512x8_array_control_core",
+      "route_cell": "gf180mcu_3v3_12t_2r2w_sram_512x8_column_periphery_routes",
+      "power_stitch_policy": "top/bottom M5 wrapper rails only; long per-leaf M5 taps disabled pending dedicated PDN routing",
+      "placement_csv": "reports/column_periphery_integration/gf180mcu_3v3_12t_2r2w_sram_512x8/gf180mcu_3v3_12t_2r2w_sram_512x8.column_periphery_placement.csv",
+      "routes_csv": "reports/column_periphery_integration/gf180mcu_3v3_12t_2r2w_sram_512x8/gf180mcu_3v3_12t_2r2w_sram_512x8.column_periphery_routes.csv",
+      "instances_expected": 32,
+      "route_records": 128,
+      "route_shapes": 729,
+      "density_fill_shapes": 5162,
+      "cleared_core_fill_shapes": 0,
+      "direct_child_counts": {
+        "detronyx_12t_precharge_sense_rc1": 16,
+        "detronyx_12t_write_driver_rc1": 16,
+        "gf180mcu_3v3_12t_2r2w_sram_512x8_array_control_core": 1,
+        "gf180mcu_3v3_12t_2r2w_sram_512x8_column_periphery_routes": 1
+      },
+      "bbox_before_um": {
+        "left_um": 0.0,
+        "bottom_um": 0.0,
+        "right_um": 585.56,
+        "top_um": 340.92,
+        "width_um": 585.56,
+        "height_um": 340.92
+      },
+      "bbox_after_um": {
+        "left_um": 0.0,
+        "bottom_um": 0.0,
+        "right_um": 594.64,
+        "top_um": 389.8,
+        "width_um": 594.64,
+        "height_um": 389.8
+      },
+      "detail": [
+
+      ]
+    },
+    {
+      "macro": "gf180mcu_3v3_12t_2r2w_sram_512x32",
+      "status": "PASS",
+      "gds": "macros/gf180mcu_3v3_12t_2r2w_sram_512x32/layout/gf180mcu_3v3_12t_2r2w_sram_512x32.gds",
+      "old_core_cell": "gf180mcu_3v3_12t_2r2w_sram_512x32_array_control_core",
+      "route_cell": "gf180mcu_3v3_12t_2r2w_sram_512x32_column_periphery_routes",
+      "power_stitch_policy": "top/bottom M5 wrapper rails only; long per-leaf M5 taps disabled pending dedicated PDN routing",
+      "placement_csv": "reports/column_periphery_integration/gf180mcu_3v3_12t_2r2w_sram_512x32/gf180mcu_3v3_12t_2r2w_sram_512x32.column_periphery_placement.csv",
+      "routes_csv": "reports/column_periphery_integration/gf180mcu_3v3_12t_2r2w_sram_512x32/gf180mcu_3v3_12t_2r2w_sram_512x32.column_periphery_routes.csv",
+      "instances_expected": 128,
+      "route_records": 512,
+      "route_shapes": 2930,
+      "density_fill_shapes": 15799,
+      "cleared_core_fill_shapes": 0,
+      "direct_child_counts": {
+        "detronyx_12t_precharge_sense_rc1": 64,
+        "detronyx_12t_write_driver_rc1": 64,
+        "gf180mcu_3v3_12t_2r2w_sram_512x32_array_control_core": 1,
+        "gf180mcu_3v3_12t_2r2w_sram_512x32_column_periphery_routes": 1
+      },
+      "bbox_before_um": {
+        "left_um": 0.0,
+        "bottom_um": 0.0,
+        "right_um": 1003.96,
+        "top_um": 618.04,
+        "width_um": 1003.96,
+        "height_um": 618.04
+      },
+      "bbox_after_um": {
+        "left_um": 0.0,
+        "bottom_um": 0.0,
+        "right_um": 1019.545,
+        "top_um": 752.71,
+        "width_um": 1019.545,
+        "height_um": 752.71
+      },
+      "detail": [
+
+      ]
+    },
+    {
+      "macro": "gf180mcu_3v3_12t_2r2w_sram_1024x8",
+      "status": "PASS",
+      "gds": "macros/gf180mcu_3v3_12t_2r2w_sram_1024x8/layout/gf180mcu_3v3_12t_2r2w_sram_1024x8.gds",
+      "old_core_cell": "gf180mcu_3v3_12t_2r2w_sram_1024x8_array_control_core",
+      "route_cell": "gf180mcu_3v3_12t_2r2w_sram_1024x8_column_periphery_routes",
+      "power_stitch_policy": "top/bottom M5 wrapper rails only; long per-leaf M5 taps disabled pending dedicated PDN routing",
+      "placement_csv": "reports/column_periphery_integration/gf180mcu_3v3_12t_2r2w_sram_1024x8/gf180mcu_3v3_12t_2r2w_sram_1024x8.column_periphery_placement.csv",
+      "routes_csv": "reports/column_periphery_integration/gf180mcu_3v3_12t_2r2w_sram_1024x8/gf180mcu_3v3_12t_2r2w_sram_1024x8.column_periphery_routes.csv",
+      "instances_expected": 32,
+      "route_records": 128,
+      "route_shapes": 729,
+      "density_fill_shapes": 9372,
+      "cleared_core_fill_shapes": 0,
+      "direct_child_counts": {
+        "detronyx_12t_precharge_sense_rc1": 16,
+        "detronyx_12t_write_driver_rc1": 16,
+        "gf180mcu_3v3_12t_2r2w_sram_1024x8_array_control_core": 1,
+        "gf180mcu_3v3_12t_2r2w_sram_1024x8_column_periphery_routes": 1
+      },
+      "bbox_before_um": {
+        "left_um": 0.0,
+        "bottom_um": 0.0,
+        "right_um": 585.56,
+        "top_um": 618.04,
+        "width_um": 585.56,
+        "height_um": 618.04
+      },
+      "bbox_after_um": {
+        "left_um": 0.0,
+        "bottom_um": 0.0,
+        "right_um": 594.64,
+        "top_um": 666.92,
+        "width_um": 594.64,
+        "height_um": 666.92
+      },
+      "detail": [
+
+      ]
+    },
+    {
+      "macro": "gf180mcu_3v3_12t_2r2w_sram_1024x32",
+      "status": "PASS",
+      "gds": "macros/gf180mcu_3v3_12t_2r2w_sram_1024x32/layout/gf180mcu_3v3_12t_2r2w_sram_1024x32.gds",
+      "old_core_cell": "gf180mcu_3v3_12t_2r2w_sram_1024x32_array_control_core",
+      "route_cell": "gf180mcu_3v3_12t_2r2w_sram_1024x32_column_periphery_routes",
+      "power_stitch_policy": "top/bottom M5 wrapper rails only; long per-leaf M5 taps disabled pending dedicated PDN routing",
+      "placement_csv": "reports/column_periphery_integration/gf180mcu_3v3_12t_2r2w_sram_1024x32/gf180mcu_3v3_12t_2r2w_sram_1024x32.column_periphery_placement.csv",
+      "routes_csv": "reports/column_periphery_integration/gf180mcu_3v3_12t_2r2w_sram_1024x32/gf180mcu_3v3_12t_2r2w_sram_1024x32.column_periphery_routes.csv",
+      "instances_expected": 128,
+      "route_records": 512,
+      "route_shapes": 2930,
+      "density_fill_shapes": 30769,
+      "cleared_core_fill_shapes": 0,
+      "direct_child_counts": {
+        "detronyx_12t_precharge_sense_rc1": 64,
+        "detronyx_12t_write_driver_rc1": 64,
+        "gf180mcu_3v3_12t_2r2w_sram_1024x32_array_control_core": 1,
+        "gf180mcu_3v3_12t_2r2w_sram_1024x32_column_periphery_routes": 1
+      },
+      "bbox_before_um": {
+        "left_um": 0.0,
+        "bottom_um": 0.0,
+        "right_um": 1003.96,
+        "top_um": 1172.28,
+        "width_um": 1003.96,
+        "height_um": 1172.28
+      },
+      "bbox_after_um": {
+        "left_um": 0.0,
+        "bottom_um": 0.0,
+        "right_um": 1019.545,
+        "top_um": 1306.95,
+        "width_um": 1019.545,
+        "height_um": 1306.95
+      },
+      "detail": [
+
+      ]
+    }
+  ]
+}

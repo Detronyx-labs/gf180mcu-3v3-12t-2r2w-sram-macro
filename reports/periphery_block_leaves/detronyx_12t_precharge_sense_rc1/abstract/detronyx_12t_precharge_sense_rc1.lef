@@ -5,14 +5,14 @@ MACRO detronyx_12t_precharge_sense_rc1
   CLASS BLOCK ;
   FOREIGN detronyx_12t_precharge_sense_rc1 0.000 0.000 ;
   ORIGIN 0.000 0.000 ;
-  SIZE 25.280000 BY 62.075000 ;
+  SIZE 18.710000 BY 24.455000 ;
   SYMMETRY X Y ;
   PIN VDD
     DIRECTION INOUT ;
     USE POWER ;
     PORT
       LAYER Metal3 ;
-        RECT 21.200000 60.875000 21.560000 62.075000 ;
+        RECT 1.220000 23.955000 1.580000 25.155000 ;
     END
   END VDD
   PIN VSS
@@ -20,7 +20,7 @@ MACRO detronyx_12t_precharge_sense_rc1
     USE GROUND ;
     PORT
       LAYER Metal3 ;
-        RECT 20.500000 0.700000 20.860000 1.900000 ;
+        RECT 1.220000 0.700000 1.580000 1.900000 ;
     END
   END VSS
   PIN pchgb
@@ -28,7 +28,7 @@ MACRO detronyx_12t_precharge_sense_rc1
     USE SIGNAL ;
     PORT
       LAYER Metal3 ;
-        RECT 22.600000 0.700000 22.960000 1.500000 ;
+        RECT 16.565000 1.500000 16.925000 2.300000 ;
     END
   END pchgb
   PIN ren
@@ -36,7 +36,7 @@ MACRO detronyx_12t_precharge_sense_rc1
     USE SIGNAL ;
     PORT
       LAYER Metal3 ;
-        RECT 24.000000 61.975000 24.360000 62.775000 ;
+        RECT 18.565000 23.155000 18.925000 23.955000 ;
     END
   END ren
   PIN rbl0
@@ -44,7 +44,7 @@ MACRO detronyx_12t_precharge_sense_rc1
     USE SIGNAL ;
     PORT
       LAYER Metal3 ;
-        RECT 23.300000 0.700000 23.660000 1.500000 ;
+        RECT 18.565000 2.300000 18.925000 3.100000 ;
     END
   END rbl0
   PIN dout
@@ -52,14 +52,14 @@ MACRO detronyx_12t_precharge_sense_rc1
     USE SIGNAL ;
     PORT
       LAYER Metal3 ;
-        RECT 21.900000 61.975000 22.260000 62.775000 ;
+        RECT 16.565000 22.355000 16.925000 23.155000 ;
     END
   END dout
   OBS
     LAYER Metal1 ;
-      RECT 0.000000 0.000000 25.280000 62.075000 ;
+      RECT 0.000000 0.000000 18.710000 24.455000 ;
     LAYER Metal2 ;
-      RECT 0.000000 0.000000 25.280000 62.075000 ;
+      RECT 0.000000 0.000000 18.710000 24.455000 ;
   END
 END detronyx_12t_precharge_sense_rc1
 END LIBRARY

@@ -1,0 +1,120 @@
+{
+  "avalon_gds": "third_party/gf180mcu_as_sc_mcu7t3v3/pdk/libs.ref/gf180mcu_as_sc_mcu7t3v3/gf180mcu_as_sc_mcu7t3v3__merged.gds",
+  "package": "gf180mcu-3v3-12t-2r2w-sram-macro",
+  "placement_manifest": "reports/stdcell_control_placement/MANIFEST.json",
+  "results": [
+    {
+      "already_integrated": false,
+      "bbox_um": {
+        "bottom_um": 0.0,
+        "height_um": 340.92,
+        "left_um": 0.0,
+        "right_um": 585.56,
+        "top_um": 340.92,
+        "width_um": 585.56
+      },
+      "detail": [],
+      "direct_avalon_instance_counts": {
+        "gf180mcu_as_sc_mcu7t3v3__inv_2": 165,
+        "gf180mcu_as_sc_mcu7t3v3__nand2_2": 66,
+        "gf180mcu_as_sc_mcu7t3v3__nand3_2": 34,
+        "gf180mcu_as_sc_mcu7t3v3__nand4_2": 2,
+        "gf180mcu_as_sc_mcu7t3v3__nor2_2": 9
+      },
+      "expected_instances": 276,
+      "footprint_unchanged": true,
+      "gds": "macros/gf180mcu_3v3_12t_2r2w_sram_512x8/layout/gf180mcu_3v3_12t_2r2w_sram_512x8.gds",
+      "inserted_instances": 276,
+      "macro": "gf180mcu_3v3_12t_2r2w_sram_512x8",
+      "source_placement_csv": "reports/stdcell_control_placement/gf180mcu_3v3_12t_2r2w_sram_512x8/gf180mcu_3v3_12t_2r2w_sram_512x8.stdcell_control_placement.csv",
+      "status": "PASS"
+    },
+    {
+      "already_integrated": false,
+      "bbox_um": {
+        "bottom_um": 0.0,
+        "height_um": 618.04,
+        "left_um": 0.0,
+        "right_um": 1003.96,
+        "top_um": 618.04,
+        "width_um": 1003.96
+      },
+      "detail": [],
+      "direct_avalon_instance_counts": {
+        "gf180mcu_as_sc_mcu7t3v3__inv_2": 165,
+        "gf180mcu_as_sc_mcu7t3v3__nand2_2": 66,
+        "gf180mcu_as_sc_mcu7t3v3__nand3_2": 34,
+        "gf180mcu_as_sc_mcu7t3v3__nand4_2": 2,
+        "gf180mcu_as_sc_mcu7t3v3__nor2_2": 9
+      },
+      "expected_instances": 276,
+      "footprint_unchanged": true,
+      "gds": "macros/gf180mcu_3v3_12t_2r2w_sram_512x32/layout/gf180mcu_3v3_12t_2r2w_sram_512x32.gds",
+      "inserted_instances": 276,
+      "macro": "gf180mcu_3v3_12t_2r2w_sram_512x32",
+      "source_placement_csv": "reports/stdcell_control_placement/gf180mcu_3v3_12t_2r2w_sram_512x32/gf180mcu_3v3_12t_2r2w_sram_512x32.stdcell_control_placement.csv",
+      "status": "PASS"
+    },
+    {
+      "already_integrated": false,
+      "bbox_um": {
+        "bottom_um": 0.0,
+        "height_um": 618.04,
+        "left_um": 0.0,
+        "right_um": 585.56,
+        "top_um": 618.04,
+        "width_um": 585.56
+      },
+      "detail": [],
+      "direct_avalon_instance_counts": {
+        "gf180mcu_as_sc_mcu7t3v3__inv_2": 191,
+        "gf180mcu_as_sc_mcu7t3v3__nand2_2": 53,
+        "gf180mcu_as_sc_mcu7t3v3__nand3_2": 66,
+        "gf180mcu_as_sc_mcu7t3v3__nand4_2": 2,
+        "gf180mcu_as_sc_mcu7t3v3__nor2_2": 10
+      },
+      "expected_instances": 322,
+      "footprint_unchanged": true,
+      "gds": "macros/gf180mcu_3v3_12t_2r2w_sram_1024x8/layout/gf180mcu_3v3_12t_2r2w_sram_1024x8.gds",
+      "inserted_instances": 322,
+      "macro": "gf180mcu_3v3_12t_2r2w_sram_1024x8",
+      "source_placement_csv": "reports/stdcell_control_placement/gf180mcu_3v3_12t_2r2w_sram_1024x8/gf180mcu_3v3_12t_2r2w_sram_1024x8.stdcell_control_placement.csv",
+      "status": "PASS"
+    },
+    {
+      "already_integrated": false,
+      "bbox_um": {
+        "bottom_um": 0.0,
+        "height_um": 1172.28,
+        "left_um": 0.0,
+        "right_um": 1003.96,
+        "top_um": 1172.28,
+        "width_um": 1003.96
+      },
+      "detail": [],
+      "direct_avalon_instance_counts": {
+        "gf180mcu_as_sc_mcu7t3v3__inv_2": 207,
+        "gf180mcu_as_sc_mcu7t3v3__nand2_2": 69,
+        "gf180mcu_as_sc_mcu7t3v3__nand3_2": 2,
+        "gf180mcu_as_sc_mcu7t3v3__nand4_2": 66,
+        "gf180mcu_as_sc_mcu7t3v3__nor2_2": 10
+      },
+      "expected_instances": 354,
+      "footprint_unchanged": true,
+      "gds": "macros/gf180mcu_3v3_12t_2r2w_sram_1024x32/layout/gf180mcu_3v3_12t_2r2w_sram_1024x32.gds",
+      "inserted_instances": 354,
+      "macro": "gf180mcu_3v3_12t_2r2w_sram_1024x32",
+      "source_placement_csv": "reports/stdcell_control_placement/gf180mcu_3v3_12t_2r2w_sram_1024x32/gf180mcu_3v3_12t_2r2w_sram_1024x32.stdcell_control_placement.csv",
+      "status": "PASS"
+    }
+  ],
+  "scope": "physically merged Avalon stdcell control GDS instances into macros/*/layout GDS files",
+  "smoke_main_drc": {
+    "deck": "gf180mcuD/libs.tech/klayout/drc/rule_decks/main.drc",
+    "macro": "gf180mcu_3v3_12t_2r2w_sram_512x8",
+    "report": "reports/stdcell_control_gds_merge/gf180mcu_3v3_12t_2r2w_sram_512x8/main_drc.lyrdb",
+    "status": "PASS",
+    "violations": 0
+  },
+  "status": "PASS"
+}

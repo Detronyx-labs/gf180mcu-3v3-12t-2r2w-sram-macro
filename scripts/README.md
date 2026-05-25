@@ -9,10 +9,51 @@ Primary source-workspace targets:
 make build-gf180mcu-3v3-12t-2r2w-sram-array-macros
 make build-gf180mcu-3v3-12t-2r2w-sram-periphery-leaves
 make build-gf180mcu-3v3-12t-2r2w-sram-final-physical
+python3 scripts/integrate_gf180mcu_3v3_12t_2r2w_sram_stdcell_control.py
+python3 scripts/place_gf180mcu_3v3_12t_2r2w_sram_stdcell_control.py
+klayout -b -r scripts/rewrite_gf180mcu_3v3_12t_2r2w_sram_gds_topcells.rb
+klayout -b -r scripts/merge_gf180mcu_3v3_12t_2r2w_sram_stdcell_gds.rb
+python3 scripts/place_gf180mcu_3v3_12t_2r2w_sram_row_select_stdcells.py
+klayout -b -r scripts/merge_gf180mcu_3v3_12t_2r2w_sram_row_select_gds.rb
+klayout -b -r scripts/route_gf180mcu_3v3_12t_2r2w_sram_control_signals.rb
+python3 scripts/place_gf180mcu_3v3_12t_2r2w_sram_column_periphery.py
+klayout -b -r scripts/merge_gf180mcu_3v3_12t_2r2w_sram_column_periphery_gds.rb
+python3 verification/gf180mcu_3v3_12t_2r2w_sram_column_periphery_gate.py
+python3 scripts/run_gf180mcu_3v3_12t_2r2w_sram_full_gds_lvs_pex.py --timeout-sec 900 --no-rc --out-dir reports/full_gds_lvs_pex_no_rc_all
 make package-gf180mcu-3v3-12t-2r2w-sram-macro
 ```
 
 Release script names in this package:
 
 - `build_gf180mcu_3v3_12t_2r2w_sram_periphery_slice.py`
-- `build_gf180mcu_3v3_12t_2r2w_sram_periphery_leaves.py`
+- `build_gf180mcu_3v3_12t_2r2w_sram_periphery_leaves.py` - compact standalone DRC/LVS-clean periphery leaf generator, including x32 tile-pitch-compatible write-driver and precharge/sense column leaf generation.
+- `integrate_gf180mcu_3v3_12t_2r2w_sram_stdcell_control.py`
+- `place_gf180mcu_3v3_12t_2r2w_sram_stdcell_control.py`
+- `rewrite_gf180mcu_3v3_12t_2r2w_sram_gds_topcells.rb`
+- `merge_gf180mcu_3v3_12t_2r2w_sram_stdcell_gds.rb`
+- `place_gf180mcu_3v3_12t_2r2w_sram_row_select_stdcells.py`
+- `merge_gf180mcu_3v3_12t_2r2w_sram_row_select_gds.rb`
+- `route_gf180mcu_3v3_12t_2r2w_sram_control_signals.rb`
+- `place_gf180mcu_3v3_12t_2r2w_sram_column_periphery.py`
+- `merge_gf180mcu_3v3_12t_2r2w_sram_column_periphery_gds.rb`
+- `audit_gf180mcu_3v3_12t_2r2w_sram_m5_power_shorts.rb`
+- `run_gf180mcu_3v3_12t_2r2w_sram_full_gds_lvs_pex.py` - Magic extraction/PEX directly from the published GDS wrappers, with parameterized blackbox, RC, extresist, resistor tee, net filtering, and timeout controls.
+
+Packaged local signoff entrypoint:
+
+```bash
+python3 scripts/run_gf180mcu_3v3_12t_2r2w_sram_local_signoff.py \
+  --final-manifest reports/final_physical/MANIFEST.json \
+  --open-signoff-manifest reports/open_signoff/MANIFEST.json \
+  --primitive-manifest reports/control_leaf_library/MANIFEST.json \
+  --stdcell-control-manifest reports/stdcell_control_integration/MANIFEST.json \
+  --stdcell-placement-manifest reports/stdcell_control_placement/MANIFEST.json \
+  --stdcell-gds-manifest reports/stdcell_control_gds_merge/MANIFEST.json \
+  --row-select-placement-manifest reports/stdcell_row_select_placement/MANIFEST.json \
+  --row-select-gds-manifest reports/stdcell_row_select_gds_merge/MANIFEST.json \
+  --stdcell-routing-manifest reports/stdcell_control_signal_routing/MANIFEST.json \
+  --column-periphery-manifest reports/column_periphery_gds_merge/MANIFEST.json \
+  --out-dir reports/local_signoff_full \
+  --magic-rc /path/to/gf180mcuD.magicrc \
+  --gf180-klayout-drc-dir /path/to/gf180mcuD/libs.tech/klayout/drc
+```

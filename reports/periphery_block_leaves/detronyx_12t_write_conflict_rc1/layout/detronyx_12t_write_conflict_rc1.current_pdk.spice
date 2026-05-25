@@ -1,17 +1,17 @@
 * NGSPICE file created from detronyx_12t_write_conflict_rc1.ext - technology: gf180mcuD
 
 .subckt detronyx_12t_write_conflict_rc1 VDD VSS w0_en w1_en addr_eq write_conflict
-X0 a_744_5604# w0_en a_600_5604# VSS nfet_03v3 ad=0.4642p pd=2.99u as=0.4642p ps=2.99u w=1.055u l=0.28u
-X1 VDD a_1896_5604# write_conflict VDD pfet_03v3 ad=0.1232p pd=1u as=0.1232p ps=1u w=0.56u l=0.28u
-X2 VSS a_1896_5604# write_conflict VSS nfet_03v3 ad=0.4642p pd=2.99u as=0.4642p ps=2.99u w=1.055u l=0.28u
-X3 VSS a_600_5604# a_1464_5604# VSS nfet_03v3 ad=0.4642p pd=2.99u as=0.4642p ps=2.99u w=1.055u l=0.28u
-X4 VDD w0_en a_600_5604# VDD pfet_03v3 ad=0.1232p pd=1u as=0.1232p ps=1u w=0.56u l=0.28u
-X5 VDD a_1464_5604# a_1896_5604# VDD pfet_03v3 ad=0.1232p pd=1u as=0.1232p ps=1u w=0.56u l=0.28u
-X6 VDD addr_eq a_1896_5604# VDD pfet_03v3 ad=0.1232p pd=1u as=0.1232p ps=1u w=0.56u l=0.28u
-X7 VDD a_600_5604# a_1464_5604# VDD pfet_03v3 ad=0.1232p pd=1u as=0.1232p ps=1u w=0.56u l=0.28u
-X8 VSS addr_eq a_2040_5604# VSS nfet_03v3 ad=0.4642p pd=2.99u as=0.4642p ps=2.99u w=1.055u l=0.28u
-X9 VSS w1_en a_744_5604# VSS nfet_03v3 ad=0.4642p pd=2.99u as=0.4642p ps=2.99u w=1.055u l=0.28u
-X10 VDD w1_en a_600_5604# VDD pfet_03v3 ad=0.1232p pd=1u as=0.1232p ps=1u w=0.56u l=0.28u
-X11 a_2040_5604# a_1464_5604# a_1896_5604# VSS nfet_03v3 ad=0.4642p pd=2.99u as=0.4642p ps=2.99u w=1.055u l=0.28u
+X0 VSS w1_en a_384_3580# VSS nfet_03v3 ad=0.4642p pd=2.99u as=0.4642p ps=2.99u w=1.055u l=0.28u
+X1 VDD a_1536_3580# write_conflict VDD pfet_03v3 ad=0.1232p pd=1u as=0.1232p ps=1u w=0.56u l=0.28u
+X2 a_384_3580# w0_en a_240_3580# VSS nfet_03v3 ad=0.4642p pd=2.99u as=0.4642p ps=2.99u w=1.055u l=0.28u
+X3 VDD addr_eq a_1536_3580# VDD pfet_03v3 ad=0.1232p pd=1u as=0.1232p ps=1u w=0.56u l=0.28u
+X4 VDD w0_en a_240_3580# VDD pfet_03v3 ad=0.1232p pd=1u as=0.1232p ps=1u w=0.56u l=0.28u
+X5 VDD a_1104_3580# a_1536_3580# VDD pfet_03v3 ad=0.1232p pd=1u as=0.1232p ps=1u w=0.56u l=0.28u
+X6 VSS a_1536_3580# write_conflict VSS nfet_03v3 ad=0.4642p pd=2.99u as=0.4642p ps=2.99u w=1.055u l=0.28u
+X7 VDD a_240_3580# a_1104_3580# VDD pfet_03v3 ad=0.1232p pd=1u as=0.1232p ps=1u w=0.56u l=0.28u
+X8 VSS a_240_3580# a_1104_3580# VSS nfet_03v3 ad=0.4642p pd=2.99u as=0.4642p ps=2.99u w=1.055u l=0.28u
+X9 VDD w1_en a_240_3580# VDD pfet_03v3 ad=0.1232p pd=1u as=0.1232p ps=1u w=0.56u l=0.28u
+X10 VSS addr_eq a_1680_3580# VSS nfet_03v3 ad=0.4642p pd=2.99u as=0.4642p ps=2.99u w=1.055u l=0.28u
+X11 a_1680_3580# a_1104_3580# a_1536_3580# VSS nfet_03v3 ad=0.4642p pd=2.99u as=0.4642p ps=2.99u w=1.055u l=0.28u
 .ends
 

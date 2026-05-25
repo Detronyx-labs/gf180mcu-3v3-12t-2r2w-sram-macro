@@ -18,9 +18,9 @@ Subcircuit pins:
 Circuit 1: detronyx_12t_precharge_sense_rc |Circuit 2: detronyx_12t_precharge_sense_rc 
 -------------------------------------------|-------------------------------------------
 dout                                       |dout                                       
+pchgb                                      |pchgb                                      
 VSS                                        |VSS                                        
 rbl0                                       |rbl0                                       
-pchgb                                      |pchgb                                      
 VDD                                        |VDD                                        
 ren                                        |ren                                        
 ---------------------------------------------------------------------------------------

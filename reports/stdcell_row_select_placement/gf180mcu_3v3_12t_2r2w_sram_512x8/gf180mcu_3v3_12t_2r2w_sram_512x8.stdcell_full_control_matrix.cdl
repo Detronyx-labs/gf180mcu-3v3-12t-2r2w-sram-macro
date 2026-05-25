@@ -1,0 +1,1310 @@
+* gf180mcu_3v3_12t_2r2w_sram_512x8_stdcell_full_control_matrix
+* Row-select/WL-buffer functions expanded into Avalon NAND/INV stdcells.
+* gf180mcu_3v3_12t_2r2w_sram_512x8_stdcell_control_matrix
+* Avalon stdcell-mapped digital control matrix for the release package.
+.include "../../../third_party/gf180mcu_as_sc_mcu7t3v3/pdk/libs.ref/gf180mcu_as_sc_mcu7t3v3/cdl/gf180mcu_as_sc_mcu7t3v3.cdl"
+
+* RC7 structural custom-gate control matrix for detronyx_12t_2w2r_512x8_rc6_fullctrl
+* Folded contract: 512 logical rows -> 64 physical WL rows + 8-way group select.
+.subckt gf180mcu_3v3_12t_2r2w_sram_512x8_stdcell_full_control_matrix VDD VSS w0_en w1_en r0_en r1_en write_conflict w0_addr[0] w0_addr[1] w0_addr[2] w0_addr[3] w0_addr[4] w0_addr[5] w0_addr[6] w0_addr[7] w0_addr[8] w1_addr[0] w1_addr[1] w1_addr[2] w1_addr[3] w1_addr[4] w1_addr[5] w1_addr[6] w1_addr[7] w1_addr[8] r0_addr[0] r0_addr[1] r0_addr[2] r0_addr[3] r0_addr[4] r0_addr[5] r0_addr[6] r0_addr[7] r0_addr[8] r1_addr[0] r1_addr[1] r1_addr[2] r1_addr[3] r1_addr[4] r1_addr[5] r1_addr[6] r1_addr[7] r1_addr[8] w0_wl[0] w0_wl[1] w0_wl[2] w0_wl[3] w0_wl[4] w0_wl[5] w0_wl[6] w0_wl[7] w0_wl[8] w0_wl[9] w0_wl[10] w0_wl[11] w0_wl[12] w0_wl[13] w0_wl[14] w0_wl[15] w0_wl[16] w0_wl[17] w0_wl[18] w0_wl[19] w0_wl[20] w0_wl[21] w0_wl[22] w0_wl[23] w0_wl[24] w0_wl[25] w0_wl[26] w0_wl[27] w0_wl[28] w0_wl[29] w0_wl[30] w0_wl[31] w0_wl[32] w0_wl[33] w0_wl[34] w0_wl[35] w0_wl[36] w0_wl[37] w0_wl[38] w0_wl[39] w0_wl[40] w0_wl[41] w0_wl[42] w0_wl[43] w0_wl[44] w0_wl[45] w0_wl[46] w0_wl[47] w0_wl[48] w0_wl[49] w0_wl[50] w0_wl[51] w0_wl[52] w0_wl[53] w0_wl[54] w0_wl[55] w0_wl[56] w0_wl[57] w0_wl[58] w0_wl[59] w0_wl[60] w0_wl[61] w0_wl[62] w0_wl[63] w0_grp[0] w0_grp[1] w0_grp[2] w0_grp[3] w0_grp[4] w0_grp[5] w0_grp[6] w0_grp[7] w1_wl[0] w1_wl[1] w1_wl[2] w1_wl[3] w1_wl[4] w1_wl[5] w1_wl[6] w1_wl[7] w1_wl[8] w1_wl[9] w1_wl[10] w1_wl[11] w1_wl[12] w1_wl[13] w1_wl[14] w1_wl[15] w1_wl[16] w1_wl[17] w1_wl[18] w1_wl[19] w1_wl[20] w1_wl[21] w1_wl[22] w1_wl[23] w1_wl[24] w1_wl[25] w1_wl[26] w1_wl[27] w1_wl[28] w1_wl[29] w1_wl[30] w1_wl[31] w1_wl[32] w1_wl[33] w1_wl[34] w1_wl[35] w1_wl[36] w1_wl[37] w1_wl[38] w1_wl[39] w1_wl[40] w1_wl[41] w1_wl[42] w1_wl[43] w1_wl[44] w1_wl[45] w1_wl[46] w1_wl[47] w1_wl[48] w1_wl[49] w1_wl[50] w1_wl[51] w1_wl[52] w1_wl[53] w1_wl[54] w1_wl[55] w1_wl[56] w1_wl[57] w1_wl[58] w1_wl[59] w1_wl[60] w1_wl[61] w1_wl[62] w1_wl[63] w1_grp[0] w1_grp[1] w1_grp[2] w1_grp[3] w1_grp[4] w1_grp[5] w1_grp[6] w1_grp[7] r0_wl[0] r0_wl[1] r0_wl[2] r0_wl[3] r0_wl[4] r0_wl[5] r0_wl[6] r0_wl[7] r0_wl[8] r0_wl[9] r0_wl[10] r0_wl[11] r0_wl[12] r0_wl[13] r0_wl[14] r0_wl[15] r0_wl[16] r0_wl[17] r0_wl[18] r0_wl[19] r0_wl[20] r0_wl[21] r0_wl[22] r0_wl[23] r0_wl[24] r0_wl[25] r0_wl[26] r0_wl[27] r0_wl[28] r0_wl[29] r0_wl[30] r0_wl[31] r0_wl[32] r0_wl[33] r0_wl[34] r0_wl[35] r0_wl[36] r0_wl[37] r0_wl[38] r0_wl[39] r0_wl[40] r0_wl[41] r0_wl[42] r0_wl[43] r0_wl[44] r0_wl[45] r0_wl[46] r0_wl[47] r0_wl[48] r0_wl[49] r0_wl[50] r0_wl[51] r0_wl[52] r0_wl[53] r0_wl[54] r0_wl[55] r0_wl[56] r0_wl[57] r0_wl[58] r0_wl[59] r0_wl[60] r0_wl[61] r0_wl[62] r0_wl[63] r0_grp[0] r0_grp[1] r0_grp[2] r0_grp[3] r0_grp[4] r0_grp[5] r0_grp[6] r0_grp[7] r1_wl[0] r1_wl[1] r1_wl[2] r1_wl[3] r1_wl[4] r1_wl[5] r1_wl[6] r1_wl[7] r1_wl[8] r1_wl[9] r1_wl[10] r1_wl[11] r1_wl[12] r1_wl[13] r1_wl[14] r1_wl[15] r1_wl[16] r1_wl[17] r1_wl[18] r1_wl[19] r1_wl[20] r1_wl[21] r1_wl[22] r1_wl[23] r1_wl[24] r1_wl[25] r1_wl[26] r1_wl[27] r1_wl[28] r1_wl[29] r1_wl[30] r1_wl[31] r1_wl[32] r1_wl[33] r1_wl[34] r1_wl[35] r1_wl[36] r1_wl[37] r1_wl[38] r1_wl[39] r1_wl[40] r1_wl[41] r1_wl[42] r1_wl[43] r1_wl[44] r1_wl[45] r1_wl[46] r1_wl[47] r1_wl[48] r1_wl[49] r1_wl[50] r1_wl[51] r1_wl[52] r1_wl[53] r1_wl[54] r1_wl[55] r1_wl[56] r1_wl[57] r1_wl[58] r1_wl[59] r1_wl[60] r1_wl[61] r1_wl[62] r1_wl[63] r1_grp[0] r1_grp[1] r1_grp[2] r1_grp[3] r1_grp[4] r1_grp[5] r1_grp[6] r1_grp[7]
+Xw0_a0_inv VDD VDD VSS VSS w0_a0_n w0_addr[0] gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_a1_inv VDD VDD VSS VSS w0_a1_n w0_addr[1] gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_a2_inv VDD VDD VSS VSS w0_a2_n w0_addr[2] gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_a3_inv VDD VDD VSS VSS w0_a3_n w0_addr[3] gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_a4_inv VDD VDD VSS VSS w0_a4_n w0_addr[4] gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_a5_inv VDD VDD VSS VSS w0_a5_n w0_addr[5] gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_a6_inv VDD VDD VSS VSS w0_a6_n w0_addr[6] gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_a7_inv VDD VDD VSS VSS w0_a7_n w0_addr[7] gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_a8_inv VDD VDD VSS VSS w0_a8_n w0_addr[8] gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_grp0_nand3 VDD VDD VSS VSS w0_a0_n w0_a1_n w0_a2_n w0_grp0_n gf180mcu_as_sc_mcu7t3v3__nand3_2
+Xw0_grp0_inv VDD VDD VSS VSS w0_grp[0] w0_grp0_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_grp1_nand3 VDD VDD VSS VSS w0_addr[0] w0_a1_n w0_a2_n w0_grp1_n gf180mcu_as_sc_mcu7t3v3__nand3_2
+Xw0_grp1_inv VDD VDD VSS VSS w0_grp[1] w0_grp1_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_grp2_nand3 VDD VDD VSS VSS w0_a0_n w0_addr[1] w0_a2_n w0_grp2_n gf180mcu_as_sc_mcu7t3v3__nand3_2
+Xw0_grp2_inv VDD VDD VSS VSS w0_grp[2] w0_grp2_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_grp3_nand3 VDD VDD VSS VSS w0_addr[0] w0_addr[1] w0_a2_n w0_grp3_n gf180mcu_as_sc_mcu7t3v3__nand3_2
+Xw0_grp3_inv VDD VDD VSS VSS w0_grp[3] w0_grp3_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_grp4_nand3 VDD VDD VSS VSS w0_a0_n w0_a1_n w0_addr[2] w0_grp4_n gf180mcu_as_sc_mcu7t3v3__nand3_2
+Xw0_grp4_inv VDD VDD VSS VSS w0_grp[4] w0_grp4_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_grp5_nand3 VDD VDD VSS VSS w0_addr[0] w0_a1_n w0_addr[2] w0_grp5_n gf180mcu_as_sc_mcu7t3v3__nand3_2
+Xw0_grp5_inv VDD VDD VSS VSS w0_grp[5] w0_grp5_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_grp6_nand3 VDD VDD VSS VSS w0_a0_n w0_addr[1] w0_addr[2] w0_grp6_n gf180mcu_as_sc_mcu7t3v3__nand3_2
+Xw0_grp6_inv VDD VDD VSS VSS w0_grp[6] w0_grp6_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_grp7_nand3 VDD VDD VSS VSS w0_addr[0] w0_addr[1] w0_addr[2] w0_grp7_n gf180mcu_as_sc_mcu7t3v3__nand3_2
+Xw0_grp7_inv VDD VDD VSS VSS w0_grp[7] w0_grp7_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_pd0_0_nand2 VDD VDD VSS VSS w0_pd0_0_n w0_a4_n w0_a3_n gf180mcu_as_sc_mcu7t3v3__nand2_2
+Xw0_pd0_0_inv VDD VDD VSS VSS w0_pd0_0 w0_pd0_0_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_pd0_1_nand2 VDD VDD VSS VSS w0_pd0_1_n w0_a4_n w0_addr[3] gf180mcu_as_sc_mcu7t3v3__nand2_2
+Xw0_pd0_1_inv VDD VDD VSS VSS w0_pd0_1 w0_pd0_1_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_pd0_2_nand2 VDD VDD VSS VSS w0_pd0_2_n w0_addr[4] w0_a3_n gf180mcu_as_sc_mcu7t3v3__nand2_2
+Xw0_pd0_2_inv VDD VDD VSS VSS w0_pd0_2 w0_pd0_2_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_pd0_3_nand2 VDD VDD VSS VSS w0_pd0_3_n w0_addr[4] w0_addr[3] gf180mcu_as_sc_mcu7t3v3__nand2_2
+Xw0_pd0_3_inv VDD VDD VSS VSS w0_pd0_3 w0_pd0_3_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_pd1_0_nand2 VDD VDD VSS VSS w0_pd1_0_n w0_a6_n w0_a5_n gf180mcu_as_sc_mcu7t3v3__nand2_2
+Xw0_pd1_0_inv VDD VDD VSS VSS w0_pd1_0 w0_pd1_0_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_pd1_1_nand2 VDD VDD VSS VSS w0_pd1_1_n w0_a6_n w0_addr[5] gf180mcu_as_sc_mcu7t3v3__nand2_2
+Xw0_pd1_1_inv VDD VDD VSS VSS w0_pd1_1 w0_pd1_1_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_pd1_2_nand2 VDD VDD VSS VSS w0_pd1_2_n w0_addr[6] w0_a5_n gf180mcu_as_sc_mcu7t3v3__nand2_2
+Xw0_pd1_2_inv VDD VDD VSS VSS w0_pd1_2 w0_pd1_2_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_pd1_3_nand2 VDD VDD VSS VSS w0_pd1_3_n w0_addr[6] w0_addr[5] gf180mcu_as_sc_mcu7t3v3__nand2_2
+Xw0_pd1_3_inv VDD VDD VSS VSS w0_pd1_3 w0_pd1_3_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_pd2_0_nand2 VDD VDD VSS VSS w0_pd2_0_n w0_a8_n w0_a7_n gf180mcu_as_sc_mcu7t3v3__nand2_2
+Xw0_pd2_0_inv VDD VDD VSS VSS w0_pd2_0 w0_pd2_0_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_pd2_1_nand2 VDD VDD VSS VSS w0_pd2_1_n w0_a8_n w0_addr[7] gf180mcu_as_sc_mcu7t3v3__nand2_2
+Xw0_pd2_1_inv VDD VDD VSS VSS w0_pd2_1 w0_pd2_1_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_pd2_2_nand2 VDD VDD VSS VSS w0_pd2_2_n w0_addr[8] w0_a7_n gf180mcu_as_sc_mcu7t3v3__nand2_2
+Xw0_pd2_2_inv VDD VDD VSS VSS w0_pd2_2 w0_pd2_2_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_pd2_3_nand2 VDD VDD VSS VSS w0_pd2_3_n w0_addr[8] w0_addr[7] gf180mcu_as_sc_mcu7t3v3__nand2_2
+Xw0_pd2_3_inv VDD VDD VSS VSS w0_pd2_3 w0_pd2_3_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_row0000_sel_nand4 VDD VDD VSS VSS w0_pd0_0 w0_pd1_0 w0_pd2_0 w0_en w0_row0000_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xw0_row0000_sel_buf0 VDD VDD VSS VSS w0_row0000_sel_buf0 w0_row0000_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_row0000_sel_buf1 VDD VDD VSS VSS w0_row0000_sel_buf1 w0_row0000_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_row0000_sel_buf2 VDD VDD VSS VSS w0_wl[0] w0_row0000_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_row0001_sel_nand4 VDD VDD VSS VSS w0_pd0_1 w0_pd1_0 w0_pd2_0 w0_en w0_row0001_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xw0_row0001_sel_buf0 VDD VDD VSS VSS w0_row0001_sel_buf0 w0_row0001_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_row0001_sel_buf1 VDD VDD VSS VSS w0_row0001_sel_buf1 w0_row0001_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_row0001_sel_buf2 VDD VDD VSS VSS w0_wl[1] w0_row0001_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_row0002_sel_nand4 VDD VDD VSS VSS w0_pd0_2 w0_pd1_0 w0_pd2_0 w0_en w0_row0002_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xw0_row0002_sel_buf0 VDD VDD VSS VSS w0_row0002_sel_buf0 w0_row0002_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_row0002_sel_buf1 VDD VDD VSS VSS w0_row0002_sel_buf1 w0_row0002_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_row0002_sel_buf2 VDD VDD VSS VSS w0_wl[2] w0_row0002_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_row0003_sel_nand4 VDD VDD VSS VSS w0_pd0_3 w0_pd1_0 w0_pd2_0 w0_en w0_row0003_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xw0_row0003_sel_buf0 VDD VDD VSS VSS w0_row0003_sel_buf0 w0_row0003_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_row0003_sel_buf1 VDD VDD VSS VSS w0_row0003_sel_buf1 w0_row0003_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_row0003_sel_buf2 VDD VDD VSS VSS w0_wl[3] w0_row0003_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_row0004_sel_nand4 VDD VDD VSS VSS w0_pd0_0 w0_pd1_1 w0_pd2_0 w0_en w0_row0004_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xw0_row0004_sel_buf0 VDD VDD VSS VSS w0_row0004_sel_buf0 w0_row0004_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_row0004_sel_buf1 VDD VDD VSS VSS w0_row0004_sel_buf1 w0_row0004_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_row0004_sel_buf2 VDD VDD VSS VSS w0_wl[4] w0_row0004_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_row0005_sel_nand4 VDD VDD VSS VSS w0_pd0_1 w0_pd1_1 w0_pd2_0 w0_en w0_row0005_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xw0_row0005_sel_buf0 VDD VDD VSS VSS w0_row0005_sel_buf0 w0_row0005_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_row0005_sel_buf1 VDD VDD VSS VSS w0_row0005_sel_buf1 w0_row0005_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_row0005_sel_buf2 VDD VDD VSS VSS w0_wl[5] w0_row0005_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_row0006_sel_nand4 VDD VDD VSS VSS w0_pd0_2 w0_pd1_1 w0_pd2_0 w0_en w0_row0006_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xw0_row0006_sel_buf0 VDD VDD VSS VSS w0_row0006_sel_buf0 w0_row0006_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_row0006_sel_buf1 VDD VDD VSS VSS w0_row0006_sel_buf1 w0_row0006_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_row0006_sel_buf2 VDD VDD VSS VSS w0_wl[6] w0_row0006_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_row0007_sel_nand4 VDD VDD VSS VSS w0_pd0_3 w0_pd1_1 w0_pd2_0 w0_en w0_row0007_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xw0_row0007_sel_buf0 VDD VDD VSS VSS w0_row0007_sel_buf0 w0_row0007_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_row0007_sel_buf1 VDD VDD VSS VSS w0_row0007_sel_buf1 w0_row0007_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_row0007_sel_buf2 VDD VDD VSS VSS w0_wl[7] w0_row0007_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_row0008_sel_nand4 VDD VDD VSS VSS w0_pd0_0 w0_pd1_2 w0_pd2_0 w0_en w0_row0008_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xw0_row0008_sel_buf0 VDD VDD VSS VSS w0_row0008_sel_buf0 w0_row0008_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_row0008_sel_buf1 VDD VDD VSS VSS w0_row0008_sel_buf1 w0_row0008_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_row0008_sel_buf2 VDD VDD VSS VSS w0_wl[8] w0_row0008_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_row0009_sel_nand4 VDD VDD VSS VSS w0_pd0_1 w0_pd1_2 w0_pd2_0 w0_en w0_row0009_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xw0_row0009_sel_buf0 VDD VDD VSS VSS w0_row0009_sel_buf0 w0_row0009_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_row0009_sel_buf1 VDD VDD VSS VSS w0_row0009_sel_buf1 w0_row0009_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_row0009_sel_buf2 VDD VDD VSS VSS w0_wl[9] w0_row0009_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_row0010_sel_nand4 VDD VDD VSS VSS w0_pd0_2 w0_pd1_2 w0_pd2_0 w0_en w0_row0010_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xw0_row0010_sel_buf0 VDD VDD VSS VSS w0_row0010_sel_buf0 w0_row0010_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_row0010_sel_buf1 VDD VDD VSS VSS w0_row0010_sel_buf1 w0_row0010_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_row0010_sel_buf2 VDD VDD VSS VSS w0_wl[10] w0_row0010_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_row0011_sel_nand4 VDD VDD VSS VSS w0_pd0_3 w0_pd1_2 w0_pd2_0 w0_en w0_row0011_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xw0_row0011_sel_buf0 VDD VDD VSS VSS w0_row0011_sel_buf0 w0_row0011_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_row0011_sel_buf1 VDD VDD VSS VSS w0_row0011_sel_buf1 w0_row0011_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_row0011_sel_buf2 VDD VDD VSS VSS w0_wl[11] w0_row0011_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_row0012_sel_nand4 VDD VDD VSS VSS w0_pd0_0 w0_pd1_3 w0_pd2_0 w0_en w0_row0012_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xw0_row0012_sel_buf0 VDD VDD VSS VSS w0_row0012_sel_buf0 w0_row0012_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_row0012_sel_buf1 VDD VDD VSS VSS w0_row0012_sel_buf1 w0_row0012_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_row0012_sel_buf2 VDD VDD VSS VSS w0_wl[12] w0_row0012_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_row0013_sel_nand4 VDD VDD VSS VSS w0_pd0_1 w0_pd1_3 w0_pd2_0 w0_en w0_row0013_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xw0_row0013_sel_buf0 VDD VDD VSS VSS w0_row0013_sel_buf0 w0_row0013_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_row0013_sel_buf1 VDD VDD VSS VSS w0_row0013_sel_buf1 w0_row0013_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_row0013_sel_buf2 VDD VDD VSS VSS w0_wl[13] w0_row0013_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_row0014_sel_nand4 VDD VDD VSS VSS w0_pd0_2 w0_pd1_3 w0_pd2_0 w0_en w0_row0014_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xw0_row0014_sel_buf0 VDD VDD VSS VSS w0_row0014_sel_buf0 w0_row0014_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_row0014_sel_buf1 VDD VDD VSS VSS w0_row0014_sel_buf1 w0_row0014_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_row0014_sel_buf2 VDD VDD VSS VSS w0_wl[14] w0_row0014_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_row0015_sel_nand4 VDD VDD VSS VSS w0_pd0_3 w0_pd1_3 w0_pd2_0 w0_en w0_row0015_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xw0_row0015_sel_buf0 VDD VDD VSS VSS w0_row0015_sel_buf0 w0_row0015_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_row0015_sel_buf1 VDD VDD VSS VSS w0_row0015_sel_buf1 w0_row0015_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_row0015_sel_buf2 VDD VDD VSS VSS w0_wl[15] w0_row0015_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_row0016_sel_nand4 VDD VDD VSS VSS w0_pd0_0 w0_pd1_0 w0_pd2_1 w0_en w0_row0016_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xw0_row0016_sel_buf0 VDD VDD VSS VSS w0_row0016_sel_buf0 w0_row0016_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_row0016_sel_buf1 VDD VDD VSS VSS w0_row0016_sel_buf1 w0_row0016_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_row0016_sel_buf2 VDD VDD VSS VSS w0_wl[16] w0_row0016_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_row0017_sel_nand4 VDD VDD VSS VSS w0_pd0_1 w0_pd1_0 w0_pd2_1 w0_en w0_row0017_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xw0_row0017_sel_buf0 VDD VDD VSS VSS w0_row0017_sel_buf0 w0_row0017_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_row0017_sel_buf1 VDD VDD VSS VSS w0_row0017_sel_buf1 w0_row0017_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_row0017_sel_buf2 VDD VDD VSS VSS w0_wl[17] w0_row0017_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_row0018_sel_nand4 VDD VDD VSS VSS w0_pd0_2 w0_pd1_0 w0_pd2_1 w0_en w0_row0018_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xw0_row0018_sel_buf0 VDD VDD VSS VSS w0_row0018_sel_buf0 w0_row0018_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_row0018_sel_buf1 VDD VDD VSS VSS w0_row0018_sel_buf1 w0_row0018_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_row0018_sel_buf2 VDD VDD VSS VSS w0_wl[18] w0_row0018_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_row0019_sel_nand4 VDD VDD VSS VSS w0_pd0_3 w0_pd1_0 w0_pd2_1 w0_en w0_row0019_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xw0_row0019_sel_buf0 VDD VDD VSS VSS w0_row0019_sel_buf0 w0_row0019_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_row0019_sel_buf1 VDD VDD VSS VSS w0_row0019_sel_buf1 w0_row0019_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_row0019_sel_buf2 VDD VDD VSS VSS w0_wl[19] w0_row0019_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_row0020_sel_nand4 VDD VDD VSS VSS w0_pd0_0 w0_pd1_1 w0_pd2_1 w0_en w0_row0020_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xw0_row0020_sel_buf0 VDD VDD VSS VSS w0_row0020_sel_buf0 w0_row0020_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_row0020_sel_buf1 VDD VDD VSS VSS w0_row0020_sel_buf1 w0_row0020_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_row0020_sel_buf2 VDD VDD VSS VSS w0_wl[20] w0_row0020_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_row0021_sel_nand4 VDD VDD VSS VSS w0_pd0_1 w0_pd1_1 w0_pd2_1 w0_en w0_row0021_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xw0_row0021_sel_buf0 VDD VDD VSS VSS w0_row0021_sel_buf0 w0_row0021_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_row0021_sel_buf1 VDD VDD VSS VSS w0_row0021_sel_buf1 w0_row0021_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_row0021_sel_buf2 VDD VDD VSS VSS w0_wl[21] w0_row0021_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_row0022_sel_nand4 VDD VDD VSS VSS w0_pd0_2 w0_pd1_1 w0_pd2_1 w0_en w0_row0022_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xw0_row0022_sel_buf0 VDD VDD VSS VSS w0_row0022_sel_buf0 w0_row0022_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_row0022_sel_buf1 VDD VDD VSS VSS w0_row0022_sel_buf1 w0_row0022_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_row0022_sel_buf2 VDD VDD VSS VSS w0_wl[22] w0_row0022_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_row0023_sel_nand4 VDD VDD VSS VSS w0_pd0_3 w0_pd1_1 w0_pd2_1 w0_en w0_row0023_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xw0_row0023_sel_buf0 VDD VDD VSS VSS w0_row0023_sel_buf0 w0_row0023_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_row0023_sel_buf1 VDD VDD VSS VSS w0_row0023_sel_buf1 w0_row0023_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_row0023_sel_buf2 VDD VDD VSS VSS w0_wl[23] w0_row0023_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_row0024_sel_nand4 VDD VDD VSS VSS w0_pd0_0 w0_pd1_2 w0_pd2_1 w0_en w0_row0024_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xw0_row0024_sel_buf0 VDD VDD VSS VSS w0_row0024_sel_buf0 w0_row0024_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_row0024_sel_buf1 VDD VDD VSS VSS w0_row0024_sel_buf1 w0_row0024_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_row0024_sel_buf2 VDD VDD VSS VSS w0_wl[24] w0_row0024_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_row0025_sel_nand4 VDD VDD VSS VSS w0_pd0_1 w0_pd1_2 w0_pd2_1 w0_en w0_row0025_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xw0_row0025_sel_buf0 VDD VDD VSS VSS w0_row0025_sel_buf0 w0_row0025_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_row0025_sel_buf1 VDD VDD VSS VSS w0_row0025_sel_buf1 w0_row0025_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_row0025_sel_buf2 VDD VDD VSS VSS w0_wl[25] w0_row0025_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_row0026_sel_nand4 VDD VDD VSS VSS w0_pd0_2 w0_pd1_2 w0_pd2_1 w0_en w0_row0026_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xw0_row0026_sel_buf0 VDD VDD VSS VSS w0_row0026_sel_buf0 w0_row0026_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_row0026_sel_buf1 VDD VDD VSS VSS w0_row0026_sel_buf1 w0_row0026_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_row0026_sel_buf2 VDD VDD VSS VSS w0_wl[26] w0_row0026_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_row0027_sel_nand4 VDD VDD VSS VSS w0_pd0_3 w0_pd1_2 w0_pd2_1 w0_en w0_row0027_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xw0_row0027_sel_buf0 VDD VDD VSS VSS w0_row0027_sel_buf0 w0_row0027_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_row0027_sel_buf1 VDD VDD VSS VSS w0_row0027_sel_buf1 w0_row0027_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_row0027_sel_buf2 VDD VDD VSS VSS w0_wl[27] w0_row0027_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_row0028_sel_nand4 VDD VDD VSS VSS w0_pd0_0 w0_pd1_3 w0_pd2_1 w0_en w0_row0028_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xw0_row0028_sel_buf0 VDD VDD VSS VSS w0_row0028_sel_buf0 w0_row0028_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_row0028_sel_buf1 VDD VDD VSS VSS w0_row0028_sel_buf1 w0_row0028_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_row0028_sel_buf2 VDD VDD VSS VSS w0_wl[28] w0_row0028_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_row0029_sel_nand4 VDD VDD VSS VSS w0_pd0_1 w0_pd1_3 w0_pd2_1 w0_en w0_row0029_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xw0_row0029_sel_buf0 VDD VDD VSS VSS w0_row0029_sel_buf0 w0_row0029_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_row0029_sel_buf1 VDD VDD VSS VSS w0_row0029_sel_buf1 w0_row0029_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_row0029_sel_buf2 VDD VDD VSS VSS w0_wl[29] w0_row0029_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_row0030_sel_nand4 VDD VDD VSS VSS w0_pd0_2 w0_pd1_3 w0_pd2_1 w0_en w0_row0030_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xw0_row0030_sel_buf0 VDD VDD VSS VSS w0_row0030_sel_buf0 w0_row0030_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_row0030_sel_buf1 VDD VDD VSS VSS w0_row0030_sel_buf1 w0_row0030_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_row0030_sel_buf2 VDD VDD VSS VSS w0_wl[30] w0_row0030_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_row0031_sel_nand4 VDD VDD VSS VSS w0_pd0_3 w0_pd1_3 w0_pd2_1 w0_en w0_row0031_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xw0_row0031_sel_buf0 VDD VDD VSS VSS w0_row0031_sel_buf0 w0_row0031_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_row0031_sel_buf1 VDD VDD VSS VSS w0_row0031_sel_buf1 w0_row0031_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_row0031_sel_buf2 VDD VDD VSS VSS w0_wl[31] w0_row0031_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_row0032_sel_nand4 VDD VDD VSS VSS w0_pd0_0 w0_pd1_0 w0_pd2_2 w0_en w0_row0032_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xw0_row0032_sel_buf0 VDD VDD VSS VSS w0_row0032_sel_buf0 w0_row0032_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_row0032_sel_buf1 VDD VDD VSS VSS w0_row0032_sel_buf1 w0_row0032_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_row0032_sel_buf2 VDD VDD VSS VSS w0_wl[32] w0_row0032_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_row0033_sel_nand4 VDD VDD VSS VSS w0_pd0_1 w0_pd1_0 w0_pd2_2 w0_en w0_row0033_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xw0_row0033_sel_buf0 VDD VDD VSS VSS w0_row0033_sel_buf0 w0_row0033_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_row0033_sel_buf1 VDD VDD VSS VSS w0_row0033_sel_buf1 w0_row0033_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_row0033_sel_buf2 VDD VDD VSS VSS w0_wl[33] w0_row0033_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_row0034_sel_nand4 VDD VDD VSS VSS w0_pd0_2 w0_pd1_0 w0_pd2_2 w0_en w0_row0034_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xw0_row0034_sel_buf0 VDD VDD VSS VSS w0_row0034_sel_buf0 w0_row0034_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_row0034_sel_buf1 VDD VDD VSS VSS w0_row0034_sel_buf1 w0_row0034_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_row0034_sel_buf2 VDD VDD VSS VSS w0_wl[34] w0_row0034_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_row0035_sel_nand4 VDD VDD VSS VSS w0_pd0_3 w0_pd1_0 w0_pd2_2 w0_en w0_row0035_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xw0_row0035_sel_buf0 VDD VDD VSS VSS w0_row0035_sel_buf0 w0_row0035_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_row0035_sel_buf1 VDD VDD VSS VSS w0_row0035_sel_buf1 w0_row0035_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_row0035_sel_buf2 VDD VDD VSS VSS w0_wl[35] w0_row0035_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_row0036_sel_nand4 VDD VDD VSS VSS w0_pd0_0 w0_pd1_1 w0_pd2_2 w0_en w0_row0036_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xw0_row0036_sel_buf0 VDD VDD VSS VSS w0_row0036_sel_buf0 w0_row0036_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_row0036_sel_buf1 VDD VDD VSS VSS w0_row0036_sel_buf1 w0_row0036_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_row0036_sel_buf2 VDD VDD VSS VSS w0_wl[36] w0_row0036_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_row0037_sel_nand4 VDD VDD VSS VSS w0_pd0_1 w0_pd1_1 w0_pd2_2 w0_en w0_row0037_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xw0_row0037_sel_buf0 VDD VDD VSS VSS w0_row0037_sel_buf0 w0_row0037_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_row0037_sel_buf1 VDD VDD VSS VSS w0_row0037_sel_buf1 w0_row0037_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_row0037_sel_buf2 VDD VDD VSS VSS w0_wl[37] w0_row0037_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_row0038_sel_nand4 VDD VDD VSS VSS w0_pd0_2 w0_pd1_1 w0_pd2_2 w0_en w0_row0038_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xw0_row0038_sel_buf0 VDD VDD VSS VSS w0_row0038_sel_buf0 w0_row0038_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_row0038_sel_buf1 VDD VDD VSS VSS w0_row0038_sel_buf1 w0_row0038_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_row0038_sel_buf2 VDD VDD VSS VSS w0_wl[38] w0_row0038_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_row0039_sel_nand4 VDD VDD VSS VSS w0_pd0_3 w0_pd1_1 w0_pd2_2 w0_en w0_row0039_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xw0_row0039_sel_buf0 VDD VDD VSS VSS w0_row0039_sel_buf0 w0_row0039_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_row0039_sel_buf1 VDD VDD VSS VSS w0_row0039_sel_buf1 w0_row0039_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_row0039_sel_buf2 VDD VDD VSS VSS w0_wl[39] w0_row0039_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_row0040_sel_nand4 VDD VDD VSS VSS w0_pd0_0 w0_pd1_2 w0_pd2_2 w0_en w0_row0040_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xw0_row0040_sel_buf0 VDD VDD VSS VSS w0_row0040_sel_buf0 w0_row0040_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_row0040_sel_buf1 VDD VDD VSS VSS w0_row0040_sel_buf1 w0_row0040_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_row0040_sel_buf2 VDD VDD VSS VSS w0_wl[40] w0_row0040_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_row0041_sel_nand4 VDD VDD VSS VSS w0_pd0_1 w0_pd1_2 w0_pd2_2 w0_en w0_row0041_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xw0_row0041_sel_buf0 VDD VDD VSS VSS w0_row0041_sel_buf0 w0_row0041_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_row0041_sel_buf1 VDD VDD VSS VSS w0_row0041_sel_buf1 w0_row0041_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_row0041_sel_buf2 VDD VDD VSS VSS w0_wl[41] w0_row0041_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_row0042_sel_nand4 VDD VDD VSS VSS w0_pd0_2 w0_pd1_2 w0_pd2_2 w0_en w0_row0042_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xw0_row0042_sel_buf0 VDD VDD VSS VSS w0_row0042_sel_buf0 w0_row0042_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_row0042_sel_buf1 VDD VDD VSS VSS w0_row0042_sel_buf1 w0_row0042_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_row0042_sel_buf2 VDD VDD VSS VSS w0_wl[42] w0_row0042_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_row0043_sel_nand4 VDD VDD VSS VSS w0_pd0_3 w0_pd1_2 w0_pd2_2 w0_en w0_row0043_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xw0_row0043_sel_buf0 VDD VDD VSS VSS w0_row0043_sel_buf0 w0_row0043_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_row0043_sel_buf1 VDD VDD VSS VSS w0_row0043_sel_buf1 w0_row0043_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_row0043_sel_buf2 VDD VDD VSS VSS w0_wl[43] w0_row0043_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_row0044_sel_nand4 VDD VDD VSS VSS w0_pd0_0 w0_pd1_3 w0_pd2_2 w0_en w0_row0044_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xw0_row0044_sel_buf0 VDD VDD VSS VSS w0_row0044_sel_buf0 w0_row0044_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_row0044_sel_buf1 VDD VDD VSS VSS w0_row0044_sel_buf1 w0_row0044_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_row0044_sel_buf2 VDD VDD VSS VSS w0_wl[44] w0_row0044_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_row0045_sel_nand4 VDD VDD VSS VSS w0_pd0_1 w0_pd1_3 w0_pd2_2 w0_en w0_row0045_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xw0_row0045_sel_buf0 VDD VDD VSS VSS w0_row0045_sel_buf0 w0_row0045_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_row0045_sel_buf1 VDD VDD VSS VSS w0_row0045_sel_buf1 w0_row0045_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_row0045_sel_buf2 VDD VDD VSS VSS w0_wl[45] w0_row0045_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_row0046_sel_nand4 VDD VDD VSS VSS w0_pd0_2 w0_pd1_3 w0_pd2_2 w0_en w0_row0046_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xw0_row0046_sel_buf0 VDD VDD VSS VSS w0_row0046_sel_buf0 w0_row0046_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_row0046_sel_buf1 VDD VDD VSS VSS w0_row0046_sel_buf1 w0_row0046_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_row0046_sel_buf2 VDD VDD VSS VSS w0_wl[46] w0_row0046_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_row0047_sel_nand4 VDD VDD VSS VSS w0_pd0_3 w0_pd1_3 w0_pd2_2 w0_en w0_row0047_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xw0_row0047_sel_buf0 VDD VDD VSS VSS w0_row0047_sel_buf0 w0_row0047_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_row0047_sel_buf1 VDD VDD VSS VSS w0_row0047_sel_buf1 w0_row0047_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_row0047_sel_buf2 VDD VDD VSS VSS w0_wl[47] w0_row0047_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_row0048_sel_nand4 VDD VDD VSS VSS w0_pd0_0 w0_pd1_0 w0_pd2_3 w0_en w0_row0048_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xw0_row0048_sel_buf0 VDD VDD VSS VSS w0_row0048_sel_buf0 w0_row0048_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_row0048_sel_buf1 VDD VDD VSS VSS w0_row0048_sel_buf1 w0_row0048_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_row0048_sel_buf2 VDD VDD VSS VSS w0_wl[48] w0_row0048_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_row0049_sel_nand4 VDD VDD VSS VSS w0_pd0_1 w0_pd1_0 w0_pd2_3 w0_en w0_row0049_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xw0_row0049_sel_buf0 VDD VDD VSS VSS w0_row0049_sel_buf0 w0_row0049_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_row0049_sel_buf1 VDD VDD VSS VSS w0_row0049_sel_buf1 w0_row0049_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_row0049_sel_buf2 VDD VDD VSS VSS w0_wl[49] w0_row0049_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_row0050_sel_nand4 VDD VDD VSS VSS w0_pd0_2 w0_pd1_0 w0_pd2_3 w0_en w0_row0050_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xw0_row0050_sel_buf0 VDD VDD VSS VSS w0_row0050_sel_buf0 w0_row0050_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_row0050_sel_buf1 VDD VDD VSS VSS w0_row0050_sel_buf1 w0_row0050_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_row0050_sel_buf2 VDD VDD VSS VSS w0_wl[50] w0_row0050_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_row0051_sel_nand4 VDD VDD VSS VSS w0_pd0_3 w0_pd1_0 w0_pd2_3 w0_en w0_row0051_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xw0_row0051_sel_buf0 VDD VDD VSS VSS w0_row0051_sel_buf0 w0_row0051_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_row0051_sel_buf1 VDD VDD VSS VSS w0_row0051_sel_buf1 w0_row0051_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_row0051_sel_buf2 VDD VDD VSS VSS w0_wl[51] w0_row0051_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_row0052_sel_nand4 VDD VDD VSS VSS w0_pd0_0 w0_pd1_1 w0_pd2_3 w0_en w0_row0052_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xw0_row0052_sel_buf0 VDD VDD VSS VSS w0_row0052_sel_buf0 w0_row0052_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_row0052_sel_buf1 VDD VDD VSS VSS w0_row0052_sel_buf1 w0_row0052_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_row0052_sel_buf2 VDD VDD VSS VSS w0_wl[52] w0_row0052_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_row0053_sel_nand4 VDD VDD VSS VSS w0_pd0_1 w0_pd1_1 w0_pd2_3 w0_en w0_row0053_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xw0_row0053_sel_buf0 VDD VDD VSS VSS w0_row0053_sel_buf0 w0_row0053_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_row0053_sel_buf1 VDD VDD VSS VSS w0_row0053_sel_buf1 w0_row0053_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_row0053_sel_buf2 VDD VDD VSS VSS w0_wl[53] w0_row0053_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_row0054_sel_nand4 VDD VDD VSS VSS w0_pd0_2 w0_pd1_1 w0_pd2_3 w0_en w0_row0054_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xw0_row0054_sel_buf0 VDD VDD VSS VSS w0_row0054_sel_buf0 w0_row0054_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_row0054_sel_buf1 VDD VDD VSS VSS w0_row0054_sel_buf1 w0_row0054_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_row0054_sel_buf2 VDD VDD VSS VSS w0_wl[54] w0_row0054_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_row0055_sel_nand4 VDD VDD VSS VSS w0_pd0_3 w0_pd1_1 w0_pd2_3 w0_en w0_row0055_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xw0_row0055_sel_buf0 VDD VDD VSS VSS w0_row0055_sel_buf0 w0_row0055_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_row0055_sel_buf1 VDD VDD VSS VSS w0_row0055_sel_buf1 w0_row0055_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_row0055_sel_buf2 VDD VDD VSS VSS w0_wl[55] w0_row0055_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_row0056_sel_nand4 VDD VDD VSS VSS w0_pd0_0 w0_pd1_2 w0_pd2_3 w0_en w0_row0056_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xw0_row0056_sel_buf0 VDD VDD VSS VSS w0_row0056_sel_buf0 w0_row0056_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_row0056_sel_buf1 VDD VDD VSS VSS w0_row0056_sel_buf1 w0_row0056_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_row0056_sel_buf2 VDD VDD VSS VSS w0_wl[56] w0_row0056_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_row0057_sel_nand4 VDD VDD VSS VSS w0_pd0_1 w0_pd1_2 w0_pd2_3 w0_en w0_row0057_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xw0_row0057_sel_buf0 VDD VDD VSS VSS w0_row0057_sel_buf0 w0_row0057_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_row0057_sel_buf1 VDD VDD VSS VSS w0_row0057_sel_buf1 w0_row0057_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_row0057_sel_buf2 VDD VDD VSS VSS w0_wl[57] w0_row0057_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_row0058_sel_nand4 VDD VDD VSS VSS w0_pd0_2 w0_pd1_2 w0_pd2_3 w0_en w0_row0058_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xw0_row0058_sel_buf0 VDD VDD VSS VSS w0_row0058_sel_buf0 w0_row0058_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_row0058_sel_buf1 VDD VDD VSS VSS w0_row0058_sel_buf1 w0_row0058_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_row0058_sel_buf2 VDD VDD VSS VSS w0_wl[58] w0_row0058_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_row0059_sel_nand4 VDD VDD VSS VSS w0_pd0_3 w0_pd1_2 w0_pd2_3 w0_en w0_row0059_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xw0_row0059_sel_buf0 VDD VDD VSS VSS w0_row0059_sel_buf0 w0_row0059_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_row0059_sel_buf1 VDD VDD VSS VSS w0_row0059_sel_buf1 w0_row0059_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_row0059_sel_buf2 VDD VDD VSS VSS w0_wl[59] w0_row0059_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_row0060_sel_nand4 VDD VDD VSS VSS w0_pd0_0 w0_pd1_3 w0_pd2_3 w0_en w0_row0060_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xw0_row0060_sel_buf0 VDD VDD VSS VSS w0_row0060_sel_buf0 w0_row0060_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_row0060_sel_buf1 VDD VDD VSS VSS w0_row0060_sel_buf1 w0_row0060_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_row0060_sel_buf2 VDD VDD VSS VSS w0_wl[60] w0_row0060_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_row0061_sel_nand4 VDD VDD VSS VSS w0_pd0_1 w0_pd1_3 w0_pd2_3 w0_en w0_row0061_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xw0_row0061_sel_buf0 VDD VDD VSS VSS w0_row0061_sel_buf0 w0_row0061_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_row0061_sel_buf1 VDD VDD VSS VSS w0_row0061_sel_buf1 w0_row0061_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_row0061_sel_buf2 VDD VDD VSS VSS w0_wl[61] w0_row0061_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_row0062_sel_nand4 VDD VDD VSS VSS w0_pd0_2 w0_pd1_3 w0_pd2_3 w0_en w0_row0062_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xw0_row0062_sel_buf0 VDD VDD VSS VSS w0_row0062_sel_buf0 w0_row0062_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_row0062_sel_buf1 VDD VDD VSS VSS w0_row0062_sel_buf1 w0_row0062_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_row0062_sel_buf2 VDD VDD VSS VSS w0_wl[62] w0_row0062_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_row0063_sel_nand4 VDD VDD VSS VSS w0_pd0_3 w0_pd1_3 w0_pd2_3 w0_en w0_row0063_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xw0_row0063_sel_buf0 VDD VDD VSS VSS w0_row0063_sel_buf0 w0_row0063_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_row0063_sel_buf1 VDD VDD VSS VSS w0_row0063_sel_buf1 w0_row0063_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw0_row0063_sel_buf2 VDD VDD VSS VSS w0_wl[63] w0_row0063_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_a0_inv VDD VDD VSS VSS w1_a0_n w1_addr[0] gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_a1_inv VDD VDD VSS VSS w1_a1_n w1_addr[1] gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_a2_inv VDD VDD VSS VSS w1_a2_n w1_addr[2] gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_a3_inv VDD VDD VSS VSS w1_a3_n w1_addr[3] gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_a4_inv VDD VDD VSS VSS w1_a4_n w1_addr[4] gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_a5_inv VDD VDD VSS VSS w1_a5_n w1_addr[5] gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_a6_inv VDD VDD VSS VSS w1_a6_n w1_addr[6] gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_a7_inv VDD VDD VSS VSS w1_a7_n w1_addr[7] gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_a8_inv VDD VDD VSS VSS w1_a8_n w1_addr[8] gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_grp0_nand3 VDD VDD VSS VSS w1_a0_n w1_a1_n w1_a2_n w1_grp0_n gf180mcu_as_sc_mcu7t3v3__nand3_2
+Xw1_grp0_inv VDD VDD VSS VSS w1_grp[0] w1_grp0_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_grp1_nand3 VDD VDD VSS VSS w1_addr[0] w1_a1_n w1_a2_n w1_grp1_n gf180mcu_as_sc_mcu7t3v3__nand3_2
+Xw1_grp1_inv VDD VDD VSS VSS w1_grp[1] w1_grp1_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_grp2_nand3 VDD VDD VSS VSS w1_a0_n w1_addr[1] w1_a2_n w1_grp2_n gf180mcu_as_sc_mcu7t3v3__nand3_2
+Xw1_grp2_inv VDD VDD VSS VSS w1_grp[2] w1_grp2_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_grp3_nand3 VDD VDD VSS VSS w1_addr[0] w1_addr[1] w1_a2_n w1_grp3_n gf180mcu_as_sc_mcu7t3v3__nand3_2
+Xw1_grp3_inv VDD VDD VSS VSS w1_grp[3] w1_grp3_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_grp4_nand3 VDD VDD VSS VSS w1_a0_n w1_a1_n w1_addr[2] w1_grp4_n gf180mcu_as_sc_mcu7t3v3__nand3_2
+Xw1_grp4_inv VDD VDD VSS VSS w1_grp[4] w1_grp4_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_grp5_nand3 VDD VDD VSS VSS w1_addr[0] w1_a1_n w1_addr[2] w1_grp5_n gf180mcu_as_sc_mcu7t3v3__nand3_2
+Xw1_grp5_inv VDD VDD VSS VSS w1_grp[5] w1_grp5_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_grp6_nand3 VDD VDD VSS VSS w1_a0_n w1_addr[1] w1_addr[2] w1_grp6_n gf180mcu_as_sc_mcu7t3v3__nand3_2
+Xw1_grp6_inv VDD VDD VSS VSS w1_grp[6] w1_grp6_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_grp7_nand3 VDD VDD VSS VSS w1_addr[0] w1_addr[1] w1_addr[2] w1_grp7_n gf180mcu_as_sc_mcu7t3v3__nand3_2
+Xw1_grp7_inv VDD VDD VSS VSS w1_grp[7] w1_grp7_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_pd0_0_nand2 VDD VDD VSS VSS w1_pd0_0_n w1_a4_n w1_a3_n gf180mcu_as_sc_mcu7t3v3__nand2_2
+Xw1_pd0_0_inv VDD VDD VSS VSS w1_pd0_0 w1_pd0_0_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_pd0_1_nand2 VDD VDD VSS VSS w1_pd0_1_n w1_a4_n w1_addr[3] gf180mcu_as_sc_mcu7t3v3__nand2_2
+Xw1_pd0_1_inv VDD VDD VSS VSS w1_pd0_1 w1_pd0_1_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_pd0_2_nand2 VDD VDD VSS VSS w1_pd0_2_n w1_addr[4] w1_a3_n gf180mcu_as_sc_mcu7t3v3__nand2_2
+Xw1_pd0_2_inv VDD VDD VSS VSS w1_pd0_2 w1_pd0_2_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_pd0_3_nand2 VDD VDD VSS VSS w1_pd0_3_n w1_addr[4] w1_addr[3] gf180mcu_as_sc_mcu7t3v3__nand2_2
+Xw1_pd0_3_inv VDD VDD VSS VSS w1_pd0_3 w1_pd0_3_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_pd1_0_nand2 VDD VDD VSS VSS w1_pd1_0_n w1_a6_n w1_a5_n gf180mcu_as_sc_mcu7t3v3__nand2_2
+Xw1_pd1_0_inv VDD VDD VSS VSS w1_pd1_0 w1_pd1_0_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_pd1_1_nand2 VDD VDD VSS VSS w1_pd1_1_n w1_a6_n w1_addr[5] gf180mcu_as_sc_mcu7t3v3__nand2_2
+Xw1_pd1_1_inv VDD VDD VSS VSS w1_pd1_1 w1_pd1_1_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_pd1_2_nand2 VDD VDD VSS VSS w1_pd1_2_n w1_addr[6] w1_a5_n gf180mcu_as_sc_mcu7t3v3__nand2_2
+Xw1_pd1_2_inv VDD VDD VSS VSS w1_pd1_2 w1_pd1_2_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_pd1_3_nand2 VDD VDD VSS VSS w1_pd1_3_n w1_addr[6] w1_addr[5] gf180mcu_as_sc_mcu7t3v3__nand2_2
+Xw1_pd1_3_inv VDD VDD VSS VSS w1_pd1_3 w1_pd1_3_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_pd2_0_nand2 VDD VDD VSS VSS w1_pd2_0_n w1_a8_n w1_a7_n gf180mcu_as_sc_mcu7t3v3__nand2_2
+Xw1_pd2_0_inv VDD VDD VSS VSS w1_pd2_0 w1_pd2_0_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_pd2_1_nand2 VDD VDD VSS VSS w1_pd2_1_n w1_a8_n w1_addr[7] gf180mcu_as_sc_mcu7t3v3__nand2_2
+Xw1_pd2_1_inv VDD VDD VSS VSS w1_pd2_1 w1_pd2_1_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_pd2_2_nand2 VDD VDD VSS VSS w1_pd2_2_n w1_addr[8] w1_a7_n gf180mcu_as_sc_mcu7t3v3__nand2_2
+Xw1_pd2_2_inv VDD VDD VSS VSS w1_pd2_2 w1_pd2_2_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_pd2_3_nand2 VDD VDD VSS VSS w1_pd2_3_n w1_addr[8] w1_addr[7] gf180mcu_as_sc_mcu7t3v3__nand2_2
+Xw1_pd2_3_inv VDD VDD VSS VSS w1_pd2_3 w1_pd2_3_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_row0000_sel_nand4 VDD VDD VSS VSS w1_pd0_0 w1_pd1_0 w1_pd2_0 w1_en w1_row0000_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xw1_row0000_sel_buf0 VDD VDD VSS VSS w1_row0000_sel_buf0 w1_row0000_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_row0000_sel_buf1 VDD VDD VSS VSS w1_row0000_sel_buf1 w1_row0000_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_row0000_sel_buf2 VDD VDD VSS VSS w1_wl[0] w1_row0000_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_row0001_sel_nand4 VDD VDD VSS VSS w1_pd0_1 w1_pd1_0 w1_pd2_0 w1_en w1_row0001_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xw1_row0001_sel_buf0 VDD VDD VSS VSS w1_row0001_sel_buf0 w1_row0001_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_row0001_sel_buf1 VDD VDD VSS VSS w1_row0001_sel_buf1 w1_row0001_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_row0001_sel_buf2 VDD VDD VSS VSS w1_wl[1] w1_row0001_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_row0002_sel_nand4 VDD VDD VSS VSS w1_pd0_2 w1_pd1_0 w1_pd2_0 w1_en w1_row0002_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xw1_row0002_sel_buf0 VDD VDD VSS VSS w1_row0002_sel_buf0 w1_row0002_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_row0002_sel_buf1 VDD VDD VSS VSS w1_row0002_sel_buf1 w1_row0002_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_row0002_sel_buf2 VDD VDD VSS VSS w1_wl[2] w1_row0002_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_row0003_sel_nand4 VDD VDD VSS VSS w1_pd0_3 w1_pd1_0 w1_pd2_0 w1_en w1_row0003_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xw1_row0003_sel_buf0 VDD VDD VSS VSS w1_row0003_sel_buf0 w1_row0003_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_row0003_sel_buf1 VDD VDD VSS VSS w1_row0003_sel_buf1 w1_row0003_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_row0003_sel_buf2 VDD VDD VSS VSS w1_wl[3] w1_row0003_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_row0004_sel_nand4 VDD VDD VSS VSS w1_pd0_0 w1_pd1_1 w1_pd2_0 w1_en w1_row0004_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xw1_row0004_sel_buf0 VDD VDD VSS VSS w1_row0004_sel_buf0 w1_row0004_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_row0004_sel_buf1 VDD VDD VSS VSS w1_row0004_sel_buf1 w1_row0004_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_row0004_sel_buf2 VDD VDD VSS VSS w1_wl[4] w1_row0004_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_row0005_sel_nand4 VDD VDD VSS VSS w1_pd0_1 w1_pd1_1 w1_pd2_0 w1_en w1_row0005_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xw1_row0005_sel_buf0 VDD VDD VSS VSS w1_row0005_sel_buf0 w1_row0005_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_row0005_sel_buf1 VDD VDD VSS VSS w1_row0005_sel_buf1 w1_row0005_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_row0005_sel_buf2 VDD VDD VSS VSS w1_wl[5] w1_row0005_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_row0006_sel_nand4 VDD VDD VSS VSS w1_pd0_2 w1_pd1_1 w1_pd2_0 w1_en w1_row0006_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xw1_row0006_sel_buf0 VDD VDD VSS VSS w1_row0006_sel_buf0 w1_row0006_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_row0006_sel_buf1 VDD VDD VSS VSS w1_row0006_sel_buf1 w1_row0006_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_row0006_sel_buf2 VDD VDD VSS VSS w1_wl[6] w1_row0006_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_row0007_sel_nand4 VDD VDD VSS VSS w1_pd0_3 w1_pd1_1 w1_pd2_0 w1_en w1_row0007_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xw1_row0007_sel_buf0 VDD VDD VSS VSS w1_row0007_sel_buf0 w1_row0007_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_row0007_sel_buf1 VDD VDD VSS VSS w1_row0007_sel_buf1 w1_row0007_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_row0007_sel_buf2 VDD VDD VSS VSS w1_wl[7] w1_row0007_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_row0008_sel_nand4 VDD VDD VSS VSS w1_pd0_0 w1_pd1_2 w1_pd2_0 w1_en w1_row0008_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xw1_row0008_sel_buf0 VDD VDD VSS VSS w1_row0008_sel_buf0 w1_row0008_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_row0008_sel_buf1 VDD VDD VSS VSS w1_row0008_sel_buf1 w1_row0008_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_row0008_sel_buf2 VDD VDD VSS VSS w1_wl[8] w1_row0008_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_row0009_sel_nand4 VDD VDD VSS VSS w1_pd0_1 w1_pd1_2 w1_pd2_0 w1_en w1_row0009_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xw1_row0009_sel_buf0 VDD VDD VSS VSS w1_row0009_sel_buf0 w1_row0009_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_row0009_sel_buf1 VDD VDD VSS VSS w1_row0009_sel_buf1 w1_row0009_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_row0009_sel_buf2 VDD VDD VSS VSS w1_wl[9] w1_row0009_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_row0010_sel_nand4 VDD VDD VSS VSS w1_pd0_2 w1_pd1_2 w1_pd2_0 w1_en w1_row0010_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xw1_row0010_sel_buf0 VDD VDD VSS VSS w1_row0010_sel_buf0 w1_row0010_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_row0010_sel_buf1 VDD VDD VSS VSS w1_row0010_sel_buf1 w1_row0010_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_row0010_sel_buf2 VDD VDD VSS VSS w1_wl[10] w1_row0010_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_row0011_sel_nand4 VDD VDD VSS VSS w1_pd0_3 w1_pd1_2 w1_pd2_0 w1_en w1_row0011_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xw1_row0011_sel_buf0 VDD VDD VSS VSS w1_row0011_sel_buf0 w1_row0011_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_row0011_sel_buf1 VDD VDD VSS VSS w1_row0011_sel_buf1 w1_row0011_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_row0011_sel_buf2 VDD VDD VSS VSS w1_wl[11] w1_row0011_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_row0012_sel_nand4 VDD VDD VSS VSS w1_pd0_0 w1_pd1_3 w1_pd2_0 w1_en w1_row0012_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xw1_row0012_sel_buf0 VDD VDD VSS VSS w1_row0012_sel_buf0 w1_row0012_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_row0012_sel_buf1 VDD VDD VSS VSS w1_row0012_sel_buf1 w1_row0012_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_row0012_sel_buf2 VDD VDD VSS VSS w1_wl[12] w1_row0012_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_row0013_sel_nand4 VDD VDD VSS VSS w1_pd0_1 w1_pd1_3 w1_pd2_0 w1_en w1_row0013_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xw1_row0013_sel_buf0 VDD VDD VSS VSS w1_row0013_sel_buf0 w1_row0013_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_row0013_sel_buf1 VDD VDD VSS VSS w1_row0013_sel_buf1 w1_row0013_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_row0013_sel_buf2 VDD VDD VSS VSS w1_wl[13] w1_row0013_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_row0014_sel_nand4 VDD VDD VSS VSS w1_pd0_2 w1_pd1_3 w1_pd2_0 w1_en w1_row0014_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xw1_row0014_sel_buf0 VDD VDD VSS VSS w1_row0014_sel_buf0 w1_row0014_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_row0014_sel_buf1 VDD VDD VSS VSS w1_row0014_sel_buf1 w1_row0014_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_row0014_sel_buf2 VDD VDD VSS VSS w1_wl[14] w1_row0014_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_row0015_sel_nand4 VDD VDD VSS VSS w1_pd0_3 w1_pd1_3 w1_pd2_0 w1_en w1_row0015_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xw1_row0015_sel_buf0 VDD VDD VSS VSS w1_row0015_sel_buf0 w1_row0015_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_row0015_sel_buf1 VDD VDD VSS VSS w1_row0015_sel_buf1 w1_row0015_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_row0015_sel_buf2 VDD VDD VSS VSS w1_wl[15] w1_row0015_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_row0016_sel_nand4 VDD VDD VSS VSS w1_pd0_0 w1_pd1_0 w1_pd2_1 w1_en w1_row0016_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xw1_row0016_sel_buf0 VDD VDD VSS VSS w1_row0016_sel_buf0 w1_row0016_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_row0016_sel_buf1 VDD VDD VSS VSS w1_row0016_sel_buf1 w1_row0016_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_row0016_sel_buf2 VDD VDD VSS VSS w1_wl[16] w1_row0016_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_row0017_sel_nand4 VDD VDD VSS VSS w1_pd0_1 w1_pd1_0 w1_pd2_1 w1_en w1_row0017_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xw1_row0017_sel_buf0 VDD VDD VSS VSS w1_row0017_sel_buf0 w1_row0017_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_row0017_sel_buf1 VDD VDD VSS VSS w1_row0017_sel_buf1 w1_row0017_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_row0017_sel_buf2 VDD VDD VSS VSS w1_wl[17] w1_row0017_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_row0018_sel_nand4 VDD VDD VSS VSS w1_pd0_2 w1_pd1_0 w1_pd2_1 w1_en w1_row0018_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xw1_row0018_sel_buf0 VDD VDD VSS VSS w1_row0018_sel_buf0 w1_row0018_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_row0018_sel_buf1 VDD VDD VSS VSS w1_row0018_sel_buf1 w1_row0018_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_row0018_sel_buf2 VDD VDD VSS VSS w1_wl[18] w1_row0018_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_row0019_sel_nand4 VDD VDD VSS VSS w1_pd0_3 w1_pd1_0 w1_pd2_1 w1_en w1_row0019_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xw1_row0019_sel_buf0 VDD VDD VSS VSS w1_row0019_sel_buf0 w1_row0019_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_row0019_sel_buf1 VDD VDD VSS VSS w1_row0019_sel_buf1 w1_row0019_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_row0019_sel_buf2 VDD VDD VSS VSS w1_wl[19] w1_row0019_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_row0020_sel_nand4 VDD VDD VSS VSS w1_pd0_0 w1_pd1_1 w1_pd2_1 w1_en w1_row0020_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xw1_row0020_sel_buf0 VDD VDD VSS VSS w1_row0020_sel_buf0 w1_row0020_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_row0020_sel_buf1 VDD VDD VSS VSS w1_row0020_sel_buf1 w1_row0020_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_row0020_sel_buf2 VDD VDD VSS VSS w1_wl[20] w1_row0020_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_row0021_sel_nand4 VDD VDD VSS VSS w1_pd0_1 w1_pd1_1 w1_pd2_1 w1_en w1_row0021_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xw1_row0021_sel_buf0 VDD VDD VSS VSS w1_row0021_sel_buf0 w1_row0021_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_row0021_sel_buf1 VDD VDD VSS VSS w1_row0021_sel_buf1 w1_row0021_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_row0021_sel_buf2 VDD VDD VSS VSS w1_wl[21] w1_row0021_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_row0022_sel_nand4 VDD VDD VSS VSS w1_pd0_2 w1_pd1_1 w1_pd2_1 w1_en w1_row0022_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xw1_row0022_sel_buf0 VDD VDD VSS VSS w1_row0022_sel_buf0 w1_row0022_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_row0022_sel_buf1 VDD VDD VSS VSS w1_row0022_sel_buf1 w1_row0022_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_row0022_sel_buf2 VDD VDD VSS VSS w1_wl[22] w1_row0022_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_row0023_sel_nand4 VDD VDD VSS VSS w1_pd0_3 w1_pd1_1 w1_pd2_1 w1_en w1_row0023_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xw1_row0023_sel_buf0 VDD VDD VSS VSS w1_row0023_sel_buf0 w1_row0023_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_row0023_sel_buf1 VDD VDD VSS VSS w1_row0023_sel_buf1 w1_row0023_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_row0023_sel_buf2 VDD VDD VSS VSS w1_wl[23] w1_row0023_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_row0024_sel_nand4 VDD VDD VSS VSS w1_pd0_0 w1_pd1_2 w1_pd2_1 w1_en w1_row0024_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xw1_row0024_sel_buf0 VDD VDD VSS VSS w1_row0024_sel_buf0 w1_row0024_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_row0024_sel_buf1 VDD VDD VSS VSS w1_row0024_sel_buf1 w1_row0024_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_row0024_sel_buf2 VDD VDD VSS VSS w1_wl[24] w1_row0024_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_row0025_sel_nand4 VDD VDD VSS VSS w1_pd0_1 w1_pd1_2 w1_pd2_1 w1_en w1_row0025_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xw1_row0025_sel_buf0 VDD VDD VSS VSS w1_row0025_sel_buf0 w1_row0025_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_row0025_sel_buf1 VDD VDD VSS VSS w1_row0025_sel_buf1 w1_row0025_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_row0025_sel_buf2 VDD VDD VSS VSS w1_wl[25] w1_row0025_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_row0026_sel_nand4 VDD VDD VSS VSS w1_pd0_2 w1_pd1_2 w1_pd2_1 w1_en w1_row0026_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xw1_row0026_sel_buf0 VDD VDD VSS VSS w1_row0026_sel_buf0 w1_row0026_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_row0026_sel_buf1 VDD VDD VSS VSS w1_row0026_sel_buf1 w1_row0026_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_row0026_sel_buf2 VDD VDD VSS VSS w1_wl[26] w1_row0026_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_row0027_sel_nand4 VDD VDD VSS VSS w1_pd0_3 w1_pd1_2 w1_pd2_1 w1_en w1_row0027_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xw1_row0027_sel_buf0 VDD VDD VSS VSS w1_row0027_sel_buf0 w1_row0027_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_row0027_sel_buf1 VDD VDD VSS VSS w1_row0027_sel_buf1 w1_row0027_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_row0027_sel_buf2 VDD VDD VSS VSS w1_wl[27] w1_row0027_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_row0028_sel_nand4 VDD VDD VSS VSS w1_pd0_0 w1_pd1_3 w1_pd2_1 w1_en w1_row0028_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xw1_row0028_sel_buf0 VDD VDD VSS VSS w1_row0028_sel_buf0 w1_row0028_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_row0028_sel_buf1 VDD VDD VSS VSS w1_row0028_sel_buf1 w1_row0028_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_row0028_sel_buf2 VDD VDD VSS VSS w1_wl[28] w1_row0028_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_row0029_sel_nand4 VDD VDD VSS VSS w1_pd0_1 w1_pd1_3 w1_pd2_1 w1_en w1_row0029_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xw1_row0029_sel_buf0 VDD VDD VSS VSS w1_row0029_sel_buf0 w1_row0029_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_row0029_sel_buf1 VDD VDD VSS VSS w1_row0029_sel_buf1 w1_row0029_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_row0029_sel_buf2 VDD VDD VSS VSS w1_wl[29] w1_row0029_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_row0030_sel_nand4 VDD VDD VSS VSS w1_pd0_2 w1_pd1_3 w1_pd2_1 w1_en w1_row0030_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xw1_row0030_sel_buf0 VDD VDD VSS VSS w1_row0030_sel_buf0 w1_row0030_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_row0030_sel_buf1 VDD VDD VSS VSS w1_row0030_sel_buf1 w1_row0030_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_row0030_sel_buf2 VDD VDD VSS VSS w1_wl[30] w1_row0030_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_row0031_sel_nand4 VDD VDD VSS VSS w1_pd0_3 w1_pd1_3 w1_pd2_1 w1_en w1_row0031_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xw1_row0031_sel_buf0 VDD VDD VSS VSS w1_row0031_sel_buf0 w1_row0031_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_row0031_sel_buf1 VDD VDD VSS VSS w1_row0031_sel_buf1 w1_row0031_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_row0031_sel_buf2 VDD VDD VSS VSS w1_wl[31] w1_row0031_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_row0032_sel_nand4 VDD VDD VSS VSS w1_pd0_0 w1_pd1_0 w1_pd2_2 w1_en w1_row0032_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xw1_row0032_sel_buf0 VDD VDD VSS VSS w1_row0032_sel_buf0 w1_row0032_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_row0032_sel_buf1 VDD VDD VSS VSS w1_row0032_sel_buf1 w1_row0032_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_row0032_sel_buf2 VDD VDD VSS VSS w1_wl[32] w1_row0032_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_row0033_sel_nand4 VDD VDD VSS VSS w1_pd0_1 w1_pd1_0 w1_pd2_2 w1_en w1_row0033_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xw1_row0033_sel_buf0 VDD VDD VSS VSS w1_row0033_sel_buf0 w1_row0033_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_row0033_sel_buf1 VDD VDD VSS VSS w1_row0033_sel_buf1 w1_row0033_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_row0033_sel_buf2 VDD VDD VSS VSS w1_wl[33] w1_row0033_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_row0034_sel_nand4 VDD VDD VSS VSS w1_pd0_2 w1_pd1_0 w1_pd2_2 w1_en w1_row0034_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xw1_row0034_sel_buf0 VDD VDD VSS VSS w1_row0034_sel_buf0 w1_row0034_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_row0034_sel_buf1 VDD VDD VSS VSS w1_row0034_sel_buf1 w1_row0034_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_row0034_sel_buf2 VDD VDD VSS VSS w1_wl[34] w1_row0034_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_row0035_sel_nand4 VDD VDD VSS VSS w1_pd0_3 w1_pd1_0 w1_pd2_2 w1_en w1_row0035_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xw1_row0035_sel_buf0 VDD VDD VSS VSS w1_row0035_sel_buf0 w1_row0035_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_row0035_sel_buf1 VDD VDD VSS VSS w1_row0035_sel_buf1 w1_row0035_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_row0035_sel_buf2 VDD VDD VSS VSS w1_wl[35] w1_row0035_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_row0036_sel_nand4 VDD VDD VSS VSS w1_pd0_0 w1_pd1_1 w1_pd2_2 w1_en w1_row0036_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xw1_row0036_sel_buf0 VDD VDD VSS VSS w1_row0036_sel_buf0 w1_row0036_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_row0036_sel_buf1 VDD VDD VSS VSS w1_row0036_sel_buf1 w1_row0036_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_row0036_sel_buf2 VDD VDD VSS VSS w1_wl[36] w1_row0036_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_row0037_sel_nand4 VDD VDD VSS VSS w1_pd0_1 w1_pd1_1 w1_pd2_2 w1_en w1_row0037_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xw1_row0037_sel_buf0 VDD VDD VSS VSS w1_row0037_sel_buf0 w1_row0037_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_row0037_sel_buf1 VDD VDD VSS VSS w1_row0037_sel_buf1 w1_row0037_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_row0037_sel_buf2 VDD VDD VSS VSS w1_wl[37] w1_row0037_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_row0038_sel_nand4 VDD VDD VSS VSS w1_pd0_2 w1_pd1_1 w1_pd2_2 w1_en w1_row0038_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xw1_row0038_sel_buf0 VDD VDD VSS VSS w1_row0038_sel_buf0 w1_row0038_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_row0038_sel_buf1 VDD VDD VSS VSS w1_row0038_sel_buf1 w1_row0038_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_row0038_sel_buf2 VDD VDD VSS VSS w1_wl[38] w1_row0038_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_row0039_sel_nand4 VDD VDD VSS VSS w1_pd0_3 w1_pd1_1 w1_pd2_2 w1_en w1_row0039_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xw1_row0039_sel_buf0 VDD VDD VSS VSS w1_row0039_sel_buf0 w1_row0039_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_row0039_sel_buf1 VDD VDD VSS VSS w1_row0039_sel_buf1 w1_row0039_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_row0039_sel_buf2 VDD VDD VSS VSS w1_wl[39] w1_row0039_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_row0040_sel_nand4 VDD VDD VSS VSS w1_pd0_0 w1_pd1_2 w1_pd2_2 w1_en w1_row0040_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xw1_row0040_sel_buf0 VDD VDD VSS VSS w1_row0040_sel_buf0 w1_row0040_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_row0040_sel_buf1 VDD VDD VSS VSS w1_row0040_sel_buf1 w1_row0040_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_row0040_sel_buf2 VDD VDD VSS VSS w1_wl[40] w1_row0040_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_row0041_sel_nand4 VDD VDD VSS VSS w1_pd0_1 w1_pd1_2 w1_pd2_2 w1_en w1_row0041_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xw1_row0041_sel_buf0 VDD VDD VSS VSS w1_row0041_sel_buf0 w1_row0041_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_row0041_sel_buf1 VDD VDD VSS VSS w1_row0041_sel_buf1 w1_row0041_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_row0041_sel_buf2 VDD VDD VSS VSS w1_wl[41] w1_row0041_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_row0042_sel_nand4 VDD VDD VSS VSS w1_pd0_2 w1_pd1_2 w1_pd2_2 w1_en w1_row0042_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xw1_row0042_sel_buf0 VDD VDD VSS VSS w1_row0042_sel_buf0 w1_row0042_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_row0042_sel_buf1 VDD VDD VSS VSS w1_row0042_sel_buf1 w1_row0042_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_row0042_sel_buf2 VDD VDD VSS VSS w1_wl[42] w1_row0042_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_row0043_sel_nand4 VDD VDD VSS VSS w1_pd0_3 w1_pd1_2 w1_pd2_2 w1_en w1_row0043_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xw1_row0043_sel_buf0 VDD VDD VSS VSS w1_row0043_sel_buf0 w1_row0043_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_row0043_sel_buf1 VDD VDD VSS VSS w1_row0043_sel_buf1 w1_row0043_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_row0043_sel_buf2 VDD VDD VSS VSS w1_wl[43] w1_row0043_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_row0044_sel_nand4 VDD VDD VSS VSS w1_pd0_0 w1_pd1_3 w1_pd2_2 w1_en w1_row0044_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xw1_row0044_sel_buf0 VDD VDD VSS VSS w1_row0044_sel_buf0 w1_row0044_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_row0044_sel_buf1 VDD VDD VSS VSS w1_row0044_sel_buf1 w1_row0044_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_row0044_sel_buf2 VDD VDD VSS VSS w1_wl[44] w1_row0044_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_row0045_sel_nand4 VDD VDD VSS VSS w1_pd0_1 w1_pd1_3 w1_pd2_2 w1_en w1_row0045_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xw1_row0045_sel_buf0 VDD VDD VSS VSS w1_row0045_sel_buf0 w1_row0045_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_row0045_sel_buf1 VDD VDD VSS VSS w1_row0045_sel_buf1 w1_row0045_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_row0045_sel_buf2 VDD VDD VSS VSS w1_wl[45] w1_row0045_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_row0046_sel_nand4 VDD VDD VSS VSS w1_pd0_2 w1_pd1_3 w1_pd2_2 w1_en w1_row0046_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xw1_row0046_sel_buf0 VDD VDD VSS VSS w1_row0046_sel_buf0 w1_row0046_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_row0046_sel_buf1 VDD VDD VSS VSS w1_row0046_sel_buf1 w1_row0046_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_row0046_sel_buf2 VDD VDD VSS VSS w1_wl[46] w1_row0046_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_row0047_sel_nand4 VDD VDD VSS VSS w1_pd0_3 w1_pd1_3 w1_pd2_2 w1_en w1_row0047_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xw1_row0047_sel_buf0 VDD VDD VSS VSS w1_row0047_sel_buf0 w1_row0047_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_row0047_sel_buf1 VDD VDD VSS VSS w1_row0047_sel_buf1 w1_row0047_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_row0047_sel_buf2 VDD VDD VSS VSS w1_wl[47] w1_row0047_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_row0048_sel_nand4 VDD VDD VSS VSS w1_pd0_0 w1_pd1_0 w1_pd2_3 w1_en w1_row0048_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xw1_row0048_sel_buf0 VDD VDD VSS VSS w1_row0048_sel_buf0 w1_row0048_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_row0048_sel_buf1 VDD VDD VSS VSS w1_row0048_sel_buf1 w1_row0048_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_row0048_sel_buf2 VDD VDD VSS VSS w1_wl[48] w1_row0048_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_row0049_sel_nand4 VDD VDD VSS VSS w1_pd0_1 w1_pd1_0 w1_pd2_3 w1_en w1_row0049_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xw1_row0049_sel_buf0 VDD VDD VSS VSS w1_row0049_sel_buf0 w1_row0049_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_row0049_sel_buf1 VDD VDD VSS VSS w1_row0049_sel_buf1 w1_row0049_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_row0049_sel_buf2 VDD VDD VSS VSS w1_wl[49] w1_row0049_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_row0050_sel_nand4 VDD VDD VSS VSS w1_pd0_2 w1_pd1_0 w1_pd2_3 w1_en w1_row0050_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xw1_row0050_sel_buf0 VDD VDD VSS VSS w1_row0050_sel_buf0 w1_row0050_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_row0050_sel_buf1 VDD VDD VSS VSS w1_row0050_sel_buf1 w1_row0050_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_row0050_sel_buf2 VDD VDD VSS VSS w1_wl[50] w1_row0050_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_row0051_sel_nand4 VDD VDD VSS VSS w1_pd0_3 w1_pd1_0 w1_pd2_3 w1_en w1_row0051_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xw1_row0051_sel_buf0 VDD VDD VSS VSS w1_row0051_sel_buf0 w1_row0051_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_row0051_sel_buf1 VDD VDD VSS VSS w1_row0051_sel_buf1 w1_row0051_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_row0051_sel_buf2 VDD VDD VSS VSS w1_wl[51] w1_row0051_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_row0052_sel_nand4 VDD VDD VSS VSS w1_pd0_0 w1_pd1_1 w1_pd2_3 w1_en w1_row0052_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xw1_row0052_sel_buf0 VDD VDD VSS VSS w1_row0052_sel_buf0 w1_row0052_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_row0052_sel_buf1 VDD VDD VSS VSS w1_row0052_sel_buf1 w1_row0052_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_row0052_sel_buf2 VDD VDD VSS VSS w1_wl[52] w1_row0052_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_row0053_sel_nand4 VDD VDD VSS VSS w1_pd0_1 w1_pd1_1 w1_pd2_3 w1_en w1_row0053_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xw1_row0053_sel_buf0 VDD VDD VSS VSS w1_row0053_sel_buf0 w1_row0053_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_row0053_sel_buf1 VDD VDD VSS VSS w1_row0053_sel_buf1 w1_row0053_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_row0053_sel_buf2 VDD VDD VSS VSS w1_wl[53] w1_row0053_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_row0054_sel_nand4 VDD VDD VSS VSS w1_pd0_2 w1_pd1_1 w1_pd2_3 w1_en w1_row0054_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xw1_row0054_sel_buf0 VDD VDD VSS VSS w1_row0054_sel_buf0 w1_row0054_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_row0054_sel_buf1 VDD VDD VSS VSS w1_row0054_sel_buf1 w1_row0054_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_row0054_sel_buf2 VDD VDD VSS VSS w1_wl[54] w1_row0054_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_row0055_sel_nand4 VDD VDD VSS VSS w1_pd0_3 w1_pd1_1 w1_pd2_3 w1_en w1_row0055_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xw1_row0055_sel_buf0 VDD VDD VSS VSS w1_row0055_sel_buf0 w1_row0055_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_row0055_sel_buf1 VDD VDD VSS VSS w1_row0055_sel_buf1 w1_row0055_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_row0055_sel_buf2 VDD VDD VSS VSS w1_wl[55] w1_row0055_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_row0056_sel_nand4 VDD VDD VSS VSS w1_pd0_0 w1_pd1_2 w1_pd2_3 w1_en w1_row0056_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xw1_row0056_sel_buf0 VDD VDD VSS VSS w1_row0056_sel_buf0 w1_row0056_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_row0056_sel_buf1 VDD VDD VSS VSS w1_row0056_sel_buf1 w1_row0056_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_row0056_sel_buf2 VDD VDD VSS VSS w1_wl[56] w1_row0056_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_row0057_sel_nand4 VDD VDD VSS VSS w1_pd0_1 w1_pd1_2 w1_pd2_3 w1_en w1_row0057_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xw1_row0057_sel_buf0 VDD VDD VSS VSS w1_row0057_sel_buf0 w1_row0057_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_row0057_sel_buf1 VDD VDD VSS VSS w1_row0057_sel_buf1 w1_row0057_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_row0057_sel_buf2 VDD VDD VSS VSS w1_wl[57] w1_row0057_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_row0058_sel_nand4 VDD VDD VSS VSS w1_pd0_2 w1_pd1_2 w1_pd2_3 w1_en w1_row0058_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xw1_row0058_sel_buf0 VDD VDD VSS VSS w1_row0058_sel_buf0 w1_row0058_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_row0058_sel_buf1 VDD VDD VSS VSS w1_row0058_sel_buf1 w1_row0058_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_row0058_sel_buf2 VDD VDD VSS VSS w1_wl[58] w1_row0058_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_row0059_sel_nand4 VDD VDD VSS VSS w1_pd0_3 w1_pd1_2 w1_pd2_3 w1_en w1_row0059_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xw1_row0059_sel_buf0 VDD VDD VSS VSS w1_row0059_sel_buf0 w1_row0059_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_row0059_sel_buf1 VDD VDD VSS VSS w1_row0059_sel_buf1 w1_row0059_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_row0059_sel_buf2 VDD VDD VSS VSS w1_wl[59] w1_row0059_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_row0060_sel_nand4 VDD VDD VSS VSS w1_pd0_0 w1_pd1_3 w1_pd2_3 w1_en w1_row0060_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xw1_row0060_sel_buf0 VDD VDD VSS VSS w1_row0060_sel_buf0 w1_row0060_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_row0060_sel_buf1 VDD VDD VSS VSS w1_row0060_sel_buf1 w1_row0060_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_row0060_sel_buf2 VDD VDD VSS VSS w1_wl[60] w1_row0060_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_row0061_sel_nand4 VDD VDD VSS VSS w1_pd0_1 w1_pd1_3 w1_pd2_3 w1_en w1_row0061_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xw1_row0061_sel_buf0 VDD VDD VSS VSS w1_row0061_sel_buf0 w1_row0061_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_row0061_sel_buf1 VDD VDD VSS VSS w1_row0061_sel_buf1 w1_row0061_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_row0061_sel_buf2 VDD VDD VSS VSS w1_wl[61] w1_row0061_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_row0062_sel_nand4 VDD VDD VSS VSS w1_pd0_2 w1_pd1_3 w1_pd2_3 w1_en w1_row0062_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xw1_row0062_sel_buf0 VDD VDD VSS VSS w1_row0062_sel_buf0 w1_row0062_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_row0062_sel_buf1 VDD VDD VSS VSS w1_row0062_sel_buf1 w1_row0062_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_row0062_sel_buf2 VDD VDD VSS VSS w1_wl[62] w1_row0062_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_row0063_sel_nand4 VDD VDD VSS VSS w1_pd0_3 w1_pd1_3 w1_pd2_3 w1_en w1_row0063_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xw1_row0063_sel_buf0 VDD VDD VSS VSS w1_row0063_sel_buf0 w1_row0063_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_row0063_sel_buf1 VDD VDD VSS VSS w1_row0063_sel_buf1 w1_row0063_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xw1_row0063_sel_buf2 VDD VDD VSS VSS w1_wl[63] w1_row0063_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_a0_inv VDD VDD VSS VSS r0_a0_n r0_addr[0] gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_a1_inv VDD VDD VSS VSS r0_a1_n r0_addr[1] gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_a2_inv VDD VDD VSS VSS r0_a2_n r0_addr[2] gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_a3_inv VDD VDD VSS VSS r0_a3_n r0_addr[3] gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_a4_inv VDD VDD VSS VSS r0_a4_n r0_addr[4] gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_a5_inv VDD VDD VSS VSS r0_a5_n r0_addr[5] gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_a6_inv VDD VDD VSS VSS r0_a6_n r0_addr[6] gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_a7_inv VDD VDD VSS VSS r0_a7_n r0_addr[7] gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_a8_inv VDD VDD VSS VSS r0_a8_n r0_addr[8] gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_grp0_nand3 VDD VDD VSS VSS r0_a0_n r0_a1_n r0_a2_n r0_grp0_n gf180mcu_as_sc_mcu7t3v3__nand3_2
+Xr0_grp0_inv VDD VDD VSS VSS r0_grp[0] r0_grp0_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_grp1_nand3 VDD VDD VSS VSS r0_addr[0] r0_a1_n r0_a2_n r0_grp1_n gf180mcu_as_sc_mcu7t3v3__nand3_2
+Xr0_grp1_inv VDD VDD VSS VSS r0_grp[1] r0_grp1_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_grp2_nand3 VDD VDD VSS VSS r0_a0_n r0_addr[1] r0_a2_n r0_grp2_n gf180mcu_as_sc_mcu7t3v3__nand3_2
+Xr0_grp2_inv VDD VDD VSS VSS r0_grp[2] r0_grp2_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_grp3_nand3 VDD VDD VSS VSS r0_addr[0] r0_addr[1] r0_a2_n r0_grp3_n gf180mcu_as_sc_mcu7t3v3__nand3_2
+Xr0_grp3_inv VDD VDD VSS VSS r0_grp[3] r0_grp3_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_grp4_nand3 VDD VDD VSS VSS r0_a0_n r0_a1_n r0_addr[2] r0_grp4_n gf180mcu_as_sc_mcu7t3v3__nand3_2
+Xr0_grp4_inv VDD VDD VSS VSS r0_grp[4] r0_grp4_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_grp5_nand3 VDD VDD VSS VSS r0_addr[0] r0_a1_n r0_addr[2] r0_grp5_n gf180mcu_as_sc_mcu7t3v3__nand3_2
+Xr0_grp5_inv VDD VDD VSS VSS r0_grp[5] r0_grp5_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_grp6_nand3 VDD VDD VSS VSS r0_a0_n r0_addr[1] r0_addr[2] r0_grp6_n gf180mcu_as_sc_mcu7t3v3__nand3_2
+Xr0_grp6_inv VDD VDD VSS VSS r0_grp[6] r0_grp6_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_grp7_nand3 VDD VDD VSS VSS r0_addr[0] r0_addr[1] r0_addr[2] r0_grp7_n gf180mcu_as_sc_mcu7t3v3__nand3_2
+Xr0_grp7_inv VDD VDD VSS VSS r0_grp[7] r0_grp7_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_pd0_0_nand2 VDD VDD VSS VSS r0_pd0_0_n r0_a4_n r0_a3_n gf180mcu_as_sc_mcu7t3v3__nand2_2
+Xr0_pd0_0_inv VDD VDD VSS VSS r0_pd0_0 r0_pd0_0_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_pd0_1_nand2 VDD VDD VSS VSS r0_pd0_1_n r0_a4_n r0_addr[3] gf180mcu_as_sc_mcu7t3v3__nand2_2
+Xr0_pd0_1_inv VDD VDD VSS VSS r0_pd0_1 r0_pd0_1_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_pd0_2_nand2 VDD VDD VSS VSS r0_pd0_2_n r0_addr[4] r0_a3_n gf180mcu_as_sc_mcu7t3v3__nand2_2
+Xr0_pd0_2_inv VDD VDD VSS VSS r0_pd0_2 r0_pd0_2_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_pd0_3_nand2 VDD VDD VSS VSS r0_pd0_3_n r0_addr[4] r0_addr[3] gf180mcu_as_sc_mcu7t3v3__nand2_2
+Xr0_pd0_3_inv VDD VDD VSS VSS r0_pd0_3 r0_pd0_3_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_pd1_0_nand2 VDD VDD VSS VSS r0_pd1_0_n r0_a6_n r0_a5_n gf180mcu_as_sc_mcu7t3v3__nand2_2
+Xr0_pd1_0_inv VDD VDD VSS VSS r0_pd1_0 r0_pd1_0_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_pd1_1_nand2 VDD VDD VSS VSS r0_pd1_1_n r0_a6_n r0_addr[5] gf180mcu_as_sc_mcu7t3v3__nand2_2
+Xr0_pd1_1_inv VDD VDD VSS VSS r0_pd1_1 r0_pd1_1_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_pd1_2_nand2 VDD VDD VSS VSS r0_pd1_2_n r0_addr[6] r0_a5_n gf180mcu_as_sc_mcu7t3v3__nand2_2
+Xr0_pd1_2_inv VDD VDD VSS VSS r0_pd1_2 r0_pd1_2_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_pd1_3_nand2 VDD VDD VSS VSS r0_pd1_3_n r0_addr[6] r0_addr[5] gf180mcu_as_sc_mcu7t3v3__nand2_2
+Xr0_pd1_3_inv VDD VDD VSS VSS r0_pd1_3 r0_pd1_3_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_pd2_0_nand2 VDD VDD VSS VSS r0_pd2_0_n r0_a8_n r0_a7_n gf180mcu_as_sc_mcu7t3v3__nand2_2
+Xr0_pd2_0_inv VDD VDD VSS VSS r0_pd2_0 r0_pd2_0_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_pd2_1_nand2 VDD VDD VSS VSS r0_pd2_1_n r0_a8_n r0_addr[7] gf180mcu_as_sc_mcu7t3v3__nand2_2
+Xr0_pd2_1_inv VDD VDD VSS VSS r0_pd2_1 r0_pd2_1_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_pd2_2_nand2 VDD VDD VSS VSS r0_pd2_2_n r0_addr[8] r0_a7_n gf180mcu_as_sc_mcu7t3v3__nand2_2
+Xr0_pd2_2_inv VDD VDD VSS VSS r0_pd2_2 r0_pd2_2_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_pd2_3_nand2 VDD VDD VSS VSS r0_pd2_3_n r0_addr[8] r0_addr[7] gf180mcu_as_sc_mcu7t3v3__nand2_2
+Xr0_pd2_3_inv VDD VDD VSS VSS r0_pd2_3 r0_pd2_3_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_row0000_sel_nand4 VDD VDD VSS VSS r0_pd0_0 r0_pd1_0 r0_pd2_0 r0_en r0_row0000_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xr0_row0000_sel_buf0 VDD VDD VSS VSS r0_row0000_sel_buf0 r0_row0000_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_row0000_sel_buf1 VDD VDD VSS VSS r0_row0000_sel_buf1 r0_row0000_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_row0000_sel_buf2 VDD VDD VSS VSS r0_wl[0] r0_row0000_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_row0001_sel_nand4 VDD VDD VSS VSS r0_pd0_1 r0_pd1_0 r0_pd2_0 r0_en r0_row0001_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xr0_row0001_sel_buf0 VDD VDD VSS VSS r0_row0001_sel_buf0 r0_row0001_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_row0001_sel_buf1 VDD VDD VSS VSS r0_row0001_sel_buf1 r0_row0001_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_row0001_sel_buf2 VDD VDD VSS VSS r0_wl[1] r0_row0001_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_row0002_sel_nand4 VDD VDD VSS VSS r0_pd0_2 r0_pd1_0 r0_pd2_0 r0_en r0_row0002_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xr0_row0002_sel_buf0 VDD VDD VSS VSS r0_row0002_sel_buf0 r0_row0002_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_row0002_sel_buf1 VDD VDD VSS VSS r0_row0002_sel_buf1 r0_row0002_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_row0002_sel_buf2 VDD VDD VSS VSS r0_wl[2] r0_row0002_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_row0003_sel_nand4 VDD VDD VSS VSS r0_pd0_3 r0_pd1_0 r0_pd2_0 r0_en r0_row0003_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xr0_row0003_sel_buf0 VDD VDD VSS VSS r0_row0003_sel_buf0 r0_row0003_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_row0003_sel_buf1 VDD VDD VSS VSS r0_row0003_sel_buf1 r0_row0003_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_row0003_sel_buf2 VDD VDD VSS VSS r0_wl[3] r0_row0003_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_row0004_sel_nand4 VDD VDD VSS VSS r0_pd0_0 r0_pd1_1 r0_pd2_0 r0_en r0_row0004_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xr0_row0004_sel_buf0 VDD VDD VSS VSS r0_row0004_sel_buf0 r0_row0004_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_row0004_sel_buf1 VDD VDD VSS VSS r0_row0004_sel_buf1 r0_row0004_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_row0004_sel_buf2 VDD VDD VSS VSS r0_wl[4] r0_row0004_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_row0005_sel_nand4 VDD VDD VSS VSS r0_pd0_1 r0_pd1_1 r0_pd2_0 r0_en r0_row0005_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xr0_row0005_sel_buf0 VDD VDD VSS VSS r0_row0005_sel_buf0 r0_row0005_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_row0005_sel_buf1 VDD VDD VSS VSS r0_row0005_sel_buf1 r0_row0005_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_row0005_sel_buf2 VDD VDD VSS VSS r0_wl[5] r0_row0005_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_row0006_sel_nand4 VDD VDD VSS VSS r0_pd0_2 r0_pd1_1 r0_pd2_0 r0_en r0_row0006_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xr0_row0006_sel_buf0 VDD VDD VSS VSS r0_row0006_sel_buf0 r0_row0006_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_row0006_sel_buf1 VDD VDD VSS VSS r0_row0006_sel_buf1 r0_row0006_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_row0006_sel_buf2 VDD VDD VSS VSS r0_wl[6] r0_row0006_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_row0007_sel_nand4 VDD VDD VSS VSS r0_pd0_3 r0_pd1_1 r0_pd2_0 r0_en r0_row0007_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xr0_row0007_sel_buf0 VDD VDD VSS VSS r0_row0007_sel_buf0 r0_row0007_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_row0007_sel_buf1 VDD VDD VSS VSS r0_row0007_sel_buf1 r0_row0007_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_row0007_sel_buf2 VDD VDD VSS VSS r0_wl[7] r0_row0007_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_row0008_sel_nand4 VDD VDD VSS VSS r0_pd0_0 r0_pd1_2 r0_pd2_0 r0_en r0_row0008_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xr0_row0008_sel_buf0 VDD VDD VSS VSS r0_row0008_sel_buf0 r0_row0008_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_row0008_sel_buf1 VDD VDD VSS VSS r0_row0008_sel_buf1 r0_row0008_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_row0008_sel_buf2 VDD VDD VSS VSS r0_wl[8] r0_row0008_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_row0009_sel_nand4 VDD VDD VSS VSS r0_pd0_1 r0_pd1_2 r0_pd2_0 r0_en r0_row0009_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xr0_row0009_sel_buf0 VDD VDD VSS VSS r0_row0009_sel_buf0 r0_row0009_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_row0009_sel_buf1 VDD VDD VSS VSS r0_row0009_sel_buf1 r0_row0009_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_row0009_sel_buf2 VDD VDD VSS VSS r0_wl[9] r0_row0009_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_row0010_sel_nand4 VDD VDD VSS VSS r0_pd0_2 r0_pd1_2 r0_pd2_0 r0_en r0_row0010_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xr0_row0010_sel_buf0 VDD VDD VSS VSS r0_row0010_sel_buf0 r0_row0010_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_row0010_sel_buf1 VDD VDD VSS VSS r0_row0010_sel_buf1 r0_row0010_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_row0010_sel_buf2 VDD VDD VSS VSS r0_wl[10] r0_row0010_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_row0011_sel_nand4 VDD VDD VSS VSS r0_pd0_3 r0_pd1_2 r0_pd2_0 r0_en r0_row0011_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xr0_row0011_sel_buf0 VDD VDD VSS VSS r0_row0011_sel_buf0 r0_row0011_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_row0011_sel_buf1 VDD VDD VSS VSS r0_row0011_sel_buf1 r0_row0011_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_row0011_sel_buf2 VDD VDD VSS VSS r0_wl[11] r0_row0011_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_row0012_sel_nand4 VDD VDD VSS VSS r0_pd0_0 r0_pd1_3 r0_pd2_0 r0_en r0_row0012_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xr0_row0012_sel_buf0 VDD VDD VSS VSS r0_row0012_sel_buf0 r0_row0012_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_row0012_sel_buf1 VDD VDD VSS VSS r0_row0012_sel_buf1 r0_row0012_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_row0012_sel_buf2 VDD VDD VSS VSS r0_wl[12] r0_row0012_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_row0013_sel_nand4 VDD VDD VSS VSS r0_pd0_1 r0_pd1_3 r0_pd2_0 r0_en r0_row0013_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xr0_row0013_sel_buf0 VDD VDD VSS VSS r0_row0013_sel_buf0 r0_row0013_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_row0013_sel_buf1 VDD VDD VSS VSS r0_row0013_sel_buf1 r0_row0013_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_row0013_sel_buf2 VDD VDD VSS VSS r0_wl[13] r0_row0013_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_row0014_sel_nand4 VDD VDD VSS VSS r0_pd0_2 r0_pd1_3 r0_pd2_0 r0_en r0_row0014_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xr0_row0014_sel_buf0 VDD VDD VSS VSS r0_row0014_sel_buf0 r0_row0014_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_row0014_sel_buf1 VDD VDD VSS VSS r0_row0014_sel_buf1 r0_row0014_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_row0014_sel_buf2 VDD VDD VSS VSS r0_wl[14] r0_row0014_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_row0015_sel_nand4 VDD VDD VSS VSS r0_pd0_3 r0_pd1_3 r0_pd2_0 r0_en r0_row0015_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xr0_row0015_sel_buf0 VDD VDD VSS VSS r0_row0015_sel_buf0 r0_row0015_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_row0015_sel_buf1 VDD VDD VSS VSS r0_row0015_sel_buf1 r0_row0015_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_row0015_sel_buf2 VDD VDD VSS VSS r0_wl[15] r0_row0015_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_row0016_sel_nand4 VDD VDD VSS VSS r0_pd0_0 r0_pd1_0 r0_pd2_1 r0_en r0_row0016_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xr0_row0016_sel_buf0 VDD VDD VSS VSS r0_row0016_sel_buf0 r0_row0016_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_row0016_sel_buf1 VDD VDD VSS VSS r0_row0016_sel_buf1 r0_row0016_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_row0016_sel_buf2 VDD VDD VSS VSS r0_wl[16] r0_row0016_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_row0017_sel_nand4 VDD VDD VSS VSS r0_pd0_1 r0_pd1_0 r0_pd2_1 r0_en r0_row0017_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xr0_row0017_sel_buf0 VDD VDD VSS VSS r0_row0017_sel_buf0 r0_row0017_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_row0017_sel_buf1 VDD VDD VSS VSS r0_row0017_sel_buf1 r0_row0017_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_row0017_sel_buf2 VDD VDD VSS VSS r0_wl[17] r0_row0017_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_row0018_sel_nand4 VDD VDD VSS VSS r0_pd0_2 r0_pd1_0 r0_pd2_1 r0_en r0_row0018_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xr0_row0018_sel_buf0 VDD VDD VSS VSS r0_row0018_sel_buf0 r0_row0018_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_row0018_sel_buf1 VDD VDD VSS VSS r0_row0018_sel_buf1 r0_row0018_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_row0018_sel_buf2 VDD VDD VSS VSS r0_wl[18] r0_row0018_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_row0019_sel_nand4 VDD VDD VSS VSS r0_pd0_3 r0_pd1_0 r0_pd2_1 r0_en r0_row0019_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xr0_row0019_sel_buf0 VDD VDD VSS VSS r0_row0019_sel_buf0 r0_row0019_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_row0019_sel_buf1 VDD VDD VSS VSS r0_row0019_sel_buf1 r0_row0019_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_row0019_sel_buf2 VDD VDD VSS VSS r0_wl[19] r0_row0019_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_row0020_sel_nand4 VDD VDD VSS VSS r0_pd0_0 r0_pd1_1 r0_pd2_1 r0_en r0_row0020_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xr0_row0020_sel_buf0 VDD VDD VSS VSS r0_row0020_sel_buf0 r0_row0020_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_row0020_sel_buf1 VDD VDD VSS VSS r0_row0020_sel_buf1 r0_row0020_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_row0020_sel_buf2 VDD VDD VSS VSS r0_wl[20] r0_row0020_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_row0021_sel_nand4 VDD VDD VSS VSS r0_pd0_1 r0_pd1_1 r0_pd2_1 r0_en r0_row0021_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xr0_row0021_sel_buf0 VDD VDD VSS VSS r0_row0021_sel_buf0 r0_row0021_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_row0021_sel_buf1 VDD VDD VSS VSS r0_row0021_sel_buf1 r0_row0021_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_row0021_sel_buf2 VDD VDD VSS VSS r0_wl[21] r0_row0021_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_row0022_sel_nand4 VDD VDD VSS VSS r0_pd0_2 r0_pd1_1 r0_pd2_1 r0_en r0_row0022_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xr0_row0022_sel_buf0 VDD VDD VSS VSS r0_row0022_sel_buf0 r0_row0022_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_row0022_sel_buf1 VDD VDD VSS VSS r0_row0022_sel_buf1 r0_row0022_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_row0022_sel_buf2 VDD VDD VSS VSS r0_wl[22] r0_row0022_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_row0023_sel_nand4 VDD VDD VSS VSS r0_pd0_3 r0_pd1_1 r0_pd2_1 r0_en r0_row0023_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xr0_row0023_sel_buf0 VDD VDD VSS VSS r0_row0023_sel_buf0 r0_row0023_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_row0023_sel_buf1 VDD VDD VSS VSS r0_row0023_sel_buf1 r0_row0023_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_row0023_sel_buf2 VDD VDD VSS VSS r0_wl[23] r0_row0023_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_row0024_sel_nand4 VDD VDD VSS VSS r0_pd0_0 r0_pd1_2 r0_pd2_1 r0_en r0_row0024_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xr0_row0024_sel_buf0 VDD VDD VSS VSS r0_row0024_sel_buf0 r0_row0024_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_row0024_sel_buf1 VDD VDD VSS VSS r0_row0024_sel_buf1 r0_row0024_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_row0024_sel_buf2 VDD VDD VSS VSS r0_wl[24] r0_row0024_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_row0025_sel_nand4 VDD VDD VSS VSS r0_pd0_1 r0_pd1_2 r0_pd2_1 r0_en r0_row0025_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xr0_row0025_sel_buf0 VDD VDD VSS VSS r0_row0025_sel_buf0 r0_row0025_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_row0025_sel_buf1 VDD VDD VSS VSS r0_row0025_sel_buf1 r0_row0025_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_row0025_sel_buf2 VDD VDD VSS VSS r0_wl[25] r0_row0025_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_row0026_sel_nand4 VDD VDD VSS VSS r0_pd0_2 r0_pd1_2 r0_pd2_1 r0_en r0_row0026_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xr0_row0026_sel_buf0 VDD VDD VSS VSS r0_row0026_sel_buf0 r0_row0026_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_row0026_sel_buf1 VDD VDD VSS VSS r0_row0026_sel_buf1 r0_row0026_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_row0026_sel_buf2 VDD VDD VSS VSS r0_wl[26] r0_row0026_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_row0027_sel_nand4 VDD VDD VSS VSS r0_pd0_3 r0_pd1_2 r0_pd2_1 r0_en r0_row0027_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xr0_row0027_sel_buf0 VDD VDD VSS VSS r0_row0027_sel_buf0 r0_row0027_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_row0027_sel_buf1 VDD VDD VSS VSS r0_row0027_sel_buf1 r0_row0027_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_row0027_sel_buf2 VDD VDD VSS VSS r0_wl[27] r0_row0027_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_row0028_sel_nand4 VDD VDD VSS VSS r0_pd0_0 r0_pd1_3 r0_pd2_1 r0_en r0_row0028_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xr0_row0028_sel_buf0 VDD VDD VSS VSS r0_row0028_sel_buf0 r0_row0028_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_row0028_sel_buf1 VDD VDD VSS VSS r0_row0028_sel_buf1 r0_row0028_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_row0028_sel_buf2 VDD VDD VSS VSS r0_wl[28] r0_row0028_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_row0029_sel_nand4 VDD VDD VSS VSS r0_pd0_1 r0_pd1_3 r0_pd2_1 r0_en r0_row0029_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xr0_row0029_sel_buf0 VDD VDD VSS VSS r0_row0029_sel_buf0 r0_row0029_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_row0029_sel_buf1 VDD VDD VSS VSS r0_row0029_sel_buf1 r0_row0029_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_row0029_sel_buf2 VDD VDD VSS VSS r0_wl[29] r0_row0029_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_row0030_sel_nand4 VDD VDD VSS VSS r0_pd0_2 r0_pd1_3 r0_pd2_1 r0_en r0_row0030_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xr0_row0030_sel_buf0 VDD VDD VSS VSS r0_row0030_sel_buf0 r0_row0030_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_row0030_sel_buf1 VDD VDD VSS VSS r0_row0030_sel_buf1 r0_row0030_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_row0030_sel_buf2 VDD VDD VSS VSS r0_wl[30] r0_row0030_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_row0031_sel_nand4 VDD VDD VSS VSS r0_pd0_3 r0_pd1_3 r0_pd2_1 r0_en r0_row0031_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xr0_row0031_sel_buf0 VDD VDD VSS VSS r0_row0031_sel_buf0 r0_row0031_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_row0031_sel_buf1 VDD VDD VSS VSS r0_row0031_sel_buf1 r0_row0031_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_row0031_sel_buf2 VDD VDD VSS VSS r0_wl[31] r0_row0031_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_row0032_sel_nand4 VDD VDD VSS VSS r0_pd0_0 r0_pd1_0 r0_pd2_2 r0_en r0_row0032_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xr0_row0032_sel_buf0 VDD VDD VSS VSS r0_row0032_sel_buf0 r0_row0032_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_row0032_sel_buf1 VDD VDD VSS VSS r0_row0032_sel_buf1 r0_row0032_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_row0032_sel_buf2 VDD VDD VSS VSS r0_wl[32] r0_row0032_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_row0033_sel_nand4 VDD VDD VSS VSS r0_pd0_1 r0_pd1_0 r0_pd2_2 r0_en r0_row0033_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xr0_row0033_sel_buf0 VDD VDD VSS VSS r0_row0033_sel_buf0 r0_row0033_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_row0033_sel_buf1 VDD VDD VSS VSS r0_row0033_sel_buf1 r0_row0033_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_row0033_sel_buf2 VDD VDD VSS VSS r0_wl[33] r0_row0033_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_row0034_sel_nand4 VDD VDD VSS VSS r0_pd0_2 r0_pd1_0 r0_pd2_2 r0_en r0_row0034_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xr0_row0034_sel_buf0 VDD VDD VSS VSS r0_row0034_sel_buf0 r0_row0034_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_row0034_sel_buf1 VDD VDD VSS VSS r0_row0034_sel_buf1 r0_row0034_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_row0034_sel_buf2 VDD VDD VSS VSS r0_wl[34] r0_row0034_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_row0035_sel_nand4 VDD VDD VSS VSS r0_pd0_3 r0_pd1_0 r0_pd2_2 r0_en r0_row0035_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xr0_row0035_sel_buf0 VDD VDD VSS VSS r0_row0035_sel_buf0 r0_row0035_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_row0035_sel_buf1 VDD VDD VSS VSS r0_row0035_sel_buf1 r0_row0035_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_row0035_sel_buf2 VDD VDD VSS VSS r0_wl[35] r0_row0035_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_row0036_sel_nand4 VDD VDD VSS VSS r0_pd0_0 r0_pd1_1 r0_pd2_2 r0_en r0_row0036_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xr0_row0036_sel_buf0 VDD VDD VSS VSS r0_row0036_sel_buf0 r0_row0036_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_row0036_sel_buf1 VDD VDD VSS VSS r0_row0036_sel_buf1 r0_row0036_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_row0036_sel_buf2 VDD VDD VSS VSS r0_wl[36] r0_row0036_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_row0037_sel_nand4 VDD VDD VSS VSS r0_pd0_1 r0_pd1_1 r0_pd2_2 r0_en r0_row0037_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xr0_row0037_sel_buf0 VDD VDD VSS VSS r0_row0037_sel_buf0 r0_row0037_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_row0037_sel_buf1 VDD VDD VSS VSS r0_row0037_sel_buf1 r0_row0037_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_row0037_sel_buf2 VDD VDD VSS VSS r0_wl[37] r0_row0037_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_row0038_sel_nand4 VDD VDD VSS VSS r0_pd0_2 r0_pd1_1 r0_pd2_2 r0_en r0_row0038_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xr0_row0038_sel_buf0 VDD VDD VSS VSS r0_row0038_sel_buf0 r0_row0038_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_row0038_sel_buf1 VDD VDD VSS VSS r0_row0038_sel_buf1 r0_row0038_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_row0038_sel_buf2 VDD VDD VSS VSS r0_wl[38] r0_row0038_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_row0039_sel_nand4 VDD VDD VSS VSS r0_pd0_3 r0_pd1_1 r0_pd2_2 r0_en r0_row0039_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xr0_row0039_sel_buf0 VDD VDD VSS VSS r0_row0039_sel_buf0 r0_row0039_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_row0039_sel_buf1 VDD VDD VSS VSS r0_row0039_sel_buf1 r0_row0039_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_row0039_sel_buf2 VDD VDD VSS VSS r0_wl[39] r0_row0039_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_row0040_sel_nand4 VDD VDD VSS VSS r0_pd0_0 r0_pd1_2 r0_pd2_2 r0_en r0_row0040_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xr0_row0040_sel_buf0 VDD VDD VSS VSS r0_row0040_sel_buf0 r0_row0040_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_row0040_sel_buf1 VDD VDD VSS VSS r0_row0040_sel_buf1 r0_row0040_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_row0040_sel_buf2 VDD VDD VSS VSS r0_wl[40] r0_row0040_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_row0041_sel_nand4 VDD VDD VSS VSS r0_pd0_1 r0_pd1_2 r0_pd2_2 r0_en r0_row0041_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xr0_row0041_sel_buf0 VDD VDD VSS VSS r0_row0041_sel_buf0 r0_row0041_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_row0041_sel_buf1 VDD VDD VSS VSS r0_row0041_sel_buf1 r0_row0041_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_row0041_sel_buf2 VDD VDD VSS VSS r0_wl[41] r0_row0041_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_row0042_sel_nand4 VDD VDD VSS VSS r0_pd0_2 r0_pd1_2 r0_pd2_2 r0_en r0_row0042_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xr0_row0042_sel_buf0 VDD VDD VSS VSS r0_row0042_sel_buf0 r0_row0042_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_row0042_sel_buf1 VDD VDD VSS VSS r0_row0042_sel_buf1 r0_row0042_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_row0042_sel_buf2 VDD VDD VSS VSS r0_wl[42] r0_row0042_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_row0043_sel_nand4 VDD VDD VSS VSS r0_pd0_3 r0_pd1_2 r0_pd2_2 r0_en r0_row0043_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xr0_row0043_sel_buf0 VDD VDD VSS VSS r0_row0043_sel_buf0 r0_row0043_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_row0043_sel_buf1 VDD VDD VSS VSS r0_row0043_sel_buf1 r0_row0043_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_row0043_sel_buf2 VDD VDD VSS VSS r0_wl[43] r0_row0043_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_row0044_sel_nand4 VDD VDD VSS VSS r0_pd0_0 r0_pd1_3 r0_pd2_2 r0_en r0_row0044_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xr0_row0044_sel_buf0 VDD VDD VSS VSS r0_row0044_sel_buf0 r0_row0044_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_row0044_sel_buf1 VDD VDD VSS VSS r0_row0044_sel_buf1 r0_row0044_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_row0044_sel_buf2 VDD VDD VSS VSS r0_wl[44] r0_row0044_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_row0045_sel_nand4 VDD VDD VSS VSS r0_pd0_1 r0_pd1_3 r0_pd2_2 r0_en r0_row0045_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xr0_row0045_sel_buf0 VDD VDD VSS VSS r0_row0045_sel_buf0 r0_row0045_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_row0045_sel_buf1 VDD VDD VSS VSS r0_row0045_sel_buf1 r0_row0045_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_row0045_sel_buf2 VDD VDD VSS VSS r0_wl[45] r0_row0045_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_row0046_sel_nand4 VDD VDD VSS VSS r0_pd0_2 r0_pd1_3 r0_pd2_2 r0_en r0_row0046_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xr0_row0046_sel_buf0 VDD VDD VSS VSS r0_row0046_sel_buf0 r0_row0046_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_row0046_sel_buf1 VDD VDD VSS VSS r0_row0046_sel_buf1 r0_row0046_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_row0046_sel_buf2 VDD VDD VSS VSS r0_wl[46] r0_row0046_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_row0047_sel_nand4 VDD VDD VSS VSS r0_pd0_3 r0_pd1_3 r0_pd2_2 r0_en r0_row0047_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xr0_row0047_sel_buf0 VDD VDD VSS VSS r0_row0047_sel_buf0 r0_row0047_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_row0047_sel_buf1 VDD VDD VSS VSS r0_row0047_sel_buf1 r0_row0047_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_row0047_sel_buf2 VDD VDD VSS VSS r0_wl[47] r0_row0047_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_row0048_sel_nand4 VDD VDD VSS VSS r0_pd0_0 r0_pd1_0 r0_pd2_3 r0_en r0_row0048_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xr0_row0048_sel_buf0 VDD VDD VSS VSS r0_row0048_sel_buf0 r0_row0048_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_row0048_sel_buf1 VDD VDD VSS VSS r0_row0048_sel_buf1 r0_row0048_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_row0048_sel_buf2 VDD VDD VSS VSS r0_wl[48] r0_row0048_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_row0049_sel_nand4 VDD VDD VSS VSS r0_pd0_1 r0_pd1_0 r0_pd2_3 r0_en r0_row0049_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xr0_row0049_sel_buf0 VDD VDD VSS VSS r0_row0049_sel_buf0 r0_row0049_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_row0049_sel_buf1 VDD VDD VSS VSS r0_row0049_sel_buf1 r0_row0049_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_row0049_sel_buf2 VDD VDD VSS VSS r0_wl[49] r0_row0049_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_row0050_sel_nand4 VDD VDD VSS VSS r0_pd0_2 r0_pd1_0 r0_pd2_3 r0_en r0_row0050_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xr0_row0050_sel_buf0 VDD VDD VSS VSS r0_row0050_sel_buf0 r0_row0050_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_row0050_sel_buf1 VDD VDD VSS VSS r0_row0050_sel_buf1 r0_row0050_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_row0050_sel_buf2 VDD VDD VSS VSS r0_wl[50] r0_row0050_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_row0051_sel_nand4 VDD VDD VSS VSS r0_pd0_3 r0_pd1_0 r0_pd2_3 r0_en r0_row0051_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xr0_row0051_sel_buf0 VDD VDD VSS VSS r0_row0051_sel_buf0 r0_row0051_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_row0051_sel_buf1 VDD VDD VSS VSS r0_row0051_sel_buf1 r0_row0051_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_row0051_sel_buf2 VDD VDD VSS VSS r0_wl[51] r0_row0051_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_row0052_sel_nand4 VDD VDD VSS VSS r0_pd0_0 r0_pd1_1 r0_pd2_3 r0_en r0_row0052_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xr0_row0052_sel_buf0 VDD VDD VSS VSS r0_row0052_sel_buf0 r0_row0052_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_row0052_sel_buf1 VDD VDD VSS VSS r0_row0052_sel_buf1 r0_row0052_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_row0052_sel_buf2 VDD VDD VSS VSS r0_wl[52] r0_row0052_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_row0053_sel_nand4 VDD VDD VSS VSS r0_pd0_1 r0_pd1_1 r0_pd2_3 r0_en r0_row0053_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xr0_row0053_sel_buf0 VDD VDD VSS VSS r0_row0053_sel_buf0 r0_row0053_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_row0053_sel_buf1 VDD VDD VSS VSS r0_row0053_sel_buf1 r0_row0053_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_row0053_sel_buf2 VDD VDD VSS VSS r0_wl[53] r0_row0053_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_row0054_sel_nand4 VDD VDD VSS VSS r0_pd0_2 r0_pd1_1 r0_pd2_3 r0_en r0_row0054_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xr0_row0054_sel_buf0 VDD VDD VSS VSS r0_row0054_sel_buf0 r0_row0054_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_row0054_sel_buf1 VDD VDD VSS VSS r0_row0054_sel_buf1 r0_row0054_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_row0054_sel_buf2 VDD VDD VSS VSS r0_wl[54] r0_row0054_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_row0055_sel_nand4 VDD VDD VSS VSS r0_pd0_3 r0_pd1_1 r0_pd2_3 r0_en r0_row0055_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xr0_row0055_sel_buf0 VDD VDD VSS VSS r0_row0055_sel_buf0 r0_row0055_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_row0055_sel_buf1 VDD VDD VSS VSS r0_row0055_sel_buf1 r0_row0055_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_row0055_sel_buf2 VDD VDD VSS VSS r0_wl[55] r0_row0055_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_row0056_sel_nand4 VDD VDD VSS VSS r0_pd0_0 r0_pd1_2 r0_pd2_3 r0_en r0_row0056_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xr0_row0056_sel_buf0 VDD VDD VSS VSS r0_row0056_sel_buf0 r0_row0056_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_row0056_sel_buf1 VDD VDD VSS VSS r0_row0056_sel_buf1 r0_row0056_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_row0056_sel_buf2 VDD VDD VSS VSS r0_wl[56] r0_row0056_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_row0057_sel_nand4 VDD VDD VSS VSS r0_pd0_1 r0_pd1_2 r0_pd2_3 r0_en r0_row0057_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xr0_row0057_sel_buf0 VDD VDD VSS VSS r0_row0057_sel_buf0 r0_row0057_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_row0057_sel_buf1 VDD VDD VSS VSS r0_row0057_sel_buf1 r0_row0057_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_row0057_sel_buf2 VDD VDD VSS VSS r0_wl[57] r0_row0057_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_row0058_sel_nand4 VDD VDD VSS VSS r0_pd0_2 r0_pd1_2 r0_pd2_3 r0_en r0_row0058_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xr0_row0058_sel_buf0 VDD VDD VSS VSS r0_row0058_sel_buf0 r0_row0058_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_row0058_sel_buf1 VDD VDD VSS VSS r0_row0058_sel_buf1 r0_row0058_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_row0058_sel_buf2 VDD VDD VSS VSS r0_wl[58] r0_row0058_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_row0059_sel_nand4 VDD VDD VSS VSS r0_pd0_3 r0_pd1_2 r0_pd2_3 r0_en r0_row0059_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xr0_row0059_sel_buf0 VDD VDD VSS VSS r0_row0059_sel_buf0 r0_row0059_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_row0059_sel_buf1 VDD VDD VSS VSS r0_row0059_sel_buf1 r0_row0059_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_row0059_sel_buf2 VDD VDD VSS VSS r0_wl[59] r0_row0059_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_row0060_sel_nand4 VDD VDD VSS VSS r0_pd0_0 r0_pd1_3 r0_pd2_3 r0_en r0_row0060_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xr0_row0060_sel_buf0 VDD VDD VSS VSS r0_row0060_sel_buf0 r0_row0060_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_row0060_sel_buf1 VDD VDD VSS VSS r0_row0060_sel_buf1 r0_row0060_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_row0060_sel_buf2 VDD VDD VSS VSS r0_wl[60] r0_row0060_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_row0061_sel_nand4 VDD VDD VSS VSS r0_pd0_1 r0_pd1_3 r0_pd2_3 r0_en r0_row0061_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xr0_row0061_sel_buf0 VDD VDD VSS VSS r0_row0061_sel_buf0 r0_row0061_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_row0061_sel_buf1 VDD VDD VSS VSS r0_row0061_sel_buf1 r0_row0061_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_row0061_sel_buf2 VDD VDD VSS VSS r0_wl[61] r0_row0061_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_row0062_sel_nand4 VDD VDD VSS VSS r0_pd0_2 r0_pd1_3 r0_pd2_3 r0_en r0_row0062_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xr0_row0062_sel_buf0 VDD VDD VSS VSS r0_row0062_sel_buf0 r0_row0062_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_row0062_sel_buf1 VDD VDD VSS VSS r0_row0062_sel_buf1 r0_row0062_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_row0062_sel_buf2 VDD VDD VSS VSS r0_wl[62] r0_row0062_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_row0063_sel_nand4 VDD VDD VSS VSS r0_pd0_3 r0_pd1_3 r0_pd2_3 r0_en r0_row0063_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xr0_row0063_sel_buf0 VDD VDD VSS VSS r0_row0063_sel_buf0 r0_row0063_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_row0063_sel_buf1 VDD VDD VSS VSS r0_row0063_sel_buf1 r0_row0063_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr0_row0063_sel_buf2 VDD VDD VSS VSS r0_wl[63] r0_row0063_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_a0_inv VDD VDD VSS VSS r1_a0_n r1_addr[0] gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_a1_inv VDD VDD VSS VSS r1_a1_n r1_addr[1] gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_a2_inv VDD VDD VSS VSS r1_a2_n r1_addr[2] gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_a3_inv VDD VDD VSS VSS r1_a3_n r1_addr[3] gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_a4_inv VDD VDD VSS VSS r1_a4_n r1_addr[4] gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_a5_inv VDD VDD VSS VSS r1_a5_n r1_addr[5] gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_a6_inv VDD VDD VSS VSS r1_a6_n r1_addr[6] gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_a7_inv VDD VDD VSS VSS r1_a7_n r1_addr[7] gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_a8_inv VDD VDD VSS VSS r1_a8_n r1_addr[8] gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_grp0_nand3 VDD VDD VSS VSS r1_a0_n r1_a1_n r1_a2_n r1_grp0_n gf180mcu_as_sc_mcu7t3v3__nand3_2
+Xr1_grp0_inv VDD VDD VSS VSS r1_grp[0] r1_grp0_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_grp1_nand3 VDD VDD VSS VSS r1_addr[0] r1_a1_n r1_a2_n r1_grp1_n gf180mcu_as_sc_mcu7t3v3__nand3_2
+Xr1_grp1_inv VDD VDD VSS VSS r1_grp[1] r1_grp1_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_grp2_nand3 VDD VDD VSS VSS r1_a0_n r1_addr[1] r1_a2_n r1_grp2_n gf180mcu_as_sc_mcu7t3v3__nand3_2
+Xr1_grp2_inv VDD VDD VSS VSS r1_grp[2] r1_grp2_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_grp3_nand3 VDD VDD VSS VSS r1_addr[0] r1_addr[1] r1_a2_n r1_grp3_n gf180mcu_as_sc_mcu7t3v3__nand3_2
+Xr1_grp3_inv VDD VDD VSS VSS r1_grp[3] r1_grp3_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_grp4_nand3 VDD VDD VSS VSS r1_a0_n r1_a1_n r1_addr[2] r1_grp4_n gf180mcu_as_sc_mcu7t3v3__nand3_2
+Xr1_grp4_inv VDD VDD VSS VSS r1_grp[4] r1_grp4_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_grp5_nand3 VDD VDD VSS VSS r1_addr[0] r1_a1_n r1_addr[2] r1_grp5_n gf180mcu_as_sc_mcu7t3v3__nand3_2
+Xr1_grp5_inv VDD VDD VSS VSS r1_grp[5] r1_grp5_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_grp6_nand3 VDD VDD VSS VSS r1_a0_n r1_addr[1] r1_addr[2] r1_grp6_n gf180mcu_as_sc_mcu7t3v3__nand3_2
+Xr1_grp6_inv VDD VDD VSS VSS r1_grp[6] r1_grp6_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_grp7_nand3 VDD VDD VSS VSS r1_addr[0] r1_addr[1] r1_addr[2] r1_grp7_n gf180mcu_as_sc_mcu7t3v3__nand3_2
+Xr1_grp7_inv VDD VDD VSS VSS r1_grp[7] r1_grp7_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_pd0_0_nand2 VDD VDD VSS VSS r1_pd0_0_n r1_a4_n r1_a3_n gf180mcu_as_sc_mcu7t3v3__nand2_2
+Xr1_pd0_0_inv VDD VDD VSS VSS r1_pd0_0 r1_pd0_0_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_pd0_1_nand2 VDD VDD VSS VSS r1_pd0_1_n r1_a4_n r1_addr[3] gf180mcu_as_sc_mcu7t3v3__nand2_2
+Xr1_pd0_1_inv VDD VDD VSS VSS r1_pd0_1 r1_pd0_1_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_pd0_2_nand2 VDD VDD VSS VSS r1_pd0_2_n r1_addr[4] r1_a3_n gf180mcu_as_sc_mcu7t3v3__nand2_2
+Xr1_pd0_2_inv VDD VDD VSS VSS r1_pd0_2 r1_pd0_2_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_pd0_3_nand2 VDD VDD VSS VSS r1_pd0_3_n r1_addr[4] r1_addr[3] gf180mcu_as_sc_mcu7t3v3__nand2_2
+Xr1_pd0_3_inv VDD VDD VSS VSS r1_pd0_3 r1_pd0_3_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_pd1_0_nand2 VDD VDD VSS VSS r1_pd1_0_n r1_a6_n r1_a5_n gf180mcu_as_sc_mcu7t3v3__nand2_2
+Xr1_pd1_0_inv VDD VDD VSS VSS r1_pd1_0 r1_pd1_0_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_pd1_1_nand2 VDD VDD VSS VSS r1_pd1_1_n r1_a6_n r1_addr[5] gf180mcu_as_sc_mcu7t3v3__nand2_2
+Xr1_pd1_1_inv VDD VDD VSS VSS r1_pd1_1 r1_pd1_1_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_pd1_2_nand2 VDD VDD VSS VSS r1_pd1_2_n r1_addr[6] r1_a5_n gf180mcu_as_sc_mcu7t3v3__nand2_2
+Xr1_pd1_2_inv VDD VDD VSS VSS r1_pd1_2 r1_pd1_2_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_pd1_3_nand2 VDD VDD VSS VSS r1_pd1_3_n r1_addr[6] r1_addr[5] gf180mcu_as_sc_mcu7t3v3__nand2_2
+Xr1_pd1_3_inv VDD VDD VSS VSS r1_pd1_3 r1_pd1_3_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_pd2_0_nand2 VDD VDD VSS VSS r1_pd2_0_n r1_a8_n r1_a7_n gf180mcu_as_sc_mcu7t3v3__nand2_2
+Xr1_pd2_0_inv VDD VDD VSS VSS r1_pd2_0 r1_pd2_0_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_pd2_1_nand2 VDD VDD VSS VSS r1_pd2_1_n r1_a8_n r1_addr[7] gf180mcu_as_sc_mcu7t3v3__nand2_2
+Xr1_pd2_1_inv VDD VDD VSS VSS r1_pd2_1 r1_pd2_1_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_pd2_2_nand2 VDD VDD VSS VSS r1_pd2_2_n r1_addr[8] r1_a7_n gf180mcu_as_sc_mcu7t3v3__nand2_2
+Xr1_pd2_2_inv VDD VDD VSS VSS r1_pd2_2 r1_pd2_2_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_pd2_3_nand2 VDD VDD VSS VSS r1_pd2_3_n r1_addr[8] r1_addr[7] gf180mcu_as_sc_mcu7t3v3__nand2_2
+Xr1_pd2_3_inv VDD VDD VSS VSS r1_pd2_3 r1_pd2_3_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_row0000_sel_nand4 VDD VDD VSS VSS r1_pd0_0 r1_pd1_0 r1_pd2_0 r1_en r1_row0000_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xr1_row0000_sel_buf0 VDD VDD VSS VSS r1_row0000_sel_buf0 r1_row0000_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_row0000_sel_buf1 VDD VDD VSS VSS r1_row0000_sel_buf1 r1_row0000_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_row0000_sel_buf2 VDD VDD VSS VSS r1_wl[0] r1_row0000_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_row0001_sel_nand4 VDD VDD VSS VSS r1_pd0_1 r1_pd1_0 r1_pd2_0 r1_en r1_row0001_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xr1_row0001_sel_buf0 VDD VDD VSS VSS r1_row0001_sel_buf0 r1_row0001_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_row0001_sel_buf1 VDD VDD VSS VSS r1_row0001_sel_buf1 r1_row0001_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_row0001_sel_buf2 VDD VDD VSS VSS r1_wl[1] r1_row0001_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_row0002_sel_nand4 VDD VDD VSS VSS r1_pd0_2 r1_pd1_0 r1_pd2_0 r1_en r1_row0002_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xr1_row0002_sel_buf0 VDD VDD VSS VSS r1_row0002_sel_buf0 r1_row0002_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_row0002_sel_buf1 VDD VDD VSS VSS r1_row0002_sel_buf1 r1_row0002_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_row0002_sel_buf2 VDD VDD VSS VSS r1_wl[2] r1_row0002_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_row0003_sel_nand4 VDD VDD VSS VSS r1_pd0_3 r1_pd1_0 r1_pd2_0 r1_en r1_row0003_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xr1_row0003_sel_buf0 VDD VDD VSS VSS r1_row0003_sel_buf0 r1_row0003_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_row0003_sel_buf1 VDD VDD VSS VSS r1_row0003_sel_buf1 r1_row0003_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_row0003_sel_buf2 VDD VDD VSS VSS r1_wl[3] r1_row0003_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_row0004_sel_nand4 VDD VDD VSS VSS r1_pd0_0 r1_pd1_1 r1_pd2_0 r1_en r1_row0004_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xr1_row0004_sel_buf0 VDD VDD VSS VSS r1_row0004_sel_buf0 r1_row0004_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_row0004_sel_buf1 VDD VDD VSS VSS r1_row0004_sel_buf1 r1_row0004_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_row0004_sel_buf2 VDD VDD VSS VSS r1_wl[4] r1_row0004_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_row0005_sel_nand4 VDD VDD VSS VSS r1_pd0_1 r1_pd1_1 r1_pd2_0 r1_en r1_row0005_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xr1_row0005_sel_buf0 VDD VDD VSS VSS r1_row0005_sel_buf0 r1_row0005_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_row0005_sel_buf1 VDD VDD VSS VSS r1_row0005_sel_buf1 r1_row0005_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_row0005_sel_buf2 VDD VDD VSS VSS r1_wl[5] r1_row0005_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_row0006_sel_nand4 VDD VDD VSS VSS r1_pd0_2 r1_pd1_1 r1_pd2_0 r1_en r1_row0006_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xr1_row0006_sel_buf0 VDD VDD VSS VSS r1_row0006_sel_buf0 r1_row0006_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_row0006_sel_buf1 VDD VDD VSS VSS r1_row0006_sel_buf1 r1_row0006_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_row0006_sel_buf2 VDD VDD VSS VSS r1_wl[6] r1_row0006_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_row0007_sel_nand4 VDD VDD VSS VSS r1_pd0_3 r1_pd1_1 r1_pd2_0 r1_en r1_row0007_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xr1_row0007_sel_buf0 VDD VDD VSS VSS r1_row0007_sel_buf0 r1_row0007_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_row0007_sel_buf1 VDD VDD VSS VSS r1_row0007_sel_buf1 r1_row0007_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_row0007_sel_buf2 VDD VDD VSS VSS r1_wl[7] r1_row0007_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_row0008_sel_nand4 VDD VDD VSS VSS r1_pd0_0 r1_pd1_2 r1_pd2_0 r1_en r1_row0008_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xr1_row0008_sel_buf0 VDD VDD VSS VSS r1_row0008_sel_buf0 r1_row0008_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_row0008_sel_buf1 VDD VDD VSS VSS r1_row0008_sel_buf1 r1_row0008_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_row0008_sel_buf2 VDD VDD VSS VSS r1_wl[8] r1_row0008_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_row0009_sel_nand4 VDD VDD VSS VSS r1_pd0_1 r1_pd1_2 r1_pd2_0 r1_en r1_row0009_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xr1_row0009_sel_buf0 VDD VDD VSS VSS r1_row0009_sel_buf0 r1_row0009_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_row0009_sel_buf1 VDD VDD VSS VSS r1_row0009_sel_buf1 r1_row0009_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_row0009_sel_buf2 VDD VDD VSS VSS r1_wl[9] r1_row0009_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_row0010_sel_nand4 VDD VDD VSS VSS r1_pd0_2 r1_pd1_2 r1_pd2_0 r1_en r1_row0010_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xr1_row0010_sel_buf0 VDD VDD VSS VSS r1_row0010_sel_buf0 r1_row0010_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_row0010_sel_buf1 VDD VDD VSS VSS r1_row0010_sel_buf1 r1_row0010_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_row0010_sel_buf2 VDD VDD VSS VSS r1_wl[10] r1_row0010_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_row0011_sel_nand4 VDD VDD VSS VSS r1_pd0_3 r1_pd1_2 r1_pd2_0 r1_en r1_row0011_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xr1_row0011_sel_buf0 VDD VDD VSS VSS r1_row0011_sel_buf0 r1_row0011_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_row0011_sel_buf1 VDD VDD VSS VSS r1_row0011_sel_buf1 r1_row0011_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_row0011_sel_buf2 VDD VDD VSS VSS r1_wl[11] r1_row0011_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_row0012_sel_nand4 VDD VDD VSS VSS r1_pd0_0 r1_pd1_3 r1_pd2_0 r1_en r1_row0012_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xr1_row0012_sel_buf0 VDD VDD VSS VSS r1_row0012_sel_buf0 r1_row0012_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_row0012_sel_buf1 VDD VDD VSS VSS r1_row0012_sel_buf1 r1_row0012_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_row0012_sel_buf2 VDD VDD VSS VSS r1_wl[12] r1_row0012_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_row0013_sel_nand4 VDD VDD VSS VSS r1_pd0_1 r1_pd1_3 r1_pd2_0 r1_en r1_row0013_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xr1_row0013_sel_buf0 VDD VDD VSS VSS r1_row0013_sel_buf0 r1_row0013_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_row0013_sel_buf1 VDD VDD VSS VSS r1_row0013_sel_buf1 r1_row0013_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_row0013_sel_buf2 VDD VDD VSS VSS r1_wl[13] r1_row0013_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_row0014_sel_nand4 VDD VDD VSS VSS r1_pd0_2 r1_pd1_3 r1_pd2_0 r1_en r1_row0014_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xr1_row0014_sel_buf0 VDD VDD VSS VSS r1_row0014_sel_buf0 r1_row0014_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_row0014_sel_buf1 VDD VDD VSS VSS r1_row0014_sel_buf1 r1_row0014_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_row0014_sel_buf2 VDD VDD VSS VSS r1_wl[14] r1_row0014_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_row0015_sel_nand4 VDD VDD VSS VSS r1_pd0_3 r1_pd1_3 r1_pd2_0 r1_en r1_row0015_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xr1_row0015_sel_buf0 VDD VDD VSS VSS r1_row0015_sel_buf0 r1_row0015_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_row0015_sel_buf1 VDD VDD VSS VSS r1_row0015_sel_buf1 r1_row0015_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_row0015_sel_buf2 VDD VDD VSS VSS r1_wl[15] r1_row0015_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_row0016_sel_nand4 VDD VDD VSS VSS r1_pd0_0 r1_pd1_0 r1_pd2_1 r1_en r1_row0016_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xr1_row0016_sel_buf0 VDD VDD VSS VSS r1_row0016_sel_buf0 r1_row0016_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_row0016_sel_buf1 VDD VDD VSS VSS r1_row0016_sel_buf1 r1_row0016_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_row0016_sel_buf2 VDD VDD VSS VSS r1_wl[16] r1_row0016_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_row0017_sel_nand4 VDD VDD VSS VSS r1_pd0_1 r1_pd1_0 r1_pd2_1 r1_en r1_row0017_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xr1_row0017_sel_buf0 VDD VDD VSS VSS r1_row0017_sel_buf0 r1_row0017_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_row0017_sel_buf1 VDD VDD VSS VSS r1_row0017_sel_buf1 r1_row0017_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_row0017_sel_buf2 VDD VDD VSS VSS r1_wl[17] r1_row0017_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_row0018_sel_nand4 VDD VDD VSS VSS r1_pd0_2 r1_pd1_0 r1_pd2_1 r1_en r1_row0018_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xr1_row0018_sel_buf0 VDD VDD VSS VSS r1_row0018_sel_buf0 r1_row0018_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_row0018_sel_buf1 VDD VDD VSS VSS r1_row0018_sel_buf1 r1_row0018_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_row0018_sel_buf2 VDD VDD VSS VSS r1_wl[18] r1_row0018_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_row0019_sel_nand4 VDD VDD VSS VSS r1_pd0_3 r1_pd1_0 r1_pd2_1 r1_en r1_row0019_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xr1_row0019_sel_buf0 VDD VDD VSS VSS r1_row0019_sel_buf0 r1_row0019_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_row0019_sel_buf1 VDD VDD VSS VSS r1_row0019_sel_buf1 r1_row0019_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_row0019_sel_buf2 VDD VDD VSS VSS r1_wl[19] r1_row0019_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_row0020_sel_nand4 VDD VDD VSS VSS r1_pd0_0 r1_pd1_1 r1_pd2_1 r1_en r1_row0020_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xr1_row0020_sel_buf0 VDD VDD VSS VSS r1_row0020_sel_buf0 r1_row0020_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_row0020_sel_buf1 VDD VDD VSS VSS r1_row0020_sel_buf1 r1_row0020_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_row0020_sel_buf2 VDD VDD VSS VSS r1_wl[20] r1_row0020_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_row0021_sel_nand4 VDD VDD VSS VSS r1_pd0_1 r1_pd1_1 r1_pd2_1 r1_en r1_row0021_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xr1_row0021_sel_buf0 VDD VDD VSS VSS r1_row0021_sel_buf0 r1_row0021_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_row0021_sel_buf1 VDD VDD VSS VSS r1_row0021_sel_buf1 r1_row0021_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_row0021_sel_buf2 VDD VDD VSS VSS r1_wl[21] r1_row0021_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_row0022_sel_nand4 VDD VDD VSS VSS r1_pd0_2 r1_pd1_1 r1_pd2_1 r1_en r1_row0022_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xr1_row0022_sel_buf0 VDD VDD VSS VSS r1_row0022_sel_buf0 r1_row0022_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_row0022_sel_buf1 VDD VDD VSS VSS r1_row0022_sel_buf1 r1_row0022_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_row0022_sel_buf2 VDD VDD VSS VSS r1_wl[22] r1_row0022_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_row0023_sel_nand4 VDD VDD VSS VSS r1_pd0_3 r1_pd1_1 r1_pd2_1 r1_en r1_row0023_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xr1_row0023_sel_buf0 VDD VDD VSS VSS r1_row0023_sel_buf0 r1_row0023_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_row0023_sel_buf1 VDD VDD VSS VSS r1_row0023_sel_buf1 r1_row0023_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_row0023_sel_buf2 VDD VDD VSS VSS r1_wl[23] r1_row0023_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_row0024_sel_nand4 VDD VDD VSS VSS r1_pd0_0 r1_pd1_2 r1_pd2_1 r1_en r1_row0024_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xr1_row0024_sel_buf0 VDD VDD VSS VSS r1_row0024_sel_buf0 r1_row0024_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_row0024_sel_buf1 VDD VDD VSS VSS r1_row0024_sel_buf1 r1_row0024_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_row0024_sel_buf2 VDD VDD VSS VSS r1_wl[24] r1_row0024_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_row0025_sel_nand4 VDD VDD VSS VSS r1_pd0_1 r1_pd1_2 r1_pd2_1 r1_en r1_row0025_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xr1_row0025_sel_buf0 VDD VDD VSS VSS r1_row0025_sel_buf0 r1_row0025_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_row0025_sel_buf1 VDD VDD VSS VSS r1_row0025_sel_buf1 r1_row0025_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_row0025_sel_buf2 VDD VDD VSS VSS r1_wl[25] r1_row0025_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_row0026_sel_nand4 VDD VDD VSS VSS r1_pd0_2 r1_pd1_2 r1_pd2_1 r1_en r1_row0026_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xr1_row0026_sel_buf0 VDD VDD VSS VSS r1_row0026_sel_buf0 r1_row0026_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_row0026_sel_buf1 VDD VDD VSS VSS r1_row0026_sel_buf1 r1_row0026_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_row0026_sel_buf2 VDD VDD VSS VSS r1_wl[26] r1_row0026_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_row0027_sel_nand4 VDD VDD VSS VSS r1_pd0_3 r1_pd1_2 r1_pd2_1 r1_en r1_row0027_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xr1_row0027_sel_buf0 VDD VDD VSS VSS r1_row0027_sel_buf0 r1_row0027_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_row0027_sel_buf1 VDD VDD VSS VSS r1_row0027_sel_buf1 r1_row0027_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_row0027_sel_buf2 VDD VDD VSS VSS r1_wl[27] r1_row0027_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_row0028_sel_nand4 VDD VDD VSS VSS r1_pd0_0 r1_pd1_3 r1_pd2_1 r1_en r1_row0028_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xr1_row0028_sel_buf0 VDD VDD VSS VSS r1_row0028_sel_buf0 r1_row0028_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_row0028_sel_buf1 VDD VDD VSS VSS r1_row0028_sel_buf1 r1_row0028_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_row0028_sel_buf2 VDD VDD VSS VSS r1_wl[28] r1_row0028_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_row0029_sel_nand4 VDD VDD VSS VSS r1_pd0_1 r1_pd1_3 r1_pd2_1 r1_en r1_row0029_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xr1_row0029_sel_buf0 VDD VDD VSS VSS r1_row0029_sel_buf0 r1_row0029_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_row0029_sel_buf1 VDD VDD VSS VSS r1_row0029_sel_buf1 r1_row0029_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_row0029_sel_buf2 VDD VDD VSS VSS r1_wl[29] r1_row0029_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_row0030_sel_nand4 VDD VDD VSS VSS r1_pd0_2 r1_pd1_3 r1_pd2_1 r1_en r1_row0030_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xr1_row0030_sel_buf0 VDD VDD VSS VSS r1_row0030_sel_buf0 r1_row0030_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_row0030_sel_buf1 VDD VDD VSS VSS r1_row0030_sel_buf1 r1_row0030_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_row0030_sel_buf2 VDD VDD VSS VSS r1_wl[30] r1_row0030_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_row0031_sel_nand4 VDD VDD VSS VSS r1_pd0_3 r1_pd1_3 r1_pd2_1 r1_en r1_row0031_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xr1_row0031_sel_buf0 VDD VDD VSS VSS r1_row0031_sel_buf0 r1_row0031_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_row0031_sel_buf1 VDD VDD VSS VSS r1_row0031_sel_buf1 r1_row0031_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_row0031_sel_buf2 VDD VDD VSS VSS r1_wl[31] r1_row0031_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_row0032_sel_nand4 VDD VDD VSS VSS r1_pd0_0 r1_pd1_0 r1_pd2_2 r1_en r1_row0032_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xr1_row0032_sel_buf0 VDD VDD VSS VSS r1_row0032_sel_buf0 r1_row0032_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_row0032_sel_buf1 VDD VDD VSS VSS r1_row0032_sel_buf1 r1_row0032_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_row0032_sel_buf2 VDD VDD VSS VSS r1_wl[32] r1_row0032_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_row0033_sel_nand4 VDD VDD VSS VSS r1_pd0_1 r1_pd1_0 r1_pd2_2 r1_en r1_row0033_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xr1_row0033_sel_buf0 VDD VDD VSS VSS r1_row0033_sel_buf0 r1_row0033_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_row0033_sel_buf1 VDD VDD VSS VSS r1_row0033_sel_buf1 r1_row0033_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_row0033_sel_buf2 VDD VDD VSS VSS r1_wl[33] r1_row0033_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_row0034_sel_nand4 VDD VDD VSS VSS r1_pd0_2 r1_pd1_0 r1_pd2_2 r1_en r1_row0034_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xr1_row0034_sel_buf0 VDD VDD VSS VSS r1_row0034_sel_buf0 r1_row0034_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_row0034_sel_buf1 VDD VDD VSS VSS r1_row0034_sel_buf1 r1_row0034_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_row0034_sel_buf2 VDD VDD VSS VSS r1_wl[34] r1_row0034_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_row0035_sel_nand4 VDD VDD VSS VSS r1_pd0_3 r1_pd1_0 r1_pd2_2 r1_en r1_row0035_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xr1_row0035_sel_buf0 VDD VDD VSS VSS r1_row0035_sel_buf0 r1_row0035_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_row0035_sel_buf1 VDD VDD VSS VSS r1_row0035_sel_buf1 r1_row0035_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_row0035_sel_buf2 VDD VDD VSS VSS r1_wl[35] r1_row0035_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_row0036_sel_nand4 VDD VDD VSS VSS r1_pd0_0 r1_pd1_1 r1_pd2_2 r1_en r1_row0036_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xr1_row0036_sel_buf0 VDD VDD VSS VSS r1_row0036_sel_buf0 r1_row0036_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_row0036_sel_buf1 VDD VDD VSS VSS r1_row0036_sel_buf1 r1_row0036_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_row0036_sel_buf2 VDD VDD VSS VSS r1_wl[36] r1_row0036_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_row0037_sel_nand4 VDD VDD VSS VSS r1_pd0_1 r1_pd1_1 r1_pd2_2 r1_en r1_row0037_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xr1_row0037_sel_buf0 VDD VDD VSS VSS r1_row0037_sel_buf0 r1_row0037_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_row0037_sel_buf1 VDD VDD VSS VSS r1_row0037_sel_buf1 r1_row0037_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_row0037_sel_buf2 VDD VDD VSS VSS r1_wl[37] r1_row0037_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_row0038_sel_nand4 VDD VDD VSS VSS r1_pd0_2 r1_pd1_1 r1_pd2_2 r1_en r1_row0038_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xr1_row0038_sel_buf0 VDD VDD VSS VSS r1_row0038_sel_buf0 r1_row0038_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_row0038_sel_buf1 VDD VDD VSS VSS r1_row0038_sel_buf1 r1_row0038_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_row0038_sel_buf2 VDD VDD VSS VSS r1_wl[38] r1_row0038_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_row0039_sel_nand4 VDD VDD VSS VSS r1_pd0_3 r1_pd1_1 r1_pd2_2 r1_en r1_row0039_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xr1_row0039_sel_buf0 VDD VDD VSS VSS r1_row0039_sel_buf0 r1_row0039_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_row0039_sel_buf1 VDD VDD VSS VSS r1_row0039_sel_buf1 r1_row0039_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_row0039_sel_buf2 VDD VDD VSS VSS r1_wl[39] r1_row0039_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_row0040_sel_nand4 VDD VDD VSS VSS r1_pd0_0 r1_pd1_2 r1_pd2_2 r1_en r1_row0040_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xr1_row0040_sel_buf0 VDD VDD VSS VSS r1_row0040_sel_buf0 r1_row0040_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_row0040_sel_buf1 VDD VDD VSS VSS r1_row0040_sel_buf1 r1_row0040_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_row0040_sel_buf2 VDD VDD VSS VSS r1_wl[40] r1_row0040_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_row0041_sel_nand4 VDD VDD VSS VSS r1_pd0_1 r1_pd1_2 r1_pd2_2 r1_en r1_row0041_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xr1_row0041_sel_buf0 VDD VDD VSS VSS r1_row0041_sel_buf0 r1_row0041_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_row0041_sel_buf1 VDD VDD VSS VSS r1_row0041_sel_buf1 r1_row0041_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_row0041_sel_buf2 VDD VDD VSS VSS r1_wl[41] r1_row0041_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_row0042_sel_nand4 VDD VDD VSS VSS r1_pd0_2 r1_pd1_2 r1_pd2_2 r1_en r1_row0042_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xr1_row0042_sel_buf0 VDD VDD VSS VSS r1_row0042_sel_buf0 r1_row0042_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_row0042_sel_buf1 VDD VDD VSS VSS r1_row0042_sel_buf1 r1_row0042_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_row0042_sel_buf2 VDD VDD VSS VSS r1_wl[42] r1_row0042_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_row0043_sel_nand4 VDD VDD VSS VSS r1_pd0_3 r1_pd1_2 r1_pd2_2 r1_en r1_row0043_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xr1_row0043_sel_buf0 VDD VDD VSS VSS r1_row0043_sel_buf0 r1_row0043_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_row0043_sel_buf1 VDD VDD VSS VSS r1_row0043_sel_buf1 r1_row0043_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_row0043_sel_buf2 VDD VDD VSS VSS r1_wl[43] r1_row0043_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_row0044_sel_nand4 VDD VDD VSS VSS r1_pd0_0 r1_pd1_3 r1_pd2_2 r1_en r1_row0044_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xr1_row0044_sel_buf0 VDD VDD VSS VSS r1_row0044_sel_buf0 r1_row0044_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_row0044_sel_buf1 VDD VDD VSS VSS r1_row0044_sel_buf1 r1_row0044_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_row0044_sel_buf2 VDD VDD VSS VSS r1_wl[44] r1_row0044_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_row0045_sel_nand4 VDD VDD VSS VSS r1_pd0_1 r1_pd1_3 r1_pd2_2 r1_en r1_row0045_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xr1_row0045_sel_buf0 VDD VDD VSS VSS r1_row0045_sel_buf0 r1_row0045_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_row0045_sel_buf1 VDD VDD VSS VSS r1_row0045_sel_buf1 r1_row0045_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_row0045_sel_buf2 VDD VDD VSS VSS r1_wl[45] r1_row0045_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_row0046_sel_nand4 VDD VDD VSS VSS r1_pd0_2 r1_pd1_3 r1_pd2_2 r1_en r1_row0046_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xr1_row0046_sel_buf0 VDD VDD VSS VSS r1_row0046_sel_buf0 r1_row0046_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_row0046_sel_buf1 VDD VDD VSS VSS r1_row0046_sel_buf1 r1_row0046_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_row0046_sel_buf2 VDD VDD VSS VSS r1_wl[46] r1_row0046_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_row0047_sel_nand4 VDD VDD VSS VSS r1_pd0_3 r1_pd1_3 r1_pd2_2 r1_en r1_row0047_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xr1_row0047_sel_buf0 VDD VDD VSS VSS r1_row0047_sel_buf0 r1_row0047_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_row0047_sel_buf1 VDD VDD VSS VSS r1_row0047_sel_buf1 r1_row0047_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_row0047_sel_buf2 VDD VDD VSS VSS r1_wl[47] r1_row0047_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_row0048_sel_nand4 VDD VDD VSS VSS r1_pd0_0 r1_pd1_0 r1_pd2_3 r1_en r1_row0048_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xr1_row0048_sel_buf0 VDD VDD VSS VSS r1_row0048_sel_buf0 r1_row0048_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_row0048_sel_buf1 VDD VDD VSS VSS r1_row0048_sel_buf1 r1_row0048_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_row0048_sel_buf2 VDD VDD VSS VSS r1_wl[48] r1_row0048_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_row0049_sel_nand4 VDD VDD VSS VSS r1_pd0_1 r1_pd1_0 r1_pd2_3 r1_en r1_row0049_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xr1_row0049_sel_buf0 VDD VDD VSS VSS r1_row0049_sel_buf0 r1_row0049_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_row0049_sel_buf1 VDD VDD VSS VSS r1_row0049_sel_buf1 r1_row0049_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_row0049_sel_buf2 VDD VDD VSS VSS r1_wl[49] r1_row0049_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_row0050_sel_nand4 VDD VDD VSS VSS r1_pd0_2 r1_pd1_0 r1_pd2_3 r1_en r1_row0050_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xr1_row0050_sel_buf0 VDD VDD VSS VSS r1_row0050_sel_buf0 r1_row0050_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_row0050_sel_buf1 VDD VDD VSS VSS r1_row0050_sel_buf1 r1_row0050_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_row0050_sel_buf2 VDD VDD VSS VSS r1_wl[50] r1_row0050_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_row0051_sel_nand4 VDD VDD VSS VSS r1_pd0_3 r1_pd1_0 r1_pd2_3 r1_en r1_row0051_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xr1_row0051_sel_buf0 VDD VDD VSS VSS r1_row0051_sel_buf0 r1_row0051_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_row0051_sel_buf1 VDD VDD VSS VSS r1_row0051_sel_buf1 r1_row0051_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_row0051_sel_buf2 VDD VDD VSS VSS r1_wl[51] r1_row0051_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_row0052_sel_nand4 VDD VDD VSS VSS r1_pd0_0 r1_pd1_1 r1_pd2_3 r1_en r1_row0052_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xr1_row0052_sel_buf0 VDD VDD VSS VSS r1_row0052_sel_buf0 r1_row0052_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_row0052_sel_buf1 VDD VDD VSS VSS r1_row0052_sel_buf1 r1_row0052_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_row0052_sel_buf2 VDD VDD VSS VSS r1_wl[52] r1_row0052_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_row0053_sel_nand4 VDD VDD VSS VSS r1_pd0_1 r1_pd1_1 r1_pd2_3 r1_en r1_row0053_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xr1_row0053_sel_buf0 VDD VDD VSS VSS r1_row0053_sel_buf0 r1_row0053_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_row0053_sel_buf1 VDD VDD VSS VSS r1_row0053_sel_buf1 r1_row0053_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_row0053_sel_buf2 VDD VDD VSS VSS r1_wl[53] r1_row0053_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_row0054_sel_nand4 VDD VDD VSS VSS r1_pd0_2 r1_pd1_1 r1_pd2_3 r1_en r1_row0054_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xr1_row0054_sel_buf0 VDD VDD VSS VSS r1_row0054_sel_buf0 r1_row0054_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_row0054_sel_buf1 VDD VDD VSS VSS r1_row0054_sel_buf1 r1_row0054_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_row0054_sel_buf2 VDD VDD VSS VSS r1_wl[54] r1_row0054_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_row0055_sel_nand4 VDD VDD VSS VSS r1_pd0_3 r1_pd1_1 r1_pd2_3 r1_en r1_row0055_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xr1_row0055_sel_buf0 VDD VDD VSS VSS r1_row0055_sel_buf0 r1_row0055_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_row0055_sel_buf1 VDD VDD VSS VSS r1_row0055_sel_buf1 r1_row0055_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_row0055_sel_buf2 VDD VDD VSS VSS r1_wl[55] r1_row0055_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_row0056_sel_nand4 VDD VDD VSS VSS r1_pd0_0 r1_pd1_2 r1_pd2_3 r1_en r1_row0056_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xr1_row0056_sel_buf0 VDD VDD VSS VSS r1_row0056_sel_buf0 r1_row0056_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_row0056_sel_buf1 VDD VDD VSS VSS r1_row0056_sel_buf1 r1_row0056_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_row0056_sel_buf2 VDD VDD VSS VSS r1_wl[56] r1_row0056_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_row0057_sel_nand4 VDD VDD VSS VSS r1_pd0_1 r1_pd1_2 r1_pd2_3 r1_en r1_row0057_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xr1_row0057_sel_buf0 VDD VDD VSS VSS r1_row0057_sel_buf0 r1_row0057_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_row0057_sel_buf1 VDD VDD VSS VSS r1_row0057_sel_buf1 r1_row0057_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_row0057_sel_buf2 VDD VDD VSS VSS r1_wl[57] r1_row0057_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_row0058_sel_nand4 VDD VDD VSS VSS r1_pd0_2 r1_pd1_2 r1_pd2_3 r1_en r1_row0058_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xr1_row0058_sel_buf0 VDD VDD VSS VSS r1_row0058_sel_buf0 r1_row0058_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_row0058_sel_buf1 VDD VDD VSS VSS r1_row0058_sel_buf1 r1_row0058_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_row0058_sel_buf2 VDD VDD VSS VSS r1_wl[58] r1_row0058_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_row0059_sel_nand4 VDD VDD VSS VSS r1_pd0_3 r1_pd1_2 r1_pd2_3 r1_en r1_row0059_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xr1_row0059_sel_buf0 VDD VDD VSS VSS r1_row0059_sel_buf0 r1_row0059_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_row0059_sel_buf1 VDD VDD VSS VSS r1_row0059_sel_buf1 r1_row0059_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_row0059_sel_buf2 VDD VDD VSS VSS r1_wl[59] r1_row0059_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_row0060_sel_nand4 VDD VDD VSS VSS r1_pd0_0 r1_pd1_3 r1_pd2_3 r1_en r1_row0060_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xr1_row0060_sel_buf0 VDD VDD VSS VSS r1_row0060_sel_buf0 r1_row0060_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_row0060_sel_buf1 VDD VDD VSS VSS r1_row0060_sel_buf1 r1_row0060_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_row0060_sel_buf2 VDD VDD VSS VSS r1_wl[60] r1_row0060_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_row0061_sel_nand4 VDD VDD VSS VSS r1_pd0_1 r1_pd1_3 r1_pd2_3 r1_en r1_row0061_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xr1_row0061_sel_buf0 VDD VDD VSS VSS r1_row0061_sel_buf0 r1_row0061_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_row0061_sel_buf1 VDD VDD VSS VSS r1_row0061_sel_buf1 r1_row0061_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_row0061_sel_buf2 VDD VDD VSS VSS r1_wl[61] r1_row0061_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_row0062_sel_nand4 VDD VDD VSS VSS r1_pd0_2 r1_pd1_3 r1_pd2_3 r1_en r1_row0062_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xr1_row0062_sel_buf0 VDD VDD VSS VSS r1_row0062_sel_buf0 r1_row0062_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_row0062_sel_buf1 VDD VDD VSS VSS r1_row0062_sel_buf1 r1_row0062_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_row0062_sel_buf2 VDD VDD VSS VSS r1_wl[62] r1_row0062_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_row0063_sel_nand4 VDD VDD VSS VSS r1_pd0_3 r1_pd1_3 r1_pd2_3 r1_en r1_row0063_sel_row_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xr1_row0063_sel_buf0 VDD VDD VSS VSS r1_row0063_sel_buf0 r1_row0063_sel_row_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_row0063_sel_buf1 VDD VDD VSS VSS r1_row0063_sel_buf1 r1_row0063_sel_buf0 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xr1_row0063_sel_buf2 VDD VDD VSS VSS r1_wl[63] r1_row0063_sel_buf1 gf180mcu_as_sc_mcu7t3v3__inv_2
+Xeq_a0_inv VDD VDD VSS VSS eq_a0_n w0_addr[0] gf180mcu_as_sc_mcu7t3v3__inv_2
+Xeq_b0_inv VDD VDD VSS VSS eq_b0_n w1_addr[0] gf180mcu_as_sc_mcu7t3v3__inv_2
+Xeq_ab0_nand VDD VDD VSS VSS eq_ab0_n w1_addr[0] w0_addr[0] gf180mcu_as_sc_mcu7t3v3__nand2_2
+Xeq_ab0_inv VDD VDD VSS VSS eq_ab0 eq_ab0_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xeq_nanb0_nand VDD VDD VSS VSS eq_nanb0_n eq_b0_n eq_a0_n gf180mcu_as_sc_mcu7t3v3__nand2_2
+Xeq_nanb0_inv VDD VDD VSS VSS eq_nanb0 eq_nanb0_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xeq_or0_nor VDD VDD VSS VSS eq_or0_n eq_nanb0 eq_ab0 gf180mcu_as_sc_mcu7t3v3__nor2_2
+Xeq_xnor0_inv VDD VDD VSS VSS eq_bit0 eq_or0_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xeq_a1_inv VDD VDD VSS VSS eq_a1_n w0_addr[1] gf180mcu_as_sc_mcu7t3v3__inv_2
+Xeq_b1_inv VDD VDD VSS VSS eq_b1_n w1_addr[1] gf180mcu_as_sc_mcu7t3v3__inv_2
+Xeq_ab1_nand VDD VDD VSS VSS eq_ab1_n w1_addr[1] w0_addr[1] gf180mcu_as_sc_mcu7t3v3__nand2_2
+Xeq_ab1_inv VDD VDD VSS VSS eq_ab1 eq_ab1_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xeq_nanb1_nand VDD VDD VSS VSS eq_nanb1_n eq_b1_n eq_a1_n gf180mcu_as_sc_mcu7t3v3__nand2_2
+Xeq_nanb1_inv VDD VDD VSS VSS eq_nanb1 eq_nanb1_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xeq_or1_nor VDD VDD VSS VSS eq_or1_n eq_nanb1 eq_ab1 gf180mcu_as_sc_mcu7t3v3__nor2_2
+Xeq_xnor1_inv VDD VDD VSS VSS eq_bit1 eq_or1_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xeq_a2_inv VDD VDD VSS VSS eq_a2_n w0_addr[2] gf180mcu_as_sc_mcu7t3v3__inv_2
+Xeq_b2_inv VDD VDD VSS VSS eq_b2_n w1_addr[2] gf180mcu_as_sc_mcu7t3v3__inv_2
+Xeq_ab2_nand VDD VDD VSS VSS eq_ab2_n w1_addr[2] w0_addr[2] gf180mcu_as_sc_mcu7t3v3__nand2_2
+Xeq_ab2_inv VDD VDD VSS VSS eq_ab2 eq_ab2_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xeq_nanb2_nand VDD VDD VSS VSS eq_nanb2_n eq_b2_n eq_a2_n gf180mcu_as_sc_mcu7t3v3__nand2_2
+Xeq_nanb2_inv VDD VDD VSS VSS eq_nanb2 eq_nanb2_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xeq_or2_nor VDD VDD VSS VSS eq_or2_n eq_nanb2 eq_ab2 gf180mcu_as_sc_mcu7t3v3__nor2_2
+Xeq_xnor2_inv VDD VDD VSS VSS eq_bit2 eq_or2_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xeq_a3_inv VDD VDD VSS VSS eq_a3_n w0_addr[3] gf180mcu_as_sc_mcu7t3v3__inv_2
+Xeq_b3_inv VDD VDD VSS VSS eq_b3_n w1_addr[3] gf180mcu_as_sc_mcu7t3v3__inv_2
+Xeq_ab3_nand VDD VDD VSS VSS eq_ab3_n w1_addr[3] w0_addr[3] gf180mcu_as_sc_mcu7t3v3__nand2_2
+Xeq_ab3_inv VDD VDD VSS VSS eq_ab3 eq_ab3_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xeq_nanb3_nand VDD VDD VSS VSS eq_nanb3_n eq_b3_n eq_a3_n gf180mcu_as_sc_mcu7t3v3__nand2_2
+Xeq_nanb3_inv VDD VDD VSS VSS eq_nanb3 eq_nanb3_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xeq_or3_nor VDD VDD VSS VSS eq_or3_n eq_nanb3 eq_ab3 gf180mcu_as_sc_mcu7t3v3__nor2_2
+Xeq_xnor3_inv VDD VDD VSS VSS eq_bit3 eq_or3_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xeq_a4_inv VDD VDD VSS VSS eq_a4_n w0_addr[4] gf180mcu_as_sc_mcu7t3v3__inv_2
+Xeq_b4_inv VDD VDD VSS VSS eq_b4_n w1_addr[4] gf180mcu_as_sc_mcu7t3v3__inv_2
+Xeq_ab4_nand VDD VDD VSS VSS eq_ab4_n w1_addr[4] w0_addr[4] gf180mcu_as_sc_mcu7t3v3__nand2_2
+Xeq_ab4_inv VDD VDD VSS VSS eq_ab4 eq_ab4_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xeq_nanb4_nand VDD VDD VSS VSS eq_nanb4_n eq_b4_n eq_a4_n gf180mcu_as_sc_mcu7t3v3__nand2_2
+Xeq_nanb4_inv VDD VDD VSS VSS eq_nanb4 eq_nanb4_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xeq_or4_nor VDD VDD VSS VSS eq_or4_n eq_nanb4 eq_ab4 gf180mcu_as_sc_mcu7t3v3__nor2_2
+Xeq_xnor4_inv VDD VDD VSS VSS eq_bit4 eq_or4_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xeq_a5_inv VDD VDD VSS VSS eq_a5_n w0_addr[5] gf180mcu_as_sc_mcu7t3v3__inv_2
+Xeq_b5_inv VDD VDD VSS VSS eq_b5_n w1_addr[5] gf180mcu_as_sc_mcu7t3v3__inv_2
+Xeq_ab5_nand VDD VDD VSS VSS eq_ab5_n w1_addr[5] w0_addr[5] gf180mcu_as_sc_mcu7t3v3__nand2_2
+Xeq_ab5_inv VDD VDD VSS VSS eq_ab5 eq_ab5_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xeq_nanb5_nand VDD VDD VSS VSS eq_nanb5_n eq_b5_n eq_a5_n gf180mcu_as_sc_mcu7t3v3__nand2_2
+Xeq_nanb5_inv VDD VDD VSS VSS eq_nanb5 eq_nanb5_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xeq_or5_nor VDD VDD VSS VSS eq_or5_n eq_nanb5 eq_ab5 gf180mcu_as_sc_mcu7t3v3__nor2_2
+Xeq_xnor5_inv VDD VDD VSS VSS eq_bit5 eq_or5_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xeq_a6_inv VDD VDD VSS VSS eq_a6_n w0_addr[6] gf180mcu_as_sc_mcu7t3v3__inv_2
+Xeq_b6_inv VDD VDD VSS VSS eq_b6_n w1_addr[6] gf180mcu_as_sc_mcu7t3v3__inv_2
+Xeq_ab6_nand VDD VDD VSS VSS eq_ab6_n w1_addr[6] w0_addr[6] gf180mcu_as_sc_mcu7t3v3__nand2_2
+Xeq_ab6_inv VDD VDD VSS VSS eq_ab6 eq_ab6_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xeq_nanb6_nand VDD VDD VSS VSS eq_nanb6_n eq_b6_n eq_a6_n gf180mcu_as_sc_mcu7t3v3__nand2_2
+Xeq_nanb6_inv VDD VDD VSS VSS eq_nanb6 eq_nanb6_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xeq_or6_nor VDD VDD VSS VSS eq_or6_n eq_nanb6 eq_ab6 gf180mcu_as_sc_mcu7t3v3__nor2_2
+Xeq_xnor6_inv VDD VDD VSS VSS eq_bit6 eq_or6_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xeq_a7_inv VDD VDD VSS VSS eq_a7_n w0_addr[7] gf180mcu_as_sc_mcu7t3v3__inv_2
+Xeq_b7_inv VDD VDD VSS VSS eq_b7_n w1_addr[7] gf180mcu_as_sc_mcu7t3v3__inv_2
+Xeq_ab7_nand VDD VDD VSS VSS eq_ab7_n w1_addr[7] w0_addr[7] gf180mcu_as_sc_mcu7t3v3__nand2_2
+Xeq_ab7_inv VDD VDD VSS VSS eq_ab7 eq_ab7_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xeq_nanb7_nand VDD VDD VSS VSS eq_nanb7_n eq_b7_n eq_a7_n gf180mcu_as_sc_mcu7t3v3__nand2_2
+Xeq_nanb7_inv VDD VDD VSS VSS eq_nanb7 eq_nanb7_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xeq_or7_nor VDD VDD VSS VSS eq_or7_n eq_nanb7 eq_ab7 gf180mcu_as_sc_mcu7t3v3__nor2_2
+Xeq_xnor7_inv VDD VDD VSS VSS eq_bit7 eq_or7_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xeq_a8_inv VDD VDD VSS VSS eq_a8_n w0_addr[8] gf180mcu_as_sc_mcu7t3v3__inv_2
+Xeq_b8_inv VDD VDD VSS VSS eq_b8_n w1_addr[8] gf180mcu_as_sc_mcu7t3v3__inv_2
+Xeq_ab8_nand VDD VDD VSS VSS eq_ab8_n w1_addr[8] w0_addr[8] gf180mcu_as_sc_mcu7t3v3__nand2_2
+Xeq_ab8_inv VDD VDD VSS VSS eq_ab8 eq_ab8_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xeq_nanb8_nand VDD VDD VSS VSS eq_nanb8_n eq_b8_n eq_a8_n gf180mcu_as_sc_mcu7t3v3__nand2_2
+Xeq_nanb8_inv VDD VDD VSS VSS eq_nanb8 eq_nanb8_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xeq_or8_nor VDD VDD VSS VSS eq_or8_n eq_nanb8 eq_ab8 gf180mcu_as_sc_mcu7t3v3__nor2_2
+Xeq_xnor8_inv VDD VDD VSS VSS eq_bit8 eq_or8_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xeq_reduce_s0_0_nand4 VDD VDD VSS VSS eq_bit0 eq_bit1 eq_bit2 eq_bit3 eq_reduce_s0_0_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xeq_reduce_s0_0_inv VDD VDD VSS VSS eq_reduce_s0_0 eq_reduce_s0_0_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xeq_reduce_s0_4_nand4 VDD VDD VSS VSS eq_bit4 eq_bit5 eq_bit6 eq_bit7 eq_reduce_s0_4_n gf180mcu_as_sc_mcu7t3v3__nand4_2
+Xeq_reduce_s0_4_inv VDD VDD VSS VSS eq_reduce_s0_4 eq_reduce_s0_4_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xeq_reduce_s1_0_nand3 VDD VDD VSS VSS eq_reduce_s0_0 eq_reduce_s0_4 eq_bit8 eq_reduce_s1_0_n gf180mcu_as_sc_mcu7t3v3__nand3_2
+Xeq_reduce_s1_0_inv VDD VDD VSS VSS eq_reduce_s1_0 eq_reduce_s1_0_n gf180mcu_as_sc_mcu7t3v3__inv_2
+Xwrite_conflict_nand VDD VDD VSS VSS w0_en w1_en eq_reduce_s1_0 write_conflict_n gf180mcu_as_sc_mcu7t3v3__nand3_2
+Xwrite_conflict_inv VDD VDD VSS VSS write_conflict write_conflict_n gf180mcu_as_sc_mcu7t3v3__inv_2
+.ends gf180mcu_3v3_12t_2r2w_sram_512x8_stdcell_full_control_matrix

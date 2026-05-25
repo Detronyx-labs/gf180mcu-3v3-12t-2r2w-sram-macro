@@ -14,11 +14,11 @@ Subcircuit pins:
 Circuit 1: detronyx_12t_write_conflict_rc1 |Circuit 2: detronyx_12t_write_conflict_rc1 
 -------------------------------------------|-------------------------------------------
 VDD                                        |VDD                                        
-VSS                                        |VSS                                        
 w0_en                                      |w0_en                                      
-w1_en                                      |w1_en                                      
 addr_eq                                    |addr_eq                                    
+w1_en                                      |w1_en                                      
 write_conflict                             |write_conflict                             
+VSS                                        |VSS                                        
 ---------------------------------------------------------------------------------------
 Cell pin lists are equivalent.
 Device classes detronyx_12t_write_conflict_rc1 and detronyx_12t_write_conflict_rc1 are equivalent.

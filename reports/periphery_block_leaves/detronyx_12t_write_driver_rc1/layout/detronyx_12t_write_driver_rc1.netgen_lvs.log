@@ -13,11 +13,11 @@ Netlists match uniquely.
 Subcircuit pins:
 Circuit 1: detronyx_12t_write_driver_rc1   |Circuit 2: detronyx_12t_write_driver_rc1   
 -------------------------------------------|-------------------------------------------
+wbl0                                       |wbl0                                       
+wbr0                                       |wbr0                                       
 wen                                        |wen                                        
 VSS                                        |VSS                                        
 din                                        |din                                        
-wbl0                                       |wbl0                                       
-wbr0                                       |wbr0                                       
 VDD                                        |VDD                                        
 ---------------------------------------------------------------------------------------
 Cell pin lists are equivalent.

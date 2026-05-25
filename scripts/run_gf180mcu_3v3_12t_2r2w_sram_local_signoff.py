@@ -7,6 +7,7 @@ only audit proxies in an open-source flow.  It runs/collects:
 * Magic DRC evidence from the final physical package;
 * Magic PEX extraction with cthresh/rthresh set to zero;
 * staged Netgen LVS evidence for transistor-level control leaves;
+* physical Avalon stdcell-control GDS merge and signal-route evidence;
 * final macro abstract pin LVS against the extracted top subckt;
 * GF180MCU KLayout antenna and density decks;
 * ngspice disturb/conflict and VDD sweep evidence as the current SNM proxy;
@@ -53,6 +54,227 @@ def load_json(path: Path) -> Any:
 
 def file_ok(path: Path) -> bool:
     return path.exists() and path.stat().st_size > 0
+
+
+def stdcell_control_summary(root: Path, manifest_path: Path) -> tuple[str, str]:
+    if not file_ok(manifest_path):
+        return "FAIL", f"missing stdcell control manifest: {manifest_path}"
+    manifest = load_json(manifest_path)
+    avalon_files = manifest.get("avalon", {}).get("files", [])
+    matrices = manifest.get("control_matrices", [])
+    missing = [str(root / str(item.get("path", ""))) for item in avalon_files if not file_ok(root / str(item.get("path", "")))]
+    missing += [str(root / str(item.get("cdl", ""))) for item in matrices if not file_ok(root / str(item.get("cdl", "")))]
+    missing += [str(root / str(item.get("macro_abstract_cdl", ""))) for item in matrices if not file_ok(root / str(item.get("macro_abstract_cdl", "")))]
+    avalon_instances = sum(sum(item.get("stdcell_instances", {}).values()) for item in matrices)
+    row_select_instances = sum(sum(item.get("custom_row_select_instances", {}).values()) for item in matrices)
+    if missing:
+        return "FAIL", f"missing={missing[:5]}, total_missing={len(missing)}"
+    if len(matrices) != 4 or avalon_instances <= 0 or row_select_instances <= 0:
+        return "FAIL", f"matrices={len(matrices)}, avalon_instances={avalon_instances}, row_select_instances={row_select_instances}"
+    return "PASS", f"matrices={len(matrices)}, avalon_instances={avalon_instances}, custom_row_select_instances={row_select_instances}"
+
+
+def stdcell_placement_summary(root: Path, manifest_path: Path) -> tuple[str, str]:
+    if not file_ok(manifest_path):
+        return "FAIL", f"missing stdcell placement manifest: {manifest_path}"
+    manifest = load_json(manifest_path)
+    results = manifest.get("results", [])
+    missing: list[str] = []
+    bad: list[str] = []
+    placed = 0
+    deferred = 0
+    max_util = 0.0
+    for item in results:
+        if item.get("status") != "PASS" or item.get("footprint_unchanged") is not True:
+            bad.append(f"{item.get('macro')}: status={item.get('status')} footprint={item.get('footprint_unchanged')}")
+        expected = int(item.get("stdcell_instances_expected", -1))
+        count = int(item.get("stdcell_instances_placed", -2))
+        placed += max(count, 0)
+        deferred += int(item.get("deferred_row_select_instances", 0))
+        max_util = max(max_util, float(item.get("max_row_utilization", 0.0)))
+        if expected != count or count <= 0:
+            bad.append(f"{item.get('macro')}: expected={expected} placed={count}")
+        for key in ("def", "placement_csv"):
+            path = root / str(item.get(key, ""))
+            if not file_ok(path):
+                missing.append(str(path))
+    if len(results) != 4:
+        bad.append(f"expected 4 macro placement results, got {len(results)}")
+    if missing or bad:
+        return "FAIL", f"missing={missing[:3]}, bad={bad[:3]}"
+    return "PASS", f"macros={len(results)}, placed_stdcells={placed}, deferred_row_select={deferred}, max_row_util={max_util:.3f}"
+
+
+def stdcell_gds_summary(root: Path, manifest_path: Path) -> tuple[str, str]:
+    if not file_ok(manifest_path):
+        return "FAIL", f"missing stdcell GDS merge manifest: {manifest_path}"
+    manifest = load_json(manifest_path)
+    results = manifest.get("results", [])
+    missing: list[str] = []
+    bad: list[str] = []
+    inserted = 0
+    for item in results:
+        macro = item.get("macro")
+        gds = root / str(item.get("gds", ""))
+        if not file_ok(gds):
+            missing.append(str(gds))
+        if item.get("status") != "PASS" or item.get("footprint_unchanged") is not True:
+            bad.append(f"{macro}: status={item.get('status')} footprint={item.get('footprint_unchanged')}")
+        expected = int(item.get("expected_instances", -1))
+        actual = sum(int(v) for v in item.get("direct_avalon_instance_counts", {}).values())
+        inserted += max(actual, 0)
+        if expected != actual or actual <= 0:
+            bad.append(f"{macro}: expected={expected} actual={actual}")
+    if manifest.get("status") != "PASS":
+        bad.append(f"manifest_status={manifest.get('status')}")
+    if len(results) != 4:
+        bad.append(f"expected 4 macro GDS merge results, got {len(results)}")
+    if missing or bad:
+        return "FAIL", f"missing={missing[:3]}, bad={bad[:3]}"
+    return "PASS", f"macros={len(results)}, placed_gds_stdcells={inserted}, footprint_unchanged=True"
+
+
+def row_select_placement_summary(root: Path, manifest_path: Path) -> tuple[str, str]:
+    if not file_ok(manifest_path):
+        return "FAIL", f"missing row-select placement manifest: {manifest_path}"
+    manifest = load_json(manifest_path)
+    results = manifest.get("results", [])
+    bad: list[str] = []
+    missing: list[str] = []
+    row_selects = 0
+    placed = 0
+    for item in results:
+        macro = item.get("macro")
+        if item.get("status") != "PASS" or item.get("footprint_unchanged") is not True:
+            bad.append(f"{macro}: status={item.get('status')} footprint={item.get('footprint_unchanged')}")
+        rows = int(item.get("row_select_instances", -1))
+        cells = int(item.get("placed_stdcells", -2))
+        row_selects += max(rows, 0)
+        placed += max(cells, 0)
+        if cells != rows * 4 or rows <= 0:
+            bad.append(f"{macro}: row_selects={rows} placed_stdcells={cells}")
+        for key in ("def", "placement_csv", "expanded_cdl", "macro_expanded_cdl"):
+            path = root / str(item.get(key, ""))
+            if not file_ok(path):
+                missing.append(str(path))
+    if manifest.get("status") != "PASS":
+        bad.append(f"manifest_status={manifest.get('status')}")
+    if len(results) != 4:
+        bad.append(f"expected 4 row-select placement results, got {len(results)}")
+    if missing or bad:
+        return "FAIL", f"missing={missing[:3]}, bad={bad[:3]}"
+    return "PASS", f"macros={len(results)}, row_selects={row_selects}, placed_stdcells={placed}, footprint_unchanged=True"
+
+
+def row_select_gds_summary(root: Path, manifest_path: Path) -> tuple[str, str]:
+    if not file_ok(manifest_path):
+        return "FAIL", f"missing row-select GDS manifest: {manifest_path}"
+    manifest = load_json(manifest_path)
+    results = manifest.get("results", [])
+    bad: list[str] = []
+    missing: list[str] = []
+    inserted = 0
+    for item in results:
+        macro = item.get("macro")
+        gds = root / str(item.get("gds", ""))
+        if not file_ok(gds):
+            missing.append(str(gds))
+        if item.get("status") != "PASS" or item.get("footprint_unchanged") is not True:
+            bad.append(f"{macro}: status={item.get('status')} footprint={item.get('footprint_unchanged')}")
+        delta = sum(int(v) for v in item.get("expected_delta_counts", {}).values())
+        inserted += max(delta, 0)
+        final_counts = item.get("direct_avalon_instance_counts", {})
+        if delta <= 0 or sum(int(v) for v in final_counts.values()) <= delta:
+            bad.append(f"{macro}: delta={delta} final_counts={final_counts}")
+    if manifest.get("status") != "PASS":
+        bad.append(f"manifest_status={manifest.get('status')}")
+    if len(results) != 4:
+        bad.append(f"expected 4 row-select GDS merge results, got {len(results)}")
+    if missing or bad:
+        return "FAIL", f"missing={missing[:3]}, bad={bad[:3]}"
+    return "PASS", f"macros={len(results)}, row_select_gds_stdcells={inserted}, footprint_unchanged=True"
+
+
+def stdcell_routing_summary(root: Path, manifest_path: Path) -> tuple[str, str]:
+    if not file_ok(manifest_path):
+        return "FAIL", f"missing stdcell signal routing manifest: {manifest_path}"
+    manifest = load_json(manifest_path)
+    results = manifest.get("results", [])
+    bad: list[str] = []
+    missing: list[str] = []
+    nets = 0
+    endpoints = 0
+    row_select_nets = 0
+    macro_pin_nets = 0
+    for item in results:
+        macro = item.get("macro")
+        gds = root / str(item.get("gds", ""))
+        csv_path = root / str(item.get("routed_nets_csv", ""))
+        if not file_ok(gds):
+            missing.append(str(gds))
+        if not file_ok(csv_path):
+            missing.append(str(csv_path))
+        if item.get("status") != "PASS" or item.get("footprint_unchanged") is not True:
+            bad.append(f"{macro}: status={item.get('status')} footprint={item.get('footprint_unchanged')}")
+        routed_nets = int(item.get("routed_nets", 0))
+        routed_endpoints = int(item.get("routed_endpoints", 0))
+        rowsel = int(item.get("row_select_input_nets", 0))
+        pins = int(item.get("macro_pin_nets", 0))
+        nets += routed_nets
+        endpoints += routed_endpoints
+        row_select_nets += rowsel
+        macro_pin_nets += pins
+        if routed_nets <= 0 or routed_endpoints <= routed_nets or rowsel <= 0 or pins <= 0:
+            bad.append(f"{macro}: routed_nets={routed_nets}, endpoints={routed_endpoints}, row_select_input_nets={rowsel}, macro_pin_nets={pins}")
+    if manifest.get("status") != "PASS":
+        bad.append(f"manifest_status={manifest.get('status')}")
+    if len(results) != 4:
+        bad.append(f"expected 4 routed macro results, got {len(results)}")
+    if missing or bad:
+        return "FAIL", f"missing={missing[:3]}, bad={bad[:3]}"
+    return "PASS", f"macros={len(results)}, routed_nets={nets}, routed_endpoints={endpoints}, row_select_input_nets={row_select_nets}, macro_pin_nets={macro_pin_nets}"
+
+
+def column_periphery_summary(root: Path, manifest_path: Path) -> tuple[str, str]:
+    if not file_ok(manifest_path):
+        return "FAIL", f"missing column periphery GDS manifest: {manifest_path}"
+    manifest = load_json(manifest_path)
+    results = manifest.get("results", [])
+    bad: list[str] = []
+    missing: list[str] = []
+    instances = 0
+    route_shapes = 0
+    for item in results:
+        macro = item.get("macro")
+        gds = root / str(item.get("gds", ""))
+        if not file_ok(gds):
+            missing.append(str(gds))
+        if item.get("status") != "PASS":
+            bad.append(f"{macro}: status={item.get('status')}")
+        expected = int(item.get("instances_expected", -1))
+        counts = item.get("direct_child_counts", {})
+        present = sum(
+            int(value)
+            for key, value in counts.items()
+            if key.startswith("detronyx_12t_") and ("write_driver" in key or "precharge_sense" in key)
+        )
+        shapes = int(item.get("route_shapes", 0))
+        bbox = item.get("bbox_after_um", {})
+        instances += max(present, 0)
+        route_shapes += max(shapes, 0)
+        if present != expected or expected <= 0:
+            bad.append(f"{macro}: expected_column_leaves={expected} present={present}")
+        if shapes <= 0:
+            bad.append(f"{macro}: route_shapes={shapes}")
+        if float(bbox.get("width_um", 0.0)) <= 0.0 or float(bbox.get("height_um", 0.0)) <= 0.0:
+            bad.append(f"{macro}: invalid_bbox={bbox}")
+    if manifest.get("status") != "PASS":
+        bad.append(f"manifest_status={manifest.get('status')}")
+    if len(results) != 4:
+        bad.append(f"expected 4 column periphery GDS results, got {len(results)}")
+    if missing or bad:
+        return "FAIL", f"missing={missing[:3]}, bad={bad[:3]}"
+    return "PASS", f"macros={len(results)}, column_leaf_instances={instances}, route_shapes={route_shapes}, expanded_wrapper=True"
 
 
 def parse_magic_drc(path: Path) -> int | None:
@@ -292,44 +514,75 @@ def parse_measures(path: Path) -> dict[str, float]:
 
 
 def check_vdd_sweep(root: Path) -> tuple[bool, str]:
-    corners = ("typical", "ff", "ss")
+    spice_dir = root / "verification" / "results" / "spice"
     vdds = ("1p62", "1p80", "2p50", "3p00", "3p30", "3p60")
+    cases = [("typical", vtag, spice_dir / f"write_read_retention_typical_{vtag}v.log") for vtag in vdds]
+    cases += [
+        ("ff", "3p30", spice_dir / "write_read_retention_ff_3p30v.log"),
+        ("ss", "3p30", spice_dir / "write_read_retention_ss_3p30v.log"),
+    ]
     missing: list[str] = []
     bad: list[str] = []
-    for corner in corners:
-        for vtag in vdds:
-            path = root / "build" / f"tb_12t_2w2r_{corner}_{vtag}v.log"
-            vals = parse_measures(path)
-            if not vals:
-                missing.append(path.name)
-                continue
-            if "q_after_write1" not in vals or "qb_after_write0" not in vals:
-                bad.append(f"{path.name}: missing write measures")
-                continue
-            vdd = float(vtag.replace("p", "."))
-            if vals["q_after_write1"] < 0.75 * vdd or vals["qb_after_write0"] < 0.75 * vdd:
-                bad.append(f"{path.name}: weak rail write q1={vals['q_after_write1']:.3g} qb0={vals['qb_after_write0']:.3g}")
-    ok = not missing and not bad
-    return ok, f"missing={missing[:4]} bad={bad[:4]} checked={len(corners) * len(vdds)}"
-
-
-def check_disturb(root: Path) -> tuple[bool, str]:
-    missing: list[str] = []
-    bad: list[str] = []
-    for corner in ("typical", "ff", "ss"):
-        path = root / "build" / f"tb_12t_disturb_conflict_{corner}.log"
+    for _corner, vtag, path in cases:
         vals = parse_measures(path)
         if not vals:
             missing.append(path.name)
             continue
-        for high_key in ("q_after_read_disturb", "q_after_disabled_write", "qb_after_dual_same0", "q_after_dual_same1", "qb_after_conflict"):
+        if "q_after_write1" not in vals or "qb_after_write0" not in vals:
+            bad.append(f"{path.name}: missing write measures")
+            continue
+        vdd = float(vtag.replace("p", "."))
+        if vals["q_after_write1"] < 0.75 * vdd or vals["qb_after_write0"] < 0.75 * vdd:
+            bad.append(f"{path.name}: weak rail write q1={vals['q_after_write1']:.3g} qb0={vals['qb_after_write0']:.3g}")
+    ok = not missing and not bad
+    return ok, f"missing={missing[:4]} bad={bad[:4]} checked={len(cases)} packaged_logs={spice_dir}"
+
+
+def check_disturb(root: Path) -> tuple[bool, str]:
+    spice_dir = root / "verification" / "results" / "spice"
+    missing: list[str] = []
+    bad: list[str] = []
+
+    def check_file(path: Path, highs: tuple[str, ...], lows: tuple[str, ...]) -> None:
+        vals = parse_measures(path)
+        if not vals:
+            missing.append(path.name)
+            return
+        for high_key in highs:
             if vals.get(high_key, 0.0) < 2.4:
                 bad.append(f"{path.name}:{high_key}={vals.get(high_key)}")
-        for low_key in ("qb_after_read_disturb", "qb_after_disabled_write", "q_after_dual_same0", "qb_after_dual_same1", "q_after_conflict"):
+        for low_key in lows:
             if vals.get(low_key, 9.9) > 0.15:
                 bad.append(f"{path.name}:{low_key}={vals.get(low_key)}")
+
+    checked = 0
+    for corner in ("typical", "ff", "ss"):
+        check_file(
+            spice_dir / f"dual_read_disturb_{corner}_3p30v.log",
+            ("q_after_dual_read",),
+            ("qb_after_dual_read",),
+        )
+        checked += 1
+        check_file(
+            spice_dir / f"disabled_write_hold_{corner}_3p30v.log",
+            ("q_after_disabled_write",),
+            ("qb_after_disabled_write",),
+        )
+        checked += 1
+        check_file(
+            spice_dir / f"same_data_dual_write_{corner}_3p30v.log",
+            ("q_after_dual_write1", "qb_after_dual_write0"),
+            ("qb_after_dual_write1", "q_after_dual_write0"),
+        )
+        checked += 1
+    check_file(
+        spice_dir / "same_cell_conflict_observation_typical_3p30v.log",
+        ("qb_after_conflict",),
+        ("q_after_conflict",),
+    )
+    checked += 1
     ok = not missing and not bad
-    return ok, f"missing={missing} bad={bad[:6]} checked=3 corners"
+    return ok, f"missing={missing} bad={bad[:6]} checked={checked} packaged_logs={spice_dir}"
 
 
 def emir_proxy(item: dict[str, Any]) -> tuple[str, str]:
@@ -394,6 +647,13 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--final-manifest", type=Path, required=True)
     parser.add_argument("--open-signoff-manifest", type=Path, required=True)
     parser.add_argument("--primitive-manifest", type=Path, required=True)
+    parser.add_argument("--stdcell-control-manifest", type=Path, default=Path("reports/stdcell_control_integration/MANIFEST.json"))
+    parser.add_argument("--stdcell-placement-manifest", type=Path, default=Path("reports/stdcell_control_placement/MANIFEST.json"))
+    parser.add_argument("--stdcell-gds-manifest", type=Path, default=Path("reports/stdcell_control_gds_merge/MANIFEST.json"))
+    parser.add_argument("--row-select-placement-manifest", type=Path, default=Path("reports/stdcell_row_select_placement/MANIFEST.json"))
+    parser.add_argument("--row-select-gds-manifest", type=Path, default=Path("reports/stdcell_row_select_gds_merge/MANIFEST.json"))
+    parser.add_argument("--stdcell-routing-manifest", type=Path, default=Path("reports/stdcell_control_signal_routing/MANIFEST.json"))
+    parser.add_argument("--column-periphery-manifest", type=Path, default=Path("reports/column_periphery_gds_merge/MANIFEST.json"))
     parser.add_argument("--out-dir", type=Path, required=True)
     parser.add_argument("--magic", default="magic")
     parser.add_argument("--magic-rc", type=Path, required=True)
@@ -428,10 +688,80 @@ def main() -> int:
     add(
         checks,
         "LVS",
-        "RC7 transistor control primitive Netgen LVS",
+        "Custom transistor control primitive Netgen LVS",
         "PASS" if primitive_fails == 0 else "FAIL",
         args.primitive_manifest,
         f"checked={total_prims}, fails={primitive_fails}, details={primitive_details[:3]}",
+    )
+
+    stdcell_status, stdcell_detail = stdcell_control_summary(root, args.stdcell_control_manifest)
+    add(
+        checks,
+        "Control",
+        "Avalon stdcell control integration",
+        stdcell_status,
+        args.stdcell_control_manifest,
+        stdcell_detail,
+    )
+
+    placement_status, placement_detail = stdcell_placement_summary(root, args.stdcell_placement_manifest)
+    add(
+        checks,
+        "Control",
+        "Avalon stdcell control placement",
+        placement_status,
+        args.stdcell_placement_manifest,
+        placement_detail,
+    )
+
+    gds_status, gds_detail = stdcell_gds_summary(root, args.stdcell_gds_manifest)
+    add(
+        checks,
+        "Control",
+        "Avalon stdcell control GDS merge",
+        gds_status,
+        args.stdcell_gds_manifest,
+        gds_detail,
+    )
+
+    row_select_place_status, row_select_place_detail = row_select_placement_summary(root, args.row_select_placement_manifest)
+    add(
+        checks,
+        "Control",
+        "Avalon row-select/WL-buffer stdcell placement",
+        row_select_place_status,
+        args.row_select_placement_manifest,
+        row_select_place_detail,
+    )
+
+    row_select_gds_status, row_select_gds_detail = row_select_gds_summary(root, args.row_select_gds_manifest)
+    add(
+        checks,
+        "Control",
+        "Avalon row-select/WL-buffer GDS merge",
+        row_select_gds_status,
+        args.row_select_gds_manifest,
+        row_select_gds_detail,
+    )
+
+    routing_status, routing_detail = stdcell_routing_summary(root, args.stdcell_routing_manifest)
+    add(
+        checks,
+        "Control",
+        "Avalon stdcell control/predecode signal routing",
+        routing_status,
+        args.stdcell_routing_manifest,
+        routing_detail,
+    )
+
+    column_status, column_detail = column_periphery_summary(root, args.column_periphery_manifest)
+    add(
+        checks,
+        "Periphery",
+        "Column precharge/sense/write-driver GDS integration",
+        column_status,
+        args.column_periphery_manifest,
+        column_detail,
     )
 
     density_deck = args.gf180_klayout_drc_dir / "rule_decks" / "density.drc"
@@ -476,7 +806,7 @@ def main() -> int:
         ext_pins = subckt_pins(Path(pex["lvs_spice"]), macro)
         pin_ok = bool(ref_pins) and set(ref_pins) == set(ext_pins)
         add(checks, macro, "Final abstract pin LVS", "PASS" if pin_ok else "FAIL", pex["lvs_spice"], f"ref_pins={len(ref_pins)}, extracted_pins={len(ext_pins)}, missing={sorted(set(ref_pins) - set(ext_pins))[:6]}, extra={sorted(set(ext_pins) - set(ref_pins))[:6]}")
-        add(checks, macro, "Full device-expanded macro LVS", "OPEN", args.open_signoff_manifest, "final top GDS is a hard-macro abstract; full row-select/predecode device expansion remains separate from this top-level GDS")
+        add(checks, macro, "Full device-expanded macro LVS", "OPEN", args.open_signoff_manifest, "published top GDS contains routed Avalon control/predecode, row-select/WL-buffer stdcells, and column precharge/sense/write-driver leaves; extracted full-macro device LVS remains open")
 
         if args.skip_klayout:
             add(checks, macro, "KLayout GF180 density deck", "OPEN", gds, "skipped by --skip-klayout for focused pin-LVS/PEX iteration")
@@ -510,10 +840,10 @@ def main() -> int:
         add(checks, macro, "Local EM/IR power strap audit", status, root / str(item["pins_json"]), detail)
 
     vdd_ok, vdd_detail = check_vdd_sweep(root)
-    add(checks, "SNM proxy", "12T VDD sweep ngspice", "PASS" if vdd_ok else "FAIL", root / "build", vdd_detail)
+    add(checks, "SNM proxy", "12T VDD sweep ngspice", "PASS" if vdd_ok else "FAIL", root / "verification" / "results" / "spice", vdd_detail)
     disturb_ok, disturb_detail = check_disturb(root)
-    add(checks, "SNM proxy", "12T disturb/conflict ngspice", "PASS" if disturb_ok else "FAIL", root / "build", disturb_detail)
-    add(checks, "SNM", "Butterfly SNM / extracted final RC SNM", "OPEN", root / "build", "current local evidence is VDD sweep and disturb/conflict; butterfly SNM on final extracted RC is not implemented yet")
+    add(checks, "SNM proxy", "12T disturb/conflict ngspice", "PASS" if disturb_ok else "FAIL", root / "verification" / "results" / "spice", disturb_detail)
+    add(checks, "SNM", "Butterfly SNM / extracted final RC SNM", "OPEN", root / "verification" / "results" / "spice", "current local evidence is VDD sweep and disturb/conflict; butterfly SNM on final extracted RC is not implemented yet")
 
     write_outputs(out_dir, checks, tool_runs)
     counts: dict[str, int] = {}

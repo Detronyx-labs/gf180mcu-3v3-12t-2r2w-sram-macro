@@ -1,26 +1,26 @@
 {
   "cell": "detronyx_12t_precharge_sense_rc1",
   "block": "precharge_sense",
-  "status": "block_leaf_rc1",
+  "status": "pitch_compatible_column_leaf_rc2",
   "pins": [
     {
       "name": "VDD",
       "direction": "INOUT",
       "use": "POWER",
       "layer": "metal3",
-      "xlo": 4240,
-      "ylo": 12175,
-      "xhi": 4312,
-      "yhi": 12415
+      "xlo": 244,
+      "ylo": 4791,
+      "xhi": 316,
+      "yhi": 5031
     },
     {
       "name": "VSS",
       "direction": "INOUT",
       "use": "GROUND",
       "layer": "metal3",
-      "xlo": 4100,
+      "xlo": 244,
       "ylo": 140,
-      "xhi": 4172,
+      "xhi": 316,
       "yhi": 380
     },
     {
@@ -28,48 +28,48 @@
       "direction": "INPUT",
       "use": "SIGNAL",
       "layer": "metal3",
-      "xlo": 4520,
-      "ylo": 140,
-      "xhi": 4592,
-      "yhi": 300
+      "xlo": 3313,
+      "ylo": 300,
+      "xhi": 3385,
+      "yhi": 460
     },
     {
       "name": "ren",
       "direction": "INPUT",
       "use": "SIGNAL",
       "layer": "metal3",
-      "xlo": 4800,
-      "ylo": 12395,
-      "xhi": 4872,
-      "yhi": 12555
+      "xlo": 3713,
+      "ylo": 4631,
+      "xhi": 3785,
+      "yhi": 4791
     },
     {
       "name": "rbl0",
       "direction": "INPUT",
       "use": "SIGNAL",
       "layer": "metal3",
-      "xlo": 4660,
-      "ylo": 140,
-      "xhi": 4732,
-      "yhi": 300
+      "xlo": 3713,
+      "ylo": 460,
+      "xhi": 3785,
+      "yhi": 620
     },
     {
       "name": "dout",
       "direction": "OUTPUT",
       "use": "SIGNAL",
       "layer": "metal3",
-      "xlo": 4380,
-      "ylo": 12395,
-      "xhi": 4452,
-      "yhi": 12555
+      "xlo": 3313,
+      "ylo": 4471,
+      "xhi": 3385,
+      "yhi": 4631
     }
   ],
   "route_terms": [
     {
       "net": "sense0",
       "kind": "diff",
-      "x": 636,
-      "y": 4169,
+      "x": 276,
+      "y": 2277,
       "block": "precharge_sense",
       "role": "sense0_n",
       "terminal": "drain"
@@ -77,8 +77,8 @@
     {
       "net": "rbl0",
       "kind": "gate",
-      "x": 716,
-      "y": 4300,
+      "x": 356,
+      "y": 2408,
       "block": "precharge_sense",
       "role": "sense0_n",
       "terminal": "gate"
@@ -86,8 +86,8 @@
     {
       "net": "VSS",
       "kind": "diff",
-      "x": 796,
-      "y": 4169,
+      "x": 436,
+      "y": 2277,
       "block": "precharge_sense",
       "role": "sense0_n",
       "terminal": "source"
@@ -95,8 +95,8 @@
     {
       "net": "sense1",
       "kind": "diff",
-      "x": 1068,
-      "y": 4169,
+      "x": 708,
+      "y": 2277,
       "block": "precharge_sense",
       "role": "sense1_n",
       "terminal": "drain"
@@ -104,8 +104,8 @@
     {
       "net": "sense0",
       "kind": "gate",
-      "x": 1148,
-      "y": 4300,
+      "x": 788,
+      "y": 2408,
       "block": "precharge_sense",
       "role": "sense1_n",
       "terminal": "gate"
@@ -113,8 +113,8 @@
     {
       "net": "VSS",
       "kind": "diff",
-      "x": 1228,
-      "y": 4169,
+      "x": 868,
+      "y": 2277,
       "block": "precharge_sense",
       "role": "sense1_n",
       "terminal": "source"
@@ -122,8 +122,8 @@
     {
       "net": "dout",
       "kind": "diff",
-      "x": 1500,
-      "y": 4169,
+      "x": 1140,
+      "y": 2277,
       "block": "precharge_sense",
       "role": "sense2_n",
       "terminal": "drain"
@@ -131,8 +131,8 @@
     {
       "net": "sense1",
       "kind": "gate",
-      "x": 1580,
-      "y": 4300,
+      "x": 1220,
+      "y": 2408,
       "block": "precharge_sense",
       "role": "sense2_n",
       "terminal": "gate"
@@ -140,8 +140,8 @@
     {
       "net": "VSS",
       "kind": "diff",
-      "x": 1660,
-      "y": 4169,
+      "x": 1300,
+      "y": 2277,
       "block": "precharge_sense",
       "role": "sense2_n",
       "terminal": "source"
@@ -149,8 +149,8 @@
     {
       "net": "rbl0",
       "kind": "diff",
-      "x": 722,
-      "y": 5101,
+      "x": 362,
+      "y": 3929,
       "block": "precharge_sense",
       "role": "rbl_precharge_p",
       "terminal": "drain"
@@ -158,8 +158,8 @@
     {
       "net": "pchgb",
       "kind": "gate",
-      "x": 802,
-      "y": 5179,
+      "x": 442,
+      "y": 4007,
       "block": "precharge_sense",
       "role": "rbl_precharge_p",
       "terminal": "gate"
@@ -167,8 +167,8 @@
     {
       "net": "VDD",
       "kind": "diff",
-      "x": 882,
-      "y": 5101,
+      "x": 522,
+      "y": 3929,
       "block": "precharge_sense",
       "role": "rbl_precharge_p",
       "terminal": "source"
@@ -176,8 +176,8 @@
     {
       "net": "sense0",
       "kind": "diff",
-      "x": 1326,
-      "y": 5101,
+      "x": 966,
+      "y": 3929,
       "block": "precharge_sense",
       "role": "sense0_p",
       "terminal": "drain"
@@ -185,8 +185,8 @@
     {
       "net": "rbl0",
       "kind": "gate",
-      "x": 1406,
-      "y": 5179,
+      "x": 1046,
+      "y": 4007,
       "block": "precharge_sense",
       "role": "sense0_p",
       "terminal": "gate"
@@ -194,8 +194,8 @@
     {
       "net": "VDD",
       "kind": "diff",
-      "x": 1486,
-      "y": 5101,
+      "x": 1126,
+      "y": 3929,
       "block": "precharge_sense",
       "role": "sense0_p",
       "terminal": "source"
@@ -203,8 +203,8 @@
     {
       "net": "sense1",
       "kind": "diff",
-      "x": 1930,
-      "y": 5101,
+      "x": 1570,
+      "y": 3929,
       "block": "precharge_sense",
       "role": "sense1_p",
       "terminal": "drain"
@@ -212,8 +212,8 @@
     {
       "net": "sense0",
       "kind": "gate",
-      "x": 2010,
-      "y": 5179,
+      "x": 1650,
+      "y": 4007,
       "block": "precharge_sense",
       "role": "sense1_p",
       "terminal": "gate"
@@ -221,8 +221,8 @@
     {
       "net": "VDD",
       "kind": "diff",
-      "x": 2090,
-      "y": 5101,
+      "x": 1730,
+      "y": 3929,
       "block": "precharge_sense",
       "role": "sense1_p",
       "terminal": "source"
@@ -230,8 +230,8 @@
     {
       "net": "dout",
       "kind": "diff",
-      "x": 2534,
-      "y": 5101,
+      "x": 2174,
+      "y": 3929,
       "block": "precharge_sense",
       "role": "sense2_p",
       "terminal": "drain"
@@ -239,8 +239,8 @@
     {
       "net": "sense1",
       "kind": "gate",
-      "x": 2614,
-      "y": 5179,
+      "x": 2254,
+      "y": 4007,
       "block": "precharge_sense",
       "role": "sense2_p",
       "terminal": "gate"
@@ -248,8 +248,8 @@
     {
       "net": "VDD",
       "kind": "diff",
-      "x": 2694,
-      "y": 5101,
+      "x": 2334,
+      "y": 3929,
       "block": "precharge_sense",
       "role": "sense2_p",
       "terminal": "source"
@@ -257,8 +257,8 @@
     {
       "net": "VSS",
       "kind": "diff",
-      "x": 3016,
-      "y": 4300,
+      "x": 2656,
+      "y": 2408,
       "block": "precharge_sense",
       "role": "psub_tap",
       "terminal": "tap"
@@ -266,8 +266,8 @@
     {
       "net": "VDD",
       "kind": "diff",
-      "x": 3016,
-      "y": 4963,
+      "x": 2656,
+      "y": 3791,
       "block": "precharge_sense",
       "role": "nsub_tap",
       "terminal": "tap"
@@ -275,8 +275,8 @@
     {
       "net": "VDD",
       "kind": "pin",
-      "x": 4276,
-      "y": 12255,
+      "x": 280,
+      "y": 4871,
       "block": "pin",
       "role": "VDD",
       "terminal": "pin"
@@ -284,7 +284,7 @@
     {
       "net": "VSS",
       "kind": "pin",
-      "x": 4136,
+      "x": 280,
       "y": 220,
       "block": "pin",
       "role": "VSS",
@@ -293,8 +293,8 @@
     {
       "net": "pchgb",
       "kind": "pin",
-      "x": 4556,
-      "y": 220,
+      "x": 3349,
+      "y": 380,
       "block": "pin",
       "role": "pchgb",
       "terminal": "pin"
@@ -302,8 +302,8 @@
     {
       "net": "ren",
       "kind": "pin",
-      "x": 4836,
-      "y": 12475,
+      "x": 3749,
+      "y": 4711,
       "block": "pin",
       "role": "ren",
       "terminal": "pin"
@@ -311,8 +311,8 @@
     {
       "net": "rbl0",
       "kind": "pin",
-      "x": 4696,
-      "y": 220,
+      "x": 3749,
+      "y": 540,
       "block": "pin",
       "role": "rbl0",
       "terminal": "pin"
@@ -320,8 +320,8 @@
     {
       "net": "dout",
       "kind": "pin",
-      "x": 4416,
-      "y": 12475,
+      "x": 3349,
+      "y": 4551,
       "block": "pin",
       "role": "dout",
       "terminal": "pin"

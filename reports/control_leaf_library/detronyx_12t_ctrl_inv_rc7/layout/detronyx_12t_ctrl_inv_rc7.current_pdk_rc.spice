@@ -1,0 +1,7 @@
+* NGSPICE file created from detronyx_12t_ctrl_inv_rc7.ext - technology: gf180mcuD
+
+.subckt detronyx_12t_ctrl_inv_rc7 VDD VSS A Y
+X0 VSS A Y VSS nfet_03v3 ad=0.4642p pd=2.99u as=0.4642p ps=2.99u w=1.055u l=0.28u
+X1 VDD A Y VDD pfet_03v3 ad=0.1232p pd=1u as=0.1232p ps=1u w=0.56u l=0.28u
+.ends
+

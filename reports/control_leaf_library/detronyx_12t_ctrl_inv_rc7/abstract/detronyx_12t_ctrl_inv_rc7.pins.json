@@ -1,0 +1,156 @@
+{
+  "cell": "detronyx_12t_ctrl_inv_rc7",
+  "pins": [
+    {
+      "direction": "INOUT",
+      "layer": "metal3",
+      "name": "VDD",
+      "use": "POWER",
+      "xhi": 2500,
+      "xlo": 2428,
+      "yhi": 8299,
+      "ylo": 8059
+    },
+    {
+      "direction": "INOUT",
+      "layer": "metal3",
+      "name": "VSS",
+      "use": "GROUND",
+      "xhi": 2360,
+      "xlo": 2288,
+      "yhi": 280,
+      "ylo": 40
+    },
+    {
+      "direction": "INPUT",
+      "layer": "metal3",
+      "name": "A",
+      "use": "SIGNAL",
+      "xhi": 2640,
+      "xlo": 2568,
+      "yhi": 240,
+      "ylo": 80
+    },
+    {
+      "direction": "OUTPUT",
+      "layer": "metal3",
+      "name": "Y",
+      "use": "SIGNAL",
+      "xhi": 2780,
+      "xlo": 2708,
+      "yhi": 8439,
+      "ylo": 8279
+    }
+  ],
+  "primitive": "inv",
+  "route_terms": [
+    {
+      "block": "inv",
+      "kind": "diff",
+      "net": "Y",
+      "role": "inv_n",
+      "terminal": "drain",
+      "x": 636,
+      "y": 2909
+    },
+    {
+      "block": "inv",
+      "kind": "gate",
+      "net": "A",
+      "role": "inv_n",
+      "terminal": "gate",
+      "x": 716,
+      "y": 3040
+    },
+    {
+      "block": "inv",
+      "kind": "diff",
+      "net": "VSS",
+      "role": "inv_n",
+      "terminal": "source",
+      "x": 796,
+      "y": 2909
+    },
+    {
+      "block": "inv",
+      "kind": "diff",
+      "net": "Y",
+      "role": "inv_p",
+      "terminal": "drain",
+      "x": 722,
+      "y": 3841
+    },
+    {
+      "block": "inv",
+      "kind": "gate",
+      "net": "A",
+      "role": "inv_p",
+      "terminal": "gate",
+      "x": 802,
+      "y": 3919
+    },
+    {
+      "block": "inv",
+      "kind": "diff",
+      "net": "VDD",
+      "role": "inv_p",
+      "terminal": "source",
+      "x": 882,
+      "y": 3841
+    },
+    {
+      "block": "inv",
+      "kind": "diff",
+      "net": "VSS",
+      "role": "psub_tap",
+      "terminal": "tap",
+      "x": 1204,
+      "y": 3040
+    },
+    {
+      "block": "inv",
+      "kind": "diff",
+      "net": "VDD",
+      "role": "nsub_tap",
+      "terminal": "tap",
+      "x": 1204,
+      "y": 3703
+    },
+    {
+      "block": "inv",
+      "kind": "pin",
+      "net": "VDD",
+      "role": "VDD",
+      "terminal": "pin",
+      "x": 2464,
+      "y": 8179
+    },
+    {
+      "block": "inv",
+      "kind": "pin",
+      "net": "VSS",
+      "role": "VSS",
+      "terminal": "pin",
+      "x": 2324,
+      "y": 160
+    },
+    {
+      "block": "inv",
+      "kind": "pin",
+      "net": "A",
+      "role": "A",
+      "terminal": "pin",
+      "x": 2604,
+      "y": 160
+    },
+    {
+      "block": "inv",
+      "kind": "pin",
+      "net": "Y",
+      "role": "Y",
+      "terminal": "pin",
+      "x": 2744,
+      "y": 8359
+    }
+  ]
+}

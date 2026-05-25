@@ -1,0 +1,15 @@
+index,block,mos,role,x_units,y_units,x_um,y_um
+1,row_select4_wlbuf,nmos,row_nand4_n0,600,6120,3.0,30.6
+2,row_select4_wlbuf,nmos,row_nand4_n1,1032,6120,5.16,30.6
+3,row_select4_wlbuf,nmos,row_nand4_n2,1464,6120,7.32,30.6
+4,row_select4_wlbuf,nmos,row_nand4_n3,1896,6120,9.48,30.6
+5,row_select4_wlbuf,nmos,buf0_n,2328,6120,11.64,30.6
+6,row_select4_wlbuf,nmos,buf1_n,2760,6120,13.8,30.6
+7,row_select4_wlbuf,nmos,buf2_n,3192,6120,15.96,30.6
+8,row_select4_wlbuf,pmos,row_nand4_p0,600,7059,3.0,35.295
+9,row_select4_wlbuf,pmos,row_nand4_p1,1204,7059,6.02,35.295
+10,row_select4_wlbuf,pmos,row_nand4_p2,1808,7059,9.04,35.295
+11,row_select4_wlbuf,pmos,row_nand4_p3,2412,7059,12.06,35.295
+12,row_select4_wlbuf,pmos,buf0_p,3016,7059,15.08,35.295
+13,row_select4_wlbuf,pmos,buf1_p,3620,7059,18.1,35.295
+14,row_select4_wlbuf,pmos,buf2_p,4224,7059,21.12,35.295

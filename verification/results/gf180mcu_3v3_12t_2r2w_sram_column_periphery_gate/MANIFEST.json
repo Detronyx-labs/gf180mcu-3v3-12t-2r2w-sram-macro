@@ -1,0 +1,225 @@
+{
+  "status": "PASS",
+  "counts": {
+    "PASS": 31
+  },
+  "results": [
+    {
+      "macro": "column_periphery",
+      "check": "placement manifest status",
+      "status": "PASS",
+      "detail": "status=PASS",
+      "evidence": "reports/column_periphery_integration/MANIFEST.json"
+    },
+    {
+      "macro": "gf180mcu_3v3_12t_2r2w_sram_512x8",
+      "check": "column leaf instance count",
+      "status": "PASS",
+      "detail": "instances={'precharge_sense': 16, 'write_driver': 16} expected_total=32",
+      "evidence": "reports/column_periphery_integration/MANIFEST.json"
+    },
+    {
+      "macro": "gf180mcu_3v3_12t_2r2w_sram_512x8",
+      "check": "expanded wrapper height",
+      "status": "PASS",
+      "detail": "old=340.92 new=389.8",
+      "evidence": "reports/column_periphery_integration/MANIFEST.json"
+    },
+    {
+      "macro": "gf180mcu_3v3_12t_2r2w_sram_512x8",
+      "check": "phase row assignment",
+      "status": "PASS",
+      "detail": "read=1 write=1",
+      "evidence": "reports/column_periphery_integration/MANIFEST.json"
+    },
+    {
+      "macro": "gf180mcu_3v3_12t_2r2w_sram_512x32",
+      "check": "column leaf instance count",
+      "status": "PASS",
+      "detail": "instances={'precharge_sense': 64, 'write_driver': 64} expected_total=128",
+      "evidence": "reports/column_periphery_integration/MANIFEST.json"
+    },
+    {
+      "macro": "gf180mcu_3v3_12t_2r2w_sram_512x32",
+      "check": "expanded wrapper height",
+      "status": "PASS",
+      "detail": "old=618.04 new=752.71",
+      "evidence": "reports/column_periphery_integration/MANIFEST.json"
+    },
+    {
+      "macro": "gf180mcu_3v3_12t_2r2w_sram_512x32",
+      "check": "phase row assignment",
+      "status": "PASS",
+      "detail": "read=2 write=2",
+      "evidence": "reports/column_periphery_integration/MANIFEST.json"
+    },
+    {
+      "macro": "gf180mcu_3v3_12t_2r2w_sram_1024x8",
+      "check": "column leaf instance count",
+      "status": "PASS",
+      "detail": "instances={'precharge_sense': 16, 'write_driver': 16} expected_total=32",
+      "evidence": "reports/column_periphery_integration/MANIFEST.json"
+    },
+    {
+      "macro": "gf180mcu_3v3_12t_2r2w_sram_1024x8",
+      "check": "expanded wrapper height",
+      "status": "PASS",
+      "detail": "old=618.04 new=666.92",
+      "evidence": "reports/column_periphery_integration/MANIFEST.json"
+    },
+    {
+      "macro": "gf180mcu_3v3_12t_2r2w_sram_1024x8",
+      "check": "phase row assignment",
+      "status": "PASS",
+      "detail": "read=1 write=1",
+      "evidence": "reports/column_periphery_integration/MANIFEST.json"
+    },
+    {
+      "macro": "gf180mcu_3v3_12t_2r2w_sram_1024x32",
+      "check": "column leaf instance count",
+      "status": "PASS",
+      "detail": "instances={'precharge_sense': 64, 'write_driver': 64} expected_total=128",
+      "evidence": "reports/column_periphery_integration/MANIFEST.json"
+    },
+    {
+      "macro": "gf180mcu_3v3_12t_2r2w_sram_1024x32",
+      "check": "expanded wrapper height",
+      "status": "PASS",
+      "detail": "old=1172.28 new=1306.95",
+      "evidence": "reports/column_periphery_integration/MANIFEST.json"
+    },
+    {
+      "macro": "gf180mcu_3v3_12t_2r2w_sram_1024x32",
+      "check": "phase row assignment",
+      "status": "PASS",
+      "detail": "read=2 write=2",
+      "evidence": "reports/column_periphery_integration/MANIFEST.json"
+    },
+    {
+      "macro": "column_periphery",
+      "check": "GDS manifest status",
+      "status": "PASS",
+      "detail": "status=PASS",
+      "evidence": "reports/column_periphery_gds_merge/MANIFEST.json"
+    },
+    {
+      "macro": "column_periphery",
+      "check": "512x8 GF180 main.drc smoke",
+      "status": "PASS",
+      "detail": "violations=0 report=reports/column_periphery_gds_merge/gf180mcu_3v3_12t_2r2w_sram_512x8/main_drc.lyrdb",
+      "evidence": "reports/column_periphery_gds_merge/MANIFEST.json"
+    },
+    {
+      "macro": "gf180mcu_3v3_12t_2r2w_sram_512x8",
+      "check": "GDS wrapper merge",
+      "status": "PASS",
+      "detail": "bbox={'left_um': 0.0, 'bottom_um': 0.0, 'right_um': 594.64, 'top_um': 389.8, 'width_um': 594.64, 'height_um': 389.8}",
+      "evidence": "reports/column_periphery_gds_merge/MANIFEST.json"
+    },
+    {
+      "macro": "gf180mcu_3v3_12t_2r2w_sram_512x8",
+      "check": "leaf cells present in top",
+      "status": "PASS",
+      "detail": "leaf_count=32 expected=32",
+      "evidence": "reports/column_periphery_gds_merge/MANIFEST.json"
+    },
+    {
+      "macro": "gf180mcu_3v3_12t_2r2w_sram_512x8",
+      "check": "route cell present",
+      "status": "PASS",
+      "detail": "route_cell=gf180mcu_3v3_12t_2r2w_sram_512x8_column_periphery_routes shapes=729",
+      "evidence": "reports/column_periphery_gds_merge/MANIFEST.json"
+    },
+    {
+      "macro": "gf180mcu_3v3_12t_2r2w_sram_512x8",
+      "check": "M5 VDD/VSS short audit",
+      "status": "PASS",
+      "detail": "short_count=0 m5_regions=4563 labels=514",
+      "evidence": "verification/results/gf180mcu_3v3_12t_2r2w_sram_column_periphery_gate/gf180mcu_3v3_12t_2r2w_sram_512x8.m5_power_short_audit.json"
+    },
+    {
+      "macro": "gf180mcu_3v3_12t_2r2w_sram_512x32",
+      "check": "GDS wrapper merge",
+      "status": "PASS",
+      "detail": "bbox={'left_um': 0.0, 'bottom_um': 0.0, 'right_um': 1019.545, 'top_um': 752.71, 'width_um': 1019.545, 'height_um': 752.71}",
+      "evidence": "reports/column_periphery_gds_merge/MANIFEST.json"
+    },
+    {
+      "macro": "gf180mcu_3v3_12t_2r2w_sram_512x32",
+      "check": "leaf cells present in top",
+      "status": "PASS",
+      "detail": "leaf_count=128 expected=128",
+      "evidence": "reports/column_periphery_gds_merge/MANIFEST.json"
+    },
+    {
+      "macro": "gf180mcu_3v3_12t_2r2w_sram_512x32",
+      "check": "route cell present",
+      "status": "PASS",
+      "detail": "route_cell=gf180mcu_3v3_12t_2r2w_sram_512x32_column_periphery_routes shapes=2930",
+      "evidence": "reports/column_periphery_gds_merge/MANIFEST.json"
+    },
+    {
+      "macro": "gf180mcu_3v3_12t_2r2w_sram_512x32",
+      "check": "M5 VDD/VSS short audit",
+      "status": "PASS",
+      "detail": "short_count=0 m5_regions=18002 labels=2050",
+      "evidence": "verification/results/gf180mcu_3v3_12t_2r2w_sram_column_periphery_gate/gf180mcu_3v3_12t_2r2w_sram_512x32.m5_power_short_audit.json"
+    },
+    {
+      "macro": "gf180mcu_3v3_12t_2r2w_sram_1024x8",
+      "check": "GDS wrapper merge",
+      "status": "PASS",
+      "detail": "bbox={'left_um': 0.0, 'bottom_um': 0.0, 'right_um': 594.64, 'top_um': 666.92, 'width_um': 594.64, 'height_um': 666.92}",
+      "evidence": "reports/column_periphery_gds_merge/MANIFEST.json"
+    },
+    {
+      "macro": "gf180mcu_3v3_12t_2r2w_sram_1024x8",
+      "check": "leaf cells present in top",
+      "status": "PASS",
+      "detail": "leaf_count=32 expected=32",
+      "evidence": "reports/column_periphery_gds_merge/MANIFEST.json"
+    },
+    {
+      "macro": "gf180mcu_3v3_12t_2r2w_sram_1024x8",
+      "check": "route cell present",
+      "status": "PASS",
+      "detail": "route_cell=gf180mcu_3v3_12t_2r2w_sram_1024x8_column_periphery_routes shapes=729",
+      "evidence": "reports/column_periphery_gds_merge/MANIFEST.json"
+    },
+    {
+      "macro": "gf180mcu_3v3_12t_2r2w_sram_1024x8",
+      "check": "M5 VDD/VSS short audit",
+      "status": "PASS",
+      "detail": "short_count=0 m5_regions=9112 labels=1026",
+      "evidence": "verification/results/gf180mcu_3v3_12t_2r2w_sram_column_periphery_gate/gf180mcu_3v3_12t_2r2w_sram_1024x8.m5_power_short_audit.json"
+    },
+    {
+      "macro": "gf180mcu_3v3_12t_2r2w_sram_1024x32",
+      "check": "GDS wrapper merge",
+      "status": "PASS",
+      "detail": "bbox={'left_um': 0.0, 'bottom_um': 0.0, 'right_um': 1019.545, 'top_um': 1306.95, 'width_um': 1019.545, 'height_um': 1306.95}",
+      "evidence": "reports/column_periphery_gds_merge/MANIFEST.json"
+    },
+    {
+      "macro": "gf180mcu_3v3_12t_2r2w_sram_1024x32",
+      "check": "leaf cells present in top",
+      "status": "PASS",
+      "detail": "leaf_count=128 expected=128",
+      "evidence": "reports/column_periphery_gds_merge/MANIFEST.json"
+    },
+    {
+      "macro": "gf180mcu_3v3_12t_2r2w_sram_1024x32",
+      "check": "route cell present",
+      "status": "PASS",
+      "detail": "route_cell=gf180mcu_3v3_12t_2r2w_sram_1024x32_column_periphery_routes shapes=2930",
+      "evidence": "reports/column_periphery_gds_merge/MANIFEST.json"
+    },
+    {
+      "macro": "gf180mcu_3v3_12t_2r2w_sram_1024x32",
+      "check": "M5 VDD/VSS short audit",
+      "status": "PASS",
+      "detail": "short_count=0 m5_regions=35965 labels=4098",
+      "evidence": "verification/results/gf180mcu_3v3_12t_2r2w_sram_column_periphery_gate/gf180mcu_3v3_12t_2r2w_sram_1024x32.m5_power_short_audit.json"
+    }
+  ]
+}

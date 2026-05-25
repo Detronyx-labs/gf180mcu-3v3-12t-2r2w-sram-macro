@@ -1,0 +1,142 @@
+{
+  "package": "gf180mcu-3v3-12t-2r2w-sram-macro",
+  "status": "PASS",
+  "scope": "top-level M2/M3 routed stdcell control, predecode, enable, and row-select input signal network",
+  "final_physical_manifest": "reports/final_physical/MANIFEST.json",
+  "control_placement_manifest": "reports/stdcell_control_placement/MANIFEST.json",
+  "row_select_placement_manifest": "reports/stdcell_row_select_placement/MANIFEST.json",
+  "results": [
+    {
+      "macro": "gf180mcu_3v3_12t_2r2w_sram_1024x32",
+      "status": "PASS",
+      "gds": "macros/gf180mcu_3v3_12t_2r2w_sram_1024x32/layout/gf180mcu_3v3_12t_2r2w_sram_1024x32.gds",
+      "route_cell": "gf180mcu_3v3_12t_2r2w_sram_1024x32_stdcell_control_signal_routes",
+      "expanded_cdl": "macros/gf180mcu_3v3_12t_2r2w_sram_1024x32/abstract/gf180mcu_3v3_12t_2r2w_sram_1024x32.stdcell_full_control_matrix.cdl",
+      "routed_nets": 381,
+      "routed_endpoints": 5112,
+      "row_select_input_nets": 100,
+      "macro_pin_nets": 44,
+      "route_shapes": 36253,
+      "routed_nets_csv": "reports/stdcell_control_signal_routing/gf180mcu_3v3_12t_2r2w_sram_1024x32/gf180mcu_3v3_12t_2r2w_sram_1024x32.routed_nets.csv",
+      "footprint_unchanged": true,
+      "bbox_before_um": {
+        "left_um": 0.0,
+        "bottom_um": 0.0,
+        "right_um": 1003.96,
+        "top_um": 1172.28,
+        "width_um": 1003.96,
+        "height_um": 1172.28
+      },
+      "bbox_after_um": {
+        "left_um": 0.0,
+        "bottom_um": 0.0,
+        "right_um": 1003.96,
+        "top_um": 1172.28,
+        "width_um": 1003.96,
+        "height_um": 1172.28
+      },
+      "detail": [
+
+      ]
+    },
+    {
+      "macro": "gf180mcu_3v3_12t_2r2w_sram_1024x8",
+      "status": "PASS",
+      "gds": "macros/gf180mcu_3v3_12t_2r2w_sram_1024x8/layout/gf180mcu_3v3_12t_2r2w_sram_1024x8.gds",
+      "route_cell": "gf180mcu_3v3_12t_2r2w_sram_1024x8_stdcell_control_signal_routes",
+      "expanded_cdl": "macros/gf180mcu_3v3_12t_2r2w_sram_1024x8/abstract/gf180mcu_3v3_12t_2r2w_sram_1024x8.stdcell_full_control_matrix.cdl",
+      "routed_nets": 333,
+      "routed_endpoints": 2904,
+      "row_select_input_nets": 68,
+      "macro_pin_nets": 44,
+      "route_shapes": 20749,
+      "routed_nets_csv": "reports/stdcell_control_signal_routing/gf180mcu_3v3_12t_2r2w_sram_1024x8/gf180mcu_3v3_12t_2r2w_sram_1024x8.routed_nets.csv",
+      "footprint_unchanged": true,
+      "bbox_before_um": {
+        "left_um": 0.0,
+        "bottom_um": 0.0,
+        "right_um": 585.56,
+        "top_um": 618.04,
+        "width_um": 585.56,
+        "height_um": 618.04
+      },
+      "bbox_after_um": {
+        "left_um": 0.0,
+        "bottom_um": 0.0,
+        "right_um": 585.56,
+        "top_um": 618.04,
+        "width_um": 585.56,
+        "height_um": 618.04
+      },
+      "detail": [
+
+      ]
+    },
+    {
+      "macro": "gf180mcu_3v3_12t_2r2w_sram_512x32",
+      "status": "PASS",
+      "gds": "macros/gf180mcu_3v3_12t_2r2w_sram_512x32/layout/gf180mcu_3v3_12t_2r2w_sram_512x32.gds",
+      "route_cell": "gf180mcu_3v3_12t_2r2w_sram_512x32_stdcell_control_signal_routes",
+      "expanded_cdl": "macros/gf180mcu_3v3_12t_2r2w_sram_512x32/abstract/gf180mcu_3v3_12t_2r2w_sram_512x32.stdcell_full_control_matrix.cdl",
+      "routed_nets": 299,
+      "routed_endpoints": 2772,
+      "row_select_input_nets": 68,
+      "macro_pin_nets": 40,
+      "route_shapes": 19783,
+      "routed_nets_csv": "reports/stdcell_control_signal_routing/gf180mcu_3v3_12t_2r2w_sram_512x32/gf180mcu_3v3_12t_2r2w_sram_512x32.routed_nets.csv",
+      "footprint_unchanged": true,
+      "bbox_before_um": {
+        "left_um": 0.0,
+        "bottom_um": 0.0,
+        "right_um": 1003.96,
+        "top_um": 618.04,
+        "width_um": 1003.96,
+        "height_um": 618.04
+      },
+      "bbox_after_um": {
+        "left_um": 0.0,
+        "bottom_um": 0.0,
+        "right_um": 1003.96,
+        "top_um": 618.04,
+        "width_um": 1003.96,
+        "height_um": 618.04
+      },
+      "detail": [
+
+      ]
+    },
+    {
+      "macro": "gf180mcu_3v3_12t_2r2w_sram_512x8",
+      "status": "PASS",
+      "gds": "macros/gf180mcu_3v3_12t_2r2w_sram_512x8/layout/gf180mcu_3v3_12t_2r2w_sram_512x8.gds",
+      "route_cell": "gf180mcu_3v3_12t_2r2w_sram_512x8_stdcell_control_signal_routes",
+      "expanded_cdl": "macros/gf180mcu_3v3_12t_2r2w_sram_512x8/abstract/gf180mcu_3v3_12t_2r2w_sram_512x8.stdcell_full_control_matrix.cdl",
+      "routed_nets": 283,
+      "routed_endpoints": 1732,
+      "row_select_input_nets": 52,
+      "macro_pin_nets": 40,
+      "route_shapes": 12487,
+      "routed_nets_csv": "reports/stdcell_control_signal_routing/gf180mcu_3v3_12t_2r2w_sram_512x8/gf180mcu_3v3_12t_2r2w_sram_512x8.routed_nets.csv",
+      "footprint_unchanged": true,
+      "bbox_before_um": {
+        "left_um": 0.0,
+        "bottom_um": 0.0,
+        "right_um": 585.56,
+        "top_um": 340.92,
+        "width_um": 585.56,
+        "height_um": 340.92
+      },
+      "bbox_after_um": {
+        "left_um": 0.0,
+        "bottom_um": 0.0,
+        "right_um": 585.56,
+        "top_um": 340.92,
+        "width_um": 585.56,
+        "height_um": 340.92
+      },
+      "detail": [
+
+      ]
+    }
+  ]
+}

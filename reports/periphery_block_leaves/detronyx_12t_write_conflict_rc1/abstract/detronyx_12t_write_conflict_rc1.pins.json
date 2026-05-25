@@ -8,19 +8,19 @@
       "direction": "INOUT",
       "use": "POWER",
       "layer": "metal3",
-      "xlo": 5448,
-      "ylo": 16247,
-      "xhi": 5520,
-      "yhi": 16487
+      "xlo": 4728,
+      "ylo": 10439,
+      "xhi": 4800,
+      "yhi": 10679
     },
     {
       "name": "VSS",
       "direction": "INOUT",
       "use": "GROUND",
       "layer": "metal3",
-      "xlo": 5308,
+      "xlo": 4588,
       "ylo": 140,
-      "xhi": 5380,
+      "xhi": 4660,
       "yhi": 380
     },
     {
@@ -28,9 +28,9 @@
       "direction": "INPUT",
       "use": "SIGNAL",
       "layer": "metal3",
-      "xlo": 6428,
+      "xlo": 5708,
       "ylo": 140,
-      "xhi": 6500,
+      "xhi": 5780,
       "yhi": 300
     },
     {
@@ -38,19 +38,19 @@
       "direction": "INPUT",
       "use": "SIGNAL",
       "layer": "metal3",
-      "xlo": 6568,
-      "ylo": 16467,
-      "xhi": 6640,
-      "yhi": 16627
+      "xlo": 5848,
+      "ylo": 10659,
+      "xhi": 5920,
+      "yhi": 10819
     },
     {
       "name": "addr_eq",
       "direction": "INPUT",
       "use": "SIGNAL",
       "layer": "metal3",
-      "xlo": 5588,
+      "xlo": 4868,
       "ylo": 140,
-      "xhi": 5660,
+      "xhi": 4940,
       "yhi": 300
     },
     {
@@ -58,18 +58,18 @@
       "direction": "OUTPUT",
       "use": "SIGNAL",
       "layer": "metal3",
-      "xlo": 6708,
-      "ylo": 16467,
-      "xhi": 6780,
-      "yhi": 16627
+      "xlo": 5988,
+      "ylo": 10659,
+      "xhi": 6060,
+      "yhi": 10819
     }
   ],
   "route_terms": [
     {
       "net": "both_n",
       "kind": "diff",
-      "x": 636,
-      "y": 5709,
+      "x": 276,
+      "y": 3685,
       "block": "write_conflict",
       "role": "both_nand_n0",
       "terminal": "drain"
@@ -77,8 +77,8 @@
     {
       "net": "w0_en",
       "kind": "gate",
-      "x": 716,
-      "y": 5840,
+      "x": 356,
+      "y": 3816,
       "block": "write_conflict",
       "role": "both_nand_n0",
       "terminal": "gate"
@@ -86,8 +86,8 @@
     {
       "net": "both_mid",
       "kind": "diff",
-      "x": 796,
-      "y": 5709,
+      "x": 436,
+      "y": 3685,
       "block": "write_conflict",
       "role": "both_nand_n0",
       "terminal": "source"
@@ -95,8 +95,8 @@
     {
       "net": "both_mid",
       "kind": "diff",
-      "x": 1068,
-      "y": 5709,
+      "x": 708,
+      "y": 3685,
       "block": "write_conflict",
       "role": "both_nand_n1",
       "terminal": "drain"
@@ -104,8 +104,8 @@
     {
       "net": "w1_en",
       "kind": "gate",
-      "x": 1148,
-      "y": 5840,
+      "x": 788,
+      "y": 3816,
       "block": "write_conflict",
       "role": "both_nand_n1",
       "terminal": "gate"
@@ -113,8 +113,8 @@
     {
       "net": "VSS",
       "kind": "diff",
-      "x": 1228,
-      "y": 5709,
+      "x": 868,
+      "y": 3685,
       "block": "write_conflict",
       "role": "both_nand_n1",
       "terminal": "source"
@@ -122,8 +122,8 @@
     {
       "net": "both",
       "kind": "diff",
-      "x": 1500,
-      "y": 5709,
+      "x": 1140,
+      "y": 3685,
       "block": "write_conflict",
       "role": "both_inv_n",
       "terminal": "drain"
@@ -131,8 +131,8 @@
     {
       "net": "both_n",
       "kind": "gate",
-      "x": 1580,
-      "y": 5840,
+      "x": 1220,
+      "y": 3816,
       "block": "write_conflict",
       "role": "both_inv_n",
       "terminal": "gate"
@@ -140,8 +140,8 @@
     {
       "net": "VSS",
       "kind": "diff",
-      "x": 1660,
-      "y": 5709,
+      "x": 1300,
+      "y": 3685,
       "block": "write_conflict",
       "role": "both_inv_n",
       "terminal": "source"
@@ -149,8 +149,8 @@
     {
       "net": "conflict_n",
       "kind": "diff",
-      "x": 1932,
-      "y": 5709,
+      "x": 1572,
+      "y": 3685,
       "block": "write_conflict",
       "role": "conflict_nand_n0",
       "terminal": "drain"
@@ -158,8 +158,8 @@
     {
       "net": "both",
       "kind": "gate",
-      "x": 2012,
-      "y": 5840,
+      "x": 1652,
+      "y": 3816,
       "block": "write_conflict",
       "role": "conflict_nand_n0",
       "terminal": "gate"
@@ -167,8 +167,8 @@
     {
       "net": "conflict_mid",
       "kind": "diff",
-      "x": 2092,
-      "y": 5709,
+      "x": 1732,
+      "y": 3685,
       "block": "write_conflict",
       "role": "conflict_nand_n0",
       "terminal": "source"
@@ -176,8 +176,8 @@
     {
       "net": "conflict_mid",
       "kind": "diff",
-      "x": 2364,
-      "y": 5709,
+      "x": 2004,
+      "y": 3685,
       "block": "write_conflict",
       "role": "conflict_nand_n1",
       "terminal": "drain"
@@ -185,8 +185,8 @@
     {
       "net": "addr_eq",
       "kind": "gate",
-      "x": 2444,
-      "y": 5840,
+      "x": 2084,
+      "y": 3816,
       "block": "write_conflict",
       "role": "conflict_nand_n1",
       "terminal": "gate"
@@ -194,8 +194,8 @@
     {
       "net": "VSS",
       "kind": "diff",
-      "x": 2524,
-      "y": 5709,
+      "x": 2164,
+      "y": 3685,
       "block": "write_conflict",
       "role": "conflict_nand_n1",
       "terminal": "source"
@@ -203,8 +203,8 @@
     {
       "net": "write_conflict",
       "kind": "diff",
-      "x": 2796,
-      "y": 5709,
+      "x": 2436,
+      "y": 3685,
       "block": "write_conflict",
       "role": "conflict_inv_n",
       "terminal": "drain"
@@ -212,8 +212,8 @@
     {
       "net": "conflict_n",
       "kind": "gate",
-      "x": 2876,
-      "y": 5840,
+      "x": 2516,
+      "y": 3816,
       "block": "write_conflict",
       "role": "conflict_inv_n",
       "terminal": "gate"
@@ -221,8 +221,8 @@
     {
       "net": "VSS",
       "kind": "diff",
-      "x": 2956,
-      "y": 5709,
+      "x": 2596,
+      "y": 3685,
       "block": "write_conflict",
       "role": "conflict_inv_n",
       "terminal": "source"
@@ -230,8 +230,8 @@
     {
       "net": "both_n",
       "kind": "diff",
-      "x": 722,
-      "y": 6641,
+      "x": 362,
+      "y": 4457,
       "block": "write_conflict",
       "role": "both_nand_p0",
       "terminal": "drain"
@@ -239,8 +239,8 @@
     {
       "net": "w0_en",
       "kind": "gate",
-      "x": 802,
-      "y": 6719,
+      "x": 442,
+      "y": 4535,
       "block": "write_conflict",
       "role": "both_nand_p0",
       "terminal": "gate"
@@ -248,8 +248,8 @@
     {
       "net": "VDD",
       "kind": "diff",
-      "x": 882,
-      "y": 6641,
+      "x": 522,
+      "y": 4457,
       "block": "write_conflict",
       "role": "both_nand_p0",
       "terminal": "source"
@@ -257,8 +257,8 @@
     {
       "net": "both_n",
       "kind": "diff",
-      "x": 1326,
-      "y": 6641,
+      "x": 966,
+      "y": 4457,
       "block": "write_conflict",
       "role": "both_nand_p1",
       "terminal": "drain"
@@ -266,8 +266,8 @@
     {
       "net": "w1_en",
       "kind": "gate",
-      "x": 1406,
-      "y": 6719,
+      "x": 1046,
+      "y": 4535,
       "block": "write_conflict",
       "role": "both_nand_p1",
       "terminal": "gate"
@@ -275,8 +275,8 @@
     {
       "net": "VDD",
       "kind": "diff",
-      "x": 1486,
-      "y": 6641,
+      "x": 1126,
+      "y": 4457,
       "block": "write_conflict",
       "role": "both_nand_p1",
       "terminal": "source"
@@ -284,8 +284,8 @@
     {
       "net": "both",
       "kind": "diff",
-      "x": 1930,
-      "y": 6641,
+      "x": 1570,
+      "y": 4457,
       "block": "write_conflict",
       "role": "both_inv_p",
       "terminal": "drain"
@@ -293,8 +293,8 @@
     {
       "net": "both_n",
       "kind": "gate",
-      "x": 2010,
-      "y": 6719,
+      "x": 1650,
+      "y": 4535,
       "block": "write_conflict",
       "role": "both_inv_p",
       "terminal": "gate"
@@ -302,8 +302,8 @@
     {
       "net": "VDD",
       "kind": "diff",
-      "x": 2090,
-      "y": 6641,
+      "x": 1730,
+      "y": 4457,
       "block": "write_conflict",
       "role": "both_inv_p",
       "terminal": "source"
@@ -311,8 +311,8 @@
     {
       "net": "conflict_n",
       "kind": "diff",
-      "x": 2534,
-      "y": 6641,
+      "x": 2174,
+      "y": 4457,
       "block": "write_conflict",
       "role": "conflict_nand_p0",
       "terminal": "drain"
@@ -320,8 +320,8 @@
     {
       "net": "both",
       "kind": "gate",
-      "x": 2614,
-      "y": 6719,
+      "x": 2254,
+      "y": 4535,
       "block": "write_conflict",
       "role": "conflict_nand_p0",
       "terminal": "gate"
@@ -329,8 +329,8 @@
     {
       "net": "VDD",
       "kind": "diff",
-      "x": 2694,
-      "y": 6641,
+      "x": 2334,
+      "y": 4457,
       "block": "write_conflict",
       "role": "conflict_nand_p0",
       "terminal": "source"
@@ -338,8 +338,8 @@
     {
       "net": "conflict_n",
       "kind": "diff",
-      "x": 3138,
-      "y": 6641,
+      "x": 2778,
+      "y": 4457,
       "block": "write_conflict",
       "role": "conflict_nand_p1",
       "terminal": "drain"
@@ -347,8 +347,8 @@
     {
       "net": "addr_eq",
       "kind": "gate",
-      "x": 3218,
-      "y": 6719,
+      "x": 2858,
+      "y": 4535,
       "block": "write_conflict",
       "role": "conflict_nand_p1",
       "terminal": "gate"
@@ -356,8 +356,8 @@
     {
       "net": "VDD",
       "kind": "diff",
-      "x": 3298,
-      "y": 6641,
+      "x": 2938,
+      "y": 4457,
       "block": "write_conflict",
       "role": "conflict_nand_p1",
       "terminal": "source"
@@ -365,8 +365,8 @@
     {
       "net": "write_conflict",
       "kind": "diff",
-      "x": 3742,
-      "y": 6641,
+      "x": 3382,
+      "y": 4457,
       "block": "write_conflict",
       "role": "conflict_inv_p",
       "terminal": "drain"
@@ -374,8 +374,8 @@
     {
       "net": "conflict_n",
       "kind": "gate",
-      "x": 3822,
-      "y": 6719,
+      "x": 3462,
+      "y": 4535,
       "block": "write_conflict",
       "role": "conflict_inv_p",
       "terminal": "gate"
@@ -383,8 +383,8 @@
     {
       "net": "VDD",
       "kind": "diff",
-      "x": 3902,
-      "y": 6641,
+      "x": 3542,
+      "y": 4457,
       "block": "write_conflict",
       "role": "conflict_inv_p",
       "terminal": "source"
@@ -392,8 +392,8 @@
     {
       "net": "VSS",
       "kind": "diff",
-      "x": 4224,
-      "y": 5840,
+      "x": 3864,
+      "y": 3816,
       "block": "write_conflict",
       "role": "psub_tap",
       "terminal": "tap"
@@ -401,8 +401,8 @@
     {
       "net": "VDD",
       "kind": "diff",
-      "x": 4224,
-      "y": 6503,
+      "x": 3864,
+      "y": 4319,
       "block": "write_conflict",
       "role": "nsub_tap",
       "terminal": "tap"
@@ -410,8 +410,8 @@
     {
       "net": "VDD",
       "kind": "pin",
-      "x": 5484,
-      "y": 16327,
+      "x": 4764,
+      "y": 10519,
       "block": "pin",
       "role": "VDD",
       "terminal": "pin"
@@ -419,7 +419,7 @@
     {
       "net": "VSS",
       "kind": "pin",
-      "x": 5344,
+      "x": 4624,
       "y": 220,
       "block": "pin",
       "role": "VSS",
@@ -428,7 +428,7 @@
     {
       "net": "w0_en",
       "kind": "pin",
-      "x": 6464,
+      "x": 5744,
       "y": 220,
       "block": "pin",
       "role": "w0_en",
@@ -437,8 +437,8 @@
     {
       "net": "w1_en",
       "kind": "pin",
-      "x": 6604,
-      "y": 16547,
+      "x": 5884,
+      "y": 10739,
       "block": "pin",
       "role": "w1_en",
       "terminal": "pin"
@@ -446,7 +446,7 @@
     {
       "net": "addr_eq",
       "kind": "pin",
-      "x": 5624,
+      "x": 4904,
       "y": 220,
       "block": "pin",
       "role": "addr_eq",
@@ -455,8 +455,8 @@
     {
       "net": "write_conflict",
       "kind": "pin",
-      "x": 6744,
-      "y": 16547,
+      "x": 6024,
+      "y": 10739,
       "block": "pin",
       "role": "write_conflict",
       "terminal": "pin"

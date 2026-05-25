@@ -1,0 +1,6 @@
+* RC7 transistor-level reference CDL for detronyx_12t_ctrl_inv_rc7
+* Uses Tim-derived 3.3V GF180 MOS primitive dimensions.
+.subckt detronyx_12t_ctrl_inv_rc7 VDD VSS A Y
+X1_inv_n Y A VSS VSS nfet_03v3 w=1.055u l=0.28u
+X2_inv_p Y A VDD VDD pfet_03v3 w=0.56u l=0.28u
+.ends detronyx_12t_ctrl_inv_rc7

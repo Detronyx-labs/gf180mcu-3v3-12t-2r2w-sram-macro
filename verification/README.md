@@ -12,6 +12,30 @@ storage checks used before macro-level LVS/PEX work.
 - `gf180mcu_3v3_12t_2r2w_sram_gds_leaf_containment.py` checks whether the
   standalone periphery leaf GDS files and the published macro GDS files contain
   the expected leaf cell names.
+- `gf180mcu_3v3_12t_2r2w_sram_stdcell_control_gate.py` checks that the
+  vendored Avalon GF180MCU 3.3V stdcell collateral is present, that generated
+  control-matrix CDLs use Avalon `INV`/`NAND`/`NOR` cells, and that macro GDS
+  contains the row-select stdcell expansion.
+- `gf180mcu_3v3_12t_2r2w_sram_stdcell_placement_gate.py` checks that the
+  generated Avalon stdcell placement DEF/CSV files stay inside the existing
+  macro footprint and do not overflow the top/bottom control bands.
+- `gf180mcu_3v3_12t_2r2w_sram_stdcell_gds_gate.py` checks that the published
+  macro GDS files physically contain the placed Avalon stdcell control
+  instances without changing the macro footprint.
+- `gf180mcu_3v3_12t_2r2w_sram_row_select_gds_gate.py` checks that custom
+  row-select/WL-buffer functions are expanded into row-pitch-compatible Avalon
+  stdcells, merged into macro GDS, and covered by a GF180 `main.drc` smoke run.
+- `gf180mcu_3v3_12t_2r2w_sram_stdcell_control_routing_gate.py` checks that
+  top-level route cells connect the expanded Avalon control/predecode netlist,
+  macro address/enable pins, and row-select NAND input sinks without changing
+  the macro footprint.
+- `gf180mcu_3v3_12t_2r2w_sram_column_periphery_gate.py` checks that the
+  expanded macro GDS tops contain the array/control core, per-bit
+  `precharge_sense` and `write_driver` column leaves, route cells, and the
+  expected expanded wrapper dimensions.
+- `../scripts/run_gf180mcu_3v3_12t_2r2w_sram_local_signoff.py` is the packaged
+  full local gate: Magic PEX, final abstract pin LVS, KLayout density/antenna,
+  staged LVS evidence, Avalon control binding, and packaged ngspice evidence.
 - `gf180mcu_3v3_12t_2r2w_sram_tile_lvs.py` checks the extracted 4x4 tile subcircuit against an
   independently generated 12T MOS reference.
 - `gf180mcu_3v3_12t_2r2w_sram_macro_lvs.py` checks the macro-top tile instance connectivity
@@ -33,10 +57,21 @@ argument. They use the unpacked reports under `reports/`.
 python3 verification/gf180mcu_3v3_12t_2r2w_sram_lvs_gate.py
 python3 verification/gf180mcu_3v3_12t_2r2w_sram_periphery_lvs.py
 python3 verification/gf180mcu_3v3_12t_2r2w_sram_gds_leaf_containment.py
+python3 verification/gf180mcu_3v3_12t_2r2w_sram_stdcell_control_gate.py
+python3 verification/gf180mcu_3v3_12t_2r2w_sram_stdcell_placement_gate.py
+python3 verification/gf180mcu_3v3_12t_2r2w_sram_stdcell_gds_gate.py
+python3 verification/gf180mcu_3v3_12t_2r2w_sram_row_select_gds_gate.py
+python3 verification/gf180mcu_3v3_12t_2r2w_sram_stdcell_control_routing_gate.py
+python3 verification/gf180mcu_3v3_12t_2r2w_sram_column_periphery_gate.py
 python3 verification/gf180mcu_3v3_12t_2r2w_sram_tile_lvs.py
 python3 verification/gf180mcu_3v3_12t_2r2w_sram_macro_lvs.py
 python3 verification/gf180mcu_3v3_12t_2r2w_sram_connectivity_check.py
 ```
+
+The packaged full local signoff report is generated under
+`reports/local_signoff_full/`. After the public GDS top-cell rewrite, the
+current full local status is `{'PASS': 31, 'OPEN': 5, 'WARN': 4}` with no
+`FAIL` entries.
 
 The Netgen scripts accept `--netgen-setup`; otherwise they use
 `GF180_NETGEN_SETUP`, `NETGEN_SETUP`, or the usual `GF180_PDK_ROOT` /
@@ -54,11 +89,30 @@ write row decode/WL driver, read row decode/WL driver, write driver,
 precharge/sense, and write-conflict control. Each leaf must have Magic DRC
 `0`, Netgen LVS `match`/`match_unique`, zero disconnected pins, and the expected
 pin contract, including `dout` as the SAOUT-equivalent read output.
+The compact write-driver and precharge/sense leaves are also gated against the
+x32 tile pitch limit of `25.950um`; the current periphery gate reports
+`{'PASS': 22, 'FAIL': 0}`. Column integration is physically present in the
+published macro GDS through the expanded-wrapper column periphery gate, which
+reports `{'PASS': 27}` with a 512x8 GF180 `main.drc` smoke report containing
+`0` violations. The remaining closure item is extracted full-macro
+device LVS/PEX and analog characterization on that routed top.
 
-The GDS containment audit currently reports the five periphery leaf GDS files
-as present and self-contained, and the four macro GDS files as
-standalone leaf-level closure only. Use
-`--require-macro-containment` once full macro periphery integration is expected.
+The broad GDS containment audit still treats all five standalone Tim-derived
+periphery leaves as required macro children when run with
+`--require-macro-containment`. The current macro GDS intentionally contains the
+column `write_driver` and `precharge_sense` leaves; row-select/WL behavior is
+implemented through the Avalon stdcell expansion, and the write-conflict leaf
+remains standalone collateral.
+
+The stdcell control, placement, GDS, row-select, and control-routing gates currently pass the
+vendored Avalon library, generated control-matrix CDL checks, DEF/CSV placement
+checks, physical macro GDS containment for placed Avalon `INV`/`NAND`/`NOR`
+control cells, row-pitch-compatible row-select/WL-buffer expansion, and top-level
+M2/M3 routing of macro address/enable and predecode nets into row-select NAND inputs. The
+stdcell control gate reports `{'PASS': 37}`, the placement gate reports
+`{'PASS': 33}`, the row-select gate reports `{'PASS': 23}`, and the routing gate
+reports `{'PASS': 18}` with a 512x8 GF180 `main.drc` smoke report containing
+`0` violations.
 
 ## Leaf Storage
 

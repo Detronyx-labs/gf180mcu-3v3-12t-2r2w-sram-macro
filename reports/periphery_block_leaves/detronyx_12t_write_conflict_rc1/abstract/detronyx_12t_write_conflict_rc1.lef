@@ -5,14 +5,14 @@ MACRO detronyx_12t_write_conflict_rc1
   CLASS BLOCK ;
   FOREIGN detronyx_12t_write_conflict_rc1 0.000 0.000 ;
   ORIGIN 0.000 0.000 ;
-  SIZE 33.420000 BY 82.435000 ;
+  SIZE 29.100000 BY 53.395000 ;
   SYMMETRY X Y ;
   PIN VDD
     DIRECTION INOUT ;
     USE POWER ;
     PORT
       LAYER Metal3 ;
-        RECT 27.240000 81.235000 27.600000 82.435000 ;
+        RECT 23.640000 52.195000 24.000000 53.395000 ;
     END
   END VDD
   PIN VSS
@@ -20,7 +20,7 @@ MACRO detronyx_12t_write_conflict_rc1
     USE GROUND ;
     PORT
       LAYER Metal3 ;
-        RECT 26.540000 0.700000 26.900000 1.900000 ;
+        RECT 22.940000 0.700000 23.300000 1.900000 ;
     END
   END VSS
   PIN w0_en
@@ -28,7 +28,7 @@ MACRO detronyx_12t_write_conflict_rc1
     USE SIGNAL ;
     PORT
       LAYER Metal3 ;
-        RECT 32.140000 0.700000 32.500000 1.500000 ;
+        RECT 28.540000 0.700000 28.900000 1.500000 ;
     END
   END w0_en
   PIN w1_en
@@ -36,7 +36,7 @@ MACRO detronyx_12t_write_conflict_rc1
     USE SIGNAL ;
     PORT
       LAYER Metal3 ;
-        RECT 32.840000 82.335000 33.200000 83.135000 ;
+        RECT 29.240000 53.295000 29.600000 54.095000 ;
     END
   END w1_en
   PIN addr_eq
@@ -44,7 +44,7 @@ MACRO detronyx_12t_write_conflict_rc1
     USE SIGNAL ;
     PORT
       LAYER Metal3 ;
-        RECT 27.940000 0.700000 28.300000 1.500000 ;
+        RECT 24.340000 0.700000 24.700000 1.500000 ;
     END
   END addr_eq
   PIN write_conflict
@@ -52,14 +52,14 @@ MACRO detronyx_12t_write_conflict_rc1
     USE SIGNAL ;
     PORT
       LAYER Metal3 ;
-        RECT 33.540000 82.335000 33.900000 83.135000 ;
+        RECT 29.940000 53.295000 30.300000 54.095000 ;
     END
   END write_conflict
   OBS
     LAYER Metal1 ;
-      RECT 0.000000 0.000000 33.420000 82.435000 ;
+      RECT 0.000000 0.000000 29.100000 53.395000 ;
     LAYER Metal2 ;
-      RECT 0.000000 0.000000 33.420000 82.435000 ;
+      RECT 0.000000 0.000000 29.100000 53.395000 ;
   END
 END detronyx_12t_write_conflict_rc1
 END LIBRARY

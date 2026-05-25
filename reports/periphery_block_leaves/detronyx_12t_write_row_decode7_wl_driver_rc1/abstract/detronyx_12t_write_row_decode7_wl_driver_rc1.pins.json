@@ -8,19 +8,19 @@
       "direction": "INOUT",
       "use": "POWER",
       "layer": "metal3",
-      "xlo": 13300,
-      "ylo": 37739,
-      "xhi": 13372,
-      "yhi": 37979
+      "xlo": 12580,
+      "ylo": 23903,
+      "xhi": 12652,
+      "yhi": 24143
     },
     {
       "name": "VSS",
       "direction": "INOUT",
       "use": "GROUND",
       "layer": "metal3",
-      "xlo": 13160,
+      "xlo": 12440,
       "ylo": 140,
-      "xhi": 13232,
+      "xhi": 12512,
       "yhi": 380
     },
     {
@@ -28,9 +28,9 @@
       "direction": "INPUT",
       "use": "SIGNAL",
       "layer": "metal3",
-      "xlo": 16940,
+      "xlo": 16220,
       "ylo": 140,
-      "xhi": 17012,
+      "xhi": 16292,
       "yhi": 300
     },
     {
@@ -38,19 +38,19 @@
       "direction": "INPUT",
       "use": "SIGNAL",
       "layer": "metal3",
-      "xlo": 13440,
-      "ylo": 37959,
-      "xhi": 13512,
-      "yhi": 38119
+      "xlo": 12720,
+      "ylo": 24123,
+      "xhi": 12792,
+      "yhi": 24283
     },
     {
       "name": "a[1]",
       "direction": "INPUT",
       "use": "SIGNAL",
       "layer": "metal3",
-      "xlo": 13580,
+      "xlo": 12860,
       "ylo": 140,
-      "xhi": 13652,
+      "xhi": 12932,
       "yhi": 300
     },
     {
@@ -58,19 +58,19 @@
       "direction": "INPUT",
       "use": "SIGNAL",
       "layer": "metal3",
-      "xlo": 13720,
-      "ylo": 37959,
-      "xhi": 13792,
-      "yhi": 38119
+      "xlo": 13000,
+      "ylo": 24123,
+      "xhi": 13072,
+      "yhi": 24283
     },
     {
       "name": "a[3]",
       "direction": "INPUT",
       "use": "SIGNAL",
       "layer": "metal3",
-      "xlo": 13860,
+      "xlo": 13140,
       "ylo": 140,
-      "xhi": 13932,
+      "xhi": 13212,
       "yhi": 300
     },
     {
@@ -78,19 +78,19 @@
       "direction": "INPUT",
       "use": "SIGNAL",
       "layer": "metal3",
-      "xlo": 14000,
-      "ylo": 37959,
-      "xhi": 14072,
-      "yhi": 38119
+      "xlo": 13280,
+      "ylo": 24123,
+      "xhi": 13352,
+      "yhi": 24283
     },
     {
       "name": "a[5]",
       "direction": "INPUT",
       "use": "SIGNAL",
       "layer": "metal3",
-      "xlo": 14140,
+      "xlo": 13420,
       "ylo": 140,
-      "xhi": 14212,
+      "xhi": 13492,
       "yhi": 300
     },
     {
@@ -98,19 +98,19 @@
       "direction": "INPUT",
       "use": "SIGNAL",
       "layer": "metal3",
-      "xlo": 14280,
-      "ylo": 37959,
-      "xhi": 14352,
-      "yhi": 38119
+      "xlo": 13560,
+      "ylo": 24123,
+      "xhi": 13632,
+      "yhi": 24283
     },
     {
       "name": "wwl0",
       "direction": "OUTPUT",
       "use": "SIGNAL",
       "layer": "metal3",
-      "xlo": 17080,
+      "xlo": 16360,
       "ylo": 140,
-      "xhi": 17152,
+      "xhi": 16432,
       "yhi": 300
     }
   ],
@@ -118,8 +118,8 @@
     {
       "net": "wdec_pre0_n",
       "kind": "diff",
-      "x": 636,
-      "y": 12989,
+      "x": 276,
+      "y": 8261,
       "block": "write_row_decode7_wl_driver",
       "role": "pre0_n_pull_a0",
       "terminal": "drain"
@@ -127,8 +127,8 @@
     {
       "net": "a[0]",
       "kind": "gate",
-      "x": 716,
-      "y": 13120,
+      "x": 356,
+      "y": 8392,
       "block": "write_row_decode7_wl_driver",
       "role": "pre0_n_pull_a0",
       "terminal": "gate"
@@ -136,8 +136,8 @@
     {
       "net": "wdec_pre0_s0",
       "kind": "diff",
-      "x": 796,
-      "y": 12989,
+      "x": 436,
+      "y": 8261,
       "block": "write_row_decode7_wl_driver",
       "role": "pre0_n_pull_a0",
       "terminal": "source"
@@ -145,8 +145,8 @@
     {
       "net": "wdec_pre0_s0",
       "kind": "diff",
-      "x": 1068,
-      "y": 12989,
+      "x": 708,
+      "y": 8261,
       "block": "write_row_decode7_wl_driver",
       "role": "pre0_n_pull_a1",
       "terminal": "drain"
@@ -154,8 +154,8 @@
     {
       "net": "a[1]",
       "kind": "gate",
-      "x": 1148,
-      "y": 13120,
+      "x": 788,
+      "y": 8392,
       "block": "write_row_decode7_wl_driver",
       "role": "pre0_n_pull_a1",
       "terminal": "gate"
@@ -163,8 +163,8 @@
     {
       "net": "wdec_pre0_s1",
       "kind": "diff",
-      "x": 1228,
-      "y": 12989,
+      "x": 868,
+      "y": 8261,
       "block": "write_row_decode7_wl_driver",
       "role": "pre0_n_pull_a1",
       "terminal": "source"
@@ -172,8 +172,8 @@
     {
       "net": "wdec_pre0_s1",
       "kind": "diff",
-      "x": 1500,
-      "y": 12989,
+      "x": 1140,
+      "y": 8261,
       "block": "write_row_decode7_wl_driver",
       "role": "pre0_n_pull_a2",
       "terminal": "drain"
@@ -181,8 +181,8 @@
     {
       "net": "a[2]",
       "kind": "gate",
-      "x": 1580,
-      "y": 13120,
+      "x": 1220,
+      "y": 8392,
       "block": "write_row_decode7_wl_driver",
       "role": "pre0_n_pull_a2",
       "terminal": "gate"
@@ -190,8 +190,8 @@
     {
       "net": "VSS",
       "kind": "diff",
-      "x": 1660,
-      "y": 12989,
+      "x": 1300,
+      "y": 8261,
       "block": "write_row_decode7_wl_driver",
       "role": "pre0_n_pull_a2",
       "terminal": "source"
@@ -199,8 +199,8 @@
     {
       "net": "wdec_pre1_n",
       "kind": "diff",
-      "x": 1932,
-      "y": 12989,
+      "x": 1572,
+      "y": 8261,
       "block": "write_row_decode7_wl_driver",
       "role": "pre1_n_pull_a3",
       "terminal": "drain"
@@ -208,8 +208,8 @@
     {
       "net": "a[3]",
       "kind": "gate",
-      "x": 2012,
-      "y": 13120,
+      "x": 1652,
+      "y": 8392,
       "block": "write_row_decode7_wl_driver",
       "role": "pre1_n_pull_a3",
       "terminal": "gate"
@@ -217,8 +217,8 @@
     {
       "net": "wdec_pre1_s0",
       "kind": "diff",
-      "x": 2092,
-      "y": 12989,
+      "x": 1732,
+      "y": 8261,
       "block": "write_row_decode7_wl_driver",
       "role": "pre1_n_pull_a3",
       "terminal": "source"
@@ -226,8 +226,8 @@
     {
       "net": "wdec_pre1_s0",
       "kind": "diff",
-      "x": 2364,
-      "y": 12989,
+      "x": 2004,
+      "y": 8261,
       "block": "write_row_decode7_wl_driver",
       "role": "pre1_n_pull_a4",
       "terminal": "drain"
@@ -235,8 +235,8 @@
     {
       "net": "a[4]",
       "kind": "gate",
-      "x": 2444,
-      "y": 13120,
+      "x": 2084,
+      "y": 8392,
       "block": "write_row_decode7_wl_driver",
       "role": "pre1_n_pull_a4",
       "terminal": "gate"
@@ -244,8 +244,8 @@
     {
       "net": "VSS",
       "kind": "diff",
-      "x": 2524,
-      "y": 12989,
+      "x": 2164,
+      "y": 8261,
       "block": "write_row_decode7_wl_driver",
       "role": "pre1_n_pull_a4",
       "terminal": "source"
@@ -253,8 +253,8 @@
     {
       "net": "wdec_pre2_n",
       "kind": "diff",
-      "x": 2796,
-      "y": 12989,
+      "x": 2436,
+      "y": 8261,
       "block": "write_row_decode7_wl_driver",
       "role": "pre2_n_pull_a5",
       "terminal": "drain"
@@ -262,8 +262,8 @@
     {
       "net": "a[5]",
       "kind": "gate",
-      "x": 2876,
-      "y": 13120,
+      "x": 2516,
+      "y": 8392,
       "block": "write_row_decode7_wl_driver",
       "role": "pre2_n_pull_a5",
       "terminal": "gate"
@@ -271,8 +271,8 @@
     {
       "net": "wdec_pre2_s0",
       "kind": "diff",
-      "x": 2956,
-      "y": 12989,
+      "x": 2596,
+      "y": 8261,
       "block": "write_row_decode7_wl_driver",
       "role": "pre2_n_pull_a5",
       "terminal": "source"
@@ -280,8 +280,8 @@
     {
       "net": "wdec_pre2_s0",
       "kind": "diff",
-      "x": 3228,
-      "y": 12989,
+      "x": 2868,
+      "y": 8261,
       "block": "write_row_decode7_wl_driver",
       "role": "pre2_n_pull_a6",
       "terminal": "drain"
@@ -289,8 +289,8 @@
     {
       "net": "a[6]",
       "kind": "gate",
-      "x": 3308,
-      "y": 13120,
+      "x": 2948,
+      "y": 8392,
       "block": "write_row_decode7_wl_driver",
       "role": "pre2_n_pull_a6",
       "terminal": "gate"
@@ -298,8 +298,8 @@
     {
       "net": "wdec_pre2_s1",
       "kind": "diff",
-      "x": 3388,
-      "y": 12989,
+      "x": 3028,
+      "y": 8261,
       "block": "write_row_decode7_wl_driver",
       "role": "pre2_n_pull_a6",
       "terminal": "source"
@@ -307,8 +307,8 @@
     {
       "net": "wdec_pre2_s1",
       "kind": "diff",
-      "x": 3660,
-      "y": 12989,
+      "x": 3300,
+      "y": 8261,
       "block": "write_row_decode7_wl_driver",
       "role": "pre2_n_pull_en",
       "terminal": "drain"
@@ -316,8 +316,8 @@
     {
       "net": "wdecen",
       "kind": "gate",
-      "x": 3740,
-      "y": 13120,
+      "x": 3380,
+      "y": 8392,
       "block": "write_row_decode7_wl_driver",
       "role": "pre2_n_pull_en",
       "terminal": "gate"
@@ -325,8 +325,8 @@
     {
       "net": "VSS",
       "kind": "diff",
-      "x": 3820,
-      "y": 12989,
+      "x": 3460,
+      "y": 8261,
       "block": "write_row_decode7_wl_driver",
       "role": "pre2_n_pull_en",
       "terminal": "source"
@@ -334,8 +334,8 @@
     {
       "net": "wdec_row_n",
       "kind": "diff",
-      "x": 4092,
-      "y": 12989,
+      "x": 3732,
+      "y": 8261,
       "block": "write_row_decode7_wl_driver",
       "role": "row_n_pull_pre0",
       "terminal": "drain"
@@ -343,8 +343,8 @@
     {
       "net": "wdec_pre0",
       "kind": "gate",
-      "x": 4172,
-      "y": 13120,
+      "x": 3812,
+      "y": 8392,
       "block": "write_row_decode7_wl_driver",
       "role": "row_n_pull_pre0",
       "terminal": "gate"
@@ -352,8 +352,8 @@
     {
       "net": "wdec_row_s0",
       "kind": "diff",
-      "x": 4252,
-      "y": 12989,
+      "x": 3892,
+      "y": 8261,
       "block": "write_row_decode7_wl_driver",
       "role": "row_n_pull_pre0",
       "terminal": "source"
@@ -361,8 +361,8 @@
     {
       "net": "wdec_row_s0",
       "kind": "diff",
-      "x": 4524,
-      "y": 12989,
+      "x": 4164,
+      "y": 8261,
       "block": "write_row_decode7_wl_driver",
       "role": "row_n_pull_pre1",
       "terminal": "drain"
@@ -370,8 +370,8 @@
     {
       "net": "wdec_pre1",
       "kind": "gate",
-      "x": 4604,
-      "y": 13120,
+      "x": 4244,
+      "y": 8392,
       "block": "write_row_decode7_wl_driver",
       "role": "row_n_pull_pre1",
       "terminal": "gate"
@@ -379,8 +379,8 @@
     {
       "net": "wdec_row_s1",
       "kind": "diff",
-      "x": 4684,
-      "y": 12989,
+      "x": 4324,
+      "y": 8261,
       "block": "write_row_decode7_wl_driver",
       "role": "row_n_pull_pre1",
       "terminal": "source"
@@ -388,8 +388,8 @@
     {
       "net": "wdec_row_s1",
       "kind": "diff",
-      "x": 4956,
-      "y": 12989,
+      "x": 4596,
+      "y": 8261,
       "block": "write_row_decode7_wl_driver",
       "role": "row_n_pull_pre2",
       "terminal": "drain"
@@ -397,8 +397,8 @@
     {
       "net": "wdec_pre2",
       "kind": "gate",
-      "x": 5036,
-      "y": 13120,
+      "x": 4676,
+      "y": 8392,
       "block": "write_row_decode7_wl_driver",
       "role": "row_n_pull_pre2",
       "terminal": "gate"
@@ -406,8 +406,8 @@
     {
       "net": "VSS",
       "kind": "diff",
-      "x": 5116,
-      "y": 12989,
+      "x": 4756,
+      "y": 8261,
       "block": "write_row_decode7_wl_driver",
       "role": "row_n_pull_pre2",
       "terminal": "source"
@@ -415,8 +415,8 @@
     {
       "net": "wdec_pre0",
       "kind": "diff",
-      "x": 5388,
-      "y": 12989,
+      "x": 5028,
+      "y": 8261,
       "block": "write_row_decode7_wl_driver",
       "role": "pre0_inv_n",
       "terminal": "drain"
@@ -424,8 +424,8 @@
     {
       "net": "wdec_pre0_n",
       "kind": "gate",
-      "x": 5468,
-      "y": 13120,
+      "x": 5108,
+      "y": 8392,
       "block": "write_row_decode7_wl_driver",
       "role": "pre0_inv_n",
       "terminal": "gate"
@@ -433,8 +433,8 @@
     {
       "net": "VSS",
       "kind": "diff",
-      "x": 5548,
-      "y": 12989,
+      "x": 5188,
+      "y": 8261,
       "block": "write_row_decode7_wl_driver",
       "role": "pre0_inv_n",
       "terminal": "source"
@@ -442,8 +442,8 @@
     {
       "net": "wdec_pre1",
       "kind": "diff",
-      "x": 5820,
-      "y": 12989,
+      "x": 5460,
+      "y": 8261,
       "block": "write_row_decode7_wl_driver",
       "role": "pre1_inv_n",
       "terminal": "drain"
@@ -451,8 +451,8 @@
     {
       "net": "wdec_pre1_n",
       "kind": "gate",
-      "x": 5900,
-      "y": 13120,
+      "x": 5540,
+      "y": 8392,
       "block": "write_row_decode7_wl_driver",
       "role": "pre1_inv_n",
       "terminal": "gate"
@@ -460,8 +460,8 @@
     {
       "net": "VSS",
       "kind": "diff",
-      "x": 5980,
-      "y": 12989,
+      "x": 5620,
+      "y": 8261,
       "block": "write_row_decode7_wl_driver",
       "role": "pre1_inv_n",
       "terminal": "source"
@@ -469,8 +469,8 @@
     {
       "net": "wdec_pre2",
       "kind": "diff",
-      "x": 6252,
-      "y": 12989,
+      "x": 5892,
+      "y": 8261,
       "block": "write_row_decode7_wl_driver",
       "role": "pre2_inv_n",
       "terminal": "drain"
@@ -478,8 +478,8 @@
     {
       "net": "wdec_pre2_n",
       "kind": "gate",
-      "x": 6332,
-      "y": 13120,
+      "x": 5972,
+      "y": 8392,
       "block": "write_row_decode7_wl_driver",
       "role": "pre2_inv_n",
       "terminal": "gate"
@@ -487,8 +487,8 @@
     {
       "net": "VSS",
       "kind": "diff",
-      "x": 6412,
-      "y": 12989,
+      "x": 6052,
+      "y": 8261,
       "block": "write_row_decode7_wl_driver",
       "role": "pre2_inv_n",
       "terminal": "source"
@@ -496,8 +496,8 @@
     {
       "net": "wdec_row_sel",
       "kind": "diff",
-      "x": 6684,
-      "y": 12989,
+      "x": 6324,
+      "y": 8261,
       "block": "write_row_decode7_wl_driver",
       "role": "row_inv_n",
       "terminal": "drain"
@@ -505,8 +505,8 @@
     {
       "net": "wdec_row_n",
       "kind": "gate",
-      "x": 6764,
-      "y": 13120,
+      "x": 6404,
+      "y": 8392,
       "block": "write_row_decode7_wl_driver",
       "role": "row_inv_n",
       "terminal": "gate"
@@ -514,8 +514,8 @@
     {
       "net": "VSS",
       "kind": "diff",
-      "x": 6844,
-      "y": 12989,
+      "x": 6484,
+      "y": 8261,
       "block": "write_row_decode7_wl_driver",
       "role": "row_inv_n",
       "terminal": "source"
@@ -523,8 +523,8 @@
     {
       "net": "wdec_wl_b0",
       "kind": "diff",
-      "x": 7116,
-      "y": 12989,
+      "x": 6756,
+      "y": 8261,
       "block": "write_row_decode7_wl_driver",
       "role": "wl_drv0_n",
       "terminal": "drain"
@@ -532,8 +532,8 @@
     {
       "net": "wdec_row_sel",
       "kind": "gate",
-      "x": 7196,
-      "y": 13120,
+      "x": 6836,
+      "y": 8392,
       "block": "write_row_decode7_wl_driver",
       "role": "wl_drv0_n",
       "terminal": "gate"
@@ -541,8 +541,8 @@
     {
       "net": "VSS",
       "kind": "diff",
-      "x": 7276,
-      "y": 12989,
+      "x": 6916,
+      "y": 8261,
       "block": "write_row_decode7_wl_driver",
       "role": "wl_drv0_n",
       "terminal": "source"
@@ -550,8 +550,8 @@
     {
       "net": "wdec_wl_s1",
       "kind": "diff",
-      "x": 7548,
-      "y": 12989,
+      "x": 7188,
+      "y": 8261,
       "block": "write_row_decode7_wl_driver",
       "role": "wl_drv1_n",
       "terminal": "drain"
@@ -559,8 +559,8 @@
     {
       "net": "wdec_wl_b0",
       "kind": "gate",
-      "x": 7628,
-      "y": 13120,
+      "x": 7268,
+      "y": 8392,
       "block": "write_row_decode7_wl_driver",
       "role": "wl_drv1_n",
       "terminal": "gate"
@@ -568,8 +568,8 @@
     {
       "net": "VSS",
       "kind": "diff",
-      "x": 7708,
-      "y": 12989,
+      "x": 7348,
+      "y": 8261,
       "block": "write_row_decode7_wl_driver",
       "role": "wl_drv1_n",
       "terminal": "source"
@@ -577,8 +577,8 @@
     {
       "net": "wdec_wl_b2",
       "kind": "diff",
-      "x": 7980,
-      "y": 12989,
+      "x": 7620,
+      "y": 8261,
       "block": "write_row_decode7_wl_driver",
       "role": "wl_drv2_n",
       "terminal": "drain"
@@ -586,8 +586,8 @@
     {
       "net": "wdec_wl_s1",
       "kind": "gate",
-      "x": 8060,
-      "y": 13120,
+      "x": 7700,
+      "y": 8392,
       "block": "write_row_decode7_wl_driver",
       "role": "wl_drv2_n",
       "terminal": "gate"
@@ -595,8 +595,8 @@
     {
       "net": "VSS",
       "kind": "diff",
-      "x": 8140,
-      "y": 12989,
+      "x": 7780,
+      "y": 8261,
       "block": "write_row_decode7_wl_driver",
       "role": "wl_drv2_n",
       "terminal": "source"
@@ -604,8 +604,8 @@
     {
       "net": "wwl0",
       "kind": "diff",
-      "x": 8412,
-      "y": 12989,
+      "x": 8052,
+      "y": 8261,
       "block": "write_row_decode7_wl_driver",
       "role": "wl_drv3_n",
       "terminal": "drain"
@@ -613,8 +613,8 @@
     {
       "net": "wdec_wl_b2",
       "kind": "gate",
-      "x": 8492,
-      "y": 13120,
+      "x": 8132,
+      "y": 8392,
       "block": "write_row_decode7_wl_driver",
       "role": "wl_drv3_n",
       "terminal": "gate"
@@ -622,8 +622,8 @@
     {
       "net": "VSS",
       "kind": "diff",
-      "x": 8572,
-      "y": 12989,
+      "x": 8212,
+      "y": 8261,
       "block": "write_row_decode7_wl_driver",
       "role": "wl_drv3_n",
       "terminal": "source"
@@ -631,8 +631,8 @@
     {
       "net": "wdec_pre0_n",
       "kind": "diff",
-      "x": 722,
-      "y": 13921,
+      "x": 362,
+      "y": 9033,
       "block": "write_row_decode7_wl_driver",
       "role": "pre0_n_pullup_a0",
       "terminal": "drain"
@@ -640,8 +640,8 @@
     {
       "net": "a[0]",
       "kind": "gate",
-      "x": 802,
-      "y": 13999,
+      "x": 442,
+      "y": 9111,
       "block": "write_row_decode7_wl_driver",
       "role": "pre0_n_pullup_a0",
       "terminal": "gate"
@@ -649,8 +649,8 @@
     {
       "net": "VDD",
       "kind": "diff",
-      "x": 882,
-      "y": 13921,
+      "x": 522,
+      "y": 9033,
       "block": "write_row_decode7_wl_driver",
       "role": "pre0_n_pullup_a0",
       "terminal": "source"
@@ -658,8 +658,8 @@
     {
       "net": "wdec_pre0_n",
       "kind": "diff",
-      "x": 1326,
-      "y": 13921,
+      "x": 966,
+      "y": 9033,
       "block": "write_row_decode7_wl_driver",
       "role": "pre0_n_pullup_a1",
       "terminal": "drain"
@@ -667,8 +667,8 @@
     {
       "net": "a[1]",
       "kind": "gate",
-      "x": 1406,
-      "y": 13999,
+      "x": 1046,
+      "y": 9111,
       "block": "write_row_decode7_wl_driver",
       "role": "pre0_n_pullup_a1",
       "terminal": "gate"
@@ -676,8 +676,8 @@
     {
       "net": "VDD",
       "kind": "diff",
-      "x": 1486,
-      "y": 13921,
+      "x": 1126,
+      "y": 9033,
       "block": "write_row_decode7_wl_driver",
       "role": "pre0_n_pullup_a1",
       "terminal": "source"
@@ -685,8 +685,8 @@
     {
       "net": "wdec_pre0_n",
       "kind": "diff",
-      "x": 1930,
-      "y": 13921,
+      "x": 1570,
+      "y": 9033,
       "block": "write_row_decode7_wl_driver",
       "role": "pre0_n_pullup_a2",
       "terminal": "drain"
@@ -694,8 +694,8 @@
     {
       "net": "a[2]",
       "kind": "gate",
-      "x": 2010,
-      "y": 13999,
+      "x": 1650,
+      "y": 9111,
       "block": "write_row_decode7_wl_driver",
       "role": "pre0_n_pullup_a2",
       "terminal": "gate"
@@ -703,8 +703,8 @@
     {
       "net": "VDD",
       "kind": "diff",
-      "x": 2090,
-      "y": 13921,
+      "x": 1730,
+      "y": 9033,
       "block": "write_row_decode7_wl_driver",
       "role": "pre0_n_pullup_a2",
       "terminal": "source"
@@ -712,8 +712,8 @@
     {
       "net": "wdec_pre1_n",
       "kind": "diff",
-      "x": 2534,
-      "y": 13921,
+      "x": 2174,
+      "y": 9033,
       "block": "write_row_decode7_wl_driver",
       "role": "pre1_n_pullup_a3",
       "terminal": "drain"
@@ -721,8 +721,8 @@
     {
       "net": "a[3]",
       "kind": "gate",
-      "x": 2614,
-      "y": 13999,
+      "x": 2254,
+      "y": 9111,
       "block": "write_row_decode7_wl_driver",
       "role": "pre1_n_pullup_a3",
       "terminal": "gate"
@@ -730,8 +730,8 @@
     {
       "net": "VDD",
       "kind": "diff",
-      "x": 2694,
-      "y": 13921,
+      "x": 2334,
+      "y": 9033,
       "block": "write_row_decode7_wl_driver",
       "role": "pre1_n_pullup_a3",
       "terminal": "source"
@@ -739,8 +739,8 @@
     {
       "net": "wdec_pre1_n",
       "kind": "diff",
-      "x": 3138,
-      "y": 13921,
+      "x": 2778,
+      "y": 9033,
       "block": "write_row_decode7_wl_driver",
       "role": "pre1_n_pullup_a4",
       "terminal": "drain"
@@ -748,8 +748,8 @@
     {
       "net": "a[4]",
       "kind": "gate",
-      "x": 3218,
-      "y": 13999,
+      "x": 2858,
+      "y": 9111,
       "block": "write_row_decode7_wl_driver",
       "role": "pre1_n_pullup_a4",
       "terminal": "gate"
@@ -757,8 +757,8 @@
     {
       "net": "VDD",
       "kind": "diff",
-      "x": 3298,
-      "y": 13921,
+      "x": 2938,
+      "y": 9033,
       "block": "write_row_decode7_wl_driver",
       "role": "pre1_n_pullup_a4",
       "terminal": "source"
@@ -766,8 +766,8 @@
     {
       "net": "wdec_pre2_n",
       "kind": "diff",
-      "x": 3742,
-      "y": 13921,
+      "x": 3382,
+      "y": 9033,
       "block": "write_row_decode7_wl_driver",
       "role": "pre2_n_pullup_a5",
       "terminal": "drain"
@@ -775,8 +775,8 @@
     {
       "net": "a[5]",
       "kind": "gate",
-      "x": 3822,
-      "y": 13999,
+      "x": 3462,
+      "y": 9111,
       "block": "write_row_decode7_wl_driver",
       "role": "pre2_n_pullup_a5",
       "terminal": "gate"
@@ -784,8 +784,8 @@
     {
       "net": "VDD",
       "kind": "diff",
-      "x": 3902,
-      "y": 13921,
+      "x": 3542,
+      "y": 9033,
       "block": "write_row_decode7_wl_driver",
       "role": "pre2_n_pullup_a5",
       "terminal": "source"
@@ -793,8 +793,8 @@
     {
       "net": "wdec_pre2_n",
       "kind": "diff",
-      "x": 4346,
-      "y": 13921,
+      "x": 3986,
+      "y": 9033,
       "block": "write_row_decode7_wl_driver",
       "role": "pre2_n_pullup_a6",
       "terminal": "drain"
@@ -802,8 +802,8 @@
     {
       "net": "a[6]",
       "kind": "gate",
-      "x": 4426,
-      "y": 13999,
+      "x": 4066,
+      "y": 9111,
       "block": "write_row_decode7_wl_driver",
       "role": "pre2_n_pullup_a6",
       "terminal": "gate"
@@ -811,8 +811,8 @@
     {
       "net": "VDD",
       "kind": "diff",
-      "x": 4506,
-      "y": 13921,
+      "x": 4146,
+      "y": 9033,
       "block": "write_row_decode7_wl_driver",
       "role": "pre2_n_pullup_a6",
       "terminal": "source"
@@ -820,8 +820,8 @@
     {
       "net": "wdec_pre2_n",
       "kind": "diff",
-      "x": 4950,
-      "y": 13921,
+      "x": 4590,
+      "y": 9033,
       "block": "write_row_decode7_wl_driver",
       "role": "pre2_n_pullup_en",
       "terminal": "drain"
@@ -829,8 +829,8 @@
     {
       "net": "wdecen",
       "kind": "gate",
-      "x": 5030,
-      "y": 13999,
+      "x": 4670,
+      "y": 9111,
       "block": "write_row_decode7_wl_driver",
       "role": "pre2_n_pullup_en",
       "terminal": "gate"
@@ -838,8 +838,8 @@
     {
       "net": "VDD",
       "kind": "diff",
-      "x": 5110,
-      "y": 13921,
+      "x": 4750,
+      "y": 9033,
       "block": "write_row_decode7_wl_driver",
       "role": "pre2_n_pullup_en",
       "terminal": "source"
@@ -847,8 +847,8 @@
     {
       "net": "wdec_row_n",
       "kind": "diff",
-      "x": 5554,
-      "y": 13921,
+      "x": 5194,
+      "y": 9033,
       "block": "write_row_decode7_wl_driver",
       "role": "row_n_pullup_pre0",
       "terminal": "drain"
@@ -856,8 +856,8 @@
     {
       "net": "wdec_pre0",
       "kind": "gate",
-      "x": 5634,
-      "y": 13999,
+      "x": 5274,
+      "y": 9111,
       "block": "write_row_decode7_wl_driver",
       "role": "row_n_pullup_pre0",
       "terminal": "gate"
@@ -865,8 +865,8 @@
     {
       "net": "VDD",
       "kind": "diff",
-      "x": 5714,
-      "y": 13921,
+      "x": 5354,
+      "y": 9033,
       "block": "write_row_decode7_wl_driver",
       "role": "row_n_pullup_pre0",
       "terminal": "source"
@@ -874,8 +874,8 @@
     {
       "net": "wdec_row_n",
       "kind": "diff",
-      "x": 6158,
-      "y": 13921,
+      "x": 5798,
+      "y": 9033,
       "block": "write_row_decode7_wl_driver",
       "role": "row_n_pullup_pre1",
       "terminal": "drain"
@@ -883,8 +883,8 @@
     {
       "net": "wdec_pre1",
       "kind": "gate",
-      "x": 6238,
-      "y": 13999,
+      "x": 5878,
+      "y": 9111,
       "block": "write_row_decode7_wl_driver",
       "role": "row_n_pullup_pre1",
       "terminal": "gate"
@@ -892,8 +892,8 @@
     {
       "net": "VDD",
       "kind": "diff",
-      "x": 6318,
-      "y": 13921,
+      "x": 5958,
+      "y": 9033,
       "block": "write_row_decode7_wl_driver",
       "role": "row_n_pullup_pre1",
       "terminal": "source"
@@ -901,8 +901,8 @@
     {
       "net": "wdec_row_n",
       "kind": "diff",
-      "x": 6762,
-      "y": 13921,
+      "x": 6402,
+      "y": 9033,
       "block": "write_row_decode7_wl_driver",
       "role": "row_n_pullup_pre2",
       "terminal": "drain"
@@ -910,8 +910,8 @@
     {
       "net": "wdec_pre2",
       "kind": "gate",
-      "x": 6842,
-      "y": 13999,
+      "x": 6482,
+      "y": 9111,
       "block": "write_row_decode7_wl_driver",
       "role": "row_n_pullup_pre2",
       "terminal": "gate"
@@ -919,8 +919,8 @@
     {
       "net": "VDD",
       "kind": "diff",
-      "x": 6922,
-      "y": 13921,
+      "x": 6562,
+      "y": 9033,
       "block": "write_row_decode7_wl_driver",
       "role": "row_n_pullup_pre2",
       "terminal": "source"
@@ -928,8 +928,8 @@
     {
       "net": "wdec_pre0",
       "kind": "diff",
-      "x": 7366,
-      "y": 13921,
+      "x": 7006,
+      "y": 9033,
       "block": "write_row_decode7_wl_driver",
       "role": "pre0_inv_p",
       "terminal": "drain"
@@ -937,8 +937,8 @@
     {
       "net": "wdec_pre0_n",
       "kind": "gate",
-      "x": 7446,
-      "y": 13999,
+      "x": 7086,
+      "y": 9111,
       "block": "write_row_decode7_wl_driver",
       "role": "pre0_inv_p",
       "terminal": "gate"
@@ -946,8 +946,8 @@
     {
       "net": "VDD",
       "kind": "diff",
-      "x": 7526,
-      "y": 13921,
+      "x": 7166,
+      "y": 9033,
       "block": "write_row_decode7_wl_driver",
       "role": "pre0_inv_p",
       "terminal": "source"
@@ -955,8 +955,8 @@
     {
       "net": "wdec_pre1",
       "kind": "diff",
-      "x": 7970,
-      "y": 13921,
+      "x": 7610,
+      "y": 9033,
       "block": "write_row_decode7_wl_driver",
       "role": "pre1_inv_p",
       "terminal": "drain"
@@ -964,8 +964,8 @@
     {
       "net": "wdec_pre1_n",
       "kind": "gate",
-      "x": 8050,
-      "y": 13999,
+      "x": 7690,
+      "y": 9111,
       "block": "write_row_decode7_wl_driver",
       "role": "pre1_inv_p",
       "terminal": "gate"
@@ -973,8 +973,8 @@
     {
       "net": "VDD",
       "kind": "diff",
-      "x": 8130,
-      "y": 13921,
+      "x": 7770,
+      "y": 9033,
       "block": "write_row_decode7_wl_driver",
       "role": "pre1_inv_p",
       "terminal": "source"
@@ -982,8 +982,8 @@
     {
       "net": "wdec_pre2",
       "kind": "diff",
-      "x": 8574,
-      "y": 13921,
+      "x": 8214,
+      "y": 9033,
       "block": "write_row_decode7_wl_driver",
       "role": "pre2_inv_p",
       "terminal": "drain"
@@ -991,8 +991,8 @@
     {
       "net": "wdec_pre2_n",
       "kind": "gate",
-      "x": 8654,
-      "y": 13999,
+      "x": 8294,
+      "y": 9111,
       "block": "write_row_decode7_wl_driver",
       "role": "pre2_inv_p",
       "terminal": "gate"
@@ -1000,8 +1000,8 @@
     {
       "net": "VDD",
       "kind": "diff",
-      "x": 8734,
-      "y": 13921,
+      "x": 8374,
+      "y": 9033,
       "block": "write_row_decode7_wl_driver",
       "role": "pre2_inv_p",
       "terminal": "source"
@@ -1009,8 +1009,8 @@
     {
       "net": "wdec_row_sel",
       "kind": "diff",
-      "x": 9178,
-      "y": 13921,
+      "x": 8818,
+      "y": 9033,
       "block": "write_row_decode7_wl_driver",
       "role": "row_inv_p",
       "terminal": "drain"
@@ -1018,8 +1018,8 @@
     {
       "net": "wdec_row_n",
       "kind": "gate",
-      "x": 9258,
-      "y": 13999,
+      "x": 8898,
+      "y": 9111,
       "block": "write_row_decode7_wl_driver",
       "role": "row_inv_p",
       "terminal": "gate"
@@ -1027,8 +1027,8 @@
     {
       "net": "VDD",
       "kind": "diff",
-      "x": 9338,
-      "y": 13921,
+      "x": 8978,
+      "y": 9033,
       "block": "write_row_decode7_wl_driver",
       "role": "row_inv_p",
       "terminal": "source"
@@ -1036,8 +1036,8 @@
     {
       "net": "wdec_wl_b0",
       "kind": "diff",
-      "x": 9782,
-      "y": 13921,
+      "x": 9422,
+      "y": 9033,
       "block": "write_row_decode7_wl_driver",
       "role": "wl_drv0_p",
       "terminal": "drain"
@@ -1045,8 +1045,8 @@
     {
       "net": "wdec_row_sel",
       "kind": "gate",
-      "x": 9862,
-      "y": 13999,
+      "x": 9502,
+      "y": 9111,
       "block": "write_row_decode7_wl_driver",
       "role": "wl_drv0_p",
       "terminal": "gate"
@@ -1054,8 +1054,8 @@
     {
       "net": "VDD",
       "kind": "diff",
-      "x": 9942,
-      "y": 13921,
+      "x": 9582,
+      "y": 9033,
       "block": "write_row_decode7_wl_driver",
       "role": "wl_drv0_p",
       "terminal": "source"
@@ -1063,8 +1063,8 @@
     {
       "net": "wdec_wl_s1",
       "kind": "diff",
-      "x": 10386,
-      "y": 13921,
+      "x": 10026,
+      "y": 9033,
       "block": "write_row_decode7_wl_driver",
       "role": "wl_drv1_p",
       "terminal": "drain"
@@ -1072,8 +1072,8 @@
     {
       "net": "wdec_wl_b0",
       "kind": "gate",
-      "x": 10466,
-      "y": 13999,
+      "x": 10106,
+      "y": 9111,
       "block": "write_row_decode7_wl_driver",
       "role": "wl_drv1_p",
       "terminal": "gate"
@@ -1081,8 +1081,8 @@
     {
       "net": "VDD",
       "kind": "diff",
-      "x": 10546,
-      "y": 13921,
+      "x": 10186,
+      "y": 9033,
       "block": "write_row_decode7_wl_driver",
       "role": "wl_drv1_p",
       "terminal": "source"
@@ -1090,8 +1090,8 @@
     {
       "net": "wdec_wl_b2",
       "kind": "diff",
-      "x": 10990,
-      "y": 13921,
+      "x": 10630,
+      "y": 9033,
       "block": "write_row_decode7_wl_driver",
       "role": "wl_drv2_p",
       "terminal": "drain"
@@ -1099,8 +1099,8 @@
     {
       "net": "wdec_wl_s1",
       "kind": "gate",
-      "x": 11070,
-      "y": 13999,
+      "x": 10710,
+      "y": 9111,
       "block": "write_row_decode7_wl_driver",
       "role": "wl_drv2_p",
       "terminal": "gate"
@@ -1108,8 +1108,8 @@
     {
       "net": "VDD",
       "kind": "diff",
-      "x": 11150,
-      "y": 13921,
+      "x": 10790,
+      "y": 9033,
       "block": "write_row_decode7_wl_driver",
       "role": "wl_drv2_p",
       "terminal": "source"
@@ -1117,8 +1117,8 @@
     {
       "net": "wwl0",
       "kind": "diff",
-      "x": 11594,
-      "y": 13921,
+      "x": 11234,
+      "y": 9033,
       "block": "write_row_decode7_wl_driver",
       "role": "wl_drv3_p",
       "terminal": "drain"
@@ -1126,8 +1126,8 @@
     {
       "net": "wdec_wl_b2",
       "kind": "gate",
-      "x": 11674,
-      "y": 13999,
+      "x": 11314,
+      "y": 9111,
       "block": "write_row_decode7_wl_driver",
       "role": "wl_drv3_p",
       "terminal": "gate"
@@ -1135,8 +1135,8 @@
     {
       "net": "VDD",
       "kind": "diff",
-      "x": 11754,
-      "y": 13921,
+      "x": 11394,
+      "y": 9033,
       "block": "write_row_decode7_wl_driver",
       "role": "wl_drv3_p",
       "terminal": "source"
@@ -1144,8 +1144,8 @@
     {
       "net": "VSS",
       "kind": "diff",
-      "x": 12076,
-      "y": 13120,
+      "x": 11716,
+      "y": 8392,
       "block": "write_row_decode7_wl_driver",
       "role": "psub_tap",
       "terminal": "tap"
@@ -1153,8 +1153,8 @@
     {
       "net": "VDD",
       "kind": "diff",
-      "x": 12076,
-      "y": 13783,
+      "x": 11716,
+      "y": 8895,
       "block": "write_row_decode7_wl_driver",
       "role": "nsub_tap",
       "terminal": "tap"
@@ -1162,8 +1162,8 @@
     {
       "net": "VDD",
       "kind": "pin",
-      "x": 13336,
-      "y": 37819,
+      "x": 12616,
+      "y": 23983,
       "block": "pin",
       "role": "VDD",
       "terminal": "pin"
@@ -1171,7 +1171,7 @@
     {
       "net": "VSS",
       "kind": "pin",
-      "x": 13196,
+      "x": 12476,
       "y": 220,
       "block": "pin",
       "role": "VSS",
@@ -1180,7 +1180,7 @@
     {
       "net": "wdecen",
       "kind": "pin",
-      "x": 16976,
+      "x": 16256,
       "y": 220,
       "block": "pin",
       "role": "wdecen",
@@ -1189,8 +1189,8 @@
     {
       "net": "a[0]",
       "kind": "pin",
-      "x": 13476,
-      "y": 38039,
+      "x": 12756,
+      "y": 24203,
       "block": "pin",
       "role": "a[0]",
       "terminal": "pin"
@@ -1198,7 +1198,7 @@
     {
       "net": "a[1]",
       "kind": "pin",
-      "x": 13616,
+      "x": 12896,
       "y": 220,
       "block": "pin",
       "role": "a[1]",
@@ -1207,8 +1207,8 @@
     {
       "net": "a[2]",
       "kind": "pin",
-      "x": 13756,
-      "y": 38039,
+      "x": 13036,
+      "y": 24203,
       "block": "pin",
       "role": "a[2]",
       "terminal": "pin"
@@ -1216,7 +1216,7 @@
     {
       "net": "a[3]",
       "kind": "pin",
-      "x": 13896,
+      "x": 13176,
       "y": 220,
       "block": "pin",
       "role": "a[3]",
@@ -1225,8 +1225,8 @@
     {
       "net": "a[4]",
       "kind": "pin",
-      "x": 14036,
-      "y": 38039,
+      "x": 13316,
+      "y": 24203,
       "block": "pin",
       "role": "a[4]",
       "terminal": "pin"
@@ -1234,7 +1234,7 @@
     {
       "net": "a[5]",
       "kind": "pin",
-      "x": 14176,
+      "x": 13456,
       "y": 220,
       "block": "pin",
       "role": "a[5]",
@@ -1243,8 +1243,8 @@
     {
       "net": "a[6]",
       "kind": "pin",
-      "x": 14316,
-      "y": 38039,
+      "x": 13596,
+      "y": 24203,
       "block": "pin",
       "role": "a[6]",
       "terminal": "pin"
@@ -1252,7 +1252,7 @@
     {
       "net": "wwl0",
       "kind": "pin",
-      "x": 17116,
+      "x": 16396,
       "y": 220,
       "block": "pin",
       "role": "wwl0",

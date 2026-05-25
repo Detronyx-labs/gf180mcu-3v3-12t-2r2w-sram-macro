@@ -19,6 +19,9 @@ EXPECTED_BLOCKS: dict[str, set[str]] = {
     "write_conflict": {"VDD", "VSS", "w0_en", "w1_en", "addr_eq", "write_conflict"},
 }
 
+X32_TILE_PITCH_UM = 25.95
+PITCH_CONSTRAINED_BLOCKS = {"write_driver", "precharge_sense"}
+
 
 @dataclass(frozen=True)
 class PackageReader:
@@ -63,6 +66,17 @@ def check_manifest(reader: PackageReader) -> list[dict[str, str]]:
         checks.append({"block": block, "check": "Magic DRC", "status": "PASS" if drc_ok else "FAIL", "detail": f"drc_errors={item.get('drc_errors')}"})
         checks.append({"block": block, "check": "Netgen LVS", "status": "PASS" if lvs_ok else "FAIL", "detail": f"lvs_result={item.get('lvs_result')}"})
         checks.append({"block": block, "check": "Disconnected pins", "status": "PASS" if pin_ok else "FAIL", "detail": f"disconnected_pins={item.get('disconnected_pins')}"})
+        if block in PITCH_CONSTRAINED_BLOCKS:
+            width_um = float(item.get("width_um", 0.0))
+            pitch_ok = width_um <= X32_TILE_PITCH_UM
+            checks.append(
+                {
+                    "block": block,
+                    "check": "x32 tile pitch",
+                    "status": "PASS" if pitch_ok else "FAIL",
+                    "detail": f"width_um={width_um:.3f}, limit_um={X32_TILE_PITCH_UM:.3f}",
+                }
+            )
 
         pins_path = f"reports/periphery_block_leaves/{cell}/abstract/{cell}.pins.json"
         if not reader.exists(pins_path):

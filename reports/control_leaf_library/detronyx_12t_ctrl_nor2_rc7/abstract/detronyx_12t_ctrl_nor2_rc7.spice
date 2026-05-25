@@ -1,0 +1,2 @@
+.subckt detronyx_12t_ctrl_nor2_rc7 VDD VSS A B Y
+.ends detronyx_12t_ctrl_nor2_rc7

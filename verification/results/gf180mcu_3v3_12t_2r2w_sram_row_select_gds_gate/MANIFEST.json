@@ -1,0 +1,169 @@
+{
+  "checks": [
+    {
+      "check": "manifest status",
+      "detail": "status=PASS",
+      "evidence": "reports/stdcell_row_select_placement/MANIFEST.json",
+      "scope": "row_select_placement",
+      "status": "PASS"
+    },
+    {
+      "check": "manifest status",
+      "detail": "status=PASS",
+      "evidence": "reports/stdcell_row_select_gds_merge/MANIFEST.json",
+      "scope": "row_select_gds",
+      "status": "PASS"
+    },
+    {
+      "check": "GDS merge status",
+      "detail": "status=PASS detail=[]",
+      "evidence": "macros/gf180mcu_3v3_12t_2r2w_sram_512x8/layout/gf180mcu_3v3_12t_2r2w_sram_512x8.gds",
+      "scope": "gf180mcu_3v3_12t_2r2w_sram_512x8",
+      "status": "PASS"
+    },
+    {
+      "check": "row-select stdcell count",
+      "detail": "row_selects=256 placed=1024 gds_delta=1024",
+      "evidence": "reports/stdcell_row_select_gds_merge/MANIFEST.json",
+      "scope": "gf180mcu_3v3_12t_2r2w_sram_512x8",
+      "status": "PASS"
+    },
+    {
+      "check": "footprint unchanged",
+      "detail": "bbox={'left_um': 0.0, 'bottom_um': 0.0, 'right_um': 585.56, 'top_um': 340.92, 'width_um': 585.56, 'height_um': 340.92}",
+      "evidence": "macros/gf180mcu_3v3_12t_2r2w_sram_512x8/layout/gf180mcu_3v3_12t_2r2w_sram_512x8.gds",
+      "scope": "gf180mcu_3v3_12t_2r2w_sram_512x8",
+      "status": "PASS"
+    },
+    {
+      "check": "row-select stdcell names present",
+      "detail": "missing=[]",
+      "evidence": "macros/gf180mcu_3v3_12t_2r2w_sram_512x8/layout/gf180mcu_3v3_12t_2r2w_sram_512x8.gds",
+      "scope": "gf180mcu_3v3_12t_2r2w_sram_512x8",
+      "status": "PASS"
+    },
+    {
+      "check": "custom row-select leaf removed from full-control CDL",
+      "detail": "exists=True custom_refs=False",
+      "evidence": "macros/gf180mcu_3v3_12t_2r2w_sram_512x8/abstract/gf180mcu_3v3_12t_2r2w_sram_512x8.stdcell_full_control_matrix.cdl",
+      "scope": "gf180mcu_3v3_12t_2r2w_sram_512x8",
+      "status": "PASS"
+    },
+    {
+      "check": "GDS merge status",
+      "detail": "status=PASS detail=[]",
+      "evidence": "macros/gf180mcu_3v3_12t_2r2w_sram_512x32/layout/gf180mcu_3v3_12t_2r2w_sram_512x32.gds",
+      "scope": "gf180mcu_3v3_12t_2r2w_sram_512x32",
+      "status": "PASS"
+    },
+    {
+      "check": "row-select stdcell count",
+      "detail": "row_selects=512 placed=2048 gds_delta=2048",
+      "evidence": "reports/stdcell_row_select_gds_merge/MANIFEST.json",
+      "scope": "gf180mcu_3v3_12t_2r2w_sram_512x32",
+      "status": "PASS"
+    },
+    {
+      "check": "footprint unchanged",
+      "detail": "bbox={'left_um': 0.0, 'bottom_um': 0.0, 'right_um': 1003.96, 'top_um': 618.04, 'width_um': 1003.96, 'height_um': 618.04}",
+      "evidence": "macros/gf180mcu_3v3_12t_2r2w_sram_512x32/layout/gf180mcu_3v3_12t_2r2w_sram_512x32.gds",
+      "scope": "gf180mcu_3v3_12t_2r2w_sram_512x32",
+      "status": "PASS"
+    },
+    {
+      "check": "row-select stdcell names present",
+      "detail": "missing=[]",
+      "evidence": "macros/gf180mcu_3v3_12t_2r2w_sram_512x32/layout/gf180mcu_3v3_12t_2r2w_sram_512x32.gds",
+      "scope": "gf180mcu_3v3_12t_2r2w_sram_512x32",
+      "status": "PASS"
+    },
+    {
+      "check": "custom row-select leaf removed from full-control CDL",
+      "detail": "exists=True custom_refs=False",
+      "evidence": "macros/gf180mcu_3v3_12t_2r2w_sram_512x32/abstract/gf180mcu_3v3_12t_2r2w_sram_512x32.stdcell_full_control_matrix.cdl",
+      "scope": "gf180mcu_3v3_12t_2r2w_sram_512x32",
+      "status": "PASS"
+    },
+    {
+      "check": "GDS merge status",
+      "detail": "status=PASS detail=[]",
+      "evidence": "macros/gf180mcu_3v3_12t_2r2w_sram_1024x8/layout/gf180mcu_3v3_12t_2r2w_sram_1024x8.gds",
+      "scope": "gf180mcu_3v3_12t_2r2w_sram_1024x8",
+      "status": "PASS"
+    },
+    {
+      "check": "row-select stdcell count",
+      "detail": "row_selects=512 placed=2048 gds_delta=2048",
+      "evidence": "reports/stdcell_row_select_gds_merge/MANIFEST.json",
+      "scope": "gf180mcu_3v3_12t_2r2w_sram_1024x8",
+      "status": "PASS"
+    },
+    {
+      "check": "footprint unchanged",
+      "detail": "bbox={'left_um': 0.0, 'bottom_um': 0.0, 'right_um': 585.56, 'top_um': 618.04, 'width_um': 585.56, 'height_um': 618.04}",
+      "evidence": "macros/gf180mcu_3v3_12t_2r2w_sram_1024x8/layout/gf180mcu_3v3_12t_2r2w_sram_1024x8.gds",
+      "scope": "gf180mcu_3v3_12t_2r2w_sram_1024x8",
+      "status": "PASS"
+    },
+    {
+      "check": "row-select stdcell names present",
+      "detail": "missing=[]",
+      "evidence": "macros/gf180mcu_3v3_12t_2r2w_sram_1024x8/layout/gf180mcu_3v3_12t_2r2w_sram_1024x8.gds",
+      "scope": "gf180mcu_3v3_12t_2r2w_sram_1024x8",
+      "status": "PASS"
+    },
+    {
+      "check": "custom row-select leaf removed from full-control CDL",
+      "detail": "exists=True custom_refs=False",
+      "evidence": "macros/gf180mcu_3v3_12t_2r2w_sram_1024x8/abstract/gf180mcu_3v3_12t_2r2w_sram_1024x8.stdcell_full_control_matrix.cdl",
+      "scope": "gf180mcu_3v3_12t_2r2w_sram_1024x8",
+      "status": "PASS"
+    },
+    {
+      "check": "GDS merge status",
+      "detail": "status=PASS detail=[]",
+      "evidence": "macros/gf180mcu_3v3_12t_2r2w_sram_1024x32/layout/gf180mcu_3v3_12t_2r2w_sram_1024x32.gds",
+      "scope": "gf180mcu_3v3_12t_2r2w_sram_1024x32",
+      "status": "PASS"
+    },
+    {
+      "check": "row-select stdcell count",
+      "detail": "row_selects=1024 placed=4096 gds_delta=4096",
+      "evidence": "reports/stdcell_row_select_gds_merge/MANIFEST.json",
+      "scope": "gf180mcu_3v3_12t_2r2w_sram_1024x32",
+      "status": "PASS"
+    },
+    {
+      "check": "footprint unchanged",
+      "detail": "bbox={'left_um': 0.0, 'bottom_um': 0.0, 'right_um': 1003.96, 'top_um': 1172.28, 'width_um': 1003.96, 'height_um': 1172.28}",
+      "evidence": "macros/gf180mcu_3v3_12t_2r2w_sram_1024x32/layout/gf180mcu_3v3_12t_2r2w_sram_1024x32.gds",
+      "scope": "gf180mcu_3v3_12t_2r2w_sram_1024x32",
+      "status": "PASS"
+    },
+    {
+      "check": "row-select stdcell names present",
+      "detail": "missing=[]",
+      "evidence": "macros/gf180mcu_3v3_12t_2r2w_sram_1024x32/layout/gf180mcu_3v3_12t_2r2w_sram_1024x32.gds",
+      "scope": "gf180mcu_3v3_12t_2r2w_sram_1024x32",
+      "status": "PASS"
+    },
+    {
+      "check": "custom row-select leaf removed from full-control CDL",
+      "detail": "exists=True custom_refs=False",
+      "evidence": "macros/gf180mcu_3v3_12t_2r2w_sram_1024x32/abstract/gf180mcu_3v3_12t_2r2w_sram_1024x32.stdcell_full_control_matrix.cdl",
+      "scope": "gf180mcu_3v3_12t_2r2w_sram_1024x32",
+      "status": "PASS"
+    },
+    {
+      "check": "GF180 main.drc on 512x8 row-select GDS",
+      "detail": "violations=0 categories=[]",
+      "evidence": "reports/stdcell_row_select_gds_merge/gf180mcu_3v3_12t_2r2w_sram_512x8/main_drc.lyrdb",
+      "scope": "smoke_drc",
+      "status": "PASS"
+    }
+  ],
+  "counts": {
+    "PASS": 23
+  },
+  "failed": false
+}

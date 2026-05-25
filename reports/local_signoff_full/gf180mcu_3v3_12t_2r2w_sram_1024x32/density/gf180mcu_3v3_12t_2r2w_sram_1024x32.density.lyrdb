@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<report-database>
+ <description>GF180 DENSITY DRC Run Report at</description>
+ <original-file/>
+ <generator>drc: script='/home/yevhenii/IHP-Open-PDK/gf180mcuD/libs.tech/klayout/drc/rule_decks/density.drc'</generator>
+ <top-cell>gf180mcu_3v3_12t_2r2w_sram_1024x32</top-cell>
+ <tags>
+ </tags>
+ <categories>
+ </categories>
+ <cells>
+  <cell>
+   <name>gf180mcu_3v3_12t_2r2w_sram_1024x32</name>
+   <variant/>
+   <references>
+   </references>
+  </cell>
+ </cells>
+ <items>
+ </items>
+</report-database>
