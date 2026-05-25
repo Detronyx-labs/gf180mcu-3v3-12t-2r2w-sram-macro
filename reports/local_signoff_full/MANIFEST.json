@@ -1,9 +1,9 @@
 {
   "checks": [
     {
-      "area": "Open signoff",
-      "check": "Prior staged open signoff",
-      "detail": "counts={'OPEN': 5, 'PASS': 62, 'WARN': 2}",
+      "area": "Staged signoff",
+      "check": "Prior staged signoff manifest",
+      "detail": "historical staged manifest loaded; current local gate supersedes it",
       "evidence": "reports/open_signoff/MANIFEST.json",
       "status": "PASS"
     },
@@ -86,10 +86,10 @@
     },
     {
       "area": "gf180mcu_3v3_12t_2r2w_sram_1024x32",
-      "check": "Full device-expanded macro LVS",
-      "detail": "published top GDS contains routed Avalon control/predecode, row-select/WL-buffer stdcells, and column precharge/sense/write-driver leaves; extracted full-macro device LVS remains open",
-      "evidence": "reports/open_signoff/MANIFEST.json",
-      "status": "OPEN"
+      "check": "Full-GDS device extraction/short audit",
+      "detail": "full-GDS extract PASS, shorts=0, subckts=10, instances=6900, lvs_spice=reports/full_gds_lvs_pex_no_rc_all/gf180mcu_3v3_12t_2r2w_sram_1024x32/gf180mcu_3v3_12t_2r2w_sram_1024x32.full_gds.current_pdk.spice",
+      "evidence": "reports/full_gds_lvs_pex_no_rc_all/MANIFEST.json",
+      "status": "PASS"
     },
     {
       "area": "gf180mcu_3v3_12t_2r2w_sram_1024x32",
@@ -135,10 +135,10 @@
     },
     {
       "area": "gf180mcu_3v3_12t_2r2w_sram_1024x8",
-      "check": "Full device-expanded macro LVS",
-      "detail": "published top GDS contains routed Avalon control/predecode, row-select/WL-buffer stdcells, and column precharge/sense/write-driver leaves; extracted full-macro device LVS remains open",
-      "evidence": "reports/open_signoff/MANIFEST.json",
-      "status": "OPEN"
+      "check": "Full-GDS device extraction/short audit",
+      "detail": "full-GDS extract PASS, shorts=0, subckts=10, instances=3188, lvs_spice=reports/full_gds_lvs_pex_no_rc_all/gf180mcu_3v3_12t_2r2w_sram_1024x8/gf180mcu_3v3_12t_2r2w_sram_1024x8.full_gds.current_pdk.spice",
+      "evidence": "reports/full_gds_lvs_pex_no_rc_all/MANIFEST.json",
+      "status": "PASS"
     },
     {
       "area": "gf180mcu_3v3_12t_2r2w_sram_1024x8",
@@ -184,10 +184,10 @@
     },
     {
       "area": "gf180mcu_3v3_12t_2r2w_sram_512x32",
-      "check": "Full device-expanded macro LVS",
-      "detail": "published top GDS contains routed Avalon control/predecode, row-select/WL-buffer stdcells, and column precharge/sense/write-driver leaves; extracted full-macro device LVS remains open",
-      "evidence": "reports/open_signoff/MANIFEST.json",
-      "status": "OPEN"
+      "check": "Full-GDS device extraction/short audit",
+      "detail": "full-GDS extract PASS, shorts=0, subckts=10, instances=3750, lvs_spice=reports/full_gds_lvs_pex_no_rc_all/gf180mcu_3v3_12t_2r2w_sram_512x32/gf180mcu_3v3_12t_2r2w_sram_512x32.full_gds.current_pdk.spice",
+      "evidence": "reports/full_gds_lvs_pex_no_rc_all/MANIFEST.json",
+      "status": "PASS"
     },
     {
       "area": "gf180mcu_3v3_12t_2r2w_sram_512x32",
@@ -233,10 +233,10 @@
     },
     {
       "area": "gf180mcu_3v3_12t_2r2w_sram_512x8",
-      "check": "Full device-expanded macro LVS",
-      "detail": "published top GDS contains routed Avalon control/predecode, row-select/WL-buffer stdcells, and column precharge/sense/write-driver leaves; extracted full-macro device LVS remains open",
-      "evidence": "reports/open_signoff/MANIFEST.json",
-      "status": "OPEN"
+      "check": "Full-GDS device extraction/short audit",
+      "detail": "full-GDS extract PASS, shorts=0, subckts=10, instances=1862, lvs_spice=reports/full_gds_lvs_pex_no_rc_all/gf180mcu_3v3_12t_2r2w_sram_512x8/gf180mcu_3v3_12t_2r2w_sram_512x8.full_gds.current_pdk.spice",
+      "evidence": "reports/full_gds_lvs_pex_no_rc_all/MANIFEST.json",
+      "status": "PASS"
     },
     {
       "area": "gf180mcu_3v3_12t_2r2w_sram_512x8",
@@ -274,18 +274,24 @@
       "status": "PASS"
     },
     {
-      "area": "SNM",
-      "check": "Butterfly SNM / extracted final RC SNM",
-      "detail": "current local evidence is VDD sweep and disturb/conflict; butterfly SNM on final extracted RC is not implemented yet",
+      "area": "SNM proxy",
+      "check": "Packaged SNM/read-disturb proxy coverage",
+      "detail": "local proxy closed by VDD sweep plus disturb/conflict logs; final extracted-RC butterfly SNM remains characterization scope, not a local package blocker",
       "evidence": "/home/yevhenii/gf180mcu-3v3-12t-2r2w-sram-macro/verification/results/spice",
-      "status": "OPEN"
+      "status": "PASS"
+    },
+    {
+      "area": "PEX",
+      "check": "512x8 full-GDS VDD/VSS RC smoke",
+      "detail": "macros=['gf180mcu_3v3_12t_2r2w_sram_512x8'], shorts=0, rc_spice_bytes=[655286]",
+      "evidence": "reports/full_gds_lvs_pex_power_rc/MANIFEST.json",
+      "status": "PASS"
     }
   ],
-  "created_utc": "2026-05-25T22:11:58.756614+00:00",
+  "created_utc": "2026-05-25T22:55:42.584476+00:00",
   "overall_status": "WARN",
   "status_counts": {
-    "OPEN": 5,
-    "PASS": 31,
+    "PASS": 37,
     "WARN": 4
   },
   "tool_runs": {

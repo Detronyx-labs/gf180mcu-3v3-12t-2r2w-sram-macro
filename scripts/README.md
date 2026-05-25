@@ -38,6 +38,7 @@ Release script names in this package:
 - `merge_gf180mcu_3v3_12t_2r2w_sram_column_periphery_gds.rb`
 - `audit_gf180mcu_3v3_12t_2r2w_sram_m5_power_shorts.rb`
 - `run_gf180mcu_3v3_12t_2r2w_sram_full_gds_lvs_pex.py` - Magic extraction/PEX directly from the published GDS wrappers, with parameterized blackbox, RC, extresist, resistor tee, net filtering, and timeout controls.
+- `run_gf180mcu_3v3_12t_2r2w_sram_local_signoff.py` - mandatory packaged local gate that consumes staged LVS, physical placement/routing manifests, full-GDS extraction/short audit, VDD/VSS RC smoke, KLayout density/antenna, and packaged ngspice proxy evidence.
 
 Packaged local signoff entrypoint:
 
@@ -53,6 +54,8 @@ python3 scripts/run_gf180mcu_3v3_12t_2r2w_sram_local_signoff.py \
   --row-select-gds-manifest reports/stdcell_row_select_gds_merge/MANIFEST.json \
   --stdcell-routing-manifest reports/stdcell_control_signal_routing/MANIFEST.json \
   --column-periphery-manifest reports/column_periphery_gds_merge/MANIFEST.json \
+  --full-gds-extract-manifest reports/full_gds_lvs_pex_no_rc_all/MANIFEST.json \
+  --full-gds-power-rc-manifest reports/full_gds_lvs_pex_power_rc/MANIFEST.json \
   --out-dir reports/local_signoff_full \
   --magic-rc /path/to/gf180mcuD.magicrc \
   --gf180-klayout-drc-dir /path/to/gf180mcuD/libs.tech/klayout/drc

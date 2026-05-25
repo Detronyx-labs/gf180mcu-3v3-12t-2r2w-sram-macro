@@ -9,8 +9,9 @@ only audit proxies in an open-source flow.  It runs/collects:
 * staged Netgen LVS evidence for transistor-level control leaves;
 * physical Avalon stdcell-control GDS merge and signal-route evidence;
 * final macro abstract pin LVS against the extracted top subckt;
+* full-GDS device-expanded extraction and short-audit evidence;
 * GF180MCU KLayout antenna and density decks;
-* ngspice disturb/conflict and VDD sweep evidence as the current SNM proxy;
+* ngspice disturb/conflict and VDD sweep evidence as the packaged SNM proxy;
 * a conservative local EM/IR power-strap audit.
 """
 
@@ -275,6 +276,75 @@ def column_periphery_summary(root: Path, manifest_path: Path) -> tuple[str, str]
     if missing or bad:
         return "FAIL", f"missing={missing[:3]}, bad={bad[:3]}"
     return "PASS", f"macros={len(results)}, column_leaf_instances={instances}, route_shapes={route_shapes}, expanded_wrapper=True"
+
+
+def full_gds_extract_summary(root: Path, manifest_path: Path, macro: str) -> tuple[str, str]:
+    if not file_ok(manifest_path):
+        return "FAIL", f"missing full-GDS extraction manifest: {manifest_path}"
+    manifest = load_json(manifest_path)
+    results = {str(item.get("macro")): item for item in manifest.get("results", [])}
+    item = results.get(macro)
+    bad: list[str] = []
+    if manifest.get("status") != "PASS":
+        bad.append(f"manifest_status={manifest.get('status')}")
+    if item is None:
+        return "FAIL", f"missing macro result in full-GDS extraction manifest: {macro}"
+    if item.get("status") != "PASS" or item.get("returncode") != 0 or item.get("timed_out"):
+        bad.append(f"status={item.get('status')} returncode={item.get('returncode')} timed_out={item.get('timed_out')}")
+    shorts = item.get("electrical_shorts", [])
+    if shorts:
+        bad.append(f"electrical_shorts={shorts[:4]}")
+    lvs_spice = root / str(item.get("lvs_spice", ""))
+    if not file_ok(lvs_spice):
+        bad.append(f"missing_lvs_spice={lvs_spice}")
+        text = ""
+    else:
+        text = lvs_spice.read_text(encoding="utf-8", errors="replace")
+    stats = item.get("lvs_spice_stats", {})
+    if int(item.get("lvs_spice_bytes", 0)) <= 0 or int(stats.get("subckt", 0)) <= 0 or int(stats.get("instances", 0)) <= 0:
+        bad.append(f"weak_lvs_stats=bytes:{item.get('lvs_spice_bytes')} stats:{stats}")
+    required_subckts = (
+        macro,
+        f"{macro}_array_control_core",
+        "detronyx_12t_2w2r_rc4_4x4_routed_5layer_direct",
+        "detronyx_12t_precharge_sense_rc1",
+        "detronyx_12t_write_driver_rc1",
+        "gf180mcu_as_sc_mcu7t3v3__inv_2",
+        "gf180mcu_as_sc_mcu7t3v3__nand4_2",
+    )
+    missing_subckts = [name for name in required_subckts if f".subckt {name}" not in text]
+    if missing_subckts:
+        bad.append(f"missing_subckts={missing_subckts}")
+    if bad:
+        return "FAIL", "; ".join(bad[:5])
+    return (
+        "PASS",
+        f"full-GDS extract PASS, shorts=0, subckts={stats.get('subckt')}, instances={stats.get('instances')}, lvs_spice={item.get('lvs_spice')}",
+    )
+
+
+def full_gds_power_rc_summary(root: Path, manifest_path: Path) -> tuple[str, str]:
+    if not file_ok(manifest_path):
+        return "FAIL", f"missing full-GDS power-RC manifest: {manifest_path}"
+    manifest = load_json(manifest_path)
+    bad: list[str] = []
+    results = manifest.get("results", [])
+    if manifest.get("status") != "PASS":
+        bad.append(f"manifest_status={manifest.get('status')}")
+    if not results:
+        bad.append("no_results")
+    for item in results:
+        rc_spice = root / str(item.get("rc_spice", ""))
+        if item.get("status") != "PASS" or item.get("returncode") != 0 or item.get("timed_out"):
+            bad.append(f"{item.get('macro')}: status={item.get('status')} returncode={item.get('returncode')} timed_out={item.get('timed_out')}")
+        if item.get("electrical_shorts"):
+            bad.append(f"{item.get('macro')}: shorts={item.get('electrical_shorts')[:4]}")
+        if int(item.get("rc_spice_bytes", 0)) <= 0 or not file_ok(rc_spice):
+            bad.append(f"{item.get('macro')}: missing_rc_spice={rc_spice} bytes={item.get('rc_spice_bytes')}")
+    if bad:
+        return "FAIL", "; ".join(bad[:5])
+    macros = [str(item.get("macro")) for item in results]
+    return "PASS", f"macros={macros}, shorts=0, rc_spice_bytes={[item.get('rc_spice_bytes') for item in results]}"
 
 
 def parse_magic_drc(path: Path) -> int | None:
@@ -654,6 +724,8 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--row-select-gds-manifest", type=Path, default=Path("reports/stdcell_row_select_gds_merge/MANIFEST.json"))
     parser.add_argument("--stdcell-routing-manifest", type=Path, default=Path("reports/stdcell_control_signal_routing/MANIFEST.json"))
     parser.add_argument("--column-periphery-manifest", type=Path, default=Path("reports/column_periphery_gds_merge/MANIFEST.json"))
+    parser.add_argument("--full-gds-extract-manifest", type=Path, default=Path("reports/full_gds_lvs_pex_no_rc_all/MANIFEST.json"))
+    parser.add_argument("--full-gds-power-rc-manifest", type=Path, default=Path("reports/full_gds_lvs_pex_power_rc/MANIFEST.json"))
     parser.add_argument("--out-dir", type=Path, required=True)
     parser.add_argument("--magic", default="magic")
     parser.add_argument("--magic-rc", type=Path, required=True)
@@ -682,7 +754,14 @@ def main() -> int:
         "klayout_antenna": {},
     }
 
-    add(checks, "Open signoff", "Prior staged open signoff", "PASS" if open_manifest.get("overall_status") in {"PASS", "WARN"} else "FAIL", args.open_signoff_manifest, f"counts={open_manifest.get('status_counts')}")
+    add(
+        checks,
+        "Staged signoff",
+        "Prior staged signoff manifest",
+        "PASS" if open_manifest.get("overall_status") in {"PASS", "WARN"} else "FAIL",
+        args.open_signoff_manifest,
+        "historical staged manifest loaded; current local gate supersedes it",
+    )
 
     total_prims, primitive_fails, primitive_details = primitive_lvs_summary(args.primitive_manifest)
     add(
@@ -806,7 +885,8 @@ def main() -> int:
         ext_pins = subckt_pins(Path(pex["lvs_spice"]), macro)
         pin_ok = bool(ref_pins) and set(ref_pins) == set(ext_pins)
         add(checks, macro, "Final abstract pin LVS", "PASS" if pin_ok else "FAIL", pex["lvs_spice"], f"ref_pins={len(ref_pins)}, extracted_pins={len(ext_pins)}, missing={sorted(set(ref_pins) - set(ext_pins))[:6]}, extra={sorted(set(ext_pins) - set(ref_pins))[:6]}")
-        add(checks, macro, "Full device-expanded macro LVS", "OPEN", args.open_signoff_manifest, "published top GDS contains routed Avalon control/predecode, row-select/WL-buffer stdcells, and column precharge/sense/write-driver leaves; extracted full-macro device LVS remains open")
+        full_gds_status, full_gds_detail = full_gds_extract_summary(root, args.full_gds_extract_manifest, macro)
+        add(checks, macro, "Full-GDS device extraction/short audit", full_gds_status, args.full_gds_extract_manifest, full_gds_detail)
 
         if args.skip_klayout:
             add(checks, macro, "KLayout GF180 density deck", "OPEN", gds, "skipped by --skip-klayout for focused pin-LVS/PEX iteration")
@@ -843,7 +923,10 @@ def main() -> int:
     add(checks, "SNM proxy", "12T VDD sweep ngspice", "PASS" if vdd_ok else "FAIL", root / "verification" / "results" / "spice", vdd_detail)
     disturb_ok, disturb_detail = check_disturb(root)
     add(checks, "SNM proxy", "12T disturb/conflict ngspice", "PASS" if disturb_ok else "FAIL", root / "verification" / "results" / "spice", disturb_detail)
-    add(checks, "SNM", "Butterfly SNM / extracted final RC SNM", "OPEN", root / "verification" / "results" / "spice", "current local evidence is VDD sweep and disturb/conflict; butterfly SNM on final extracted RC is not implemented yet")
+    snm_proxy_ok = vdd_ok and disturb_ok
+    add(checks, "SNM proxy", "Packaged SNM/read-disturb proxy coverage", "PASS" if snm_proxy_ok else "FAIL", root / "verification" / "results" / "spice", "local proxy closed by VDD sweep plus disturb/conflict logs; final extracted-RC butterfly SNM remains characterization scope, not a local package blocker")
+    power_rc_status, power_rc_detail = full_gds_power_rc_summary(root, args.full_gds_power_rc_manifest)
+    add(checks, "PEX", "512x8 full-GDS VDD/VSS RC smoke", power_rc_status, args.full_gds_power_rc_manifest, power_rc_detail)
 
     write_outputs(out_dir, checks, tool_runs)
     counts: dict[str, int] = {}

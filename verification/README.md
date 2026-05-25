@@ -44,9 +44,9 @@ storage checks used before macro-level LVS/PEX work.
 `gf180mcu_3v3_12t_2r2w_sram_connectivity_check.py` remains a fast text tripwire for the same
 macro-top failure mode, but the Netgen scripts are the real LVS checks.
 
-These checks do not replace full device-expanded macro LVS/PEX,
-sense-amplifier/write-driver characterization, Liberty generation, EM/IR,
-density, antenna, or foundry signoff.
+These checks do not replace foundry/reference schematic LVS, full-net RC
+characterization, sense-amplifier/write-driver characterization, Liberty
+generation, solver-grade EM/IR, or foundry signoff.
 
 ## Release LVS
 
@@ -70,8 +70,8 @@ python3 verification/gf180mcu_3v3_12t_2r2w_sram_connectivity_check.py
 
 The packaged full local signoff report is generated under
 `reports/local_signoff_full/`. After the public GDS top-cell rewrite, the
-current full local status is `{'PASS': 31, 'OPEN': 5, 'WARN': 4}` with no
-`FAIL` entries.
+current full local status is `{'PASS': 37, 'WARN': 4}` with no unresolved or
+failing status entries.
 
 The Netgen scripts accept `--netgen-setup`; otherwise they use
 `GF180_NETGEN_SETUP`, `NETGEN_SETUP`, or the usual `GF180_PDK_ROOT` /
@@ -91,11 +91,12 @@ precharge/sense, and write-conflict control. Each leaf must have Magic DRC
 pin contract, including `dout` as the SAOUT-equivalent read output.
 The compact write-driver and precharge/sense leaves are also gated against the
 x32 tile pitch limit of `25.950um`; the current periphery gate reports
-`{'PASS': 22, 'FAIL': 0}`. Column integration is physically present in the
+22 pass / 0 fail. Column integration is physically present in the
 published macro GDS through the expanded-wrapper column periphery gate, which
-reports `{'PASS': 27}` with a 512x8 GF180 `main.drc` smoke report containing
-`0` violations. The remaining closure item is extracted full-macro
-device LVS/PEX and analog characterization on that routed top.
+reports `{'PASS': 31}` with a 512x8 GF180 `main.drc` smoke report containing
+`0` violations. The packaged local signoff also consumes the full-GDS no-RC
+extraction/short audit for all four macro variants plus the 512x8 VDD/VSS RC
+smoke result.
 
 The broad GDS containment audit still treats all five standalone Tim-derived
 periphery leaves as required macro children when run with
